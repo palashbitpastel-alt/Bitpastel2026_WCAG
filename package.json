@@ -1,0 +1,53 @@
+{
+  "name": "bitpastel_ai",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 4028",
+    "build": "next build",
+    "start": "next start",
+    "format": "prettier --write \"src/**/*.{ts,tsx,css,md,json}\"",
+    "serve": "next start",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@dhiwise/component-tagger": "^1.0.9",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/material": "^7.3.5",
+    "@next/bundle-analyzer": "^15.4.4",
+    "@tailwindcss/typography": "^0.5.16",
+    "country-codes-list": "^2.0.0",
+    "framer-motion": "^12.23.26",
+    "gsap": "^3.13.0",
+    "lodash": "^4.17.21",
+    "lucide-react": "^0.523.0",
+    "next": "14.2.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-google-recaptcha": "^3.1.0",
+    "react-google-recaptcha-v3": "^1.11.0",
+    "react-phone-number-input": "^3.4.12",
+    "react-snowfall": "^2.4.0",
+    "sharp": "^0.34.5",
+    "swiper": "^11.2.10"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^7.0.2",
+    "@netlify/plugin-nextjs": "^5.11.1",
+    "@types/node": "^20",
+    "@types/react": "18.2.45",
+    "@types/react-dom": "18.2.0",
+    "@types/react-google-recaptcha": "^2.1.9",
+    "autoprefixer": "^10.4.23",
+    "postcss": "^8.5.6",
+    "prettier": "^3.5.3",
+    "tailwindcss": "^3.4.19",
+    "typescript": "^5",
+    "webpack-bundle-analyzer": "^4.10.2"
+  },
+  "description": "A modern Next.js 14 application built with TypeScript and Tailwind CSS.",
+  "main": "postcss.config.js",
+  "author": "Bitpastel",
+  "license": "ISC"
+}

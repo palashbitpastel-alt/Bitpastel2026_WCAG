@@ -1,0 +1,38 @@
+<section id="testimonial">
+    <div class="container">
+        <h2 class="text-center testimonial_heading heading_bold_text">Testimonials</h2>
+    </div>
+
+    <div class="container-fluid px-0">
+        <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig"
+            (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)"
+            (beforeChange)="beforeChange($event)">
+            <div ngxSlickItem *ngFor="let testi of testimonials" class="slide">
+                <div class="testi_inner">
+                    <div class="row testi_header">
+                        <div class="col-6 testi_header_left">
+                            <div>
+                                <img src="{{testi.logo}}">
+                            </div>
+                        </div>
+                        <div class="col-6 testi_header_right">
+                            <div>
+                                <img src="{{testi.graphic}}">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row testi_body_text">
+                        <div class="testi_body">
+                            <p>{{testi.testimonials}}</p>
+                        </div>
+                        <div class="testi_client">
+                            <hr>
+                            <h5><b>{{testi.cName}}</b> {{testi.designagion}}, {{testi.project}} </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ngx-slick-carousel>
+    </div>
+
+</section>

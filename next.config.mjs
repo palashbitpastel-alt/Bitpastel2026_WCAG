@@ -26,38 +26,43 @@
 
 
 /** @type {import('next').NextConfig} */
-//import BundleAnalyzer from '@next/bundle-analyzer';
+import BundleAnalyzer from '@next/bundle-analyzer';
 
+const withBundleAnalyzer = BundleAnalyzer({
+  enabled: process.env.ANALYZE === 'true',
+  openAnalyzer: true,
+});
 
 const nextConfig = {
   reactStrictMode: true, // ✅ Helps catch hydration issues in dev
-  productionBrowserSourceMaps: true,
+  productionBrowserSourceMaps: false, // ⚡ Disabled to reduce build size by ~110MB
   distDir: process.env.DIST_DIR || '.next',
-  typescript: {
-    ignoreBuildErrors: true, // Ignore TypeScript-related mismatches during development
-  },
-  
-  //webpack(config) {
-  //  config.module.rules.push({
-  //    test: /\.(jsx|tsx)$/,
-  //    exclude: [/node_modules/],
-  //    use: [
-  //      {
-  //        loader: '@dhiwise/component-tagger/nextLoader',
-  //      },
-  //    ],
-  //  });
-  //  // console.log('ANALYZE ENV:', process.env.ANALYZE);
+  compress: true, // ⚡ Enable Gzip compression
+  poweredByHeader: false, // 🔒 Remove X-Powered-By header for security
 
-  //  return config;
-  //},
+  typescript: {
+    ignoreBuildErrors: false, // ✅ Enable type checking to catch errors
+  },
+
+  // ⚡ Experimental optimizations for better performance
+  experimental: {
+    optimizePackageImports: ['lucide-react', 'react-phone-number-input'], // Better tree-shaking
+  },
+
+  // 🚀 Cache control headers for static assets
+  async headers() {
+    return [
+      {
+        source: '/images/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+    ];
+  },
 };
 
-// const withBundleAnalyzer = BundleAnalyzer({
-//   enabled: true,
-//   openAnalyzer: true,
-// });
-
-export default nextConfig;
-
-//export default withBundleAnalyzer(nextConfig);
+export default withBundleAnalyzer(nextConfig);

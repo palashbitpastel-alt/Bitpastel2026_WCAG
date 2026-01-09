@@ -1,20 +1,17 @@
 // hooks/useScrollToNews.js
 'use client';
 
-import { useEffect, useCallback } from 'react';
-import { useRouter, usePathname, useSearchParams } from 'next/navigation';
-import { ScrollSmoother } from 'gsap/ScrollSmoother';
-import gsap from 'gsap';
-gsap.registerPlugin(ScrollSmoother);
+import { useCallback } from 'react';
+import { useRouter, usePathname } from 'next/navigation';
+// GSAP removed for performance optimization - using native scroll fallback
 
 export default function useScrollToNews() {
   const router = useRouter();
   const pathname = usePathname();
-  const searchParams = useSearchParams();
 
   const scrollToElement = useCallback((id, opts = {}) => {
     if (typeof window === 'undefined') return;
-    
+
     // Debug: entering scrollToElement
     try { console.debug('[useScrollToNews] scrollToElement called', { id, opts }); } catch {}
 
@@ -24,30 +21,9 @@ export default function useScrollToNews() {
       return;
     }
 
-    const { useGSAP = true, offset = -10, duration = 900 } = opts;
+    const { offset = -10, duration = 900 } = opts;
 
-    // Try GSAP ScrollSmoother first if available and allowed
-    const smoother = useGSAP ? ScrollSmoother.get() : null;
-    if (smoother) {
-      try {
-        try { console.debug('[useScrollToNews] using GSAP ScrollSmoother'); } catch {}
-        // Prefer numeric target to avoid element miscalculation during route transitions
-        if (typeof smoother.offset === 'function') {
-          const y = Math.max(0, smoother.offset(element) + offset);
-          smoother.scrollTo(y, true);
-          return;
-        }
-        // Fallback to element-based scroll if offset() isn't available
-        smoother.scrollTo(element, true);
-        return;
-      } catch (error) {
-        console.warn('GSAP ScrollSmoother failed, falling back to native scroll');
-      }
-    } else {
-      try { console.debug('[useScrollToNews] GSAP smoother unavailable, using native scroll'); } catch {}
-    }
-
-    // Native fallback across browsers
+    // Native scroll implementation (GSAP removed for optimization)
     const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
     const elementRect = element.getBoundingClientRect();
     const currentScroll = isSafari
@@ -105,7 +81,7 @@ export default function useScrollToNews() {
 
     if (pathname === '/') {
       try { console.debug('[useScrollToNews] on home page → in-page scroll'); } catch {}
-      scrollToElement('stories', { useGSAP: false });
+      scrollToElement('stories');
       if (typeof window !== 'undefined') {
         try {
           window.history.replaceState(null, '', '#stories');

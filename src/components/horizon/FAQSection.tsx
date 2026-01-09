@@ -3,10 +3,6 @@ import Image from 'next/image';
 import { useState } from 'react';
 import Modal from '@/components/Modal';
 import Link from 'next/link';
-import Accordion from '@mui/material/Accordion';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import Typography from '@mui/material/Typography';
 
 interface FAQSectionProps {
     openModal?: () => void;
@@ -74,67 +70,54 @@ const FAQSection: React.FC<FAQSectionProps> = ({ openModal }) => {
                             const isActive = expanded === index;
 
                             return (
-                                <Accordion
+                                <div
                                     key={item.id}
-                                    expanded={expanded === index}
-                                    defaultExpanded={index === 0}
-                                    onChange={handleChange(index)}
-                                    sx={{
-                                        borderRadius: '10px',
-                                        boxShadow: isActive ? '1px 1px 14px 0px #0000001C;' : '1px 1px 14px 0px #0000001C',
-                                        background: isActive ? 'linear-gradient(120.42deg, #22587A 9.08%, #56CC99 88.27%)' : '#fff',
-                                        transition: 'all 0.3s ease',
-                                        '&::before': { display: 'none' },
-                                        marginBottom: '10px',
-                                        marginTop: '10px',
-
-                                    }}
+                                    className={`rounded-[10px] shadow-[1px_1px_14px_0px_rgba(0,0,0,0.11)] mb-[10px] mt-[10px] transition-all duration-300 ${
+                                        isActive ? 'bg-gradient-to-br from-[#22587A] to-[#56CC99]' : 'bg-white'
+                                    }`}
                                 >
-                                    <AccordionSummary
-                                        expandIcon={
-                                            <img
-                                                src={
-                                                    isActive
-                                                        ? '/images/AccordionMinus.svg'
-                                                        : '/images/AccordionPlus.svg'
-                                                }
-                                                alt={isActive ? 'Collapse' : 'Expand'}
-                                                className="w-5 h-5"
-                                            />
-                                        }
-                                        sx={{
-                                            paddingTop: '10px',
-                                            paddingBottom: '10px',
-                                        }}
+                                    <button
+                                        onClick={() => handleChange(index)(null as any, !isActive)}
+                                        className="w-full flex justify-between items-center py-[10px] px-4 text-left"
                                         aria-controls={`panel${item.id}-content`}
                                         id={`panel${item.id}-header`}
+                                        aria-expanded={isActive}
                                     >
-                                        <Typography
-                                            component="span"
-                                            className="accordion-item-title text-[20px] font-[700] font-source responsive-h3"
-                                            sx={{
-                                                color: isActive ? '#fff' : '#111827',
-                                                marginBottom: isActive ? '0px' : '0px 0px 0px 10px',
-                                                marginTop: isActive ? '6px' : '0px 0px 0px 10px',
-                                            }}
+                                        <span
+                                            className={`accordion-item-title text-[20px] font-[700] font-source responsive-h3 ${
+                                                isActive ? 'text-white mt-[6px]' : 'text-[#111827]'
+                                            }`}
                                         >
                                             {item.title}
-                                        </Typography>
-                                    </AccordionSummary>
+                                        </span>
+                                        <img
+                                            src={
+                                                isActive
+                                                    ? '/images/AccordionMinus.svg'
+                                                    : '/images/AccordionPlus.svg'
+                                            }
+                                            alt={isActive ? 'Collapse' : 'Expand'}
+                                            className="w-5 h-5 flex-shrink-0"
+                                        />
+                                    </button>
 
-                                    <AccordionDetails>
-                                        <Typography className="md:text-[16px] lg:text-[18px] responsive-subtitle" sx={{
-                                            color: isActive ? '#fff' : '#000',
-                                            fontSize: '18px',
-                                            lineHeight: '26px',
-                                            width: '75%',
-                                            fontFamily: 'Roboto',
-                                            fontWeight: '400'
-                                        }}>
-                                            {item.description}
-                                        </Typography>
-                                    </AccordionDetails>
-                                </Accordion>
+                                    <div
+                                        className={`overflow-hidden transition-all duration-300 ${
+                                            isActive ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+                                        }`}
+                                        id={`panel${item.id}-content`}
+                                    >
+                                        <div className="px-4 pb-4">
+                                            <p
+                                                className={`md:text-[16px] lg:text-[18px] responsive-subtitle ${
+                                                    isActive ? 'text-white' : 'text-black'
+                                                } text-[18px] leading-[26px] w-[75%] font-roboto font-[400]`}
+                                            >
+                                                {item.description}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
                             );
                         })}
                     </div>

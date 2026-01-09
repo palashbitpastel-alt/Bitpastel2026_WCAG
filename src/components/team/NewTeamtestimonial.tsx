@@ -106,19 +106,20 @@ const NewTeamtestimonial = () => {
     setCurrentIndices(getRandomIndices());
   }, []);
 
-  useEffect(() => {
-    const initAOS = async () => {
-      const AOS = (await import('aos')).default;
-      AOS.init({
-        duration: 600,
-        easing: 'ease-in-out',
-        once: true,
-        offset: 120,
-        delay: 0
-      });
-    };
-    initAOS();
-  }, []);
+  // AOS animation removed for performance optimization
+  // useEffect(() => {
+  //   const initAOS = async () => {
+  //     const AOS = (await import('aos')).default;
+  //     AOS.init({
+  //       duration: 600,
+  //       easing: 'ease-in-out',
+  //       once: true,
+  //       offset: 120,
+  //       delay: 0
+  //     });
+  //   };
+  //   initAOS();
+  // }, []);
 
   useEffect(() => {
     if (!currentIndices) return;

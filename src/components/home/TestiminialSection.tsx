@@ -29,6 +29,16 @@ interface TestimonialsSectionProps {
 }
 
 const orderedTestimonials: Testimonial[] = [
+   // 8. Dan Miller
+  {
+    id: '10',
+    name: 'Dan Miller',
+    title: 'CEO, Young Professionals, UK',
+    message:
+      "We have worked with Bitpastel now for over 2 years and we've been really happy with the level of service and development work we have had done. They now manage all of our technology needs on an ongoing basis and nothing ever seems to be an issue with our requirements. Work is completed on time and to the highest quality that meets our expectations.",
+    image: '/images/Dan_M.jpg',
+    bgColor: 'bg-[#D8F5E9]',
+  },
   // 1. Reece Wabara
   {
     id: '1',
@@ -99,16 +109,7 @@ const orderedTestimonials: Testimonial[] = [
     image: '/images/Doug_A.jpg',
     bgColor: 'bg-[#FDE3E5]',
   },
-  // 8. Dan Miller
-  {
-    id: '10',
-    name: 'Dan Miller',
-    title: 'CEO, Young Professionals, UK',
-    message:
-      "We have worked with Bitpastel now for over 2 years and we've been really happy with the level of service and development work we have had done. They now manage all of our technology needs on an ongoing basis and nothing ever seems to be an issue with our requirements. Work is completed on time and to the highest quality that meets our expectations.",
-    image: '/images/Dan_M.jpg',
-    bgColor: 'bg-[#D8F5E9]',
-  },
+ 
   // 9. Anthony Deketelaere
   {
     id: '8',
@@ -152,14 +153,15 @@ const orderedTestimonials: Testimonial[] = [
 ];
 
 const defaultTestimonials: Testimonial[] = [
+  
   {
     id: '1',
-    name: 'Reece Wabara',
-    title: 'CEO, Maniére De Voir, UK | Forbes 30 Under 30',
+    name: 'Dan Miller',
+    title: 'CEO, Young Professionals, UK',
     message:
-      "Ayan and his team are superstars, they interpret suggestions well and propose even better and more efficient alternatives, the team's work is to a very high standard and turn around time is much faster than a UK equivalent",
-    image: Profileimg1,
-    bgColor: 'bg-[#CEEEF6]',
+      "We have worked with Bitpastel now for over 2 years and we've been really happy with the level of service and development work we have had done. They now manage all of our technology needs on an ongoing basis and nothing ever seems to be an issue with our requirements. Work is completed on time and to the highest quality that meets our expectations.",
+    image: Profileimg10,
+    bgColor: 'bg-[#D8F5E9]',
   },
   {
     id: '2',
@@ -235,12 +237,12 @@ const defaultTestimonials: Testimonial[] = [
   },
   {
     id: '10',
-    name: 'Dan Miller',
-    title: 'CEO, Young Professionals, UK',
+    name: 'Reece Wabara',
+    title: 'CEO, Maniére De Voir, UK | Forbes 30 Under 30',
     message:
-      "We have worked with Bitpastel now for over 2 years and we've been really happy with the level of service and development work we have had done. They now manage all of our technology needs on an ongoing basis and nothing ever seems to be an issue with our requirements. Work is completed on time and to the highest quality that meets our expectations.",
-    image: Profileimg10,
-    bgColor: 'bg-[#D8F5E9]',
+      "Ayan and his team are superstars, they interpret suggestions well and propose even better and more efficient alternatives, the team's work is to a very high standard and turn around time is much faster than a UK equivalent",
+    image: Profileimg1,
+    bgColor: 'bg-[#CEEEF6]',
   },
   {
     id: '11',

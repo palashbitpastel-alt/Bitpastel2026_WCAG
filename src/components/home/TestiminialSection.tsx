@@ -46,7 +46,7 @@ const orderedTestimonials: Testimonial[] = [
     title: 'CEO, Maniére De Voir, UK | Forbes 30 Under 30',
     message:
       "Ayan and his team are superstars, they interpret suggestions well and propose even better and more efficient alternatives, the team's work is to a very high standard and turn around time is much faster than a UK equivalent",
-    image: "fsvdv",
+    image: Profileimg1,
     bgColor: 'bg-[#CEEEF6]',
   },
   // 2. Paul R. Turner
@@ -181,6 +181,15 @@ const defaultTestimonials: Testimonial[] = [
     image: Profileimg3,
     bgColor: 'bg-[#CEEEF6]',
   },
+   {
+    id: '10',
+    name: 'Reece Wabara',
+    title: 'CEO, Maniére De Voir, UK | Forbes 30 Under 30',
+    message:
+      "Ayan and his team are superstars, they interpret suggestions well and propose even better and more efficient alternatives, the team's work is to a very high standard and turn around time is much faster than a UK equivalent",
+    image: Profileimg1,
+    bgColor: 'bg-[#CEEEF6]',
+  },
   {
     id: '4',
     name: 'Paul R. Turner',
@@ -235,15 +244,7 @@ const defaultTestimonials: Testimonial[] = [
     image: Profileimg9,
     bgColor: 'bg-[#FDE3E5]',
   },
-  {
-    id: '10',
-    name: 'Reece Wabara',
-    title: 'CEO, Maniére De Voir, UK | Forbes 30 Under 30',
-    message:
-      "Ayan and his team are superstars, they interpret suggestions well and propose even better and more efficient alternatives, the team's work is to a very high standard and turn around time is much faster than a UK equivalent",
-    image: Profileimg1,
-    bgColor: 'bg-[#CEEEF6]',
-  },
+ 
   {
     id: '11',
     name: 'Charles Fried',

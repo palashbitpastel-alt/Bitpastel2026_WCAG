@@ -25,6 +25,7 @@ const ServicesSection = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [isMobile, setisMobile] = useState(false);
   const [timeoutId, setTimeoutId] = useState<NodeJS.Timeout | null>(null);
+ 
 
   useEffect(() => {
     const handleResize = () => {
@@ -37,22 +38,34 @@ const ServicesSection = () => {
     };
   });
 
+  const [transitionComplete, setTransitionComplete] = useState<Set<number>>(new Set());
+
   const handleClick = (index: number) => {
-    // setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
-        // Clear any existing timeout
-    if (timeoutId) {
-      clearTimeout(timeoutId);
+    if (activeIndex === index) {
+      // Deactivating: first hide text, then collapse
+      setTransitionComplete((prev) => {
+        const newSet = new Set(prev);
+        newSet.delete(index);
+        return newSet;
+      });
+      
+      // Wait for text fade out, then collapse
+      setTimeout(() => {
+        setActiveIndex(null);
+      }, 200); // Match CSS transition duration
+    } else {
+      // Activating: first expand, then show text
+      setActiveIndex(index);
+      
+      // Wait for CSS transition to complete, then show text
+      setTimeout(() => {
+        setTransitionComplete((prev) => {
+          const newSet = new Set(prev);
+          newSet.add(index);
+          return newSet;
+        });
+      }, 300); // Match CSS transition duration
     }
-    
-    // Set the new active index
-    setActiveIndex(index);
-    
-    // Set a timeout to remove the active class after 5 seconds
-    const newTimeoutId = setTimeout(() => {
-      setActiveIndex(null);
-    }, 5000);
-    
-    setTimeoutId(newTimeoutId);
   };
   
   const services: services[] = [
@@ -206,7 +219,9 @@ const ServicesSection = () => {
                 className={`collapsible-element text-left content-center${activeIndex === index ? 'active' : ''}`}
                 style={{ background: service.bgcolorCollapsed }}
               >
-                <p className="paragraph text-title text-[16px] leading-[20px]">
+                <p className={`paragraph text-title text-[16px] leading-[20px] transition-opacity duration-300 ${
+                  transitionComplete.has(index) && activeIndex === index ? 'opacity-100' : 'opacity-0'
+                }`}>
                   {service.description}
                 </p>
               </div>

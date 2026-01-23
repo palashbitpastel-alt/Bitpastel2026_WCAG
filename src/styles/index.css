@@ -52,6 +52,15 @@
 }
 .collapsible-element p {
   display: block !important;
+  transition: opacity 0.1s ease;
+}
+
+.collapsible-element p.opacity-0 {
+  opacity: 0;
+}
+
+.collapsible-element p.opacity-100 {
+  opacity: 1;
 }
 
 .type-footer{
@@ -558,7 +567,7 @@
     left: calc(100%);
     padding: 15px;
     z-index: -1;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
     border-radius: 8px;
     align-content: center;
     

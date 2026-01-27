@@ -648,7 +648,7 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                   </div>
                 </div>
                 <p className="lg:hidden block text-center text-white text-[13px] font-roboto font-[300] lg:max-w-[100%] max-w-[100%] mx-auto">
-                  Copyright © Bitpastel Solution Private Limited 2025
+                  Copyright © Bitpastel Solution Private Limited {new Date().getFullYear()}
                   <br />
                   All Rights Reserved
                   <span className="px-2">|</span>
@@ -663,7 +663,7 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
               style={{ borderTop: '1px solid rgba(255, 255, 255, 0.1)' }}
             >
               <p className="text-center lg:text-[13px] text-[13px] font-roboto font-[300] lg:max-w-[100%] max-w-[80%] mx-auto">
-                Copyright © Bitpastel Solution Private Limited 2025 | All Rights Reserved |{' '}
+                Copyright © Bitpastel Solution Private Limited {new Date().getFullYear()} | All Rights Reserved |{' '}
                 <Link prefetch={true} href="/privacy-policy">
                   Privacy Policy
                 </Link>

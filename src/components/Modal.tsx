@@ -48,7 +48,7 @@ const services = [
   'Shopify Store',
   'Website',
   'Mobile App',
-  'Custom Software',
+  'Custom SaaS',
   'E-commerce Site',
   'UI/UX Design',
   'Digital Marketing',

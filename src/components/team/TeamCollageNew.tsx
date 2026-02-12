@@ -170,7 +170,31 @@ import TownHall2021_2 from "../../../public/images/new-team-images/Team page upd
 import X_max_1 from "../../../public/images/new-team-images/Team page slicing/X-mas 2025/X-mas-1.webp";
 import X_max_2 from "../../../public/images/new-team-images/Team page slicing/X-mas 2025/X-mas-2.webp";
 import X_max_3 from "../../../public/images/new-team-images/Team page slicing/X-mas 2025/X-mas-3.webp";
-import X_max_4 from "../../../public/images/new-team-images/Team page slicing/X-mas 2025/X-mas-4.webp";
+import X_max_4 from "../../../public/images/new-team-images/Team page slicing/X-mas 2025/X-mas-4.webp"; 
+
+// TownHall 2026
+
+import TH1 from '../../../public/images/TownHall2026/TH1.webp';
+import TH111 from '../../../public/images/TownHall2026/TH1.png';
+import TH2 from '../../../public/images/TownHall2026/TH2.webp';
+import TH3 from '../../../public/images/TownHall2026/TH3.webp';
+import TH4 from '../../../public/images/TownHall2026/TH4.webp';
+import TH5 from '../../../public/images/TownHall2026/TH5.webp';
+import TH6 from '../../../public/images/TownHall2026/TH6.webp';
+import TH7 from '../../../public/images/TownHall2026/TH7.webp';
+import TH8 from '../../../public/images/TownHall2026/TH8.webp';
+import TH9 from '../../../public/images/TownHall2026/TH9.webp';
+import TH10 from '../../../public/images/TownHall2026/TH10.webp';
+import TH11 from '../../../public/images/TownHall2026/TH11.webp';
+import TH12 from '../../../public/images/TownHall2026/TH12.webp';
+import TH13 from '../../../public/images/TownHall2026/TH13.webp';
+import TH14 from '../../../public/images/TownHall2026/TH14.webp';
+import TH15 from '../../../public/images/TownHall2026/TH15.webp';
+import TH16 from '../../../public/images/TownHall2026/TH16.webp';
+import TH17 from '../../../public/images/TownHall2026/TH17.webp';
+import TH18 from '../../../public/images/TownHall2026/TH18.webp';
+import TH19 from '../../../public/images/TownHall2026/TH19.webp';
+
 
 
 
@@ -182,6 +206,195 @@ const TeamCollageNew = () => {
   return (
     <section className="team-members">
       <div className="container mx-auto px-4">
+
+
+      <div className="team-collage">
+          <h2 className="text-[20px] font-[700] pb-4">Bitpastel Townhall 2026</h2>
+           <div className="grid grid-cols-1 md:grid-cols-1 mb-2">
+            <Image
+              src={TH111}
+              alt="TownHall 2026"
+              width={1200} 
+              height={600}
+              quality={100}
+              className="w-full object-cover"
+            />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-2">
+            <Image
+              src={TH2}
+              alt="TownHall 2026"
+              width={600} // REPLACE with actual intrinsic width
+              height={400} // REPLACE with actual intrinsic height
+         
+              className="w-full object-cover"
+            />
+             <Image
+              src={TH3}
+              alt="TownHall 2026"
+              width={600} // REPLACE with actual intrinsic width
+              height={400} // REPLACE with actual intrinsic height
+         
+              className="w-full object-cover"
+            />
+            
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-2">
+            <Image
+              src={TH4}
+              alt="TownHall 2026"
+              width={600} // REPLACE with actual intrinsic width
+              height={400} // REPLACE with actual intrinsic height
+         
+              className="w-full object-cover"
+            />
+             <Image
+              src={TH5}
+              alt="TownHall 2026"
+              width={600} // REPLACE with actual intrinsic width
+              height={400} // REPLACE with actual intrinsic height
+         
+              className="w-full object-cover"
+            />
+            
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-1 mb-2">
+            <Image
+              src={TH6}
+              alt="TownHall 2026"
+              width={1200} // REPLACE with actual intrinsic width
+              height={600} // REPLACE with actual intrinsic height
+         
+              className="w-full object-cover"
+            />
+          </div>
+           <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-2">
+            <Image
+              src={TH7}
+              alt="TownHall 2026"
+              width={600} // REPLACE with actual intrinsic width
+              height={400} // REPLACE with actual intrinsic height
+         
+              className="w-full object-cover"
+            />
+             <Image
+              src={TH8}
+              alt="TownHall 2026"
+              width={600} // REPLACE with actual intrinsic width
+              height={400} // REPLACE with actual intrinsic height
+         
+              className="w-full object-cover"
+            />
+            
+          </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-2">
+            <Image
+              src={TH9}
+              alt="TownHall 2026"
+              width={600} // REPLACE with actual intrinsic width
+              height={400} // REPLACE with actual intrinsic height
+         
+              className="w-full object-cover"
+            />
+             <Image
+              src={TH10}
+              alt="TownHall 2026"
+              width={600} // REPLACE with actual intrinsic width
+              height={400} // REPLACE with actual intrinsic height
+         
+              className="w-full object-cover"
+            />
+            
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-1 mb-2">
+            <Image
+              src={TH11}
+              alt="TownHall 2026"
+              width={1200} // REPLACE with actual intrinsic width
+              height={600} // REPLACE with actual intrinsic height
+         
+              className="w-full object-cover"
+            />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-2">
+            <Image
+              src={TH12}
+              alt="TownHall 2026"
+              width={600} // REPLACE with actual intrinsic width
+              height={400} // REPLACE with actual intrinsic height
+         
+              className="w-full object-cover"
+            />
+             <Image
+              src={TH13}
+              alt="TownHall 2026"
+              width={600} // REPLACE with actual intrinsic width
+              height={400} // REPLACE with actual intrinsic height
+         
+              className="w-full object-cover"
+            />
+            
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-1 mb-2">
+            <Image
+              src={TH14}
+              alt="TownHall 2026"
+              width={1200} // REPLACE with actual intrinsic width
+              height={600} // REPLACE with actual intrinsic height
+         
+              className="w-full object-cover"
+            />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-2">
+            <Image
+              src={TH15}
+              alt="TownHall 2026"
+              width={600} // REPLACE with actual intrinsic width
+              height={400} // REPLACE with actual intrinsic height
+         
+              className="w-full object-cover"
+            />
+             <Image
+              src={TH16}
+              alt="TownHall 2026"
+              width={600} // REPLACE with actual intrinsic width
+              height={400} // REPLACE with actual intrinsic height
+         
+              className="w-full object-cover"
+            />
+            
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-2">
+            <Image
+              src={TH17}
+              alt="TownHall 2026"
+              width={600} // REPLACE with actual intrinsic width
+              height={400} // REPLACE with actual intrinsic height
+         
+              className="w-full object-cover"
+            />
+             <Image
+              src={TH18}
+              alt="TownHall 2026"
+              width={600} // REPLACE with actual intrinsic width
+              height={400} // REPLACE with actual intrinsic height
+         
+              className="w-full object-cover"
+            />
+            
+          </div>
+         <div className="grid grid-cols-1 md:grid-cols-1 mb-2">
+            <Image
+              src={TH19}
+              alt="TownHall 2026"
+              width={1200} // REPLACE with actual intrinsic width
+              height={600} // REPLACE with actual intrinsic height
+         
+              className="w-full object-cover"
+            />
+          </div>
+        </div>
+
 
         <div className="team-collage">
           <h2 className="text-[20px] font-[700] pb-4">Christmas Celebration at Office 2025</h2>

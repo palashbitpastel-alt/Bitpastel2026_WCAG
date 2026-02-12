@@ -34,7 +34,7 @@ const TeamEngage = () => {
               alt="Team collaboration"
               width={711}
               height={406}
-              className="w-full md:h-[440px] h-[280px] md:object-unset object-cover md:object-[50%_17%] object-right"
+              className="w-full"
               priority
             />
           </div>

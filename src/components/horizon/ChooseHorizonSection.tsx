@@ -32,7 +32,7 @@ const ChooseHorizonSection: React.FC<ChooseHorizonSectionProps> = ({ openModal }
             icon: '/images/AdvantagesIcon/DesignIcon.svg',
             bgColor: ' ',
             bgcolorCollapsed: '#fcf4d7',
-            mobileTextColor: ' text-[rgba(240,198,56,1)]',
+            mobileTextColor: ' text-[rgb(243, 222, 155)]',
         }
         ,
         {
@@ -140,4 +140,4 @@ const ChooseHorizonSection: React.FC<ChooseHorizonSectionProps> = ({ openModal }
         </>
     )
 }
-export default ChooseHorizonSection;
+export default ChooseHorizonSection; 

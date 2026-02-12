@@ -15,6 +15,55 @@ const MobileTeamCollage: React.FC = () => {
   // };
 
   // All image arrays
+
+  // TOWNHALL 2026
+
+  const townhall2026Images: CarouselItem[] = [
+    { id: '1', type: 'image', src: '/images/TownHall2026Mob/MBTH1.webp', alt: 'TownHall 2026' },
+    { id: '2', type: 'image', src: '/images/TownHall2026Mob/MBTH2.webp', alt: 'TownHall 2026' },
+    { id: '3', type: 'image', src: '/images/TownHall2026Mob/MBTH3.webp', alt: 'TownHall 2026' },
+    { id: '4', type: 'image', src: '/images/TownHall2026Mob/MBTH4.webp', alt: 'TownHall 2026' },
+    { id: '5', type: 'image', src: '/images/TownHall2026Mob/MBTH5.webp', alt: 'TownHall 2026' },
+    { id: '6', type: 'image', src: '/images/TownHall2026Mob/MBTH6.webp', alt: 'TownHall 2026' },
+    { id: '7', type: 'image', src: '/images/TownHall2026Mob/MBTH7.webp', alt: 'TownHall 2026' },
+    { id: '8', type: 'image', src: '/images/TownHall2026Mob/MBTH8.webp', alt: 'TownHall 2026' },
+    { id: '9', type: 'image', src: '/images/TownHall2026Mob/MBTH9.webp', alt: 'TownHall 2026' },
+    { id: '10', type: 'image', src: '/images/TownHall2026Mob/MBTH10.webp', alt: 'TownHall 2026' },
+    { id: '11', type: 'image', src: '/images/TownHall2026Mob/MBTH11.webp', alt: 'TownHall 2026' },
+    { id: '12', type: 'image', src: '/images/TownHall2026Mob/MBTH12.webp', alt: 'TownHall 2026' },
+    { id: '13', type: 'image', src: '/images/TownHall2026Mob/MBTH13.webp', alt: 'TownHall 2026' },
+    { id: '14', type: 'image', src: '/images/TownHall2026Mob/MBTH14.webp', alt: 'TownHall 2026' },
+    { id: '15', type: 'image', src: '/images/TownHall2026Mob/MBTH15.webp', alt: 'TownHall 2026' },
+    { id: '16', type: 'image', src: '/images/TownHall2026Mob/MBTH16.webp', alt: 'TownHall 2026' },
+    { id: '17', type: 'image', src: '/images/TownHall2026Mob/MBTH17.webp', alt: 'TownHall 2026' },
+    { id: '18', type: 'image', src: '/images/TownHall2026Mob/MBTH18.webp', alt: 'TownHall 2026' },
+    { id: '19', type: 'image', src: '/images/TownHall2026Mob/MBTH19.webp', alt: 'TownHall 2026' },
+    
+  ];
+
+  // Chrismas 2025
+  const chrismas2025Images: CarouselItem[] = [
+    { id: '1', type: 'image', src: '/images/Christmas2025Mob/MobChrismas1.webp', alt: 'Christmas 2025' },
+    { id: '2', type: 'image', src: '/images/Christmas2025Mob/MobChrismas2.webp', alt: 'Christmas 2025' },
+    { id: '3', type: 'image', src: '/images/Christmas2025Mob/MobChrismas3.webp', alt: 'Christmas 2025' },
+    { id: '4', type: 'image', src: '/images/Christmas2025Mob/MobChrismas4.webp', alt: 'Christmas 2025' },
+  ];
+
+  // EMBTHnic Day 2025
+
+  const ethinicDay2025Images: CarouselItem[] = [
+    { id: '1', type: 'image', src: '/images/EthinicDayMob2025/EthinicDayMob1.webp', alt: 'Ethnic Day 2025' },
+    { id: '2', type: 'image', src: '/images/EthinicDayMob2025/EthinicDayMob2.webp', alt: 'Ethnic Day 2025' },
+  ];
+
+  // Independence Day 2025
+  const independenceDay2025Images: CarouselItem[] = [
+    { id: '1', type: 'image', src: '/images/Independence2025Mob/Independence2025Mob1.webp', alt: 'Independence Day 2025' },
+    { id: '2', type: 'image', src: '/images/Independence2025Mob/Independence2025Mob2.webp', alt: 'Independence Day 2025' },
+    { id: '3', type: 'image', src: '/images/Independence2025Mob/Independence2025Mob3.webp', alt: 'Independence Day 2025' },
+  ];
+
+
   const sampleImages: CarouselItem[] = [
     { id: '1', type: 'image', src: '/images/new-team-images/Team page slicing/Escape room/1.webp', alt: 'Escape Room 1' },
     { id: '2', type: 'image', src: '/images/new-team-images/Team page slicing/Escape room/2.webp', alt: 'Escape Room 2' },
@@ -215,12 +264,45 @@ const renderCarouselSection = (
 
   return (
     <section className="relative team-members-mob team-members-mobile" id="OurTeam">
+      {/* Townhall 2026 */}
+      {renderCarouselSection(
+        'townhall2026',
+        townhall2026Images,
+        'Townhall 2026',
+        '#BitpastelTownhall2026 #CompanyCulture'
+      )}
+
+      {/* Christmas 2025 */}
+      {renderCarouselSection(
+        'chrismas2025',
+        chrismas2025Images,
+        'Christmas 2025',
+        '#Christmas2025 #HolidaySeason #OfficeClebration'
+      )}
+
+      {/* Ethnic Day 2025 */}
+      {renderCarouselSection(
+        'ethinicDay2025',
+        ethinicDay2025Images,
+        'Ethnic Day 2025',
+        '#TraditionalAttire  #CulturalCelebration'
+      )}
+
+      {/* Independence Day 2025 */}
+      {renderCarouselSection(
+        'independenceDay2025',
+        independenceDay2025Images,
+        'Independence Day 2025',
+        '#IndependenceDay2025 #OfficeCelebration'
+      )}
+
+
       {/* Escape Rooms */}
       {renderCarouselSection(
         'escapeRooms',
         sampleImages,
         'Escape Rooms',
-        '#MysteryRooms #CanYouEscape #RealLifeEscapeExperience'
+        '#MysteryRooms #RealLifeEscapeExperience'
       )}
 
       {/* Interactive Team Mission */}

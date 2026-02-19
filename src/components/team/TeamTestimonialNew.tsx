@@ -152,7 +152,7 @@ const TeamTestimonialNew = () => {
 
   return (
     <section className="md:pt-0 pt-[40px]">
-      <SnowfallAnimation />
+      {/* <SnowfallAnimation /> */}
 
       {/* FIRST */}
       <AnimatePresence>

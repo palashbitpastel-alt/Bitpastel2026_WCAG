@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
-import SnowfallAnimation from '@/components/SnowfallAnimation';
+// import SnowfallAnimation from '@/components/SnowfallAnimation';
 import HeroSection from '@/components/horizon/HeroSection';
 import ChooseHorizonSection from '@/components/horizon/ChooseHorizonSection';
 import AiPoweredSection from '@/components/horizon/AiPoweredSection';
@@ -26,7 +26,7 @@ export default function Page() {
 
   return (
     <>
-      <SnowfallAnimation />
+      {/* <SnowfallAnimation /> */}
 
       <HeroSection openModal={openModal} />
       <ChooseHorizonSection openModal={openModal} />

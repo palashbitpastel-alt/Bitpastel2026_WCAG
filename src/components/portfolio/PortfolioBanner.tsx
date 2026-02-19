@@ -94,7 +94,7 @@ const PortfolioBanner: React.FC<HerSectionProps> = ({ openModal}) => {
           </div>
         </div>
       </section>
-      <Modal open={isModalOpen} onClose={() => setIsModalOpen(false)} />
+      {/* <Modal open={isModalOpen} onClose={() => setIsModalOpen(false)} /> */}
     </>
   );
 };

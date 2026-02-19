@@ -65,7 +65,7 @@ const HomePage: React.FC<HomePageProps> = ({ forceModalOpen = false, onModalClos
       <CtaSection   openModal={openModal} />
       
       {isModalOpen && (
-        <Modal open={isModalOpen} onClose={handleModalClose} />
+        <Modal open={isModalOpen} setIsModalOpen={setIsModalOpen} />
       )}
     </>
   );

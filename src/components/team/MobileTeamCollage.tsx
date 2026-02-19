@@ -15,6 +15,23 @@ const MobileTeamCollage: React.FC = () => {
   // };
 
   // All image arrays
+  // Bitpastel Offsite 2026
+
+  const bitpastelOffsite2026 : CarouselItem[] = [
+    { id: '1', type: 'image', src: '/images/Picnic2026/Picnic1.webp', alt: 'Bitpastel Offsite 2026' },
+    { id: '2', type: 'image', src: '/images/Picnic2026/Picnic2.webp', alt: 'Bitpastel Offsite 2026' },
+    { id: '3', type: 'image', src: '/images/Picnic2026/Picnic3.webp', alt: 'Bitpastel Offsite 2026' },
+    { id: '4', type: 'image', src: '/images/Picnic2026/Picnic4.webp', alt: 'Bitpastel Offsite 2026' },
+    { id: '5', type: 'image', src: '/images/Picnic2026/Picnic5.webp', alt: 'Bitpastel Offsite 2026' },
+    { id: '6', type: 'image', src: '/images/Picnic2026/Picnic6.webp', alt: 'Bitpastel Offsite 2026' },
+    { id: '7', type: 'image', src: '/images/Picnic2026/Picnic7.webp', alt: 'Bitpastel Offsite 2026' },
+    { id: '8', type: 'image', src: '/images/Picnic2026/Picnic8.webp', alt: 'Bitpastel Offsite 2026' },
+    { id: '9', type: 'image', src: '/images/Picnic2026/Picnic9.webp', alt: 'Bitpastel Offsite 2026' },
+    { id: '10', type: 'image', src: '/images/Picnic2026/Picnic10.webp', alt: 'Bitpastel Offsite 2026' },
+    { id: '11', type: 'image', src: '/images/Picnic2026/Picnic11.webp', alt: 'Bitpastel Offsite 2026' },
+    { id: '12', type: 'image', src: '/images/Picnic2026/Picnic12.webp', alt: 'Bitpastel Offsite 2026' },
+    { id: '13', type: 'image', src: '/images/Picnic2026/Picnic13.webp', alt: 'Bitpastel Offsite 2026' }
+  ]
 
   // TOWNHALL 2026
 
@@ -264,6 +281,16 @@ const renderCarouselSection = (
 
   return (
     <section className="relative team-members-mob team-members-mobile" id="OurTeam">
+
+      {/* Bitpaastel Offsite 2026 */}
+      {renderCarouselSection(
+        'bitpastelOffsite2026',
+        bitpastelOffsite2026,
+        'Bitpastel Offsite 2026',
+        '#BitpastelOffsite2026 #Vacation'
+      )}
+
+
       {/* Townhall 2026 */}
       {renderCarouselSection(
         'townhall2026',

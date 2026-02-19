@@ -38,7 +38,7 @@ export default function Page() {
       <TransformSection openModal={openModal} />
 
       {isModalOpen && (
-        <Modal open={isModalOpen} onClose={handleModalClose} />
+        <Modal open={isModalOpen} setIsModalOpen={setIsModalOpen}  />
       )}
     </>
   );

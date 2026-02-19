@@ -15,13 +15,13 @@ import ContactUs from '../../public/images/contact_us_modal.webp';
 
 interface ModalProps {
   open: boolean;
-  onClose: () => void;
+  setIsModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
   children?: React.ReactNode;
 }
 
 interface ContactModalProps {
   isOpen: boolean;
-  onClose: () => void;
+  setIsModalOpen: () => void;
 }
 
 // Custom ChevronDown component
@@ -72,7 +72,7 @@ const countryCodes1 = Object.entries(myCountryCodesObject)
   })
   .filter(Boolean);
 
-const Modal: React.FC<ModalProps> = ({ open, onClose, children }) => {
+const Modal: React.FC<ModalProps> = ({ open, setIsModalOpen, children }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
@@ -135,7 +135,9 @@ const Modal: React.FC<ModalProps> = ({ open, onClose, children }) => {
   }, [open]);
 
   const handleClose = () => {
-    onClose();
+    setIsModalOpen(false);
+    console.log("Please click me");
+    
   };
 
   const handleOverlayClick = (e: React.MouseEvent) => {
@@ -579,9 +581,8 @@ const Modal: React.FC<ModalProps> = ({ open, onClose, children }) => {
 
                           <div className="md:pb-1 md:mt-1 border-b border-gray-200 relative">
                             <input
-                              autoComplete="new-text"
-                              readOnly
-                              onFocus={(e) => e.target.removeAttribute('readOnly')}
+                              autoComplete="off"
+                              // onFocus={(e) => e.target.removeAttribute('readOnly')}
                               type="text"
                               placeholder="Full Name"
                               value={formData.fullName}
@@ -598,9 +599,9 @@ const Modal: React.FC<ModalProps> = ({ open, onClose, children }) => {
 
                           <div className="md:pb-1 md:mt-1 border-b border-gray-200 relative">
                             <input
-                              autoComplete="new-text-1"
-                              readOnly
-                              onFocus={(e) => e.target.removeAttribute('readOnly')}
+                              autoComplete="off"
+                              // readOnly
+                              // onFocus={(e) => e.target.removeAttribute('readOnly')}
                               type="email"
                               placeholder="Email"
                               value={formData.email}
@@ -653,9 +654,9 @@ const Modal: React.FC<ModalProps> = ({ open, onClose, children }) => {
 
                           <div className="md:pb-1 border-b border-gray-200">
                             <textarea
-                              autoComplete="new-text-8"
-                              readOnly
-                              onFocus={(e) => e.target.removeAttribute('readOnly')}
+                              autoComplete="off"
+                              // readOnly
+                              // onFocus={(e) => e.target.removeAttribute('readOnly')}
                               placeholder="Message (optional)"
                               value={formData.message}
                               onChange={(e) => handleInputChange('message', e.target.value)}
@@ -720,7 +721,7 @@ const Modal: React.FC<ModalProps> = ({ open, onClose, children }) => {
                     width="20px"
                     height="20px"
                     viewBox="-3.5 0 19 19"
-                    className="cf-icon-svg "
+                    className="cf-icon-svg hidden md:block"
                   >
                     <path d="M11.383 13.644A1.03 1.03 0 0 1 9.928 15.1L6 11.172 2.072 15.1a1.03 1.03 0 1 1-1.455-1.456l3.928-3.928L.617 5.79a1.03 1.03 0 1 1 1.455-1.456L6 8.261l3.928-3.928a1.03 1.03 0 0 1 1.455 1.456L7.455 9.716z" />
                   </svg>
@@ -730,7 +731,7 @@ const Modal: React.FC<ModalProps> = ({ open, onClose, children }) => {
                     width="20px"
                     height="20px"
                     viewBox="-3.5 0 19 19"
-                    className="cf-icon-svg"
+                    className="cf-icon-svg block md:hidden"
                   >
                     <path d="M11.383 13.644A1.03 1.03 0 0 1 9.928 15.1L6 11.172 2.072 15.1a1.03 1.03 0 1 1-1.455-1.456l3.928-3.928L.617 5.79a1.03 1.03 0 1 1 1.455-1.456L6 8.261l3.928-3.928a1.03 1.03 0 0 1 1.455 1.456L7.455 9.716z" />
                   </svg>

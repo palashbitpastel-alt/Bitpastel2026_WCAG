@@ -330,7 +330,7 @@ const Header = ({ forceModalOpen = false, onModalClose }: HomePageProps) => {
           </div>
         </div>
       </header>
-      <Modal open={isModalOpen} onClose={handleModalClose} />
+      <Modal open={isModalOpen} setIsModalOpen={setIsModalOpen} />
     </>
   )
 }

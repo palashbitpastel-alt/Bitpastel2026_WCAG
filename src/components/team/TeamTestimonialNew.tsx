@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import Image, { StaticImageData } from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-import SnowfallAnimation from '../SnowfallAnimation';
+import SnowfallAnimation from '@/components/SnowfallAnimation';
 
 import ShovanImg from '../../../public/images/Testimonial Section/Images/Shovan.webp';
 import SumanImg from '../../../public/images/Testimonial Section/Images/Suman.webp';

@@ -856,7 +856,7 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
           </div>
         </div>
       </footer>
-      <Modal open={isModalOpen} onClose={() => router.push('/', { scroll: false })} />
+      <Modal open={isModalOpen} setIsModalOpen={setIsModalOpen}  />
       <Whatsapp />
     </>
   );

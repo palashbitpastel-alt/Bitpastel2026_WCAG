@@ -1,4 +1,3 @@
-
 'use client';
 
 import type React from 'react';
@@ -10,6 +9,7 @@ import 'react-phone-number-input/style.css';
 import Link from 'next/link';
 import { CircleCheck, CircleCheckBig, Phone, Check } from 'lucide-react';
 import { useRouter, usePathname } from 'next/navigation';
+import ReCAPTCHA from 'react-google-recaptcha';
 import config from '../../config';
 import ContactUs from '../../public/images/contact_us_modal.webp';
 
@@ -111,6 +111,8 @@ const Modal: React.FC<ModalProps> = ({ open, setIsModalOpen, children }) => {
       setIsVisible(true);
       setFormData(initialFormData);
       setIsSuccess(false);
+      setCaptchaToken(null);
+      recaptchaRef.current?.reset();
       // setTimeout(() => setIsAnimating(true), 10);
       setIsAnimating(true);
 
@@ -165,6 +167,8 @@ const Modal: React.FC<ModalProps> = ({ open, setIsModalOpen, children }) => {
   const [isCountryDropdownOpen, setIsCountryDropdownOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -181,6 +185,12 @@ const Modal: React.FC<ModalProps> = ({ open, setIsModalOpen, children }) => {
     setValidationErrors(errors);
 
     if (Object.values(errors).some(Boolean)) {
+      setIsSubmitting(false);
+      return;
+    }
+
+    if (!captchaToken) {
+      alert("Please verify that you're not a robot.");
       setIsSubmitting(false);
       return;
     }
@@ -208,6 +218,7 @@ const Modal: React.FC<ModalProps> = ({ open, setIsModalOpen, children }) => {
       phone_code: phoneCode.replace('+', ''),
       choice: formData.service,
       message: formData.message,
+      'g-recaptcha-response': captchaToken,
     };
 
     const formEncoded = new URLSearchParams(payload as any).toString();
@@ -226,13 +237,19 @@ const Modal: React.FC<ModalProps> = ({ open, setIsModalOpen, children }) => {
         console.log('Success:', result);
         setIsSuccess(true);
         setFormData(initialFormData);
+        setCaptchaToken(null);
+        recaptchaRef.current?.reset();
       } else {
         console.error('Failed to submit form:', response.status);
         alert('Oops! Something went wrong. Please try again.');
+        recaptchaRef.current?.reset();
+        setCaptchaToken(null);
       }
     } catch (error) {
       console.error('Network error:', error);
       alert('Network error. Please try again later.');
+      recaptchaRef.current?.reset();
+      setCaptchaToken(null);
     } finally {
       setIsSubmitting(false);
     }
@@ -438,7 +455,7 @@ const Modal: React.FC<ModalProps> = ({ open, setIsModalOpen, children }) => {
                 </div>
 
                 {/* Form Section */}
-                <div className="bg-[#fff] md:p-[35px] p-[15px] md:shadow-[1px_-2px_20px_rgba(0,0,0,0.1),0_12px_24px_rgba(0,0,0,0.12)]">
+                <div className="bg-[#fff] md:p-[35px] p-[15px] md:shadow-[1px_-2px_20px_rgba(0,0,0,0.1),0_12px_24px_rgba(0,0,0,0.12)] modalform-area-mob">
                   {isSuccess ? (
                     <>
                       <div className="grid grid-cols-1 min-h-[450px] place-items-center justify-between">
@@ -667,9 +684,24 @@ const Modal: React.FC<ModalProps> = ({ open, setIsModalOpen, children }) => {
                         </div>
 
                         <div className=" pt-4">
+                          {/* ReCAPTCHA */}
+                          {formData.service && formData.fullName && formData.email && (
+                            <div className="mb-3">
+                              <ReCAPTCHA
+                                ref={recaptchaRef}
+                                sitekey="6LdSzGEUAAAAABG0EhsRTOkyJUyTqwFz6gpNX8g1"
+                                onChange={(token) => setCaptchaToken(token)}
+                                onExpired={() => setCaptchaToken(null)}
+                                size="normal"
+                              />
+                            </div>
+                          )}
                           <button
                             type="submit"
-                            className="w-full btn bg-green-btn text-primary-white transition-colors duration-200"
+                            disabled={isSubmitting || !captchaToken}
+                            className={`w-full btn bg-green-btn text-primary-white transition-colors duration-200 ${
+                              !captchaToken ? 'opacity-[0.65] cursor-not-allowed' : ''
+                            }`}
                           >
                             Lets Work Together
                           </button>

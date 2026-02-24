@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
+import ReCAPTCHA from 'react-google-recaptcha';
 import config from '../../../config';
 
 type FormData = {
@@ -33,6 +34,7 @@ const BecomePartner = () => {
   const [status, setStatus] = useState('');
   const [defaultCountry, setDefaultCountry] = useState('IN');
   const [isSuccess, setIsSuccess] = useState(false);
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
 
   // Detect user's country
   useEffect(() => {
@@ -127,6 +129,12 @@ const BecomePartner = () => {
     setIsSubmitting(true);
     setStatus('');
 
+    if (!captchaToken) {
+      setStatus("Please verify that you're not a robot.");
+      setIsSubmitting(false);
+      return;
+    }
+
     try {
       const response = await fetch(`${config.API_BASE_URL}/partnersSendEmail.php`, {
         method: 'POST',
@@ -138,6 +146,7 @@ const BecomePartner = () => {
           email: formData.email,
           phone: formData.phone,
           message: formData.message,
+          'g-recaptcha-response': captchaToken,
         } as Record<string, string>).toString(),
       });
 
@@ -158,6 +167,9 @@ const BecomePartner = () => {
   // Check if form is valid (only required fields: name and email)
   const isFormValid =
     formData.name.trim() !== '' && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email);
+
+  // Check if form fields are valid (for showing captcha)
+  const areFieldsValid = isFormValid;
 
   if (isSuccess) {
     return (
@@ -367,10 +379,22 @@ const BecomePartner = () => {
               </div>
               {errors.message && <span className="error-text">{errors.message}</span>}
             </div>
+            <div className="mt-[20px]">
+              {/* ReCAPTCHA */}
+              {areFieldsValid && (
+                <ReCAPTCHA
+                  sitekey="6LdSzGEUAAAAABG0EhsRTOkyJUyTqwFz6gpNX8g1"
+                  onChange={(token) => setCaptchaToken(token)}
+                  onExpired={() => setCaptchaToken(null)}
+                  theme="dark"
+                  className="mb-4"
+                />
+              )}
+            </div>
             <button
-              className="mt-[30px] bg-green-btn px-[20px] min-w-[140px] md:w-auto w-full text-primary-white min-h-[40px] rounded disabled:opacity-[0.65]"
+              className="mt-[10px] bg-green-btn px-[20px] min-w-[140px] md:w-auto w-full text-primary-white min-h-[40px] rounded disabled:opacity-[0.65]"
               type="submit"
-              disabled={isSubmitting || !isFormValid}
+              disabled={isSubmitting || !isFormValid || !captchaToken}
             >
               {isSubmitting ? 'Submitting...' : 'Submit'}
             </button>

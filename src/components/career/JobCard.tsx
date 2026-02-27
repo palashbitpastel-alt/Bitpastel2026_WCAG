@@ -39,55 +39,69 @@ export default function Home() {
       experience: "2 - 6 Years",
       gradientColors: "linear-gradient(-45deg, rgb(0,103,183), rgb(140, 13,99))"
     },
+    // {
+    //   id: "2",
+    //   title: "Back End Developer",
+    //   hashtags: ["#PHP", "#MySQL", "#CodeIgniter", "#Laravel", "#JavaScript", "#Plugins", "#WordPress", "#WooCommerce", "#Shopify"],
+    //   experience: "2 - 5 Years",
+    //   gradientColors: "linear-gradient(-45deg, rgb(108, 50, 182), rgb(29, 160, 163))"
+    // },
+    // {
+    //   id: "3",
+    //   title: "Shopify Developer",
+    //   hashtags: ["#Shopify", "#RubyonRails"],
+    //   experience: "2 - 6 Years",
+    //   gradientColors: "linear-gradient(-45deg, rgb(15, 134, 178), rgb(7, 62, 152))"
+    // },
+    // {
+    //   id: "4",
+    //   title: "Senior WordPress Developer",
+    //   hashtags: ["#WordPress", "#WooCommerce"," #PHP", "#MySQL" ,"#JavaScript" ,"#Plugins"],
+    //   experience: "2 - 6 Years",
+    //   gradientColors: "linear-gradient(-45deg, rgb(15, 134, 178), rgb(7, 62, 152))"
+    // },
+    // {
+    //   id: "5",
+    //   title: "Full Stack Developer",
+    //   hashtags: ["#FullStackDeveloper", "#FrontEndDeveloper", "#BackEndDeveloper"],
+    //   experience: "2 - 5 Years",
+    //   gradientColors: "linear-gradient(-45deg, rgb(0, 103, 183), rgb(140, 13, 99))"
+    // },
+    // {
+    //   id: "6",
+    //   title: "PHP Development - Internship",
+    //   hashtags: ["#PHP", "#MySQL", "#JavaScript", "#Plugins"],
+    //   experience: "Fresher",
+    //   gradientColors: "linear-gradient(-45deg, rgb(108, 50, 182), rgb(29, 160, 163))"
+    // },
+    // {
+    //   id: "7",
+    //   title: "UI/UX Designer Intern",
+    //   hashtags: ["#GraphicDesign", "#Logo", "#WebDesign", "#AppDesign", "#UI", "#UX"],
+    //   experience: "Fresher",
+    //   gradientColors: "linear-gradient(-45deg, rgb(108, 50, 182), rgb(29, 160, 163))"
+    // },
+    //  {
+    //   id: "8",
+    //   title: "Mobile App Developer",
+    //   hashtags: ["#React Native", "#Responsiveness", "#UI", "#UX", "#MobileApp" , "#Git", "#Android", "#iOS" ],
+    //   experience: "1 - 3 Years",
+    //   gradientColors: "linear-gradient(-45deg, rgb(15, 134, 178), rgb(7, 62, 152))"
+    // }
     {
       id: "2",
-      title: "Back End Developer",
-      hashtags: ["#PHP", "#MySQL", "#CodeIgniter", "#Laravel", "#JavaScript", "#Plugins", "#WordPress", "#WooCommerce", "#Shopify"],
-      experience: "2 - 5 Years",
+      title: "Email & LinkedIn Sales Executive",
+      hashtags: ["#Hiring", "#KolkataJobs", "#SalesExecutive", "#Bitpastel", "#LinkedInEmails"],
+      experience: "1 - 3 Years",
       gradientColors: "linear-gradient(-45deg, rgb(108, 50, 182), rgb(29, 160, 163))"
     },
     {
       id: "3",
-      title: "Shopify Developer",
-      hashtags: ["#Shopify", "#RubyonRails"],
-      experience: "2 - 6 Years",
-      gradientColors: "linear-gradient(-45deg, rgb(15, 134, 178), rgb(7, 62, 152))"
-    },
-    {
-      id: "4",
-      title: "Senior WordPress Developer",
-      hashtags: ["#WordPress", "#WooCommerce"," #PHP", "#MySQL" ,"#JavaScript" ,"#Plugins"],
-      experience: "2 - 6 Years",
-      gradientColors: "linear-gradient(-45deg, rgb(15, 134, 178), rgb(7, 62, 152))"
-    },
-    {
-      id: "5",
-      title: "Full Stack Developer",
-      hashtags: ["#FullStackDeveloper", "#FrontEndDeveloper", "#BackEndDeveloper"],
-      experience: "2 - 5 Years",
-      gradientColors: "linear-gradient(-45deg, rgb(0, 103, 183), rgb(140, 13, 99))"
-    },
-    {
-      id: "6",
-      title: "PHP Development - Internship",
-      hashtags: ["#PHP", "#MySQL", "#JavaScript", "#Plugins"],
+      title: "Sales Intern",
+      hashtags:["#Hiring", "#SalesIntern", "##InternshipOpportunity", "#CareerGrowth", "#WeAreHiring"],
       experience: "Fresher",
-      gradientColors: "linear-gradient(-45deg, rgb(108, 50, 182), rgb(29, 160, 163))"
-    },
-    {
-      id: "7",
-      title: "UI/UX Designer Intern",
-      hashtags: ["#GraphicDesign", "#Logo", "#WebDesign", "#AppDesign", "#UI", "#UX"],
-      experience: "Fresher",
-      gradientColors: "linear-gradient(-45deg, rgb(108, 50, 182), rgb(29, 160, 163))"
-    },
-     {
-      id: "8",
-      title: "Mobile App Developer",
-      hashtags: ["#React Native", "#Responsiveness", "#UI", "#UX", "#MobileApp" , "#Git", "#Android", "#iOS" ],
-      experience: "1 - 3 Years",
       gradientColors: "linear-gradient(-45deg, rgb(15, 134, 178), rgb(7, 62, 152))"
-    }
+    },
   ];
 
   const handleApply = (jobTitle: string) => {

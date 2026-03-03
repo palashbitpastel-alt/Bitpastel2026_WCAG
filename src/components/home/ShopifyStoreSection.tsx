@@ -120,7 +120,8 @@ const ShopifyStoreSection = () => {
               At Bitpastel, we build differentiated, fast, and scalable online
               <span className="md:block inline md:pl-0 pl-[5px]" />
               stores to help you provide the best customer experience!
-              <span className="md:block inline md:pl-0 pl-[5px]" />
+            </p>
+            <p>
               We also deliver speed and performance optimization that 
               <span className="md:block inline md:pl-0 pl-[5px]" />
               contributes to better conversion rates.

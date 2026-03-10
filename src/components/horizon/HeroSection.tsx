@@ -1,81 +1,97 @@
 import React from 'react';
 import Image from 'next/image';
-import { useState } from 'react';
-import Modal from '@/components/Modal';
-import Link from 'next/link';
+import BannerImage from '../../../public/images/horizon-new-images/banner_section_image.webp';
+import ShopifyXBitpastel from '../../../public/images/shopify_X_bitpastel.svg';
 
 interface HerSectionProps {
   openModal?: () => void;
 }
 
-const HeroSection: React.FC<HerSectionProps> = ({ openModal }) => {
-  // const [isModalOpen, setIsModalOpen] = useState(false);
+const HeroSection: React.FC<HerSectionProps> = ({ openModal: _openModal }) => {
   return (
-    <>
-      <section className="relative lg:h-lvh md:h-[686px]  h-auto overflow-hidden">
-        {/* Desktop background image */}
-        <div
-          className="md:block absolute inset-0 bg-cover bg-[position:60%_20%] bg-no-repeat"
-          style={{
-            backgroundImage: `
-            
-            url('/images/banner_landing_image.jpg')
-          `,
-          }}
-        ></div>
+    <section className="relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0b3535 0%, #0d4040 40%, #0e4a3a 70%, #0b3535 100%)', minHeight: '100vh' }}>
 
-        {/* Content */}
-        <div className="relative z-10 container mx-auto px-4 md:h-full pt-[40px] md:pt-[60px] text-left ">
-          <div className="md:h-full content-center mx-auto md:max-w-[100%] max-w-[310px]">
-            <div className="flex justify-center items-center mb-[90px] ml-[2%] horinzon-logo-area">
-              <img src="/images/horizon_logo.png" alt="Horizon logo" width={535} height={220} />
+      {/* Decorative curved wave */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: 'radial-gradient(ellipse at 80% 50%, rgba(0,169,116,0.22) 0%, rgba(0,153,153,0.14) 35%, transparent 65%)',
+        }}
+      />
+      <div
+        className="absolute right-0 top-0 bottom-0 pointer-events-none hidden md:block"
+        style={{
+          width: '55%',
+          background: 'radial-gradient(ellipse at 60% 50%, rgba(14,90,70,0.55) 0%, transparent 70%)',
+          borderRadius: '60% 0 0 60% / 100% 0 0 100%',
+        }}
+      />
+
+      {/* Content */}
+      <div className="relative z-10 container mx-auto px-4 py-[60px] lg:py-0 lg:h-screen flex items-center">
+        <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-8 w-full">
+
+          {/* ── LEFT CONTENT ── */}
+          <div className="flex-1 lg:max-w-[50%] w-full">
+
+            {/* Shopify × bitpastel logo */}
+            <div className="mb-7">
+              <Image
+                src={ShopifyXBitpastel}
+                alt="Shopify × bitpastel"
+                width={240}
+                height={40}
+                priority
+              />
             </div>
-            <h1 className="md:text-primary-white md:text-center md:text-[32px] lg:text-[38px] text-title title lg:leading-[40px] font-source leading-[normal] md:mb-5 mb-4 text-center horizon-title">
-              <span>Migrate seamlessly to </span>
-              <span className="font-[700]">Shopify Horizon</span>
-            </h1>
-            <h4 className=" md:text-center md:text-[16px] lg:text-[18px] md:text-primary-white horizon-subtitle text-title title lg:leading-[40px] font-source leading-[normal] md:mb-5 mb-4 text-center">
-              {/* <span className="block">
-                Experience faster performance, AI-powered personalisation, and unmatched design flexibility. 
-              </span> */}
-              <span className="block">
-                Bitpastel helps you migrate and customise your store on Shopify’s Horizon
-              </span>
-              <span>theme with zero hassle.</span>
-            </h4>
 
-            <div className="flex justify-center items-center gap-4 hero-btn-area">
+            {/* Headline */}
+            <h1 className="text-primary-white font-source font-bold text-[30px] md:text-[36px] lg:text-[42px] leading-tight mb-5">
+              We Help Brands Unlock the Full Potential of Shopify
+            </h1>
+
+            {/* Subtext */}
+            <p className="text-primary-white font-roboto text-[15px] md:text-[17px] leading-[1.7] mb-8 opacity-85">
+              Through custom development, store optimization, migrations, and advanced integrations.
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4">
               <button
-                className="btn leading-normal bg-white-btn bg-green-text md:w-auto w-[100%] mt-[15px] font-roboto btn-hover"
+                className="btn leading-normal bg-white-btn bg-green-text md:w-auto w-full font-roboto btn-hover"
                 onClick={() => {
                   const element = document.getElementById('flexible-horizon');
-                  if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' });
-                  }
+                  if (element) element.scrollIntoView({ behavior: 'smooth' });
                 }}
               >
-                Get Started with Horizon
+                Explore Horizon
               </button>
               <button
-                className="btn leading-normal bg-transparent-btn md:w-auto w-[100%] mt-[15px] font-roboto btn-hover"
+                className="btn leading-normal bg-transparent-btn md:w-auto w-full font-roboto btn-hover"
                 onClick={() => window.open('https://calendly.com/ayanh/meet-ayan', '_blank')}
               >
-                Book Free Consultation
+                Speed Optimisation Service
               </button>
             </div>
-            <div></div>
-            {/* <button
-              className="btn leading-normal bg-green-btn md:w-auto w-[100%] mt-[15px] font-roboto"
-              // onClick={() => setIsModalOpen(true)}
-              onClick={openModal}
-            >
-              Let’s Work Together
-            </button> */}
           </div>
+
+          {/* ── RIGHT CONTENT – Dashboard illustration ── */}
+          <div className="flex-1 lg:max-w-[50%] w-full flex justify-center lg:justify-end items-center">
+            <div className="relative w-full max-w-[600px]">
+              <Image
+                src={BannerImage}
+                alt="Shopify dashboard illustration"
+                width={600}
+                height={500}
+                priority
+                className="w-full h-auto object-contain drop-shadow-2xl"
+              />
+            </div>
+          </div>
+
         </div>
-      </section>
-      {/* <Modal open={isModalOpen} onClose={() => setIsModalOpen(false)} /> */}
-    </>
+      </div>
+    </section>
   );
 };
 

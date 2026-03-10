@@ -1068,4 +1068,9 @@ padding-bottom:20px;
     max-height: 430px;
     overflow-y: auto;
   }  
+  .mb-center
+  {
+    margin: 0 auto;
+    
+  }
 }

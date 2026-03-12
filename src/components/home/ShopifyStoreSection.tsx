@@ -127,13 +127,13 @@ const ShopifyStoreSection = () => {
               <span className="md:block inline md:pl-0 pl-[5px]" />
               contributes to better conversion rates.
             </p>
-            <div className="xl:mb-[20px] mt-[20px] mobile-margin-top">
+            <div className="xl:mb-[20px] mt-[30px] mobile-margin-top">
               <Image
                 src={ShopifyImageBottom}
                 alt="Shopify Select Partner"
                 width={isMobile ? 180 : 220}
                 height={53}
-                className="object-contain object-left mb-center h-[80px]"
+                className="object-contain object-left mb-center h-[48px]"
               />
             </div>
         

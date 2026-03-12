@@ -102,6 +102,20 @@ export default function Home() {
       experience: "Fresher",
       gradientColors: "linear-gradient(-45deg, rgb(15, 134, 178), rgb(7, 62, 152))"
     },
+     {
+      id: "4",
+      title: "Affiliate PR and Link Acquisition Specialist",
+      hashtags:["#Shopify", "#AffiliateMarketing", "#SEO", "#DigitalMedia", "#PRCampaigns"],
+      experience: "2 - 4 Years",
+      gradientColors: "linear-gradient(-45deg, rgb(0,103,183), rgb(140, 13,99))"
+    },
+    {
+      id: "5",
+      title: "CRO Specialist",
+      hashtags:["#CRO", "#BusinessIntelligence&Analytics", "##SQLFundamentals", "#Shopify"],
+      experience: "2 - 4 Years",
+      gradientColors: "linear-gradient(-45deg, rgb(108, 50, 182), rgb(29, 160, 163))"
+    },
   ];
 
   const handleApply = (jobTitle: string) => {

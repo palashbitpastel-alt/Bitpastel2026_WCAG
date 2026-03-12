@@ -1,4 +1,3 @@
-# .gitignore content
 node_modules/
 .next/
 .env
@@ -13,6 +12,7 @@ yarn-error.log*
 out/
 build/
 dist/
-DONE_CRITERIA.md/
-AI_CONTRACT.md/
-REQUIRMENTS.md/
+
+DONE_CRITERIA.md
+AI_CONTRACT.md
+REQUIRMENTS.md

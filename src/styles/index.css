@@ -1060,7 +1060,14 @@ padding-bottom:20px;
   }
 }
 
-
+@media only screen and (max-width: 1024px) 
+{
+  .tab-padding
+  {
+    padding: 11px;
+  }
+  
+}
 @media (max-width: 767px) 
 {
   .modalform-area-mob
@@ -1073,4 +1080,21 @@ padding-bottom:20px;
     margin: 0 auto;
     
   }
+   .tab-padding
+  {
+    padding: 0px;
+  }
 }
+@media only screen and (max-width: 1500px) 
+{
+  .mobile-margin-bottom 
+  {
+    margin-bottom: 12px !important;
+  }
+  .mobile-margin-top 
+  {
+    margin-top: 12px !important;
+  }
+  
+}
+

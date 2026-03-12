@@ -101,7 +101,7 @@ const ShopifyStoreSection = () => {
         {/* <div className="flex flex-col lg:flex-row items-center gap-12 md:md:rounded-[40px] md:p-8 px-4 pt-4 pb-12 bg-primary-mint md:text-left text-center "> */}
         <div className="flex flex-col lg:flex-row items-center md:gap-0 gap-12 md:rounded-[40px] rounded-[20px] bg-primary-mint md:text-left text-center pt-[20px] px-[20px] pb-[40px] md:p-0 ">
           <div className="lg:w-1/2 w-full xl:px-[55px] md:pl-[40px] md:pr-[20px] md:pt-[30px] md:pb-[10px]">
-            <div className="xl:mb-[20px] mb-[10px]">
+            <div className="xl:mb-[20px] mb-[10px] mobile-margin-bottom">
               <Image
                 src={isMobile ? ShopifyImageMobile : ShopifyImage}
                 alt="Team working together"
@@ -110,7 +110,7 @@ const ShopifyStoreSection = () => {
                 className="shopifyX-image object-contain object-center md:object-cover md:object-[30%] xl:object-contain xl:object-center"
               />
             </div>
-            <h2 className=" font-source md:font-[600] font-[700] text-title title mb-6 md:leading-[45px] leading-[normal] text-accent-green">
+            <h2 className=" font-source md:font-[600] font-[700] text-title title mb-6 md:leading-[45px] leading-[normal] text-accent-green mobile-margin-bottom">
               <span className="text-accent-green">400+</span> Shopify Stores
               <br />& <span className="text-accent-green">100+</span> Shopify Plus Stores
             </h2>
@@ -127,13 +127,13 @@ const ShopifyStoreSection = () => {
               <span className="md:block inline md:pl-0 pl-[5px]" />
               contributes to better conversion rates.
             </p>
-            <div className="xl:mb-[20px] mt-[20px] ml-[-18px]">
+            <div className="xl:mb-[20px] mt-[20px] mobile-margin-top">
               <Image
                 src={ShopifyImageBottom}
                 alt="Shopify Select Partner"
                 width={isMobile ? 180 : 220}
                 height={53}
-                className="object-contain object-left mb-center"
+                className="object-contain object-left mb-center h-[80px]"
               />
             </div>
         
@@ -143,7 +143,7 @@ const ShopifyStoreSection = () => {
               Explore Our Portfolio
             </button> */}
           </div>
-          <div className="lg:w-1/2  lg:pr-[15px]   w-full lg:order-last order-first xl:h-auto md:h-[-webkit-fill-available] h-auto">
+          <div className="lg:w-1/2  lg:pr-[11px] lg:pt-[10px] lg:pb-[10px]   w-full lg:order-last order-first xl:h-auto md:h-[-webkit-fill-available] h-auto tab-padding">
             <Image
               src={ShopifyClientImage}
               alt="Team working together"

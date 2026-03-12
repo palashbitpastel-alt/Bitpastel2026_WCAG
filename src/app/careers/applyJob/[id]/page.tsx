@@ -6,6 +6,7 @@ import { useEffect, useState, useRef } from 'react';
 // import Common_banner from '@/components/ui/Common_banner';
 
 import dynamic from 'next/dynamic';
+import { Session } from 'inspector';
 
 // Dynamically import components that might be heavy
 const JoinTeam = dynamic(() => import('@/components/JoinTeamForm'));
@@ -26,7 +27,7 @@ interface JobListing {
   desiredCandidateProfile?: string[];
   naukriLink?: string;
 }
-export default function JobDetail({ params }: { params: { id: string } }) {
+export default function JobDetail ({ params }: { params: { id: string } }) {
   const router = useRouter();
   const [job, setJob] = useState<JobListing | null>(null);
   const [loading, setLoading] = useState(true);
@@ -43,7 +44,7 @@ export default function JobDetail({ params }: { params: { id: string } }) {
     const el = document.getElementById(id);
     if (el) {
       setTimeout(() => {
-        window.scrollTo({ top: el.offsetTop - 100, behavior: 'smooth'});
+        window.scrollTo({ top: el.offsetTop - 100, behavior: 'smooth' });
       }, 100);
     }
   };
@@ -353,13 +354,10 @@ export default function JobDetail({ params }: { params: { id: string } }) {
     {
       id: '2',
       title: 'Email & LinkedIn Sales Executive',
-      hashtags: [
-       "#Hiring", "#KolkataJobs", "#SalesExecutive", "#Bitpastel", "#LinkedInEmails"
-      ],
+      hashtags: ['#Hiring', '#KolkataJobs', '#SalesExecutive', '#Bitpastel', '#LinkedInEmails'],
       experience: '1 - 3 Years',
       gradientColors: 'linear-gradient(-45deg, rgb(108, 50, 182), rgb(29, 160, 163))',
-      description:
-        'We are seeking a skilled Email & LinkedIn Sales Executive.',
+      description: 'We are seeking a skilled Email & LinkedIn Sales Executive.',
       responsibilities: [
         'Cold outbound lead generation',
         'Run & optimize email campaigns (Mailchimp, SendGrid, etc.)',
@@ -384,7 +382,13 @@ export default function JobDetail({ params }: { params: { id: string } }) {
     {
       id: '3',
       title: 'Sales Intern',
-      hashtags: ["#Hiring", "#SalesIntern", "##InternshipOpportunity", "#CareerGrowth", "#WeAreHiring"],
+      hashtags: [
+        '#Hiring',
+        '#SalesIntern',
+        '##InternshipOpportunity',
+        '#CareerGrowth',
+        '#WeAreHiring',
+      ],
       experience: 'Fresher',
       gradientColors: 'linear-gradient(-45deg, rgb(15, 134, 178), rgb(7, 62, 152))',
       description:
@@ -410,11 +414,114 @@ export default function JobDetail({ params }: { params: { id: string } }) {
       desiredCandidateProfile: ['Interested to learn & work with latest/upcoming technologies'],
       naukriLink: '',
     },
+    {
+      id: '4',
+      title: 'Affiliate PR and Link Acquisition Specialist',
+      hashtags: ['#Shopify', '#AffiliateMarketing', '#SEO', '#DigitalMedia', '#PRCampaigns'],
+      experience: '2 - 4 Years',
+      gradientColors: 'linear-gradient(-45deg, rgb(0,103,183), rgb(140, 13,99))',
+      description:
+        'We are looking for a results-driven Affiliate PR and Link Acquisition Specialist to strengthen our brand presence through strategic partnerships, digital PR outreach, and high-quality backlink acquisition. The ideal candidate will build relationships with publishers, bloggers, influencers, and affiliate partners to drive traffic, improve SEO rankings, and increase affiliate revenue.',
+      responsibilities: [
+        'Develop and execute affiliate PR and link-building strategies to improve domain authority and organic visibility.',
+
+        'Identify and reach out to relevant websites, bloggers, influencers, and media outlets for collaboration opportunities.',
+
+        'Secure high-quality backlinks and affiliate placements on authoritative platforms.',
+
+        'Manage and grow affiliate partnerships with publishers and content creators.',
+
+        'Pitch brand stories, products, and content to digital media and industry publications.',
+
+        'Collaborate with the content and SEO teams to create link-worthy campaigns and outreach materials.',
+
+        'Monitor and analyze link-building performance, referral traffic, and affiliate revenue.',
+
+        'Maintain a database of outreach contacts and partnerships.',
+
+        'Monitor competitor backlink profiles and identify new link opportunities.',
+        'Track and analyze link-building performance, referral traffic, and affiliate revenue.',
+
+        'Maintain a database of outreach contacts and partnerships.',
+
+        'Monitor competitor backlink profiles and identify new link opportunities.',
+      ],
+      softSkills: [
+        'Strong communication & interpersonal skills',
+        'Willingness to learn and take initiative',
+        'Basic understanding of sales/marketing is a plus',
+      ],
+      location: 'Kolkata',
+      requirements: [
+        '2–4 years of experience in SEO, digital PR, link building, or affiliate marketing.',
+        'Strong knowledge of SEO and backlink acquisition strategies.',
+        'Experience with outreach and relationship management.',
+        'Familiarity with tools such as Ahrefs, SEMrush, Moz, BuzzStream, or Pitchbox.',
+        'Understanding of affiliate marketing platforms (CJ, ShareASale, Impact, etc.).',
+        'Excellent communication, negotiation, and networking skills.',
+        'Strong analytical skills to measure campaign performance.',
+      ],
+      desiredCandidateProfile: ['Interested to learn & work with latest/upcoming technologies'],
+      naukriLink: '',
+    },
+    {
+      id: '5',
+      title: 'CRO Specialist',
+      hashtags: ['#CRO', '#BusinessIntelligence&Analytics', '##SQLFundamentals', '#Shopify'],
+      experience: '2 - 4 Years',
+      gradientColors: 'linear-gradient(-45deg, rgb(108, 50, 182), rgb(29, 160, 163))',
+      description:
+        'We are looking for a data-driven CRO Specialist to optimize website and campaign performance by improving user experience and increasing conversion rates across digital touchpoints. The role focuses on turning traffic into customers through testing, insights, and continuous optimization.',
+      responsibilities: [
+        'Plan, execute, and analyze A/B and multivariate experiments across websites and landing pages with statistically valid outcomes.',
+
+        'Identify conversion bottlenecks using funnel analysis, behavioral analytics, and AI-assisted insights.',
+
+        'Improve conversion performance across landing pages, product pages, lead forms, and checkout journeys.',
+
+        'Leverage heatmaps, session recordings, and event-level tracking to diagnose UX and friction issues.',
+
+        'Monitor and report CRO KPIs including conversion rate, experiment lift, statistical confidence, and engagement metrics.',
+
+        'Collaborate with design, development, and growth teams to implement, QA, and scale winning experiments.',
+
+        'Drive continuous optimization using structured experimentation frameworks and iterative testing cycles.',
+
+        'Maintain website content accuracy and consistency aligned with UX and conversion goals.',
+
+        'Document experiments, learnings, and insights to build a scalable CRO knowledge base.',
+      ],
+      softSkills: [
+        'Strong communication & interpersonal skills',
+        'Willingness to learn and take initiative',
+        'Basic understanding of sales/marketing is a plus',
+      ],
+      location: 'Kolkata',
+      requirements: [
+        '3+ years of hands-on experience in CRO, experimentation, growth marketing, eCommerce, or website optimization.',
+        '3+ years of working experience with HTML and CSS; ability to review and implement frontend changes.',
+        'Proven experience designing experiments, defining success metrics, and interpreting statistical results.',
+        'AI-Powered Analytics: Amplitude AI, Mixpanel Signal, Heap Illuminate',
+        'Session Replay & DX: FullStory, Content square',
+        'Personalization & AI Testing: Dynamic Yield, Mutiny, Adobe Target',
+        'Data & Experiment QA: Looker Studio, BigQuery (basic exposure), SQL fundamentals',
+        'AI-assisted UX & Copy tools exposure for experimentation and personalization',
+        'Strong analytical and statistical thinking with a test-and-learn mindset.',
+        'Ability to use AI-driven insights without blindly trusting automation.',
+        'Solid understanding of UX, behavioral psychology, and conversion frameworks.',
+        'Clear communicator with strong ownership and execution focus.',
+        'Comfortable operating in fast-paced, data-heavy environments.',
+        'CRO Tools: Optimizely, VWO, AB Tasty, Convert, Analytics & Tracking: GA4, Google Tag Manager (GTM), Hotjar, Microsoft Clarity, GA4 predictive metrics, automated insights, AI-based funnel analysis tools, Shopify, Sitefinity',
+        'Project Management: Wrike, Jira, ClickUp',
+      ],
+      desiredCandidateProfile: ['Interested to learn & work with latest/upcoming technologies'],
+      naukriLink: '',
+    },
   ];
   useEffect(() => {
     // Simulate API fetch
     const fetchJob = () => {
-      const foundJob = jobListings.find((job) => job.id === params.id);
+      const foundJob = jobListings.find(job => job.id === params.id);
       if (foundJob) {
         setJob(foundJob);
       }
@@ -424,8 +531,8 @@ export default function JobDetail({ params }: { params: { id: string } }) {
   }, [params.id]);
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
+      <div className='min-h-screen flex items-center justify-center'>
+        <div className='animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500'></div>
       </div>
     );
   }
@@ -454,24 +561,24 @@ export default function JobDetail({ params }: { params: { id: string } }) {
   ];
   return (
     <>
-      <section className="relative">
+      <section className='relative'>
         <JobDetailsBanner
           jobTitle={job.title}
-          backgroundImage="/images/apply-job.png"
+          backgroundImage='/images/apply-job.png'
           benefits={customBenefits}
-          applyButtonText="Apply Now"
-          scrollToId="applicationForm"
-          buttonanimation="ripple-btn"
+          applyButtonText='Apply Now'
+          scrollToId='applicationForm'
+          buttonanimation='ripple-btn'
         />
         {/* Job Details Content */}
         {/* className='md:pt-16 pt-12' */}
-        <div className="md:pt-[90px] pt-[70px] text-title">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
+        <div className='md:pt-[90px] pt-[70px] text-title'>
+          <div className='container mx-auto px-4'>
+            <div className='max-w-4xl mx-auto'>
               {' '}
               {/* Added max-width and mx-auto for centering */}
-              <div className="inner paragraph font-roboto text-title">
-                <p className="mb-10">
+              <div className='inner paragraph font-roboto text-title'>
+                <p className='mb-10'>
                   {' '}
                   {/* Added text-center for the description */}
                   {job.description}
@@ -479,19 +586,39 @@ export default function JobDetail({ params }: { params: { id: string } }) {
                   <br />
                   The current position requires the following skills:
                 </p>
-                {job.requirements && (
-                  <div className="flex flex-col md:flex-row gap-8">
+                {job.responsibilities && (
+                  <div className='flex flex-col md:flex-row gap-8 md:mb-[65px] mb-[30px]'>
                     {' '}
                     {/* Added gap for better spacing */}
-                    <div className="md:w-1/3">
-                      <h3 className="subheading font-source font-semibold text-title">
+                    <div className='md:w-1/3'>
+                      <h3 className='subheading font-source font-semibold text-title'>
+                        Responsibilities:
+                      </h3>
+                    </div>
+                    <div className='md:w-2/3'>
+                      <ul className='list-[circle] pl-5 text-title space-y-2 paragraph font-roboto'>
+                        {job.responsibilities.map((skill, index) => (
+                          <li className='text-title' key={index}>
+                            {skill}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                )}
+                {job.requirements && (
+                  <div className='flex flex-col md:flex-row gap-8'>
+                    {' '}
+                    {/* Added gap for better spacing */}
+                    <div className='md:w-1/3'>
+                      <h3 className='subheading font-source font-semibold text-title'>
                         Technical Skills:
                       </h3>
                     </div>
-                    <div className="md:w-2/3">
-                      <ul className="list-[circle] pl-5 text-title space-y-2 paragraph font-roboto">
+                    <div className='md:w-2/3'>
+                      <ul className='list-[circle] pl-5 text-title space-y-2 paragraph font-roboto'>
                         {job.requirements.map((skill, index) => (
-                          <li className="text-title" key={index}>
+                          <li className='text-title' key={index}>
                             {skill}
                           </li>
                         ))}
@@ -500,16 +627,16 @@ export default function JobDetail({ params }: { params: { id: string } }) {
                   </div>
                 )}
                 {job.softSkills && (
-                  <div className="flex flex-col md:flex-row gap-8 md:mt-[65px] mt-[30px]">
-                    <div className="md:w-1/3">
-                      <h3 className="subheading font-source font-semibold text-title">
+                  <div className='flex flex-col md:flex-row gap-8 md:mt-[65px] mt-[30px]'>
+                    <div className='md:w-1/3'>
+                      <h3 className='subheading font-source font-semibold text-title'>
                         Soft Skills:
                       </h3>
                     </div>
-                    <div className="md:w-2/3">
-                      <ul className="list-[circle] pl-5 text-title space-y-2 paragraph font-roboto">
+                    <div className='md:w-2/3'>
+                      <ul className='list-[circle] pl-5 text-title space-y-2 paragraph font-roboto'>
                         {job.softSkills.map((skill, index) => (
-                          <li className="text-title" key={index}>
+                          <li className='text-title' key={index}>
                             {skill}
                           </li>
                         ))}
@@ -518,16 +645,16 @@ export default function JobDetail({ params }: { params: { id: string } }) {
                   </div>
                 )}
                 {job.desiredCandidateProfile && (
-                  <div className="flex flex-col md:flex-row gap-8 md:mt-[65px] mt-[30px]">
-                    <div className="md:w-1/3">
-                      <h3 className="subheading font-source font-semibold text-title">
+                  <div className='flex flex-col md:flex-row gap-8 md:mt-[65px] mt-[30px]'>
+                    <div className='md:w-1/3'>
+                      <h3 className='subheading font-source font-semibold text-title'>
                         Desired Candidate Profile:
                       </h3>
                     </div>
-                    <div className="md:w-2/3">
-                      <ul className="list-[circle] pl-5 text-title space-y-2 paragraph font-roboto">
+                    <div className='md:w-2/3'>
+                      <ul className='list-[circle] pl-5 text-title space-y-2 paragraph font-roboto'>
                         {job.desiredCandidateProfile.map((profile, index) => (
-                          <li className="text-title" key={index}>
+                          <li className='text-title' key={index}>
                             {profile}
                           </li>
                         ))}
@@ -585,19 +712,16 @@ export default function JobDetail({ params }: { params: { id: string } }) {
                   </div>
                 )}
               </div> */}
-
-
-
               {/* Apply Div */}
-              <div className="md:pt-[90px] pt-[30px]" ref={formRef}>
+              <div className='md:pt-[90px] pt-[30px]' ref={formRef}>
                 {jobWithForm.includes(job.id) ? (
                   <div className='' id='applicationForm'>
-                    <JoinTeam title="Apply Now" jobTitle={job.title} />
+                    <JoinTeam title='Apply Now' jobTitle={job.title} />
                   </div>
-                  // <JoinTeam title="Apply Now" jobTitle={job.title} />
-                ) : jobWithFormAndButton.includes(job.id) ? (
+                ) : // <JoinTeam title="Apply Now" jobTitle={job.title} />
+                jobWithFormAndButton.includes(job.id) ? (
                   <>
-                    <div className="flex flex-col sm:flex-row gap-10 justify-center items-center md:mb-16 mb-[0px] md:pt-14 pt-[30px]">
+                    <div className='flex flex-col sm:flex-row gap-10 justify-center items-center md:mb-16 mb-[0px] md:pt-14 pt-[30px]'>
                       {/* <button
                         className="ripple-btn min-h-[40px] min-w-[280px] bg-green-btn text-primary-white paragraph font-source py-3 px-6 rounded-md transition-colors"
                         onClick={(e: React.MouseEvent<HTMLButtonElement>) =>
@@ -607,28 +731,36 @@ export default function JobDetail({ params }: { params: { id: string } }) {
                         Apply via Naukri.com
                       </button> */}
                       <button
-                        className="ripple-btn min-h-[40px] min-w-[280px] bg-green-btn text-primary-white paragraph font-source py-3 px-6 rounded-md transition-colors"
+                        className='ripple-btn min-h-[40px] min-w-[280px] bg-green-btn text-primary-white paragraph font-source py-3 px-6 rounded-md transition-colors'
                         onClick={() => formRef.current?.scrollIntoView({ behavior: 'smooth' })}
                       >
                         Apply Now
                       </button>
                     </div>
-                    <div className="join-team-section" id='applicationForm'>
-                      <JoinTeam title="Apply Now" className="md:pt-14 pt-[30px]" jobTitle={job.title} />
+                    <div className='join-team-section' id='applicationForm'>
+                      <JoinTeam
+                        title='Apply Now'
+                        className='md:pt-14 pt-[30px]'
+                        jobTitle={job.title}
+                      />
                     </div>
                   </>
                 ) : jobWithOneButtonAndForm.includes(job.id) ? (
                   <>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center md:mb-16 mb-[30px] md:pt-[90px] pt-[30px]">
+                    <div className='flex flex-col sm:flex-row gap-4 justify-center items-center md:mb-16 mb-[30px] md:pt-[90px] pt-[30px]'>
                       <button
-                        className="ripple-btn min-h-[40px] md:ml-[32px] min-w-[280px] bg-green-btn text-primary-white paragraph font-source py-3 px-6 rounded-md transition-colors"
+                        className='ripple-btn min-h-[40px] md:ml-[32px] min-w-[280px] bg-green-btn text-primary-white paragraph font-source py-3 px-6 rounded-md transition-colors'
                         onClick={() => formRef.current?.scrollIntoView({ behavior: 'smooth' })}
                       >
                         Apply Now
                       </button>
                     </div>
-                    <div className="join-team-section" id='applicationForm'>
-                      <JoinTeam title="Apply Now" className="md:pt-8 pt-[30px]" jobTitle={job.title} />
+                    <div className='join-team-section' id='applicationForm'>
+                      <JoinTeam
+                        title='Apply Now'
+                        className='md:pt-8 pt-[30px]'
+                        jobTitle={job.title}
+                      />
                     </div>
                   </>
                 ) : (
@@ -642,9 +774,13 @@ export default function JobDetail({ params }: { params: { id: string } }) {
                   //     Apply via Naukri.com
                   //   </button>
                   // </div>
-                  <div className="join-team-section" id='applicationForm'>
-                      <JoinTeam title="Apply Now" className="md:pt-14 pt-[30px]" jobTitle={job.title} />
-                    </div>
+                  <div className='join-team-section' id='applicationForm'>
+                    <JoinTeam
+                      title='Apply Now'
+                      className='md:pt-14 pt-[30px]'
+                      jobTitle={job.title}
+                    />
+                  </div>
                 )}
               </div>
             </div>

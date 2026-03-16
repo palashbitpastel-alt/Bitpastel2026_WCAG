@@ -146,7 +146,7 @@ const JobDetailsBanner: React.FC<JobDetailsBannerProps> = ({
             </div>
 
             <button
-              className={`${buttonanimation} btn leading-normal bg-green-btn md:w-auto w-[100%] text-primary-white mt-[25px] font-roboto`}
+              className={` new-btn-design`}
               onClick={() => scrollToSection(scrollToId)}
             >
               {applyButtonText}

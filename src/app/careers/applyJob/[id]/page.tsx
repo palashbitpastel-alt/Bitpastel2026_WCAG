@@ -731,7 +731,7 @@ export default function JobDetail ({ params }: { params: { id: string } }) {
                         Apply via Naukri.com
                       </button> */}
                       <button
-                        className='ripple-btn min-h-[40px] min-w-[280px] bg-green-btn text-primary-white paragraph font-source py-3 px-6 rounded-md transition-colors'
+                        className='new-btn-design'
                         onClick={() => formRef.current?.scrollIntoView({ behavior: 'smooth' })}
                       >
                         Apply Now
@@ -749,7 +749,7 @@ export default function JobDetail ({ params }: { params: { id: string } }) {
                   <>
                     <div className='flex flex-col sm:flex-row gap-4 justify-center items-center md:mb-16 mb-[30px] md:pt-[90px] pt-[30px]'>
                       <button
-                        className='ripple-btn min-h-[40px] md:ml-[32px] min-w-[280px] bg-green-btn text-primary-white paragraph font-source py-3 px-6 rounded-md transition-colors'
+                        className='new-btn-design'
                         onClick={() => formRef.current?.scrollIntoView({ behavior: 'smooth' })}
                       >
                         Apply Now

@@ -96,16 +96,16 @@ const HeroSection: React.FC<HerSectionProps> = ({ openModal }) => {
                 </div>
               ))}
             </div>
-            <div>
-              <Link
-                prefetch={true}
-                className='btn leading-normal bg-green-btn md:w-auto w-[100%] mt-[15px] inline-block font-roboto content-center'
-                href="#"
-                scroll={false}
+            <div className='button-area-main'>
+              <button
+                // prefetch={true}
+                className='new-btn-design-full mt-[15px]'
+                // href="#"
+                // scroll={false}
                 onClick={openModal}
               >
                 Let’s Work Together
-              </Link>
+              </button>
 
             </div>
             {/* <button

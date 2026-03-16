@@ -86,7 +86,7 @@ export default function Card({
         <div className="pt-4 flex-shrink-0 text-center">
           <button 
             onClick={onApply}
-            className="min-w-[116px] card-button rounded-[4px] bg-green-btn text-primary-white py-2 px-5  w-auto mx-auto"
+            className="new-btn-design"
           >
             Apply
           </button>

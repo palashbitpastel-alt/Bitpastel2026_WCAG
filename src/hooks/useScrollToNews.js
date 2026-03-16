@@ -84,10 +84,7 @@ export default function useScrollToNews() {
       scrollToElement('stories');
       if (typeof window !== 'undefined') {
         try {
-          window.history.replaceState(null, '', '#stories');
-          setTimeout(() => {
-            window.history.replaceState(null, '', '/');
-          }, 800);
+          window.history.replaceState(null, '', '/#stories');
         } catch (e) {
           // noop
         }

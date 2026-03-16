@@ -45,7 +45,7 @@ const scrollToSection = (id: string) => {
           <div className="partner-hero-wrapper grid md:grid-cols-2 grid-cols-1 items-center md:text-left text-center md:p-[0] p-[15px]">
             <div className='partner-hero-title md:p-[0] py-[25px]'>
                <h1 className='font-source font-[700] pb-[25px] title text-title'>Bitpastel Partner Program</h1>
-               <button className='partner-btn bg-green-btn font-roboto' onClick={() => scrollToSection('become-a-partner-form') }> Refer & Earn</button>
+               <button className='new-btn-design' onClick={() => scrollToSection('become-a-partner-form') }>Refer & Earn</button>
             </div>
             <div className=' md:pl-[30px] md:order-last order-first' >
             <img src="/images/partner_ban_new.jpg" alt="partner image" className='rounded-[10px]'/>

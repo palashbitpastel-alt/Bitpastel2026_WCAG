@@ -385,7 +385,7 @@ const OurProjects = () => {
                     {/* </Link> */}
                     <button
                       onClick={() => openModal(project)}
-                      className="min-w-[96px] card-button rounded-[4px] bg-green-btn text-primary-white py-2 px-5 w-auto mx-auto hover:bg-opacity-90 transition-opacity button-hover"
+                      className="new-btn-design card-button min-w-[96px] w-auto mx-auto"
                     >
                       View Project
                     </button>

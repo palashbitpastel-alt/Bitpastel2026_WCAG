@@ -103,7 +103,7 @@ export default function RootLayout({
         </noscript>
 
         <HeaderOptimized />
-        <main className="flex-grow">
+        <main className="flex-grow pb-[88px] lg:pb-0">
           {children}
         </main>
         <FooterOptimized />

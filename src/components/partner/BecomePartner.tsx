@@ -353,7 +353,7 @@ const BecomePartner = () => {
                   {errors.message && <span className="error-text">{errors.message}</span>}
                 </div>
                 <button
-                  className="mt-[30px] bg-green-btn px-[20px] min-w-[140px] text-primary-white min-h-[40px] rounded disabled:opacity-[0.65]"
+                  className="new-btn-design mt-[30px] min-w-[140px]"
                   type="submit"
                   disabled={isSubmitting || !isFormValid}
                 >

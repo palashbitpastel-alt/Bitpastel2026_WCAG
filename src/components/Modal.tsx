@@ -699,9 +699,8 @@ const Modal: React.FC<ModalProps> = ({ open, setIsModalOpen, children }) => {
                           <button
                             type="submit"
                             disabled={isSubmitting || !captchaToken}
-                            className={`w-full btn bg-green-btn text-primary-white transition-colors duration-200 ${
-                              !captchaToken ? 'opacity-[0.65] cursor-not-allowed' : ''
-                            }`}
+                            className={`new-btn-design-full mb-center ${!captchaToken ? 'opacity-[0.65] cursor-not-allowed' : ''}`}
+                            style={{width: '100%'}}
                           >
                             Lets Work Together
                           </button>
@@ -720,7 +719,7 @@ const Modal: React.FC<ModalProps> = ({ open, setIsModalOpen, children }) => {
                             }
 
                             type="button"
-                            className="w-full text-[#52d09c] flex justify-center items-center mt-5 border-[1px] h-[40px] rounded-[4px] border-[#52d09c] hover:bg-green-btn hover:text-primary-white transition-all duration-300"
+                            className="w-full text-[#52d09c] flex justify-center items-center mt-5 border-[1px] h-[40px] rounded-[100px] border-[#52d09c] hover:bg-green-btn hover:text-primary-white transition-all duration-300 border-radius-[100px]"
                           >
                             Chat with Us
                           </Link>

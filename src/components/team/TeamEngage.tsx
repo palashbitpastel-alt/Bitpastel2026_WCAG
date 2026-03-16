@@ -59,7 +59,7 @@ const TeamEngage = () => {
                 open positions.
               </p>
               <button 
-                className="btn font-inter mt-6 h-auto font-[400] bg-green-btn" 
+                className="new-btn-design-full mt-6" 
                onClick={handleFindOpportunities}
               >
                 Find Opportunities

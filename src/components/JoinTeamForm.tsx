@@ -634,9 +634,7 @@ export default function JoinTeam({ title = 'Join Our Team', className, jobTitle 
           )}
           <button
             type="submit"
-            className={`bg-green-btn text-primary-white font-medium py-2 px-28 rounded transition duration-200 text-center ${
-              !isFormValid || !captchaToken ? 'opacity-[0.65] cursor-not-allowed' : ''
-            }`}
+            className={`new-btn-design w-full ${!isFormValid || !captchaToken ? 'opacity-[0.65] cursor-not-allowed' : ''}`}
             disabled={!isFormValid || !captchaToken}
           >
             Send

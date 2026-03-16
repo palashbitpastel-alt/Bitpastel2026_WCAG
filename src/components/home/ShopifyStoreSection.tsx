@@ -99,7 +99,7 @@ const ShopifyStoreSection = () => {
     <section className="md:pt-[73px] pt-[60px]">
       <div className="container mx-auto mb-12 px-4  ">
         {/* <div className="flex flex-col lg:flex-row items-center gap-12 md:md:rounded-[40px] md:p-8 px-4 pt-4 pb-12 bg-primary-mint md:text-left text-center "> */}
-        <div className="flex flex-col lg:flex-row items-center md:gap-0 gap-12 md:rounded-[40px] rounded-[20px] bg-primary-mint md:text-left text-center pt-[20px] px-[20px] pb-[40px] md:p-0 ">
+        <div className="flex flex-col lg:flex-row items-center md:gap-0 gap-10 md:rounded-[40px] rounded-[20px] bg-primary-mint md:text-left text-center pt-[20px] px-[20px] pb-[40px] md:p-0 ">
           <div className="lg:w-1/2 w-full xl:px-[55px] md:pl-[40px] md:pr-[20px] md:pt-[30px] md:pb-[10px]">
             <div className="xl:mb-[20px] mb-[10px] mobile-margin-bottom">
               <Image

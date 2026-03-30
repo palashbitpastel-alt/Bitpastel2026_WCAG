@@ -110,7 +110,7 @@ const FAQSection: React.FC<FAQSectionProps> = ({ openModal }) => {
                                         <div className="px-4 pb-4">
                                             <p
                                                 className={`md:text-[16px] lg:text-[18px] responsive-subtitle ${
-                                                    isActive ? 'text-[#FFF]' : 'text-black'
+                                                    isActive ? 'text-[#FFF]' : 'text-[#111827]'
                                                 } text-[18px] leading-[26px] w-[75%] font-roboto font-[400]`}
                                             >
                                                 {item.description}

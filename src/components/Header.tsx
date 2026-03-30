@@ -226,21 +226,21 @@ const Header = ({ forceModalOpen = false, onModalClose }: HomePageProps) => {
               paddingRight: "10px",
             }}
           >
-            <Link href="/" prefetch={true} onClick={handleLogoClick}>
-              <Image src="/images/icons/bp_dark_logo.svg" alt="Bitpastel Logo" width={101} height={28} priority />
+            <Link href="/" prefetch={true} onClick={handleLogoClick} className="flex items-center h-full">
+              <Image src="/images/icons/bp_dark_logo.svg" alt="Bitpastel Logo" width={101} height={28} priority className="block mt-[2px]" />
             </Link>
 
             <nav className="flex space-x-8 items-center">
               <button
                 onClick={(e) => handleLinkClick(e, "services")}
-                className={`nav-dark ${activeSection === "services" ? "is-active" : ""} ${pathname === "/horizon" ? "horizon-nav-menu" : ""}`}
+                className={`nav-dark ${activeSection === "services" ? "is-active" : ""} `}
                 style={{ fontFamily: "Roboto", fontSize: "16px", fontWeight: 400 }}
               >
                 Services
               </button>
               <button
                 onClick={scrollToNews}
-                className={`nav-dark ${activeSection === "stories" ? "is-active" : ""} ${pathname === "/horizon" ? "horizon-nav-menu" : ""}`}
+                className={`nav-dark ${activeSection === "stories" ? "is-active" : ""} `}
                 style={{ fontFamily: "Roboto", fontSize: "16px", fontWeight: 400 }}
               >
                 Stories
@@ -249,14 +249,14 @@ const Header = ({ forceModalOpen = false, onModalClose }: HomePageProps) => {
                 prefetch={true}
                 href="/culture"
                 onClick={handleCultureClick}
-                className={`nav-dark ${pathname === "/culture" ? "is-active" : ""} ${pathname === "/horizon" ? "horizon-nav-menu" : ""}`}
+                className={`nav-dark ${pathname === "/culture" ? "is-active" : ""} `}
                 style={{ fontFamily: "Roboto", fontSize: "16px", fontWeight: 400 }}
               >
                 Culture
               </Link>
               <Link
                 prefetch={true}
-                className={`new-btn-design flex items-center justify-center transition-all duration-200 ${pathname === "/horizon" ? "unfilled_button" : ""}`}
+                className={`new-btn-design flex items-center justify-center transition-all duration-200 `}
                 href="#"
                 scroll={false}
                 onClick={(e) => { e.preventDefault(); handleChatClick(); }}

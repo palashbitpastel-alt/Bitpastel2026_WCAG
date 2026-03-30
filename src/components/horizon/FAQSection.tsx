@@ -85,7 +85,7 @@ const FAQSection: React.FC<FAQSectionProps> = ({ openModal }) => {
                                     >
                                         <span
                                             className={`accordion-item-title text-[20px] font-[700] font-source responsive-h3 ${
-                                                isActive ? 'text-white mt-[6px]' : 'text-[#111827]'
+                                                isActive ? 'text-[#FFF] mt-[6px]' : 'text-[#111827]'
                                             }`}
                                         >
                                             {item.title}
@@ -110,7 +110,7 @@ const FAQSection: React.FC<FAQSectionProps> = ({ openModal }) => {
                                         <div className="px-4 pb-4">
                                             <p
                                                 className={`md:text-[16px] lg:text-[18px] responsive-subtitle ${
-                                                    isActive ? 'text-white' : 'text-black'
+                                                    isActive ? 'text-[#FFF]' : 'text-black'
                                                 } text-[18px] leading-[26px] w-[75%] font-roboto font-[400]`}
                                             >
                                                 {item.description}

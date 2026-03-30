@@ -36,7 +36,7 @@ const TransformSection: React.FC<TransformSectionProps> = ({ openModal }) => {
 
                             <div className='flex lg:justify-start md:justify-center items-center gap-2'>
                                 <button
-                                    className="btn leading-normal bg-white-btn bg-green-text md:w-auto w-[100%] mt-[15px] font-roboto btn-hover"
+                                    className="btn leading-normal bg-white-btn bg-green-text md:w-auto w-[100%] mt-[15px] font-roboto btn-hover rounded-[100px]"
                                     // onClick={() => setIsModalOpen(true)}
                                     onClick={() => window.open('https://calendly.com/ayanh/meet-ayan', '_blank')}
                                 >

@@ -44,7 +44,7 @@ const HeroSection: React.FC<HerSectionProps> = ({ openModal }) => {
               <span>theme with zero hassle.</span>
             </h4>
 
-            <div className="flex justify-center items-center gap-4 hero-btn-area">
+            {/* <div className="flex justify-center items-center gap-4 hero-btn-area">
               <button
                 className="btn leading-normal bg-white-btn bg-green-text md:w-auto w-[100%] mt-[15px] font-roboto btn-hover"
                 onClick={() => {
@@ -61,6 +61,30 @@ const HeroSection: React.FC<HerSectionProps> = ({ openModal }) => {
                 onClick={() => window.open('https://calendly.com/ayanh/meet-ayan', '_blank')}
               >
                 Book Free Consultation
+              </button>
+            </div> */}
+            <div className="flex justify-center md:justify-center items-center gap-[18px] hero-btn-area">
+              <button
+                className="btn leading-normal bg-white-btn bg-green-text md:w-auto w-full mt-0 font-roboto btn-hover !rounded-full !min-w-[244px]"
+                onClick={() => {
+                  const element = document.getElementById('flexible-horizon');
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
+                Explore Horizon
+              </button>
+              <button
+                className="btn leading-normal bg-transparent-btn md:w-auto w-full mt-0 font-roboto btn-hover !rounded-full !min-w-[244px]"
+                onClick={() =>
+                  window.open(
+                    'https://calendly.com/ayanh/meet-ayan',
+                    '_blank'
+                  )
+                }
+              >
+                Speed Optimisation Service
               </button>
             </div>
             <div></div>

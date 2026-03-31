@@ -279,11 +279,12 @@ const Header = ({ forceModalOpen = false, onModalClose }: HomePageProps) => {
           >
             <Link href="/" prefetch={true} onClick={handleLogoClick}>
               <Image
-                src={isScrolled ? "/images/icons/7a.png" : "/images/icons/bp_logo_mob_white.svg"}
+                src={isScrolled ? "/images/icons/mb_green.svg" : "/images/icons/mb_dark.svg"}
                 alt="Bitpastel Logo"
                 width={101}
                 height={28}
                 priority
+                // className="header-mob-logo"
               />
             </Link>
           </div>

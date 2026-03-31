@@ -2817,3 +2817,7 @@ a.horizon-nav-menu::after {
   cursor: pointer;
   width: 200px;
 }
+.header-mob-logo
+{
+  height: 28px;
+}

@@ -82,6 +82,7 @@ import ShopifyClientImage from '../../../public/images/shopify_client_image1.web
 import ShopifyClientImage2 from '../../../public/images/shopify_client_image2.webp';
 import ShopifyClientImage3 from '../../../public/images/shopify_client_image3-1.webp';
 import ShopifyImageBottom from '../../../public/images/icons/Badge_Select_blk_transp.svg'
+import Link from 'next/link';
 //import Button from '@/components/ui/Button';
 const ShopifyStoreSection = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -128,6 +129,7 @@ const ShopifyStoreSection = () => {
               contributes to better conversion rates.
             </p>
             <div className="xl:mb-[20px] mt-[30px] mobile-margin-top">
+              <Link href="https://www.shopify.com/partners/directory/partner/bitpastel3" target="_blank">
               <Image
                 src={ShopifyImageBottom}
                 alt="Shopify Select Partner"
@@ -135,6 +137,7 @@ const ShopifyStoreSection = () => {
                 height={53}
                 className="object-contain object-left mb-center h-[48px]"
               />
+              </Link>
             </div>
         
 

@@ -250,11 +250,19 @@ const Header = ({ forceModalOpen = false, onModalClose }: HomePageProps) => {
     return () => window.removeEventListener("popstate", onPopState)
   }, [])
 
-  // Listen for the custom event dispatched by /free-quote/page.tsx so direct
-  // visits to /free-quote also open the modal without re-pushing history.
+  // Listen for the custom event dispatched by /free-quote/page.tsx and by the
+  // mobile FloatingFooter's Contact icon. Pick up the prev URL from
+  // window.history.state if a sibling component pushed /free-quote with it,
+  // so closing the modal returns the user to where they came from.
   useEffect(() => {
     if (typeof window === "undefined") return
-    const onOpen = () => setIsModalOpen(true)
+    const onOpen = () => {
+      if (!freeQuotePrevUrlRef.current) {
+        const prev = (window.history.state as { prev?: string } | null)?.prev
+        if (prev) freeQuotePrevUrlRef.current = prev
+      }
+      setIsModalOpen(true)
+    }
     window.addEventListener("bp:open-free-quote", onOpen as EventListener)
     return () =>
       window.removeEventListener("bp:open-free-quote", onOpen as EventListener)

@@ -56,7 +56,7 @@ const FloatingFooter = () => {
     if (section === 'stories') return isHomePage && activeSection === 'stories';
     if (section === 'culture') return pathname === '/culture';
     if (section === 'careers') return pathname?.startsWith('/careers') ?? false;
-    if (section === 'contact') return pathname === '/contact';
+    if (section === 'contact') return pathname === '/contact' || pathname === '/free-quote';
     return false;
   };
 
@@ -70,6 +70,19 @@ const FloatingFooter = () => {
       window.history.replaceState(null, '', '/#services');
     }
   }, [isHomePage, router]);
+
+  // Open the global Free Quote modal in place (same UX as desktop "Chat with Us"),
+  // reflecting the URL as /free-quote without a Next.js navigation.
+  const handleContactClick = useCallback((e: React.MouseEvent) => {
+    e.preventDefault();
+    if (typeof window === 'undefined') return;
+    if (window.location.pathname !== '/free-quote') {
+      const prev =
+        window.location.pathname + window.location.search + window.location.hash;
+      window.history.pushState({ bpFreeQuote: true, prev }, '', '/free-quote');
+    }
+    window.dispatchEvent(new CustomEvent('bp:open-free-quote'));
+  }, []);
 
   const c = (section: string) => isActive(section) ? TEAL : GRAY;
   const textCls = (section: string) => `text-xs mt-1 ${isActive(section) ? 'text-teal-600' : 'text-gray-400'}`;
@@ -131,12 +144,17 @@ const FloatingFooter = () => {
 
         {/* Contact */}
         <div className="nav-item flex flex-col items-center">
-          <Link href="/contact" className="flex flex-col items-center">
+          <button
+            type="button"
+            onClick={handleContactClick}
+            className="flex flex-col items-center"
+            aria-label="Open Get a Free Quote"
+          >
             <svg fill="none" height="20" viewBox="0 0 23 23" width="20">
               <path d="M21.9577 16.7225V19.8839C21.9589 20.1774 21.8988 20.4679 21.7812 20.7368C21.6637 21.0057 21.4912 21.247 21.275 21.4454C21.0587 21.6438 20.8034 21.7949 20.5254 21.8889C20.2474 21.9829 19.9528 22.0179 19.6605 21.9914C16.4178 21.6391 13.303 20.5311 10.5664 18.7563C8.02024 17.1384 5.86158 14.9798 4.24367 12.4336C2.46275 9.68454 1.35445 6.55458 1.00855 3.29735C0.98222 3.00594 1.01685 2.71225 1.11024 2.43496C1.20364 2.15767 1.35374 1.90287 1.551 1.68677C1.74827 1.47067 1.98837 1.29802 2.25601 1.1798C2.52366 1.06157 2.81299 1.00038 3.10558 1.0001H6.26693C6.77833 0.995069 7.27412 1.17617 7.66188 1.50964C8.04964 1.84311 8.30292 2.30621 8.37449 2.81261C8.50792 3.82431 8.75538 4.81767 9.11214 5.77374C9.25392 6.15091 9.2846 6.56082 9.20056 6.9549C9.11651 7.34898 8.92126 7.71071 8.63794 7.99722L7.29963 9.33552C8.79975 11.9737 10.9841 14.1581 13.6223 15.6582L14.9606 14.3199C15.2471 14.0366 15.6089 13.8413 16.0029 13.7573C16.397 13.6732 16.8069 13.7039 17.1841 13.8457C18.1402 14.2025 19.1335 14.4499 20.1452 14.5834C20.6571 14.6556 21.1246 14.9134 21.4588 15.3078C21.793 15.7022 21.9706 16.2057 21.9577 16.7225Z" stroke={c('contact')} strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
             </svg>
             <span className={textCls('contact')}>Contact</span>
-          </Link>
+          </button>
         </div>
 
       </div>

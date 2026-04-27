@@ -25,11 +25,18 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
   const isNavigating = useRef(false);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(forceModalOpen);
   const {scrollToNews} = useScrollToNews();
+  // Tracks the URL we should restore when the Free Quote modal is closed.
+  const freeQuotePrevUrlRef = useRef<string | null>(null);
   useEffect(() => {
     setIsClient(true);
   }, []);
 
   useEffect(() => {
+    // Skip the auto-close while on the synthetic /free-quote URL we push when
+    // the mobile Contact icon is tapped — usePathname won't reflect the
+    // pushState, so this effect is naturally inert there, but keep an explicit
+    // guard for safety in case Next ever starts tracking it.
+    if (pathname === '/free-quote') return;
     setIsModalOpen(false);
   }, [pathname]);
 
@@ -211,10 +218,49 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
     setIsModalOpen(true)
   }
 
+  // Open the Free Quote modal and reflect the URL as /free-quote in place
+  // (matches the desktop "Chat with Us" UX in Header).
+  const handleContactClick = useCallback(() => {
+    if (typeof window !== 'undefined') {
+      const currentUrl =
+        window.location.pathname + window.location.search + window.location.hash;
+      if (window.location.pathname !== '/free-quote') {
+        freeQuotePrevUrlRef.current = currentUrl;
+        window.history.pushState({ bpFreeQuote: true, prev: currentUrl }, '', '/free-quote');
+      }
+    }
+    setIsModalOpen(true);
+  }, []);
+
   const handleModalClose = () => {
     setIsModalOpen(false);
+    if (typeof window !== 'undefined' && window.location.pathname === '/free-quote') {
+      // Return to the page the user came from, preserving scroll position.
+      if (freeQuotePrevUrlRef.current) {
+        window.history.back();
+      } else {
+        // Direct visit to /free-quote — fall back gracefully.
+        router.replace('/');
+      }
+      freeQuotePrevUrlRef.current = null;
+    }
     onModalClose?.();
   };
+
+  // Keep modal state in sync with browser back/forward.
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const onPopState = () => {
+      if (window.location.pathname === '/free-quote') {
+        setIsModalOpen(true);
+      } else {
+        setIsModalOpen(false);
+        freeQuotePrevUrlRef.current = null;
+      }
+    };
+    window.addEventListener('popstate', onPopState);
+    return () => window.removeEventListener('popstate', onPopState);
+  }, []);
 
   return (
     <>
@@ -838,9 +884,7 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
             <div className={`nav-item flex flex-col items-center`}>
               <button
                 className={`flex flex-col items-center ${isModalOpen ? 'modal-open' : ''}`}
-                onClick={() => {
-                  setIsModalOpen(true);
-                }}
+                onClick={handleContactClick}
               >
                 <svg
                   fill="none"
@@ -864,7 +908,20 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
           </div>
         </div>
       </footer>
-      <Modal open={isModalOpen} setIsModalOpen={setIsModalOpen}  />
+      <Modal
+        open={isModalOpen}
+        setIsModalOpen={((value) => {
+          const next =
+            typeof value === 'function'
+              ? (value as (prev: boolean) => boolean)(isModalOpen)
+              : value;
+          if (next) {
+            setIsModalOpen(true);
+          } else {
+            handleModalClose();
+          }
+        }) as React.Dispatch<React.SetStateAction<boolean>>}
+      />
       <Whatsapp />
     </>
   );

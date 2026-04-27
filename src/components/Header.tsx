@@ -53,9 +53,14 @@ const Header = ({ forceModalOpen = false, onModalClose }: HomePageProps) => {
 
   // Refs for navigation and scroll handling
   const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+  // Tracks the URL we should restore when closing the /free-quote modal
+  const freeQuotePrevUrlRef = useRef<string | null>(null)
 
-  // Close modal on route change
+  // Close modal on route change (but ignore the synthetic /free-quote path
+  // we push via window.history — usePathname won't update for plain pushState,
+  // so this effect is naturally inert during /free-quote)
   useEffect(() => {
+    if (pathname === "/free-quote") return
     setIsModalOpen(false)
   }, [pathname])
 
@@ -194,14 +199,71 @@ const Header = ({ forceModalOpen = false, onModalClose }: HomePageProps) => {
     [pathname, router],
   )
 
-  // Handle chat button click
+  // Handle chat button click — opens the global "Free Quote" modal and reflects
+  // the URL as /free-quote without triggering a Next.js navigation, so the
+  // current page stays mounted underneath the modal.
   const handleChatClick = useCallback(() => {
+    if (typeof window !== "undefined") {
+      const currentUrl =
+        window.location.pathname + window.location.search + window.location.hash
+      if (window.location.pathname !== "/free-quote") {
+        freeQuotePrevUrlRef.current = currentUrl
+        window.history.pushState(
+          { bpFreeQuote: true, prev: currentUrl },
+          "",
+          "/free-quote"
+        )
+      }
+    }
     setIsModalOpen(true)
   }, [])
-  const handleModalClose = () => {
-    setIsModalOpen(false);
-    onModalClose?.();
-  };
+
+  const handleModalClose = useCallback(() => {
+    setIsModalOpen(false)
+    if (typeof window !== "undefined" && window.location.pathname === "/free-quote") {
+      // Returning to the page the user came from. history.back() preserves
+      // scroll position and avoids the previous bug where closing redirected to "/".
+      if (freeQuotePrevUrlRef.current) {
+        window.history.back()
+      } else {
+        // Direct visit to /free-quote — fall back gracefully.
+        router.replace("/")
+      }
+      freeQuotePrevUrlRef.current = null
+    }
+    onModalClose?.()
+  }, [router, onModalClose])
+
+  // If the user navigates back/forward while the modal is open, sync the modal
+  // state with the URL.
+  useEffect(() => {
+    if (typeof window === "undefined") return
+    const onPopState = () => {
+      if (window.location.pathname === "/free-quote") {
+        setIsModalOpen(true)
+      } else {
+        setIsModalOpen(false)
+        freeQuotePrevUrlRef.current = null
+      }
+    }
+    window.addEventListener("popstate", onPopState)
+    return () => window.removeEventListener("popstate", onPopState)
+  }, [])
+
+  // Listen for the custom event dispatched by /free-quote/page.tsx so direct
+  // visits to /free-quote also open the modal without re-pushing history.
+  useEffect(() => {
+    if (typeof window === "undefined") return
+    const onOpen = () => setIsModalOpen(true)
+    window.addEventListener("bp:open-free-quote", onOpen as EventListener)
+    return () =>
+      window.removeEventListener("bp:open-free-quote", onOpen as EventListener)
+  }, [])
+
+  // If the parent forces the modal open (e.g. /free-quote layout), honor it.
+  useEffect(() => {
+    if (forceModalOpen) setIsModalOpen(true)
+  }, [forceModalOpen])
   // Function to scroll to news section
 
 
@@ -292,7 +354,20 @@ const Header = ({ forceModalOpen = false, onModalClose }: HomePageProps) => {
         </div>
       </header>
 
-      <Modal open={isModalOpen} setIsModalOpen={setIsModalOpen} />
+      <Modal
+        open={isModalOpen}
+        setIsModalOpen={((value) => {
+          const next =
+            typeof value === "function"
+              ? (value as (prev: boolean) => boolean)(isModalOpen)
+              : value
+          if (next) {
+            setIsModalOpen(true)
+          } else {
+            handleModalClose()
+          }
+        }) as React.Dispatch<React.SetStateAction<boolean>>}
+      />
     </>
   )
 }

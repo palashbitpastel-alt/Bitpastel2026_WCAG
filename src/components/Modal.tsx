@@ -45,6 +45,7 @@ const ChevronDown = ({ className }: { className?: string }) => (
 );
 
 const services = [
+  'Store Speed Optimization',
   'Shopify Store',
   'Website',
   'Mobile App',

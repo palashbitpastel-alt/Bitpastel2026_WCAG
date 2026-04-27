@@ -13,6 +13,7 @@ out/
 build/
 dist/
 .a5c/
+.claude/
 
 DONE_CRITERIA.md
 AI_CONTRACT.md

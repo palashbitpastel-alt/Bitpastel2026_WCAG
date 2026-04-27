@@ -36,7 +36,7 @@
     "postcss": "^8.5.6",
     "prettier": "^3.5.3",
     "tailwindcss": "^3.4.19",
-    "typescript": "^5",
+    "typescript": "^5.9.3",
     "webpack-bundle-analyzer": "^4.10.2"
   },
   "description": "A modern Next.js 14 application built with TypeScript and Tailwind CSS.",

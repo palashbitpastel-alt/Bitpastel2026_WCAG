@@ -24,32 +24,12 @@ import CtaSection from '@/components/home/CtaSection';
 import Modal from '@/components/Modal';
 import SnowfallAnimation from '@/components/SnowfallAnimation';
 
-interface HomePageProps {
-  forceModalOpen?: boolean;
-  onModalClose?: () => void;
-}
-
-const HomePage: React.FC<HomePageProps> = ({ forceModalOpen = false, onModalClose }) => {
-
-
-  const [isModalOpen, setIsModalOpen] = useState<boolean>(forceModalOpen);
-
-
-  // useEffect(() => {
-  //   setIsModalOpen(forceModalOpen);
-  // }, [forceModalOpen]);
+const HomePage = () => {
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
   const openModal = () => {
-    setIsModalOpen(true)
-  }
-
-  const handleModalClose = () => {
-    setIsModalOpen(false);
-    onModalClose?.();
+    setIsModalOpen(true);
   };
-
-
-
 
 
   return (

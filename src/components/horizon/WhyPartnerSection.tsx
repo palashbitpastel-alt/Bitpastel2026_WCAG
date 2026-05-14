@@ -1,7 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 import { useState } from 'react';
-import Modal from '@/components/Modal';
+import dynamic from 'next/dynamic';
+const Modal = dynamic(() => import('@/components/Modal'), { ssr: false });
 import Link from 'next/link';
 
 interface WhyPartnerSectionProps {
@@ -26,7 +27,7 @@ const WhyPartnerSection: React.FC<WhyPartnerSectionProps> = ({ openModal }) => {
             id: 'theme',
             title: 'Theme Customisation',
             description: 'Experts in horizon theme customisation',
-            icon: '/images/ThemeCustomization.png',
+            icon: '/images/ThemeCustomization.webp',
         }
         ,
         {

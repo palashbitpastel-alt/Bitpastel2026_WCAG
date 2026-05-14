@@ -81,14 +81,6 @@ export default function RootLayout({
         </Script>
 
 
-        
-        {/* ✅ Fixed preload link - removed incorrect onLoad handler */}
-        <link
-          rel="preload"
-          href="/styles.1437268a5814c5fb.css"
-          as="style"
-        />
-        <link rel="stylesheet" href="/styles.1437268a5814c5fb.css" />
       </head>
       <body className="min-h-screen flex flex-col">
         {/* ✅ Google Tag Manager (noscript) - should be right after opening body tag */}

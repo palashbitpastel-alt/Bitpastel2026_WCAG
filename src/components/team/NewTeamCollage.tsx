@@ -254,7 +254,7 @@ const NewTeamCollage = () => {
             <img
               alt="Award & Recognition"
               className="lazy w-full"
-              src="/images/cover_15-07-2024.png"
+              src="/images/cover_15-07-2024.webp"
               height="1000"
               width="700"
             />

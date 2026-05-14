@@ -15,7 +15,7 @@ const TransformSection: React.FC<TransformSectionProps> = ({ openModal }) => {
                         className="absolute inset-0 bg-cover rounded-[20px] md:mx-4 bg-[position:60%_20%] bg-no-repeat z-[-1] background-image"
                         style={{
                             backgroundImage: `
-            url('/images/transformsectionbackground.png')
+            url('/images/transformsectionbackground.webp')
           `,
                         }}
                     ></div>
@@ -23,13 +23,13 @@ const TransformSection: React.FC<TransformSectionProps> = ({ openModal }) => {
                     <div className='grid  md:grid-cols-1 lg:grid-cols-2 gap-8'>
                         <div className="md:h-full content-center mx-auto md:max-w-[100%] max-w-[310px]">
                             <div className="flex md:justify-center lg:justify-start items-center mb-3 horinzon-logo-area-small">
-                                <img src="/images/horizon_logo.png" alt="Horizon logo" width={146} height={60} />
+                                <Image src="/images/horizon_logo.png" alt="Horizon logo" width={146} height={60} />
                             </div>
-                            <h1 className="md:text-primary-white md:text-[32px] lg:text-[36px] lg:leading-[40px] font-source leading-[normal] md:mb-5 mb-4 md:text-center lg:text-start  horizon-title ">
+                            <h1 className="md:text-primary-white md:text-[32px] lg:text-[36px] lg:leading-[40px] font-source font-[700] leading-[normal] md:mb-5 mb-4 md:text-center lg:text-start  horizon-title ">
                                 <span className='block'>Ready to transform</span>
                                 <span>your Shopify store with Horizon?</span>
                             </h1>
-                            <h4 className="md:text-primary-white horizon-subtitle md:text-[16px] lg:text-[18px] lg:leading-[40px] font-source leading-[normal] md:mb-5 mb-4  md:text-center lg:text-start ">
+                            <h4 className="md:text-primary-white horizon-subtitle font-[700] md:text-[16px] lg:text-[18px] lg:leading-[40px] font-source leading-[normal] md:mb-5 mb-4  md:text-center lg:text-start ">
                                 <span className='block'>Let Bitpastel handle your migration, customisation,</span>
                                 <span> and AI integration-so you can focus on growth.</span>
                             </h4>
@@ -58,7 +58,7 @@ const TransformSection: React.FC<TransformSectionProps> = ({ openModal }) => {
 
                         </div>
                         <div className='flex justify-center align-middle'>
-                            <img src="/images/transformmain.webp" alt="transformmain" width={430} height={460} />
+                            <Image src="/images/transformmain.webp" alt="transformmain" width={430} height={460} />
                         </div>
                     </div>
                 </div>

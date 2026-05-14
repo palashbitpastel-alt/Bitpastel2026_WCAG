@@ -6,7 +6,8 @@ import { useState, useEffect, useCallback, useRef, useMemo } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
-import Modal from "@/components/Modal"
+import dynamic from 'next/dynamic';
+const Modal = dynamic(() => import('@/components/Modal'), { ssr: false });
 import useScrollToNews from "@/hooks/useScrollToNews";
 import { throttle, scrollToSection } from "@/utils/navigationUtils";
 
@@ -38,6 +39,26 @@ interface HomePageProps {
   forceModalOpen?: boolean;
   onModalClose?: () => void;
 }
+
+// Map the current URL to its context-specific Free Quote path. The modal is
+// the same; only the URL we reflect into history changes.
+const getFreeQuotePath = (pathname: string | null | undefined): string => {
+  if (!pathname) return "/free-quote";
+  if (pathname.startsWith("/culture")) return "/culture/free-quote";
+  if (pathname.startsWith("/careers")) return "/careers/free-quote";
+  if (pathname.startsWith("/shopify")) return "/shopify/free-quote";
+  return "/free-quote";
+};
+
+const isFreeQuotePath = (path: string | null | undefined): boolean => {
+  if (!path) return false;
+  return (
+    path === "/free-quote" ||
+    path === "/culture/free-quote" ||
+    path === "/careers/free-quote" ||
+    path === "/shopify/free-quote"
+  );
+};
 const Header = ({ forceModalOpen = false, onModalClose }: HomePageProps) => {
   const [activeSection, setActiveSection] = useState<string | null>(null)
   const [pendingScroll, setPendingScroll] = useState<string | null>(null)
@@ -56,11 +77,11 @@ const Header = ({ forceModalOpen = false, onModalClose }: HomePageProps) => {
   // Tracks the URL we should restore when closing the /free-quote modal
   const freeQuotePrevUrlRef = useRef<string | null>(null)
 
-  // Close modal on route change (but ignore the synthetic /free-quote path
+  // Close modal on route change (but ignore the synthetic free-quote paths
   // we push via window.history — usePathname won't update for plain pushState,
-  // so this effect is naturally inert during /free-quote)
+  // so this effect is naturally inert during /<scope>/free-quote)
   useEffect(() => {
-    if (pathname === "/free-quote") return
+    if (isFreeQuotePath(pathname)) return
     setIsModalOpen(false)
   }, [pathname])
 
@@ -200,18 +221,19 @@ const Header = ({ forceModalOpen = false, onModalClose }: HomePageProps) => {
   )
 
   // Handle chat button click — opens the global "Free Quote" modal and reflects
-  // the URL as /free-quote without triggering a Next.js navigation, so the
-  // current page stays mounted underneath the modal.
+  // the URL as /<scope>/free-quote (scope picked from the current page) without
+  // triggering a Next.js navigation, so the current page stays mounted under it.
   const handleChatClick = useCallback(() => {
     if (typeof window !== "undefined") {
       const currentUrl =
         window.location.pathname + window.location.search + window.location.hash
-      if (window.location.pathname !== "/free-quote") {
+      const targetPath = getFreeQuotePath(window.location.pathname)
+      if (!isFreeQuotePath(window.location.pathname)) {
         freeQuotePrevUrlRef.current = currentUrl
         window.history.pushState(
           { bpFreeQuote: true, prev: currentUrl },
           "",
-          "/free-quote"
+          targetPath
         )
       }
     }
@@ -220,14 +242,16 @@ const Header = ({ forceModalOpen = false, onModalClose }: HomePageProps) => {
 
   const handleModalClose = useCallback(() => {
     setIsModalOpen(false)
-    if (typeof window !== "undefined" && window.location.pathname === "/free-quote") {
+    if (typeof window !== "undefined" && isFreeQuotePath(window.location.pathname)) {
       // Returning to the page the user came from. history.back() preserves
       // scroll position and avoids the previous bug where closing redirected to "/".
       if (freeQuotePrevUrlRef.current) {
         window.history.back()
       } else {
-        // Direct visit to /free-quote — fall back gracefully.
-        router.replace("/")
+        // Direct visit to a free-quote URL — fall back gracefully to the parent.
+        const fallback =
+          window.location.pathname.replace(/\/free-quote$/, "") || "/"
+        router.replace(fallback)
       }
       freeQuotePrevUrlRef.current = null
     }
@@ -239,7 +263,7 @@ const Header = ({ forceModalOpen = false, onModalClose }: HomePageProps) => {
   useEffect(() => {
     if (typeof window === "undefined") return
     const onPopState = () => {
-      if (window.location.pathname === "/free-quote") {
+      if (isFreeQuotePath(window.location.pathname)) {
         setIsModalOpen(true)
       } else {
         setIsModalOpen(false)

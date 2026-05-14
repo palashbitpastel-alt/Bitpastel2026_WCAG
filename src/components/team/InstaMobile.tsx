@@ -788,6 +788,7 @@
 
 "use client"
 import { useState, useEffect, useCallback, useRef, useMemo } from "react"
+import Image from "next/image"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { cn } from "@/lib/utils"
 
@@ -1160,7 +1161,7 @@ const InstagramCarousel = ({
               )}
             >
               {item.type === "image" ? (
-                <img src={item.src || "/placeholder.svg"} alt={item.alt || ""} className="w-full h-full object-cover" />
+                <Image src={item.src || "/placeholder.svg"} alt={item.alt || ""} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
               ) : (
                 <video src={item.src} className="w-full h-full object-cover" controls muted loop />
               )}

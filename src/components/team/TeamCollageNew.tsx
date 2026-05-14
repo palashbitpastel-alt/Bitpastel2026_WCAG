@@ -173,7 +173,7 @@ import X_max_4 from '../../../public/images/new-team-images/Team page slicing/X-
 // TownHall 2026
 
 import TH1 from '../../../public/images/TownHall2026/TH1.webp';
-import TH111 from '../../../public/images/TownHall2026/TH1.png';
+import TH111 from '../../../public/images/TownHall2026/TH1.webp';
 import TH2 from '../../../public/images/TownHall2026/TH2.webp';
 import TH3 from '../../../public/images/TownHall2026/TH3.webp';
 import TH4 from '../../../public/images/TownHall2026/TH4.webp';

@@ -3,7 +3,8 @@
 import React from 'react';
 import Image from 'next/image';
 import { useState } from 'react';
-import Modal from '@/components/Modal';
+import dynamic from 'next/dynamic';
+const Modal = dynamic(() => import('@/components/Modal'), { ssr: false });
 
 
 interface HerSectionProps {

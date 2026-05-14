@@ -1,7 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 import { useState } from 'react';
-import Modal from '@/components/Modal';
+import dynamic from 'next/dynamic';
+const Modal = dynamic(() => import('@/components/Modal'), { ssr: false });
 import Link from 'next/link';
 import BannerDesktop from '../../../public/images/banner_new02.webp';
 import BannerMobile from '../../../public/images/banner-for-mobile.webp';

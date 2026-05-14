@@ -14,6 +14,8 @@ build/
 dist/
 .a5c/
 .claude/
+feedback/
+script/
 
 DONE_CRITERIA.md
 AI_CONTRACT.md

@@ -1,7 +1,8 @@
 import React from 'react';
 import Image from 'next/image';
 import { useState } from 'react';
-import Modal from '@/components/Modal';
+import dynamic from 'next/dynamic';
+const Modal = dynamic(() => import('@/components/Modal'), { ssr: false });
 import Link from 'next/link';
 
 interface HerSectionProps {
@@ -28,7 +29,7 @@ const HeroSection: React.FC<HerSectionProps> = ({ openModal }) => {
         <div className="relative z-10 container mx-auto px-4 md:h-full pt-[40px] md:pt-[60px] text-left ">
           <div className="md:h-full content-center mx-auto md:max-w-[100%] max-w-[310px]">
             <div className="flex justify-center items-center mb-[90px] ml-[2%] horinzon-logo-area">
-              <img src="/images/horizon_logo.png" alt="Horizon logo" width={535} height={220} />
+              <Image src="/images/horizon_logo.png" alt="Horizon logo" width={535} height={220} />
             </div>
             <h1 className="md:text-primary-white md:text-center md:text-[32px] lg:text-[38px] text-title title lg:leading-[40px] font-source leading-[normal] md:mb-5 mb-4 text-center horizon-title">
               <span>Migrate seamlessly to </span>

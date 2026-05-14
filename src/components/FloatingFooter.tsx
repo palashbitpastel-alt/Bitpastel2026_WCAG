@@ -8,6 +8,26 @@ import useScrollToNews from '@/hooks/useScrollToNews';
 const TEAL = "#008B8B";
 const GRAY = "#9CA3AF";
 
+// Map the current URL to its context-specific Free Quote path. Keep this in
+// sync with the matching helpers in Header.tsx.
+const getFreeQuotePath = (pathname: string | null | undefined): string => {
+  if (!pathname) return "/free-quote";
+  if (pathname.startsWith("/culture")) return "/culture/free-quote";
+  if (pathname.startsWith("/careers")) return "/careers/free-quote";
+  if (pathname.startsWith("/shopify")) return "/shopify/free-quote";
+  return "/free-quote";
+};
+
+const isFreeQuotePath = (path: string | null | undefined): boolean => {
+  if (!path) return false;
+  return (
+    path === "/free-quote" ||
+    path === "/culture/free-quote" ||
+    path === "/careers/free-quote" ||
+    path === "/shopify/free-quote"
+  );
+};
+
 const FloatingFooter = () => {
   const pathname = usePathname();
   const router = useRouter();
@@ -56,7 +76,7 @@ const FloatingFooter = () => {
     if (section === 'stories') return isHomePage && activeSection === 'stories';
     if (section === 'culture') return pathname === '/culture';
     if (section === 'careers') return pathname?.startsWith('/careers') ?? false;
-    if (section === 'contact') return pathname === '/contact' || pathname === '/free-quote';
+    if (section === 'contact') return pathname === '/contact' || isFreeQuotePath(pathname);
     return false;
   };
 
@@ -72,14 +92,16 @@ const FloatingFooter = () => {
   }, [isHomePage, router]);
 
   // Open the global Free Quote modal in place (same UX as desktop "Chat with Us"),
-  // reflecting the URL as /free-quote without a Next.js navigation.
+  // reflecting the URL as /<scope>/free-quote (scope picked from the current
+  // page) without a Next.js navigation.
   const handleContactClick = useCallback((e: React.MouseEvent) => {
     e.preventDefault();
     if (typeof window === 'undefined') return;
-    if (window.location.pathname !== '/free-quote') {
+    if (!isFreeQuotePath(window.location.pathname)) {
       const prev =
         window.location.pathname + window.location.search + window.location.hash;
-      window.history.pushState({ bpFreeQuote: true, prev }, '', '/free-quote');
+      const targetPath = getFreeQuotePath(window.location.pathname);
+      window.history.pushState({ bpFreeQuote: true, prev }, '', targetPath);
     }
     window.dispatchEvent(new CustomEvent('bp:open-free-quote'));
   }, []);

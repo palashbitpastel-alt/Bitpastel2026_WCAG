@@ -21,7 +21,8 @@ import ShopifyStoreSection from '@/components/home/ShopifyStoreSection';
 import CultureSection from '@/components/home/CultureSection';
 import TestimonialsSection from '@/components/home/TestiminialSection';
 import CtaSection from '@/components/home/CtaSection';
-import Modal from '@/components/Modal';
+import dynamic from 'next/dynamic';
+const Modal = dynamic(() => import('@/components/Modal'), { ssr: false });
 import SnowfallAnimation from '@/components/SnowfallAnimation';
 
 const HomePage = () => {

@@ -49,6 +49,17 @@ const nextConfig = {
     optimizePackageImports: ['lucide-react', 'react-phone-number-input'], // Better tree-shaking
   },
 
+  // 🔁 Permanent redirects (308) for renamed routes
+  async redirects() {
+    return [
+      {
+        source: '/horizon',
+        destination: '/shopify',
+        permanent: true,
+      },
+    ];
+  },
+
   // 🚀 Cache control headers for static assets
   async headers() {
     return [

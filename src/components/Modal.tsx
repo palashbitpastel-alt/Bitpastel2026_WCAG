@@ -137,10 +137,34 @@ const Modal: React.FC<ModalProps> = ({ open, setIsModalOpen, children }) => {
     }
   }, [open]);
 
+  // ESC-to-close + body-scroll lock + focus management while modal is open
+  useEffect(() => {
+    if (!open) return;
+    const previouslyFocused = document.activeElement as HTMLElement | null;
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        e.stopPropagation();
+        setIsModalOpen(false);
+      }
+    };
+    document.addEventListener('keydown', onKey);
+    // Focus the first input/select inside the modal on next paint
+    const focusTimer = window.setTimeout(() => {
+      const first = document.querySelector<HTMLElement>('[data-modal-root] input, [data-modal-root] select, [data-modal-root] textarea, [data-modal-root] button');
+      first?.focus();
+    }, 50);
+    return () => {
+      document.removeEventListener('keydown', onKey);
+      window.clearTimeout(focusTimer);
+      document.body.style.overflow = prevOverflow;
+      previouslyFocused?.focus?.();
+    };
+  }, [open, setIsModalOpen]);
+
   const handleClose = () => {
     setIsModalOpen(false);
-    console.log("Please click me");
-    
   };
 
   const handleOverlayClick = (e: React.MouseEvent) => {
@@ -311,6 +335,10 @@ const Modal: React.FC<ModalProps> = ({ open, setIsModalOpen, children }) => {
 
   return (
     <div
+      role="dialog"
+      aria-modal="true"
+      aria-label="Contact form"
+      data-modal-root
       className={`fixed inset-0 z-50 flex items-center justify-center modal-overlay duration-500 ${isAnimating ? 'opacity-100 scale-100' : 'opacity-0 scale-0'
         }`}
       onClick={handleOverlayClick}

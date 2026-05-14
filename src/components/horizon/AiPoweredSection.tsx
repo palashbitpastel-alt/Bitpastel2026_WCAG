@@ -13,7 +13,7 @@ const AiPoweredSection: React.FC<AiPoweredSectionProps> = ({ openModal }) => {
                     className=" absolute inset-0 bg-cover bg-[position:60%_20%] bg-no-repeat"
                     style={{
                         backgroundImage: `
-            url('/images/ai-poweredbackground.png')
+            url('/images/ai-poweredbackground.webp')
           `,
                     }}
                 ></div>
@@ -59,7 +59,7 @@ const AiPoweredSection: React.FC<AiPoweredSectionProps> = ({ openModal }) => {
                             </div>
                         </div>
                         <div className='flex justify-center align-middle'>
-                            <img src="/images/Ai_powered_Image.webp" alt="Ai_powered_Image" width={430} height={460} />
+                            <Image src="/images/Ai_powered_Image.webp" alt="Ai_powered_Image" width={430} height={460} />
                         </div>
                     </div>
                 </div>

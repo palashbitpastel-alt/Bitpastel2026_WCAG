@@ -111,7 +111,7 @@ const ChooseHorizonSection: React.FC<ChooseHorizonSectionProps> = ({ openModal }
                                 // className="text-center hover:shadow-lg transition-shadow duration-300 cursor-pointer py-10"
                                 className={`card-element relative card-element-Horizon text-center transition-shadow duration-300m md:min-w-[275px] min-w-[unset] cursor-pointer md:py-6 pt-0 pb-8 md:bg-transparent ${service.bgColor} md:rounded rounded-[10px] md:min-h-full min-h-[160px]
                                 ${activeIndex === index ? 'active' : ''}`}>
-                                <div className="flex flex-col justify-center items-center h-full">
+                                <div className="flex flex-col justify-start items-center h-full">
                                     <div
                                         className={`${service.bgColor} mobile-bg-transparent flex items-center justify-center mx-auto md:mb-4 mb-4 chooseImage`}
                                     >

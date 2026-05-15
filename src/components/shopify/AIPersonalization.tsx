@@ -32,14 +32,15 @@ const AIPersonalization: React.FC = () => {
   });
 
   return (
-    <section className="bg-[#f8fafc] py-[80px] md:py-[100px] overflow-x-clip mob-pad">
-     
+    <section className="bg-[#f8fafc] py-[80px] md:py-[100px] overflow-x-clip mob-pad relative">
+        <div className='container mx-auto px-4 max-w-[1206px]'>
+
         <div
           ref={sectionRef}
           className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
         >
           {/* LEFT — Copy column */}
-          <div className="flex flex-col gap-[30px] ml-[6%]  md:ml-[22%]">
+          <div className="flex flex-col gap-[30px]">
             {/* Headline + gradient divider */}
             <motion.div className="flex flex-col gap-[16px] items-center md:items-start" {...fadeUp(0)}>
               <h2 className="font-source font-bold text-[26px] md:text-[36px] leading-[1.15] md:leading-[36px] tracking-[-0.72px] text-[#111827] text-center md:text-left">
@@ -132,17 +133,18 @@ const AIPersonalization: React.FC = () => {
 
           {/* RIGHT — Device mockup column */}
           <motion.div
-            className="relative w-full h-full mx-auto lg:mx-0 flex items-center justify-end"
+            className="lg:absolute lg:right-0 lg:h-[calc(100%-200px)] h-full md:mr-0 -mr-4 ml-auto lg:mx-0 flex items-center justify-end"
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-           <div className="w-full lg:w-[100%] xl:w-[100%] lg:max-w-none flex items-center justify-end">
-            <Image src={deviceMockup} alt="Device mockup" className="w-full h-auto object-contain max-w-[690px]"  />
+           <div className="w-full h-full lg:w-[100%] xl:w-[100%] lg:max-w-none flex items-center justify-end">
+            <Image src={deviceMockup} alt="Device mockup" className="w-full h-full object-contain max-w-[690px]"  />
            </div>
           </motion.div>
         </div>
-  
+
+        </div>
     </section>
   );
 };

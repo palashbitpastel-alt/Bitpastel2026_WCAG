@@ -1934,6 +1934,7 @@ span.MuiAccordionSummary-content.Mui-expanded.MuiAccordionSummary-contentGutters
 
   .migration-subtitle {
     font-size: 14px;
+    max-width: 90%;
   }
 
   .horizon-subtitle {

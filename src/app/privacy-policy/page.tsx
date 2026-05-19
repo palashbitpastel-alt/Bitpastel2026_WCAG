@@ -4,7 +4,7 @@ const PrivacyPolicy = () => {
   return (
     <>
       <div className="relative">
-        <div className="title flex align-center items-center justify-center min-h-[350px] bg-primary-teal mt-[70px]">
+        <div className="title flex align-center items-center justify-center min-h-[350px] bg-primary-teal md:mt-[90px] mt-[56px]">
           <h1 className="text-primary-white font-source font-[400] title">Privacy Policy</h1>
         </div>
         <div className="privacy-content md:py-[100px] py-[70px]">

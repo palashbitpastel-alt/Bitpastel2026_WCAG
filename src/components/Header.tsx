@@ -71,6 +71,16 @@ const Header = ({ forceModalOpen = false, onModalClose }: HomePageProps) => {
   // Memoize computed values with better optimization
   const isHomePage = useMemo(() => pathname === "/", [pathname])
 
+  // Pages where the mobile header should always show the green logo on white bg
+  const forceGreenMobileHeader = useMemo(() => {
+    if (!pathname) return false
+    return (
+      pathname.startsWith("/privacy-policy") ||
+      pathname.startsWith("/careers/applyJob") ||
+      pathname.startsWith("/partners")
+    )
+  }, [pathname])
+
 
   // Refs for navigation and scroll handling
   const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null)
@@ -365,15 +375,15 @@ const Header = ({ forceModalOpen = false, onModalClose }: HomePageProps) => {
             className="lg:hidden flex justify-center items-center transition-all duration-300"
             style={{
               height: "56px",
-              background: isScrolled ? "#FFF" : "transparent",
-              boxShadow: isScrolled ? "0 1px 8px 0 rgba(0,0,0,0.10)" : "none",
+              background: isScrolled || forceGreenMobileHeader ? "#FFF" : "transparent",
+              boxShadow: isScrolled || forceGreenMobileHeader ? "0 1px 8px 0 rgba(0,0,0,0.10)" : "none",
               paddingLeft: "16px",
               paddingRight: "16px",
             }}
           >
             <Link href="/" prefetch={true} onClick={handleLogoClick}>
               <Image
-                src={isScrolled ? "/images/icons/mb_green.svg" : "/images/icons/mb_dark.svg"}
+                src={isScrolled || forceGreenMobileHeader ? "/images/icons/mb_green.svg" : "/images/icons/mb_dark.svg"}
                 alt="Bitpastel Logo"
                 width={101}
                 height={28}

@@ -59,7 +59,7 @@ const JobDetailsBanner: React.FC<JobDetailsBannerProps> = ({
 
   return (
     <div>
-      <section className="relative lg:h-[470px] md:mt-[70px] mt-[50px] h-auto overflow-hidden">
+      <section className="relative lg:h-[470px] md:mt-[90px] mt-[56px] h-auto overflow-hidden">
         {/* Desktop Background */}
         <div
           className="md:block hidden absolute inset-0 bg-cover bg-center bg-no-repeat"

@@ -1156,7 +1156,7 @@ const InstagramCarousel = ({
             <div
               key={item.id}
               className={cn(
-                "relative w-full h-full flex-shrink-0 overflow-hidden",
+                "relative w-full aspect-[3/2] flex-shrink-0 overflow-hidden",
                 slidesToShow > 1 ? `w-1/${slidesToShow}` : "w-full",
               )}
             >

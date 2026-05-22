@@ -40,7 +40,7 @@ const BrandingSection: React.FC = () => {
       <div className='relative z-10 container mx-auto px-4'>
         {/* Title */}
         <div className='flex flex-col items-center mb-[20px]'>
-          <h2 className='font-source font-bold text-[23px] md:text-[36px] leading-[1.2] md:leading-[58px] tracking-[-0.72px] text-center text-[#FFF]'>
+          <h2 className='font-source font-bold text-[23px] md:text-[38px] leading-[1.2] md:leading-[49.4px] text-center text-[#FFF]'>
             Shopify Solutions & Branding
           </h2>
           {/* Gradient underline */}

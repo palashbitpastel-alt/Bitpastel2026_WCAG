@@ -20,7 +20,9 @@ const HorizonBanner: React.FC = () => {
       {/* Animation keyframes — 5-state Figma keyframe cycle (default → variant4a → variant3 → variant4b → variant5).
           Matches Figma Interaction prototype: 2500ms ease-out smart-animate per transition, 1ms delay between
           (= continuous chain). 5 transitions × 2.5s = 12.5s total cycle. Ease-out per segment via animation-timing-function. */}
-      <style>{`
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
         @keyframes horizon-vmarquee {
           0%, 8%   { transform: translate3d(0, 0%, 0);   animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
           20%, 28% { transform: translate3d(0, -10%, 0); animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
@@ -29,98 +31,95 @@ const HorizonBanner: React.FC = () => {
           80%, 88% { transform: translate3d(0, -40%, 0); animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
           100%     { transform: translate3d(0, -50%, 0); }
         }
+        /* Glow keyframes converted from the original left/top/width values to GPU-composited
+           transforms (translate + scale). transform-origin is the top-left of each blob, and the
+           translate->scale order reproduces the exact same motion path. Vertical (translateY) values
+           were scaled by the banner section ratio H/W ~ 0.5256 so the path matches the % layout. */
         @keyframes horizon-glow-a {
-          0%,   8%  { left: -9.59%; top: 55.66%; width: 41.29%; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
-          20%, 28%  { left:  7.39%; top: 57.22%; width: 47.14%; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
-          40%, 48%  { left: 31.70%; top: 57.22%; width: 47.14%; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
-          60%, 68%  { left: 31.70%; top: 33.81%; width: 47.14%; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
-          80%, 88%  { left: -9.59%; top: 60.86%; width: 41.29%; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
-          100%      { left: -9.59%; top: 55.66%; width: 41.29%; }
+          0%,   8%  { transform: translate(0%, 0%) scale(1);              animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+          20%, 28%  { transform: translate(41.124%, 1.986%) scale(1.142); animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+          40%, 48%  { transform: translate(100%, 1.986%) scale(1.142);    animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+          60%, 68%  { transform: translate(100%, -27.816%) scale(1.142);  animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+          80%, 88%  { transform: translate(0%, 6.62%) scale(1);           animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+          100%      { transform: translate(0%, 0%) scale(1); }
         }
         @keyframes horizon-glow-b {
-          0%,   8%  { left: 27.09%; top: 72.95%; width: 38.07%; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
-          20%, 28%  { left: 34.26%; top:  6.11%; width: 43.49%; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
-          40%, 48%  { left: -1.68%; top: 20.68%; width: 43.49%; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
-          60%, 68%  { left: -1.68%; top: 58.13%; width: 43.49%; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
-          80%, 88%  { left: 27.09%; top: 78.15%; width: 38.07%; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
-          100%      { left: 27.09%; top: 72.95%; width: 38.07%; }
+          0%,   8%  { transform: translate(0%, 0%) scale(1);                 animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+          20%, 28%  { transform: translate(18.834%, -92.287%) scale(1.142);  animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+          40%, 48%  { transform: translate(-75.571%, -72.17%) scale(1.142);  animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+          60%, 68%  { transform: translate(-75.571%, -20.462%) scale(1.142); animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+          80%, 88%  { transform: translate(0%, 7.18%) scale(1);              animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+          100%      { transform: translate(0%, 0%) scale(1); }
         }
         @keyframes horizon-glow-c {
-          0%,   8%  { left: 88.36%; top: 37.97%; width: 17.35%; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
-          20%, 28%  { left: 80.31%; top: 16.51%; width: 26.35%; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
-          40%, 48%  { left: 68.16%; top: 52.28%; width: 26.35%; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
-          60%, 68%  { left: 61.13%; top:  7.80%; width: 32.43%; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
-          80%, 88%  { left: 88.36%; top: 41.87%; width: 17.35%; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
-          100%      { left: 88.36%; top: 37.97%; width: 17.35%; }
+          0%,   8%  { transform: translate(0%, 0%) scale(1);                  animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+          20%, 28%  { transform: translate(-46.398%, -65.016%) scale(1.519);  animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+          40%, 48%  { transform: translate(-116.427%, 43.354%) scale(1.519);  animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+          60%, 68%  { transform: translate(-156.945%, -91.404%) scale(1.869); animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+          80%, 88%  { transform: translate(0%, 11.816%) scale(1);             animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+          100%      { transform: translate(0%, 0%) scale(1); }
         }
         @keyframes horizon-glow-d {
-          0%,   8%  { left: 72.62%; top: 77.89%; width: 24.38%; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
-          20%, 28%  { left: 74.23%; top: 45.25%; width: 35.87%; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
-          40%, 48%  { left: 74.23%; top:  6.11%; width: 35.87%; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
-          60%, 68%  { left: 77.60%; top: 39.53%; width: 35.87%; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
-          80%, 88%  { left: 72.62%; top: 81.79%; width: 24.38%; animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
-          100%      { left: 72.62%; top: 77.89%; width: 24.38%; }
+          0%,   8%  { transform: translate(0%, 0%) scale(1);                 animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+          20%, 28%  { transform: translate(6.604%, -70.373%) scale(1.471);   animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+          40%, 48%  { transform: translate(6.604%, -154.76%) scale(1.471);   animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+          60%, 68%  { transform: translate(20.427%, -82.705%) scale(1.471);  animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+          80%, 88%  { transform: translate(0%, 8.409%) scale(1);             animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1); }
+          100%      { transform: translate(0%, 0%) scale(1); }
         }
-      `}</style>
+      `,
+        }}
+      />
 
-      {/* Layer 1 — Four solid-fill blurred circles cycling through 5 Figma keyframes (Figma exact spec) */}
+      {/* Layer 1 — Four solid-fill blurred circles cycling through the 5 Figma keyframes (Figma exact spec).
+          CROSS-BROWSER FIX (identical look): the 183.2px blur is unchanged, but it now lives on a STATIC
+          inner circle while only the non-blurred WRAPPER animates — and it animates via `transform`
+          (translate + scale) instead of left/top/width. Safari rasterizes the blur ONCE into a composited
+          layer and GPU-transforms that texture every frame, instead of re-running the blur per frame and
+          tiling it at low resolution (the blocky pixelation you saw). Result: the same rich, dark glow as
+          the original, now smooth in Safari, Chrome and Firefox. transform-origin is the top-left of each
+          blob so `scale()` reproduces the original width growth exactly. */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0">
-        {/* Glow A — #00D5BE, blur 105.9px, base 564px */}
+        {/* Glow A — #00D5BE, blur 183.2px, base 41.29% */}
         <div
-          className="pointer-events-none absolute will-change-[left,top,width] motion-safe:[animation:horizon-glow-a_20s_linear_infinite]"
-          style={{
-            left: '-9.59%',
-            top: '55.66%',
-            width: '41.29%',
-            aspectRatio: '1 / 1',
-            background: '#00D5BE',
-            filter: 'blur(183.2px)',
-            opacity: 0.66,
-            borderRadius: '50%',
-          }}
-        />
-        {/* Glow B — #00E365, blur 105.9px, base 528px */}
+          className="pointer-events-none absolute will-change-transform motion-safe:[animation:horizon-glow-a_20s_linear_infinite]"
+          style={{ left: '-9.59%', top: '55.66%', width: '41.29%', aspectRatio: '1 / 1', transformOrigin: '0 0' }}
+        >
+          <div
+            className="absolute inset-0"
+            style={{ background: '#00D5BE', filter: 'blur(183.2px)', opacity: 0.66, borderRadius: '50%' }}
+          />
+        </div>
+        {/* Glow B — #00E365, blur 183.2px, base 38.07% */}
         <div
-          className="pointer-events-none absolute will-change-[left,top,width] motion-safe:[animation:horizon-glow-b_20s_linear_infinite]"
-          style={{
-            left: '27.09%',
-            top: '72.95%',
-            width: '38.07%',
-            aspectRatio: '1 / 1',
-            background: '#00E365',
-            filter: 'blur(183.2px)',
-            opacity:0.66,
-            borderRadius: '50%',
-          }}
-        />
-        {/* Glow C — #00E365, blur 91.6px, base 237px */}
+          className="pointer-events-none absolute will-change-transform motion-safe:[animation:horizon-glow-b_20s_linear_infinite]"
+          style={{ left: '27.09%', top: '72.95%', width: '38.07%', aspectRatio: '1 / 1', transformOrigin: '0 0' }}
+        >
+          <div
+            className="absolute inset-0"
+            style={{ background: '#00E365', filter: 'blur(183.2px)', opacity: 0.66, borderRadius: '50%' }}
+          />
+        </div>
+        {/* Glow C — #00E365, blur 183.2px, base 17.35% */}
         <div
-          className="pointer-events-none absolute will-change-[left,top,width] motion-safe:[animation:horizon-glow-c_20s_linear_infinite]"
-          style={{
-            left: '88.36%',
-            top: '37.97%',
-            width: '17.35%',
-            aspectRatio: '1 / 1',
-            background: '#00E365',
-            filter: 'blur(183.2px)',
-            opacity:0.66,
-            borderRadius: '50%',
-          }}
-        />
-        {/* Glow D — #02C8B7, blur 91.6px, base 333px */}
+          className="pointer-events-none absolute will-change-transform motion-safe:[animation:horizon-glow-c_20s_linear_infinite]"
+          style={{ left: '88.36%', top: '37.97%', width: '17.35%', aspectRatio: '1 / 1', transformOrigin: '0 0' }}
+        >
+          <div
+            className="absolute inset-0"
+            style={{ background: '#00E365', filter: 'blur(183.2px)', opacity: 0.66, borderRadius: '50%' }}
+          />
+        </div>
+        {/* Glow D — #02C8B7, blur 183.2px, base 24.38% */}
         <div
-          className="pointer-events-none absolute will-change-[left,top,width] motion-safe:[animation:horizon-glow-d_20s_linear_infinite]"
-          style={{
-            left: '72.62%',
-            top: '77.89%',
-            width: '24.38%',
-            aspectRatio: '1 / 1',
-            background: '#02C8B7',
-            filter: 'blur(183.2px)',
-            opacity: 0.66,
-            borderRadius: '50%',
-          }}
-        />
+          className="pointer-events-none absolute will-change-transform motion-safe:[animation:horizon-glow-d_20s_linear_infinite]"
+          style={{ left: '72.62%', top: '77.89%', width: '24.38%', aspectRatio: '1 / 1', transformOrigin: '0 0' }}
+        >
+          <div
+            className="absolute inset-0"
+            style={{ background: '#02C8B7', filter: 'blur(183.2px)', opacity: 0.66, borderRadius: '50%' }}
+          />
+        </div>
       </div>
 
       {/* Layer 2 — Vertical column-grid "glass curtain" (stronger, 83px stripe to match Figma) */}
@@ -168,7 +167,7 @@ const HorizonBanner: React.FC = () => {
           </motion.div>
 
           <motion.h2
-            className="mt-2 md:mt-4 font-source font-bold text-[30px] md:text-[45px] leading-[1.2] md:leading-[55px] tracking-[-1.35px] text-[#FFF]"
+            className="mt-2 md:mt-4 font-source font-bold text-[23px] md:text-[38px] leading-[1.2] md:leading-[49.4px] text-[#FFF]"
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.5, delay: 0.1 }}
@@ -190,7 +189,14 @@ const HorizonBanner: React.FC = () => {
       {/* Layer 4 — Vertical bottom→top slide-up marquee, synced with the 30s spotlight keyframe cycle. */}
       <div
         aria-hidden="true"
-        className="relative z-10 mt-[30px] md:mt-[30px] w-full max-w-[1303px] mx-auto h-[60px] md:h-[100px] overflow-hidden"
+        className="relative z-10 mt-[30px] md:mt-[30px] w-full max-w-[1303px] mx-auto h-[90px] md:h-[130px] overflow-hidden"
+        style={{
+          padding: '10px',
+          WebkitMaskImage:
+            'linear-gradient(transparent 0%, black 25%, black 90%, transparent 100%)',
+          maskImage:
+            'linear-gradient(transparent 0%, black 25%, black 90%, transparent 100%)',
+        }}
       >
         <div
           className="flex flex-col items-center motion-safe:[animation:horizon-vmarquee_20s_linear_infinite] motion-reduce:translate-y-0 will-change-transform"

@@ -20,7 +20,7 @@ const AiPoweredSection: React.FC<AiPoweredSectionProps> = ({ openModal }) => {
                 <div className="relative z-10 container mx-auto px-4 md:pt-[50px] pt-[50px] md:pb-[50px] pb-[50px] text-left ">
                     <div className='grid md:grid-cols-1 lg:grid-cols-2  gap-8'>
                         <div className='flex justify-center items-left flex-col'>
-                            <h1 className="md:text-primary-white text-title title md:leading-[40px] font-source leading-[normal] md:mb-2 mb-3 text-center md:text-left ai-powered-title">
+                            <h1 className="font-source font-bold text-[23px] md:text-[38px] leading-[1.2] md:leading-[49.4px] mb-[5px] text-center text-[#ffffff] md:text-left ai-powered-title">
                                 <span className="block text-[38px] md:text-[32px] lg:text-[36px] leading-[48px] md:leading-[40px] horizon-title">AI-Powered selling </span>
                                 <span className=" text-[38px] md:text-[32px] lg:text-[36px] leading-[48px] md:leading-[40px] horizon-title">with </span>
                                 <span className="bold text-[38px] md:text-[32px] lg:text-[36px] leading-[48px] md:leading-[40px] horizon-title">  Horizon + Bitpastel</span>

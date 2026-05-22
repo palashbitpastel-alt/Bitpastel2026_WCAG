@@ -42,8 +42,8 @@ const AIPersonalization: React.FC = () => {
           {/* LEFT — Copy column */}
           <div className="flex flex-col gap-[30px]">
             {/* Headline + gradient divider */}
-            <motion.div className="flex flex-col gap-[16px] items-center md:items-start" {...fadeUp(0)}>
-              <h2 className="font-source font-bold text-[26px] md:text-[36px] leading-[1.15] md:leading-[36px] tracking-[-0.72px] text-[#111827] text-center md:text-left">
+            <motion.div className="flex flex-col gap-[5px] items-center md:items-start" {...fadeUp(0)}>
+              <h2 className="font-source font-bold text-[23px] md:text-[38px] leading-[1.2] md:leading-[49.4px] text-center md:text-left">
                 AI Personalisation with Rebuy
               </h2>
               <div

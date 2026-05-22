@@ -106,7 +106,7 @@ const AISection: React.FC = () => {
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="font-source font-bold text-[23px] md:text-[38px] leading-[1.2] md:leading-[49.4px] text-[#0f172b] text-center mb-[16px]">
+            <h2 className="font-source font-bold text-[23px] md:text-[38px] leading-[1.2] md:leading-[49.4px] text-[#0f172b] text-center mb-[5px]">
               AI-Powered Shopify Enhancements
             </h2>
 

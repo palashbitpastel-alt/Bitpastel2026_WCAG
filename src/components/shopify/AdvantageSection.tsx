@@ -84,7 +84,7 @@ const AdvantageSection: React.FC = () => {
       <div className="container mx-auto px-4 md:px-[80px]">
         {/* Title */}
         <div className="flex flex-col items-center mb-[20px]">
-          <h2 className="font-source font-bold text-[23px] md:text-[38px] leading-[1.2] md:leading-[49.4px] md:tracking-[-1px] tracking-[-.72px] text-center text-[#0F172B]">
+          <h2 className="font-source font-bold text-[23px] md:text-[38px] leading-[1.2] md:leading-[49.4px] text-[#0f172b] text-center">
             The Bitpastel Advantage
           </h2>
           {/* Gradient underline */}

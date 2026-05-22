@@ -254,7 +254,7 @@ const PerformanceSection: React.FC = () => {
         >
           {/* Left column — starts lower than image per Figma */}
           <div className="w-full lg:w-[42%] flex-shrink-0 lg:pt-[20px]">
-            <h2 className="font-source font-bold text-[28px] md:text-[36px] leading-[1.15] md:leading-[44px] tracking-[-0.72px] text-[#111827] mb-[5px]">
+            <h2 className="font-source font-bold text-[23px] md:text-[38px] leading-[1.2] md:leading-[49.4px] text-[#0f172b] mb-[5px]">
               Shopify Speed Optimization
               <br />
               &amp; Performance Audits

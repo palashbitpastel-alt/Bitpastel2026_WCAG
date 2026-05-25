@@ -135,15 +135,15 @@ export default function Home() {
       if (window.location.hash) {
         const hash = window.location.hash.replace('#', '');
         const element = document.getElementById(hash);
-        
+
         if (element) {
           // First scroll to top to ensure consistent behavior
           window.scrollTo(0, 0);
-          
+
           // Calculate position with offset (adjust -100 for your header height)
           const yOffset = -0;
           const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-          
+
           // Smooth scroll to the element after a small delay
           setTimeout(() => {
             window.scrollTo({
@@ -152,6 +152,13 @@ export default function Home() {
             });
           }, 100);
         }
+
+        // Strip the hash from the URL so it reads as /careers rather than /careers#jobCards.
+        window.history.replaceState(
+          null,
+          '',
+          window.location.pathname + window.location.search
+        );
       }
     };
 

@@ -11,7 +11,7 @@
 // }
 
 'use client';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 import HeroSection from '@/components/home/HeroSection';
 import ServicesSection from '@/components/home/ServicesSection';
@@ -21,15 +21,21 @@ import ShopifyStoreSection from '@/components/home/ShopifyStoreSection';
 import CultureSection from '@/components/home/CultureSection';
 import TestimonialsSection from '@/components/home/TestiminialSection';
 import CtaSection from '@/components/home/CtaSection';
-import dynamic from 'next/dynamic';
-const Modal = dynamic(() => import('@/components/Modal'), { ssr: false });
 import SnowfallAnimation from '@/components/SnowfallAnimation';
 
 const HomePage = () => {
-  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
-
+  // Open the global Free Quote modal in place (same UX as the header's
+  // "Chat with Us" button), reflecting the URL as /free-quote without a
+  // Next.js navigation. Mirrors FloatingFooter.handleContactClick.
   const openModal = () => {
-    setIsModalOpen(true);
+    if (typeof window === 'undefined') return;
+    const isFreeQuote = window.location.pathname === '/free-quote';
+    if (!isFreeQuote) {
+      const prev =
+        window.location.pathname + window.location.search + window.location.hash;
+      window.history.pushState({ bpFreeQuote: true, prev }, '', '/free-quote');
+    }
+    window.dispatchEvent(new CustomEvent('bp:open-free-quote'));
   };
 
 
@@ -44,10 +50,6 @@ const HomePage = () => {
       <TechPartnerSection />
       <CultureSection />
       <CtaSection   openModal={openModal} />
-      
-      {isModalOpen && (
-        <Modal open={isModalOpen} setIsModalOpen={setIsModalOpen} />
-      )}
     </>
   );
 };

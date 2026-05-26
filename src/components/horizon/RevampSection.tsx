@@ -7,7 +7,7 @@ import { ArrowLeftRight } from 'lucide-react';
 const cards = [
   {
     icon: '/images/revamp/file-icon.svg',
-    title: 'Product Data, Customer, Blogs, Pages Migration',
+    title: 'Product Data, Customers, Blogs, and Pages Migration',
   },
   {
     icon: '/images/revamp/search-icon.svg',
@@ -95,7 +95,7 @@ const RevampSection: React.FC = () => {
             </p>
 
             <p className="font-roboto font-normal text-[16px] md:text-[18px] leading-[29.25px] text-[#FFFFFF] max-w-[550px]">
-              If your current Shopify store feels outdated or underperforming, we
+              If your current Shopify store feels outdated or is underperforming, we
               help transform it with modern, conversion-focused designs. Bitpastel
               redesigns stores using premium themes and custom UX strategies to
               enhance brand identity and improve customer engagement.

@@ -9,12 +9,7 @@ import {
 
 const Database: React.FC = () => (
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-  <path d="M15 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V7L15 2Z" stroke="#00D5BE" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M14 2V6C14 6.53043 14.2107 7.03914 14.5858 7.41421C14.9609 7.78929 15.4696 8 16 8H20" stroke="#00D5BE" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M8 13H10" stroke="#00D5BE" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M14 13H16" stroke="#00D5BE" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M8 17H10" stroke="#00D5BE" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M14 17H16" stroke="#00D5BE" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M21 5C21 6.65685 16.9706 8 12 8C7.02944 8 3 6.65685 3 5M21 5C21 3.34315 16.9706 2 12 2C7.02944 2 3 3.34315 3 5M21 5V19C21 20.66 17 22 12 22C7 22 3 20.66 3 19V5M21 12C21 13.66 17 15 12 15C7 15 3 13.66 3 12" stroke="#00D5BE" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round"/>
 </svg>
 );
 const Search: React.FC = () => (
@@ -50,7 +45,7 @@ const Brush: React.FC = () => (
 const cards = [
   {
     icon: Database,
-    title: 'Product Data, Customer, Blogs, Pages Migration',
+    title: 'Product Data, Customers, Blogs, and Pages Migration',
   },
   {
     icon: Search,
@@ -134,7 +129,7 @@ const RevampSection: React.FC = () => {
             </p>
 
             <p className="font-roboto font-normal text-[16px] md:text-[18px] leading-[29.25px] text-[#FFF] max-w-[557px]">
-              If your current Shopify store feels outdated or underperforming, we
+              If your current Shopify store feels outdated or is underperforming, we
               help transform it with modern, conversion-focused designs. Bitpastel
               redesigns stores using premium themes and custom UX strategies to
               enhance brand identity and improve customer engagement.

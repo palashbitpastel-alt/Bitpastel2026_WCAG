@@ -456,15 +456,16 @@ const Modal: React.FC<ModalProps> = ({ open, setIsModalOpen, children }) => {
                     </div>
                   </div>
                   <div className="flex flex-wrap justify-center lg:gap-0 gap-4 pt-6 text-center lg:mr-[-17px]">
+                    <p className="text-[#099] border-right text-[14px] w-full lg:w-1/3 md:w-full lg:flex justify-center mb-2 lg:mb-0">
+                      <a href="tel:+18724446679">US: +1 (872) 444 6679</a>
+                    </p>
                     <p className="text-[#099] border-right text-[14px] w-full md:w-full lg:w-1/3 flex justify-center mb-2 lg:mb-0">
                       {/* <a target='_blank' href="https://api.whatsapp.com/send/?phone=442081446579&text=Hey...+I+would+like+to+have+a+quick+chat+with+you.&type=phone_number&app_absent=0">UK: +44 2081 446579</a> */}
                       {/* <a target='_blank' href="https://api.whatsapp.com/send/?phone=447469539191&text=Hey...+I+would+like+to+have+a+quick+chat+with+you.&type=phone_number&app_absent=0">UK: +44 7469 539191</a> */}
                       <a href="tel:+447469539191">UK: +44 7469 539191</a>
                     </p>
 
-                    <p className="text-[#099] border-right text-[14px] w-full lg:w-1/3 md:w-full lg:flex justify-center mb-2 lg:mb-0">
-                      <a href="tel:+18724446679">US: +1 (872) 444 6679</a>
-                    </p>
+                    
 
                     <p className="text-[#099] text-[14px] w-full lg:w-1/3 md:w-full lg:flex justify-center">
                       <a href="tel:+919830566248">IN: +91 9830 566 248</a>
@@ -501,7 +502,7 @@ const Modal: React.FC<ModalProps> = ({ open, setIsModalOpen, children }) => {
                             We have received your request and we will get back to you soon
                           </p>
                         </div>
-                        <div className="flex flex-col items-center space-y-2">
+                        <div className="flex flex-col items-start space-y-2">
                           <p className=" font-[100] text-dark paragraph font-roboto">
                             Please tap below to call us
                           </p>

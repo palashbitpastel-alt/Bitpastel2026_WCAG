@@ -75,7 +75,7 @@ const HeroSection: React.FC<HerSectionProps> = ({ openModal }) => {
                   }
                 }}
               >
-                Book Free Consultation
+                Explore Horizon
               </button>
               <button
                 className="btn leading-normal bg-transparent-btn md:w-auto w-full mt-0 font-roboto btn-hover !rounded-full !min-w-[244px]"
@@ -88,6 +88,37 @@ const HeroSection: React.FC<HerSectionProps> = ({ openModal }) => {
               >
                 Speed Optimisation Service
               </button>
+            </div>
+
+            {/* Stats Bar */}
+            <div className="flex justify-center md:justify-start items-center mt-8 md:mt-10 gap-[15px]">
+              <div className="text-center md:text-left pr-5 md:pr-6 lg:pr-8">
+                <p className="text-[#FFF] font-source font-[500] text-[28px] md:text-[36px] lg:text-[42px] leading-none">
+                  400+
+                </p>
+                <p className="text-[#FFF] font-source font-medium text-[14px] leading-[22px] mt-1">
+                  Shopify Stores
+                </p>
+              </div>
+              <div className="w-px h-[50px] md:h-[60px]" style={{ backgroundColor: '#FFFFFF80' }}></div>
+              <div className="text-center md:text-left px-5 md:px-6 lg:px-8">
+                <p className="text-[#FFF] font-source font-[500] text-[28px] md:text-[36px] lg:text-[42px] leading-none">
+                  100+
+                </p>
+                <p className="text-[#FFF] font-source font-medium text-[14px] leading-[22px] mt-1">
+                  Shopify Plus Stores
+                </p>
+              </div>
+              <div className="w-px h-[50px] md:h-[60px]" style={{ backgroundColor: '#FFFFFF80' }}></div>
+              <div className="pl-5 md:pl-6 lg:pl-8">
+                <Image
+                  src="/images/ShopifySelectPartnerHero.svg"
+                  alt="Shopify Select Partner"
+                  width={130}
+                  height={50}
+                  className="w-[90px] md:w-[130px] h-auto object-contain"
+                />
+              </div>
             </div>
 
             {/* Mobile Dashboard Image */}

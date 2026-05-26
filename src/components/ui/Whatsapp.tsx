@@ -3,35 +3,55 @@ import Link from 'next/link';
 
 const WhatsAppBubble = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [timer, setTimer] = useState<NodeJS.Timeout | number | null>(null);
+  const [isHovered, setIsHovered] = useState(false);
+  const timerRef = React.useRef<NodeJS.Timeout | number | null>(null);
+
+  const startHideTimer = React.useCallback(() => {
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+    }
+    timerRef.current = setTimeout(() => {
+      setIsVisible(false);
+    }, 2000);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
-      // Show the bubble
       setIsVisible(true);
 
-      // Clear any existing timeout
-      if (timer) {
-        clearTimeout(timer);
+      if (!isHovered) {
+        startHideTimer();
       }
-
-      // Hide the bubble after scrolling stops (2 seconds)
-      setTimer(setTimeout(() => {
-        setIsVisible(false);
-      }, 2000));
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      if (timer) clearTimeout(timer);
+      if (timerRef.current) clearTimeout(timerRef.current);
     };
-  }, [timer]);
+  }, [isHovered, startHideTimer]);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+      timerRef.current = null;
+    }
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+    startHideTimer();
+  };
 
   if (!isVisible) return null;
 
   return (
-    <div className="fixed whatspp-bubble lg:bottom-[50px] md:bottom-[70px] bottom-[80px] right-[26px] z-50">
+    <div
+      className="fixed whatspp-bubble lg:bottom-[50px] md:bottom-[70px] bottom-[80px] right-[26px] z-50"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <Link
         target="_blank"
         prefetch

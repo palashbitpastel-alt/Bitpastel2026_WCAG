@@ -327,7 +327,7 @@ const PerformanceSection: React.FC = () => {
               </div>
               <div>
                 <h3 className="font-source font-semibold text-[22px] md:text-[24px] leading-[1.2] tracking-[-0.5px] text-[#FFFFFF] mb-[2px]">
-                  Why Speed Matters?
+                  Why Does Speed Matter?
                 </h3>
                 <p className="font-roboto font-normal text-[14px] md:text-[16px] leading-[22px] text-[#FFFFFF]/90">
                   Performance directly affects revenue and engagement
@@ -338,7 +338,7 @@ const PerformanceSection: React.FC = () => {
             {/* Animated bars — slow is ~10s, fast is ~1.5s matching Figma */}
             <AnimatedBar
               label="Slow loading (>6s)"
-              value="50% abandon"
+              value="50% abandon the site"
               color="#FF7171"
               targetWidth="100%"
               inView={bottomInView}
@@ -381,7 +381,7 @@ const PerformanceSection: React.FC = () => {
                   Studies Show
                 </h3>
                 <p className="font-roboto font-normal text-[14px] md:text-[16px] leading-[22px] text-[#FFFFFF]/90">
-                  70% visitors leave a sites taking more than 6s to load
+                  70% of visitors leave a site that takes more than 6 seconds to load
                 </p>
               </div>
             </div>

@@ -91,15 +91,15 @@ const ChooseHorizonSection: React.FC<ChooseHorizonSectionProps> = ({ openModal }
                     <h4 className="md:font-[500] font-[500] font-roboto text-center text-[18px] leading-[20px] w-200 md:mb-0 mb-3 description text-[#6B7280] md:hidden">
                         <span className="text-[#111827] leading-[24px]">
                             <span className="block text-[#6B7280]  md:text-[16px] lg:text-[18px] font-[400] font-roboto md:w-[80%] mx-auto responsive-subtitle">
-                                Horizon isn’t just another Shopify theme, it’s built for speed, scalability, and conversions. Whether you’re running a 
+                                Horizon isn&apos;t just another Shopify theme; it&apos;s built for speed, scalability, and conversions. Whether you&apos;re running a
                             </span>
-                            <span className='text-[#6B7280] md:text-[16px] lg:text-[18px] font-[400] font-roboto md:w-[70%] mx-auto  responsive-subtitle'>startup store or scaling to enterprise level, Horizon ensures your brand looks modern, loads faster, and converts better.</span>
+                            <span className="text-[#6B7280] md:text-[16px] lg:text-[18px] font-[400] font-roboto md:w-[70%] mx-auto  responsive-subtitle">startup store or scaling to enterprise level, Horizon ensures your brand looks modern, loads faster, and converts better.</span>
                         </span>
                     </h4>
                     <h4 className="hidden md:font-[500] font-[500] font-roboto text-center text-[18px] leading-[20px] w-200 md:mb-8 mb-3 description text-[#6B7280] md:block responsive-subtitle">
                         <span className="text-[#111827] leading-[24px]">
                             <span className="block text-[#6B7280]  md:text-[16px] lg:text-[18px] font-[400] font-roboto md:w-[80%] mx-auto">
-                                Horizon isn’t just another Shopify them, it’s built for speed, scalability, and conversions. Whether you’re running a startup store or scaling to enterprise level, Horizon ensures your brand looks modern, loads faster, and converts better.
+                                Horizon isn&apos;t just another Shopify theme; it&apos;s built for speed, scalability, and conversions. Whether you&apos;re running a startup store or scaling to enterprise level, Horizon ensures your brand looks modern, loads faster, and converts better.
                             </span>
                         </span>
                     </h4>

@@ -988,12 +988,18 @@ padding-bottom:20px;
 
 .nav-item.current svg path {
   fill: #008B8B;
+  stroke: #008B8B;
 }
 
 #culture .arrow-icon{
   margin-left: auto !important;
 }
-
+.shopify_badge_section
+{
+  position: absolute;
+  bottom: 32px;
+  left: 22px;
+}
 @media screen and (max-width:767px) {
   #culture .work-with-us-features .relative:nth-child(1) ul li::before {
       background: #3ECB90;

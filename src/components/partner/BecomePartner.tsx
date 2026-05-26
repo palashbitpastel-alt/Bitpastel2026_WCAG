@@ -163,7 +163,7 @@ const BecomePartner = () => {
     return (
       <section className="become-partner-area" id="become-a-partner">
         <div className="container mx-auto px-4">
-          <div className="grid mx-[-15px] md:grid-cols-2 grid-cols-1 font-source">
+          <div className="grid mx-[-15px] md:grid-cols-2 grid-cols-1 font-source items-center">
             <div className="px-[15px]">
               <div className="become-partner-title-area">
                 <div className="become-partner-circle">
@@ -201,7 +201,7 @@ const BecomePartner = () => {
   return (
     <section className="become-partner-area">
       <div className="container mx-auto px-4">
-        <div className="grid mx-[-15px] md:grid-cols-2 grid-cols-1 font-source">
+        <div className="grid mx-[-15px] md:grid-cols-2 grid-cols-1 font-source items-center">
           <div className="px-[15px]">
             <div className="become-partner-title-area">
               <div className="become-partner-circle">

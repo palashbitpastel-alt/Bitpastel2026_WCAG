@@ -13,28 +13,22 @@
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://www.bitpastel.com/partners</loc>
-  <lastmod>2025-11-11T12:45:30+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://www.bitpastel.com/horizon</loc>
-  <lastmod>2025-11-11T12:45:30+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
   <loc>https://www.bitpastel.com/shopify</loc>
   <lastmod>2025-11-11T12:45:30+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.90</priority>
 </url>
 <url>
+  <loc>https://www.bitpastel.com/partners</loc>
+  <lastmod>2025-11-11T12:45:30+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
   <loc>https://www.bitpastel.com/careers</loc>
 	<lastmod>2025-11-11T12:45:30+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
+  <priority>0.60</priority>
 </url>
 <url>
   <loc>https://www.bitpastel.com/culture</loc>

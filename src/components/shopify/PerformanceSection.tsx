@@ -345,7 +345,7 @@ const PerformanceSection: React.FC = () => {
               </div>
               <div>
                 <h3 className="font-source font-semibold text-[20px] md:text-[24px] leading-[1.2] tracking-[-0.5px] text-[#FFFFFF] mb-[2px]">
-                  Why Does Speed Matter?
+                  Why does Speed Matter?
                 </h3>
                 <p className="font-roboto font-normal text-[14px] md:text-[16px] leading-[22px] text-[#FFFFFF]/90">
                   Performance directly affects revenue and engagement

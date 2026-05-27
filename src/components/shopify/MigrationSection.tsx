@@ -16,7 +16,7 @@ const MigrationSection: React.FC<MigrationSectionProps> = ({ openModal }) => {
             <section id="Advantages" className="md:pt-[90px] pt-[60px] md:pb-[40px] pb-[50px] migration-section ">
                 <div className="container overflow-hidden relative mx-auto px-4">
                     <h2 className="font-source font-bold text-[23px] md:text-[38px] leading-[1.2] md:leading-[49.4px] text-center mb-[5px] text-[#111827]">
-                        Effortless Migration Powered by Bitpastel
+                        Effortless Migration powered by Bitpastel
                     </h2>
                     <div className="flex justify-center items-center mb-[30px]">
                         <div className="ai-powered-green-gradient heading-bottom"></div>

@@ -94,8 +94,8 @@ const ShopifyStoreSection = () => {
     <section className='md:pt-[73px] pt-[60px]'>
       <div className='container mx-auto mb-12 px-4  '>
         {/* <div className="flex flex-col lg:flex-row items-center gap-12 md:md:rounded-[40px] md:p-8 px-4 pt-4 pb-12 bg-primary-mint md:text-left text-center "> */}
-        <div className='flex flex-col lg:flex-row items-center md:gap-0 gap-10 md:rounded-[40px] rounded-[20px] bg-primary-mint md:text-left text-center pt-[20px] px-[20px] pb-[40px] md:p-0 '>
-          <div className='lg:w-1/2 w-full xl:px-[55px] md:pl-[40px] md:pr-[20px] md:pt-[30px] md:pb-[10px]'>
+        <div className='flex flex-col lg:flex-row lg:items-stretch items-center md:gap-0 gap-10 md:rounded-[40px] rounded-[20px] bg-primary-mint md:text-left text-center pt-[20px] px-[20px] pb-[40px] md:p-0 '>
+          <div className='lg:w-1/2 w-full xl:px-[55px] md:pl-[40px] md:pr-[20px] md:pt-[30px] md:pb-[10px] flex flex-col'>
             <div className='xl:mb-[15px] mb-[10px] mobile-margin-bottom'>
               <Image
                 src={isMobile ? ShopifyImageMobile : ShopifyImage}
@@ -123,17 +123,19 @@ const ShopifyStoreSection = () => {
               contributes to better conversion rates.
             </p>
 
-            <Link
-              prefetch={true}
-              className='new-btn-design-full mt-[40px]'
-              href="/shopify"
-              scroll={true}
-            >
-              Get Started
-            </Link>
-            <p className='text-[14px] leading-[26px] md:p-0 px-[10px] font-roboto font-[400] md:leading-relaxed mt-[5px] text-[#666666]'>
+            <div className='mt-auto md:pb-[15px]'>
+              <Link
+                prefetch={true}
+                className='new-btn-design-full mt-[40px]'
+                href="/shopify"
+                scroll={true}
+              >
+                Get Started
+              </Link>
+            </div>
+            {/* <p className='text-[14px] leading-[26px] md:p-0 px-[10px] font-roboto font-[400] md:leading-relaxed mt-[5px] text-[#666666]'>
              Upgrade your Shopify Store today
-            </p>
+            </p> */}
           </div>
           <div className='lg:w-1/2  lg:pr-[11px] lg:pt-[10px] lg:pb-[10px]   w-full lg:order-last order-first xl:h-auto md:h-[-webkit-fill-available] h-auto tab-padding relative'>
             <div className='shopify_badge_section'>

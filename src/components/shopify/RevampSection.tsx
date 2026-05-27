@@ -143,7 +143,7 @@ const RevampSection: React.FC = () => {
               return (
                 <motion.div
                   key={i}
-                  className="rounded-[16px] p-[25px] h-[159px] backdrop-blur-[27px] flex flex-col items-center text-center sm:items-start sm:text-left"
+                  className="rounded-[16px] p-[25px] backdrop-blur-[27px] flex flex-col items-center text-center sm:items-start sm:text-left"
                   style={{
                     background: 'rgba(255, 255, 255, 0.05)',
                     border: '1px solid rgba(255, 255, 255, 0.10)',

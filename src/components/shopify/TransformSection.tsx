@@ -26,8 +26,8 @@ const TransformSection: React.FC<TransformSectionProps> = ({ openModal }) => {
                                 <Image src="/images/horizon_logo.png" alt="Horizon logo" width={146} height={60} />
                             </div>
                             <h1 className="md:text-primary-white md:text-[32px] lg:text-[36px] lg:leading-[40px] font-source leading-[normal] md:mb-5 mb-4 md:text-center lg:text-start  horizon-title ">
-                                <span className='block font-[700]' >Ready to Transform</span>
-                                <span className=' font-[700]'>Your Shopify Store with Horizon?</span>
+                                <span className='block font-[700]' >Ready to transform</span>
+                                <span className=' font-[700]'>your Shopify Store with Horizon?</span>
                             </h1>
                             <h4 className="md:text-primary-white horizon-subtitle md:text-[16px] lg:text-[18px] lg:leading-[40px] font-source leading-[normal] md:mb-5 mb-4  md:text-center lg:text-start ">
                                 <span className='block'>Let Bitpastel handle your migration, customization,</span>
@@ -40,7 +40,7 @@ const TransformSection: React.FC<TransformSectionProps> = ({ openModal }) => {
                                     // onClick={() => setIsModalOpen(true)}
                                     onClick={() => window.open('https://calendly.com/ayanh/meet-ayan', '_blank')}
                                 >
-                                  Book Free Consultation
+                                  Book a Free Consultation
                                 </button>
                                 
                             </div>

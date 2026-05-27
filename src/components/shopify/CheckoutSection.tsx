@@ -60,7 +60,7 @@ const CheckoutCard = ({ inView }: { inView: boolean }) => (
           </div>
           <div className='flex-1'>
             <p className='font-roboto font-medium text-[18px] leading-[23.79px] text-[#0B4F4A]'>
-              Nike
+              Nike Air Jordan Retro
             </p>
             <p className='font-roboto font-normal text-[16px] leading-[23.79px] text-[#0B4F4AD6]'>
               Men&apos;s Sneakers

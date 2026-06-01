@@ -4,11 +4,14 @@ export const metadata: Metadata = {
 title: 'Shopify X Bitpastel - We Help Brands unlock the Full Potential of Shopify',
   description:
   'Build differentiated Shopify experiences with Bitpastel through scalable development, speed optimization, and AI-driven solutions focused on better conversions.',
+  alternates: {
+    canonical: '/shopify',
+  },
   icons: {
     icon: [{ url: '/favicon.ico', sizes: 'any', type: 'image/x-icon' }],
     shortcut: ['/favicon.ico'],
   },
-    
+
 };
 // export const metadata: Metadata = {
 //   title: 'Shopify Horizon Theme Migration - Bitpastel | Fast, AI-Powered Stores',

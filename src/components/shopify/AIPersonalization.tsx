@@ -43,7 +43,7 @@ const AIPersonalization: React.FC = () => {
           <div className="flex flex-col gap-[30px]">
             {/* Headline + gradient divider */}
             <motion.div className="flex flex-col gap-[5px] items-center md:items-start" {...fadeUp(0)}>
-              <h2 className="font-source font-bold text-[23px] md:text-[38px] leading-[1.2] md:leading-[49.4px] text-center md:text-left">
+              <h2 className="font-source font-bold lg:font-semibold lg:tracking-[-1px] text-[23px] md:text-[38px] leading-[1.2] md:leading-[49.4px] text-center md:text-left">
                 AI Personalisation with Rebuy
               </h2>
               <div

@@ -282,7 +282,7 @@ const PerformanceSection: React.FC = () => {
         >
           {/* Left column — starts lower than image per Figma */}
           <div className="w-full lg:w-[42%] flex-shrink-0 lg:pt-[20px]">
-            <h2 className="font-source font-bold text-[23px] md:text-[36px] leading-[1.15] md:leading-[44px] tracking-[-0.72px] text-[#111827] mb-[5px] mobile-style-description">
+            <h2 className="font-source font-bold lg:font-semibold text-[23px] md:text-[36px] lg:text-[38px] leading-[1.15] md:leading-[44px] tracking-[-0.72px] lg:tracking-[-1px] text-[#111827] mb-[5px] mobile-style-description">
               Shopify Speed Optimization
               <br />
               &amp; Performance Audits
@@ -294,7 +294,7 @@ const PerformanceSection: React.FC = () => {
                   'linear-gradient(90deg, #22587a 0%, #C7FACE 36%, #56CC99 70%, #39A3A6 100%)',
               }}
             />
-            <p className="font-roboto font-normal text-[16px] md:text-[18px] leading-[26px] text-[#45556C] mb-[40px] max-w-[470px] mobile-style-description">
+            <p className="font-roboto font-normal lg:font-light text-[16px] md:text-[18px] leading-[26px] text-[#45556C] mb-[40px] max-w-[470px] mobile-style-description">
               A slow store impacts conversions, SEO rankings, and user experience. Our Shopify
               performance experts conduct detailed speed audits and implement advanced optimization
               strategies to ensure your store loads fast and performs efficiently across all

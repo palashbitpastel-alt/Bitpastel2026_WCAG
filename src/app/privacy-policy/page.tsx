@@ -1,4 +1,14 @@
 import React from 'react';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy - Bitpastel',
+  description:
+    'Learn how Bitpastel collects, uses and protects your information when you visit www.bitpastel.com.',
+  alternates: {
+    canonical: '/privacy-policy',
+  },
+};
 
 const PrivacyPolicy = () => {
   return (

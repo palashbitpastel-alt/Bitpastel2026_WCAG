@@ -4,6 +4,9 @@
 export const metadata: Metadata = {
  title: 'Bitpastel Portfolio – Innovative Shopify Plus & E-commerce Solutions',
   description: 'Explore Bitpastel’s portfolio showcasing cutting-edge Shopify Plus stores, custom e-commerce solutions, and digital transformation success stories. See how we help businesses thrive online.',
+  alternates: {
+    canonical: '/portfolio',
+  },
   icons: {
     icon: [{ url: '/favicon.ico', sizes: 'any', type: 'image/x-icon' }],
     shortcut: ['/favicon.ico'],

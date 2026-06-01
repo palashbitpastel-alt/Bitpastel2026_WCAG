@@ -19,8 +19,12 @@ export const viewport: Viewport = {
 
 // ✅ Correct metadata export (proper typing)
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.bitpastel.com'),
   title: 'Bitpastel - Shopify Plus Development Agency | AI Transformation & Custom SaaS Solutions',
   description: 'Bitpastel is a software development company specializing in Shopify Plus & e-commerce development, custom SaaS product development, AI transformation & automation, mobile apps, websites, and UI/UX design for startups and enterprises.',
+  alternates: {
+    canonical: '/',
+  },
   icons: {
     icon: [{ url: '/favicon.ico', sizes: 'any', type: 'image/x-icon' }],
     shortcut: ['/favicon.ico'],

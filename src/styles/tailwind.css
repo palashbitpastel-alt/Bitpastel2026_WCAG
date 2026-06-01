@@ -1383,7 +1383,7 @@ a.unfilled_button {
   border-radius: 5px;
   color: #ffffff;
   font-family: Roboto;
-  font-weight: 700;
+  font-weight: 600;
   font-style: Bold;
   font-size: 16px;
   leading-trim: NONE;
@@ -2095,7 +2095,7 @@ a.unfilled_button {
   border-radius: 5px;
   color: #ffffff;
   font-family: Roboto;
-  font-weight: 700;
+  font-weight: 600;
   font-style: Bold;
   font-size: 16px;
   leading-trim: NONE;
@@ -2904,4 +2904,36 @@ a.horizon-nav-menu::after {
     transform: none;
     height: 100% !important;
   }
+}
+/* Hero buttons — smooth gradient fade on hover.
+   CSS can't transition a gradient (background-image), so instead of letting the
+   button background snap to the gradient we fade in an overlay pseudo-element and
+   keep the base background in place underneath. */
+.hero-btn-area .btn {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition: color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+}
+.hero-btn-area .btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #22577a 0%, #44b3a1 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  z-index: 0;
+}
+.hero-btn-area .btn:hover::before {
+  opacity: 1;
+}
+/* Stop the underlying background from jumping to the gradient so only the overlay fades. */
+.hero-btn-area .btn.btn-hover:hover {
+  background-image: none;
+}
+/* Keep the label above the overlay. */
+.hero-btn-area .btn > span {
+  position: relative;
+  z-index: 1;
 }

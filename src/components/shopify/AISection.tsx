@@ -106,7 +106,7 @@ const AISection: React.FC = () => {
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="font-source font-bold text-[23px] md:text-[38px] leading-[1.2] md:leading-[49.4px] text-[#0f172b] text-center mb-[5px]">
+            <h2 className="font-source font-bold lg:font-semibold lg:tracking-[-1px] text-[23px] md:text-[38px] leading-[1.2] md:leading-[49.4px] text-[#0f172b] text-center mb-[5px]">
               AI-Powered Shopify Enhancements
             </h2>
 
@@ -118,7 +118,7 @@ const AISection: React.FC = () => {
               }}
             />
 
-            <p className="font-roboto font-normal text-[16px] md:text-[18px] leading-[26px] md:leading-[29.25px] text-[#45556c] text-center max-w-[834px]">
+            <p className="font-roboto font-normal lg:font-light text-[16px] md:text-[18px] leading-[26px] md:leading-[29.25px] text-[#45556c] text-center max-w-[834px]">
               We help Shopify stores unlock the power of AI to create smarter, more
               personalised shopping experiences. From intelligent product recommendations
               to automated customer interactions, our AI integrations are designed to

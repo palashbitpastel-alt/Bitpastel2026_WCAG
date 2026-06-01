@@ -167,7 +167,7 @@ const HorizonBanner: React.FC = () => {
           </motion.div>
 
           <motion.h2
-            className="mt-2 md:mt-4 font-source font-bold text-[23px] md:text-[38px] leading-[1.2] md:leading-[49.4px] text-[#FFF]"
+            className="mt-2 md:mt-4 font-source font-bold lg:font-semibold lg:tracking-[-1px] text-[23px] md:text-[38px] leading-[1.2] md:leading-[49.4px] text-[#FFF]"
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.5, delay: 0.1 }}
@@ -176,7 +176,7 @@ const HorizonBanner: React.FC = () => {
           </motion.h2>
 
           <motion.p
-            className="mt-[24px] font-roboto font-normal text-[16px] md:text-[18px] leading-[28px] md:leading-[30px] text-[#FFF] max-w-[934px]"
+            className="mt-[24px] font-roboto font-normal lg:font-light text-[16px] md:text-[18px] leading-[28px] md:leading-[30px] text-[#FFF] max-w-[934px]"
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -209,7 +209,7 @@ const HorizonBanner: React.FC = () => {
               {benefits.map((phrase, i) => (
                 <li
                   key={`${dup}-${i}`}
-                  className="font-source font-light text-[22px] sm:text-[32px] md:text-[80px] leading-[1.1] tracking-[-0.6px] md:tracking-[-2.4px] text-[#FFF] opacity-50 whitespace-nowrap text-center py-[6px] px-[10px]"
+                  className="font-source font-light text-[22px] sm:text-[32px] md:text-[80px] leading-[1.1] tracking-[-0.6px] md:tracking-[-2.4px] lg:tracking-[-1px] text-[#FFF] opacity-50 whitespace-nowrap text-center py-[6px] px-[10px]"
                 >
                   {phrase}
                 </li>

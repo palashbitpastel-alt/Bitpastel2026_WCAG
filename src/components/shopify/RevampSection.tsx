@@ -110,7 +110,7 @@ const RevampSection: React.FC = () => {
               <ArrowLeftRight size={32} color="white" strokeWidth={1.6} />
             </div>
 
-            <h2 className="font-source font-bold text-[23px] md:text-[38px] leading-[1.15] md:leading-[45.6px] tracking-[-1.08px] text-[#FFF] mb-[5px]">
+            <h2 className="font-source font-bold lg:font-semibold text-[23px] md:text-[38px] leading-[1.15] md:leading-[45.6px] tracking-[-1.08px] lg:tracking-[-1px] text-[#FFF] mb-[5px]">
               Replatforming & Elevated Shopify Experiences
             </h2>
 
@@ -122,13 +122,13 @@ const RevampSection: React.FC = () => {
               }}
             />
 
-            <p className="font-roboto font-normal text-[16px] md:text-[18px] leading-[29.25px] text-[#FFF] mb-[40px] max-w-[557px]">
+            <p className="font-roboto font-normal lg:font-light text-[16px] md:text-[18px] leading-[29.25px] text-[#FFF] mb-[40px] max-w-[557px]">
               Switching platforms can feel complex, but our migration specialists
               ensure a seamless transition to Shopify without losing valuable data
               or SEO rankings.
             </p>
 
-            <p className="font-roboto font-normal text-[16px] md:text-[18px] leading-[29.25px] text-[#FFF] max-w-[557px]">
+            <p className="font-roboto font-normal lg:font-light text-[16px] md:text-[18px] leading-[29.25px] text-[#FFF] max-w-[557px]">
               If your current Shopify store feels outdated or is underperforming, we
               help transform it with modern, conversion-focused designs. Bitpastel
               redesigns stores using premium themes and custom UX strategies to

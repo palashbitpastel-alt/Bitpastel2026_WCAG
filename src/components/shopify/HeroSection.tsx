@@ -59,14 +59,14 @@ const HeroSection: React.FC<HerSectionProps> = ({ openModal }) => {
             </h1>
 
             {/* Subtitle */}
-            <p className='text-primary-white text-center md:text-left font-roboto font-normal text-[16px] lg:text-[18px] leading-[26px] mb-10 md:max-w-[473px] horizon-subtitle'>
+            <p className='text-primary-white text-center md:text-left font-roboto font-normal lg:font-light text-[16px] lg:text-[18px] leading-[26px] mb-10 md:max-w-[473px] horizon-subtitle'>
               through custom development, store optimization, migrations, and advanced integrations.
             </p>
 
             {/* Buttons */}
             <div className='flex justify-center md:justify-start items-center gap-[18px] hero-btn-area'>
               <button
-                className='btn leading-normal bg-white-btn bg-green-text md:w-auto w-full mt-0 font-roboto btn-hover !rounded-full !min-w-[244px] flexible-horizon'
+                className='font-600 btn leading-normal bg-white-btn bg-green-text md:w-auto w-full mt-0 font-roboto btn-hover !rounded-full !min-w-[244px] flexible-horizon'
                 onClick={() => {
                   const element = document.getElementById('flexible-horizon');
                   if (element) {
@@ -74,20 +74,20 @@ const HeroSection: React.FC<HerSectionProps> = ({ openModal }) => {
                   }
                 }}
               >
-                Explore Horizon
+                <span>Explore Horizon</span>
               </button>
               <button
-                className='btn leading-normal bg-transparent-btn md:w-auto w-full mt-0 font-roboto btn-hover !rounded-full !min-w-[244px]'
+                className='font-600 btn leading-normal bg-transparent-btn md:w-auto w-full mt-0 font-roboto btn-hover !rounded-full !min-w-[244px]'
                 onClick={() => window.open('https://calendly.com/ayanh/meet-ayan', '_blank')}
               >
-                Speed Optimisation Service
+                <span>Speed Optimisation Service</span>
               </button>
             </div>
 
             {/* Stats Bar */}
             <div className='flex justify-center md:justify-start items-center mt-8 md:mt-10 gap-[15px]'>
               <div className='text-center md:text-left pr-5 md:pr-6 lg:pr-8'>
-                <p className='text-[#FFF] font-source font-[500] text-[28px] md:text-[36px] lg:text-[42px] leading-none'>
+                <p className='text-[#FFF] font-source font-[500] lg:font-semibold text-[28px] md:text-[36px] lg:text-[38px] leading-none'>
                   400+
                 </p>
                 <p className='text-[#FFF] font-source font-medium text-[14px] leading-[22px] mt-1'>
@@ -99,7 +99,7 @@ const HeroSection: React.FC<HerSectionProps> = ({ openModal }) => {
                 style={{ backgroundColor: '#FFFFFF80' }}
               ></div>
               <div className='text-center md:text-left px-5 md:px-6 lg:px-8'>
-                <p className='text-[#FFF] font-source font-[500] text-[28px] md:text-[36px] lg:text-[42px] leading-none'>
+                <p className='text-[#FFF] font-source font-[500] lg:font-semibold text-[28px] md:text-[36px] lg:text-[38px] leading-none'>
                   100+
                 </p>
                 <p className='text-[#FFF] font-source font-medium text-[14px] leading-[22px] mt-1'>

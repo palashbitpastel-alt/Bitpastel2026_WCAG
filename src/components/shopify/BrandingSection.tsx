@@ -40,7 +40,7 @@ const BrandingSection: React.FC = () => {
       <div className='relative z-10 container mx-auto px-4'>
         {/* Title */}
         <div className='flex flex-col items-center mb-[20px]'>
-          <h2 className='font-source font-bold text-[23px] md:text-[38px] leading-[1.2] md:leading-[49.4px] text-center text-[#FFF]'>
+          <h2 className='font-source font-bold lg:font-semibold lg:tracking-[-1px] text-[23px] md:text-[38px] leading-[1.2] md:leading-[49.4px] text-center text-[#FFF]'>
             Shopify Solutions & Branding
           </h2>
           {/* Gradient underline */}
@@ -54,7 +54,7 @@ const BrandingSection: React.FC = () => {
         </div>
 
         {/* Subtitle */}
-        <p className='font-roboto font-normal text-[16px] md:text-[18px] leading-[26px] text-center text-[#FFF] max-w-[655px] mx-auto mb-[40px] md:mb-[40px]'>
+        <p className='font-roboto font-normal lg:font-light text-[16px] md:text-[18px] leading-[26px] text-center text-[#FFF] max-w-[655px] mx-auto mb-[40px] md:mb-[40px]'>
           We provide a wide range of Shopify development and optimization services designed to help
           brands build, scale, and optimize their e-commerce stores.
         </p>

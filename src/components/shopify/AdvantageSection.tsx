@@ -84,7 +84,7 @@ const AdvantageSection: React.FC = () => {
       <div className="container mx-auto px-4 md:px-[80px]">
         {/* Title */}
         <div className="flex flex-col items-center mb-[20px]">
-          <h2 className="font-source font-bold text-[23px] md:text-[38px] leading-[1.2] md:leading-[49.4px] text-[#0f172b] text-center">
+          <h2 className="font-source font-bold lg:font-semibold lg:tracking-[-1px] text-[23px] md:text-[38px] leading-[1.2] md:leading-[49.4px] text-[#0f172b] text-center">
             The Bitpastel Advantage
           </h2>
           {/* Gradient underline */}
@@ -98,7 +98,7 @@ const AdvantageSection: React.FC = () => {
         </div>
 
         {/* Subtitle */}
-        <p className="font-roboto font-normal text-[16px] md:text-[18px] leading-[26px] text-center text-[#6B7280] max-w-[909px] mx-auto mb-[40px] md:mb-[40px]">
+        <p className="font-roboto font-normal lg:font-light text-[16px] md:text-[18px] leading-[26px] text-center text-[#6B7280] max-w-[909px] mx-auto mb-[40px] md:mb-[40px]">
           At Bitpastel, we combine Shopify expertise with modern development practices to help brands build scalable and high-performing ecommerce stores. From store setup to advanced integrations, our team delivers tailored Shopify solutions that align with your business goals.
         </p>
 

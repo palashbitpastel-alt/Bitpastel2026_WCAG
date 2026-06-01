@@ -57,6 +57,14 @@ const nextConfig = {
         destination: '/shopify',
         permanent: true,
       },
+      {
+        // /home renders the exact same component as /, so it was a duplicate
+        // URL flagged by Search Console ("Duplicate without user-selected
+        // canonical"). Collapse it into the canonical home URL.
+        source: '/home',
+        destination: '/',
+        permanent: true,
+      },
     ];
   },
 

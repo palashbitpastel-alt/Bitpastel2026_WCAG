@@ -28,13 +28,17 @@ const CheckoutCard = ({ inView }: { inView: boolean }) => (
         background: '#F8FAFB',
         backgroundImage: 'radial-gradient(circle, #D1D5DB 1px, transparent 1px)',
         backgroundSize: '20px 20px',
-        boxShadow: '0 8px 30px rgba(0, 0, 0, 0.08)',
+        boxShadow:
+          '0 24px 48px -12px rgba(15, 23, 43, 0.18), 0 8px 18px -8px rgba(15, 23, 43, 0.12)',
       }}
     >
       {/* Inner white card */}
       <div
         className='rounded-[16px] bg-white p-[24px] md:p-[30px]'
-        style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.06)' }}
+        style={{
+          boxShadow:
+            '0 12px 32px -8px rgba(15, 23, 43, 0.12), 0 4px 10px -4px rgba(15, 23, 43, 0.08)',
+        }}
       >
         {/* Header */}
         <div className='flex justify-between items-center mb-[28px]'>
@@ -175,7 +179,7 @@ const CheckoutSection: React.FC = () => {
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h2 className='font-source font-bold text-[23px] md:text-[38px] leading-[1.15] md:leading-[45.6px] text-[#0F172B] mb-[5px]'>
+            <h2 className='font-source font-bold lg:font-semibold lg:tracking-[-1px] text-[23px] md:text-[38px] leading-[1.15] md:leading-[45.6px] text-[#0F172B] mb-[5px]'>
               Enhanced Checkout &<br />
               Post-Purchase Experiences
             </h2>
@@ -189,7 +193,7 @@ const CheckoutSection: React.FC = () => {
             />
 
             <p
-              className='font-roboto font-normal text-[16px] md:text-[18px] leading-[29.25px] text-[#45556C] mb-[20px] max-w-[530px]'
+              className='font-roboto font-normal lg:font-light text-[16px] md:text-[18px] leading-[29.25px] text-[#45556C] mb-[20px] max-w-[530px]'
               style={{ wordSpacing: '-1px' }}
             >
               We extend Shopify&apos;s checkout and post-purchase journey to create personalised and
@@ -197,7 +201,7 @@ const CheckoutSection: React.FC = () => {
             </p>
 
             <p
-              className='font-roboto font-normal text-[16px] md:text-[18px] leading-[29.25px] text-[#45556C] mb-[45px] max-w-[530px]'
+              className='font-roboto font-normal lg:font-light text-[16px] md:text-[18px] leading-[29.25px] text-[#45556C] mb-[45px] max-w-[530px]'
               style={{ wordSpacing: '-1px' }}
             >
               By leveraging Shopify&apos;s latest Checkout Extensibility framework, we enhance

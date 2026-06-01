@@ -51,10 +51,10 @@ const AnimatedBar = ({
     {/* bar track */}
     <div className="relative h-[4px] w-full rounded-full bg-[#1F2D3C]">
       {/* dot at start */}
-      {/* <div
+      <div
         className="absolute left-0 top-1/2 -translate-y-1/2 w-[8px] h-[8px] rounded-full z-10"
         style={{ backgroundColor: color }}
-      /> */}
+      />
       {/* animated fill */}
       <motion.div
         className="absolute left-0 top-0 h-full rounded-full"
@@ -76,10 +76,10 @@ const AnimatedBar = ({
 /* ─── Animated graph with SVG path draw ─── */
 // Curve tuned to match screenshot: gentle rise, first hump ~30%, subtle dip, sharp climb to high plateau
 const CURVE =
-  'M48 215 C54 214.5, 62 213.5, 72 211 C86 207.5, 98 200, 110 191 C128 180, 145 168, 162 162 C176 158, 184 172, 195 180 C208 188, 222 184, 238 162 C254 140, 268 116, 286 102 C304 92, 318 102, 332 122 C346 142, 358 144, 372 134 C390 122, 410 96, 430 70 C440 57, 462 50, 478 50 C484 50, 487 50, 490 50';
+  'M48 280 C56 279, 68 278, 82 275 C104 270, 122 261, 140 249 C166 235, 188 219, 210 211 C228 206, 238 224, 252 234 C268 245, 286 240, 306 211 C326 183, 344 151, 366 133 C388 120, 406 133, 424 159 C442 185, 456 188, 474 175 C496 159, 520 125, 544 91 C556 75, 580 65, 598 65 C606 65, 612 65, 616 65';
 
 const AREA =
-  'M48 215 C54 214.5, 62 213.5, 72 211 C86 207.5, 98 200, 110 191 C128 180, 145 168, 162 162 C176 158, 184 172, 195 180 C208 188, 222 184, 238 162 C254 140, 268 116, 286 102 C304 92, 318 102, 332 122 C346 142, 358 144, 372 134 C390 122, 410 96, 430 70 C440 57, 462 50, 478 50 C484 50, 487 50, 490 50 L490 215 L48 215 Z';
+  'M48 280 C56 279, 68 278, 82 275 C104 270, 122 261, 140 249 C166 235, 188 219, 210 211 C228 206, 238 224, 252 234 C268 245, 286 240, 306 211 C326 183, 344 151, 366 133 C388 120, 406 133, 424 159 C442 185, 456 188, 474 175 C496 159, 520 125, 544 91 C556 75, 580 65, 598 65 C606 65, 612 65, 616 65 L616 280 L48 280 Z';
 
 
 const AnimatedGraph = ({ inView }: { inView: boolean }) => {
@@ -114,7 +114,7 @@ const AnimatedGraph = ({ inView }: { inView: boolean }) => {
 
   return (
     <svg
-      viewBox="0 0 580 255"
+      viewBox="0 15 700 310"
       className="w-full h-full"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -126,58 +126,58 @@ const AnimatedGraph = ({ inView }: { inView: boolean }) => {
           <stop offset="100%" stopColor="#00E396" stopOpacity="0" />
         </linearGradient>
         {/* horizontal gradient: low opacity at the start of the curve, full opacity by ~25% across */}
-        <linearGradient id="curveStroke" x1="490" y1="49" x2="0" y2="280" gradientUnits="userSpaceOnUse">
+        <linearGradient id="curveStroke" x1="616" y1="65" x2="0" y2="300" gradientUnits="userSpaceOnUse">
           <stop offset="0%" stopColor="#00E365" stopOpacity="1" />
           <stop offset="25%" stopColor="#00E365" stopOpacity="0.95" />
           <stop offset="55%" stopColor="#00E365" stopOpacity="0.40" />
           <stop offset="75%" stopColor="#00E365" stopOpacity="0.10" />
           <stop offset="100%" stopColor="#00E365" stopOpacity="0" />
         </linearGradient>
-        {/* width = 500 - 48 = 452, clips curve to match X axis end */}
+        {/* width = 616 - 48 = 568, clips curve to match X axis end */}
         <clipPath id="graphClip">
-          <rect x="48" y="0" width="452" height="218" />
+          <rect x="48" y="0" width="568" height="285" />
         </clipPath>
       </defs>
 
-      {/* horizontal grid lines — match X axis end at 560 */}
+      {/* horizontal grid lines — match X axis end at 616 */}
       {[1, 2, 3, 4, 5].map((i) => (
         <line
           key={i}
           x1="48"
-          y1={215 - i * 35}
-          x2="490"
-          y2={215 - i * 35}
+          y1={280 - i * 46}
+          x2="616"
+          y2={280 - i * 46}
           stroke="rgba(255,255,255,0.07)"
           strokeWidth="1"
         />
       ))}
 
       {/* Y axis — taller */}
-      <line x1="48" y1="4" x2="48" y2="215" stroke="#FFFFFF" strokeWidth="1" />
+      <line x1="48" y1="20" x2="48" y2="280" stroke="#FFFFFF" strokeWidth="1.5" />
       {/* Y axis arrowhead removed */}
 
       {/* X axis line stops just before arrowhead */}
-      <line x1="48" y1="215" x2="490" y2="215" stroke="#FFFFFF" strokeWidth="1.5" />
+      <line x1="48" y1="280" x2="616" y2="280" stroke="#FFFFFF" strokeWidth="1.5" />
 
       {/* X axis arrowhead removed */}
 
       {/* Y label — rotated, centered on x=22 to match the arrow shaft */}
       <text
         x="22"
-        y="140"
+        y="175"
         fill="#FFFFFF"
         fontSize="16"
         fontFamily="Roboto, sans-serif"
         fontWeight="400"
-        transform="rotate(-90 22 140)"
+        transform="rotate(-90 22 175)"
         textAnchor="middle"
       >
         Loading Speed
       </text>
       {/* Y label arrow (just above text, pointing upward) — open/line head, centered on shaft x=16 */}
-      <line x1="16" y1="78" x2="16" y2="42" stroke="#FFFFFF" strokeWidth="1.5" strokeLinecap="round" />
+      <line x1="16" y1="104" x2="16" y2="68" stroke="#FFFFFF" strokeWidth="1.5" strokeLinecap="round" />
       <polyline
-        points="10,50 16,42 22,50"
+        points="10,76 16,68 22,76"
         fill="none"
         stroke="#FFFFFF"
         strokeWidth="1.5"
@@ -187,8 +187,8 @@ const AnimatedGraph = ({ inView }: { inView: boolean }) => {
 
       {/* X label + arrow */}
       <text
-        x="290"
-        y="245"
+        x="332"
+        y="312"
         fill="#FFFFFF"
         fontSize="16"
         fontFamily="Roboto, sans-serif"
@@ -197,9 +197,9 @@ const AnimatedGraph = ({ inView }: { inView: boolean }) => {
       >
         Revenue &amp; engagement
       </text>
-      <line x1="385" y1="239" x2="446" y2="239" stroke="#FFFFFF" strokeWidth="1.5" strokeLinecap="round" />
+      <line x1="455" y1="306" x2="516" y2="306" stroke="#FFFFFF" strokeWidth="1.5" strokeLinecap="round" />
       <polyline
-        points="438,233 446,239 438,245"
+        points="508,300 516,306 508,312"
         fill="none"
         stroke="#FFFFFF"
         strokeWidth="1.5"
@@ -390,12 +390,12 @@ const PerformanceSection: React.FC = () => {
                   Studies Show
                 </h3>
                 <p className="font-roboto font-normal text-[14px] md:text-[16px] leading-[22px] text-[#FFFFFF]/90">
-                  70% of visitors leave a site that takes more than 6 seconds to load
+                  70% of visitors leave a site taking more than 6s to load
                 </p>
               </div>
             </div>
 
-            <div className="w-full flex-1 min-h-[220px] md:min-h-[240px]">
+            <div className="w-full aspect-[700/310] mt-2">
               <AnimatedGraph inView={bottomInView} />
             </div>
           </div>

@@ -81,7 +81,7 @@ const advantages = [
 const AdvantageSection: React.FC = () => {
   return (
     <section className="bg-white py-[80px] md:py-[100px]">
-      <div className="container mx-auto px-4 md:px-[80px]">
+      <div className="relative z-10 container mx-auto px-4">
         {/* Title */}
         <div className="flex flex-col items-center mb-[20px]">
           <h2 className="font-source font-bold lg:font-semibold lg:tracking-[-1px] text-[23px] md:text-[38px] leading-[1.2] md:leading-[49.4px] text-[#0f172b] text-center">
@@ -103,13 +103,13 @@ const AdvantageSection: React.FC = () => {
         </p>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[40px] max-w-[1207px] mx-auto">
+        <div className="flex flex-wrap justify-center gap-[40px] mx-auto">
           {advantages.map((item, index) => {
             const Icon = item.icon;
             return (
               <div
                 key={index}
-                className="bg-white rounded-[16px] border p-[15px] md:p-[33px] flex flex-col gap-[15px] h-[296px] mobile-style-admantage"
+                className="bg-white rounded-[16px] border p-[15px] md:p-[33px] flex flex-col gap-[15px] h-[296px] w-full sm:w-[272px] mobile-style-admantage"
                 style={{
                   borderColor: item.borderColor,
                   boxShadow: '0 0 13.6px 0 rgba(0, 0, 0, 0.08)',

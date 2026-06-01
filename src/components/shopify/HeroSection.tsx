@@ -95,7 +95,7 @@ const HeroSection: React.FC<HerSectionProps> = ({ openModal }) => {
                 </p>
               </div>
               <div
-                className='w-px h-[50px] md:h-[60px]'
+                className='w-px h-[54px] md:h-[64px]'
                 style={{ backgroundColor: '#FFFFFF80' }}
               ></div>
               <div className='text-center md:text-left px-5 md:px-6 lg:px-8'>
@@ -107,7 +107,7 @@ const HeroSection: React.FC<HerSectionProps> = ({ openModal }) => {
                 </p>
               </div>
               <div
-                className='w-px h-[50px] md:h-[60px]'
+                className='w-px h-[54px] md:h-[64px]'
                 style={{ backgroundColor: '#FFFFFF80' }}
               ></div>
               <div className='pl-5 md:pl-6 lg:pl-8'>
@@ -120,7 +120,7 @@ const HeroSection: React.FC<HerSectionProps> = ({ openModal }) => {
                     alt='Shopify Select Partner'
                     width={130}
                     height={50}
-                    className='w-[90px] md:w-[130px] h-auto object-contain'
+                    className='h-[54px] md:h-[64px] w-auto object-contain'
                   />
                 </Link>
               </div>

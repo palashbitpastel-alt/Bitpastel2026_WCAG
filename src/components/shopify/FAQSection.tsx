@@ -60,7 +60,7 @@ const FAQSection: React.FC<FAQSectionProps> = ({ openModal }) => {
         <>
             <section id="services" className="md:pt-[70px] pt-[40px] md:pb-[90px] pb-[60px]">
                 <div className="container mx-auto px-4 overflow-hidden relative">
-                    <h2 className="font-source font-bold lg:font-medium lg:tracking-[-1px] text-[23px] md:text-[38px] leading-[1.2] md:leading-[49.4px] text-center text-[#111827] md:mb-[5px] mb-[5px]">
+                    <h2 className="font-source font-[600] font-bold lg:font-medium lg:tracking-[-1px] text-[23px] md:text-[38px] leading-[1.2] md:leading-[49.4px] text-center text-[#111827] md:mb-[5px] mb-[5px]">
                         Frequently Asked Questions
                     </h2>
                      <div className="flex justify-center items-center mb-[30px]">

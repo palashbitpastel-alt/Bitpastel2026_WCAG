@@ -1000,6 +1000,11 @@ padding-bottom:20px;
     left: 15px;
 }
 @media screen and (max-width:767px) {
+  .shopify_badge_section {
+    position: absolute;
+    bottom: 2px;
+    left: 2px;
+}
   #culture .work-with-us-features .relative:nth-child(1) ul li::before {
       background: #3ECB90;
 

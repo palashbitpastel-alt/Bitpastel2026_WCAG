@@ -151,11 +151,10 @@ const HorizonBanner: React.FC = () => {
         <div ref={headingRef} className="flex flex-col items-center text-center">
           {/* Chrome script-lettering "Horizons" emblem (Rectangle 52 from Figma) */}
           <motion.div
-            className="relative z-10 flex justify-center mb-8 md:mb-10"
+            className="relative z-10 flex justify-center mb-8 md:mb-10 ml-[20px] md:ml-[85px]"
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6 }}
-            style={{marginLeft: '85px'}}
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img

@@ -43,7 +43,7 @@ const HeroSection: React.FC<HerSectionProps> = ({ openModal }) => {
 
         {/* Content */}
         <div className='relative z-20 container mx-auto px-4 md:h-full pt-[40px] md:pt-[60px] text-left'>
-          <div className='md:h-full content-center mx-auto md:max-w-[100%] max-w-[310px]'>
+          <div className='md:h-full content-center mx-auto md:max-w-[100%] max-w-[350px]'>
             {/* Shopify X Bitpastel Logo */}
             <div className='flex justify-center md:justify-start items-center mb-[38px] horinzon-logo-area'>
               <img
@@ -85,32 +85,32 @@ const HeroSection: React.FC<HerSectionProps> = ({ openModal }) => {
             </div>
 
             {/* Stats Bar */}
-            <div className='flex justify-center md:justify-start items-center mt-8 md:mt-10 gap-[15px]'>
-              <div className='text-center md:text-left pr-5 md:pr-6 lg:pr-8'>
-                <p className='text-[#FFF] font-source font-[500] lg:font-semibold text-[28px] md:text-[36px] lg:text-[38px] leading-none'>
+            <div className='flex flex-row justify-between md:justify-start items-center mt-8 md:mt-10 gap-2 md:gap-[15px] md:w-full md:max-w-[506px]'>
+              <div className='text-left pr-0 md:pr-6 lg:pr-8'>
+                <p className='text-[#FFF] font-source font-[500] lg:font-semibold text-[24px] md:text-[36px] lg:text-[38px] leading-none'>
                   400+
                 </p>
-                <p className='text-[#FFF] font-source font-medium text-[14px] leading-[22px] mt-1'>
+                <p className='text-[#FFF] font-source font-medium text-[11px] md:text-[14px] leading-[15px] md:leading-[22px] mt-1 whitespace-nowrap'>
                   Shopify Stores
                 </p>
               </div>
               <div
-                className='w-px h-[54px] md:h-[64px]'
+                className='w-px h-[40px] md:h-[64px]'
                 style={{ backgroundColor: '#FFFFFF80' }}
               ></div>
-              <div className='text-center md:text-left px-5 md:px-6 lg:px-8'>
-                <p className='text-[#FFF] font-source font-[500] lg:font-semibold text-[28px] md:text-[36px] lg:text-[38px] leading-none'>
+              <div className='text-left px-0 md:px-6 lg:px-8'>
+                <p className='text-[#FFF] font-source font-[500] lg:font-semibold text-[24px] md:text-[36px] lg:text-[38px] leading-none'>
                   100+
                 </p>
-                <p className='text-[#FFF] font-source font-medium text-[14px] leading-[22px] mt-1'>
+                <p className='text-[#FFF] font-source font-medium text-[11px] md:text-[14px] leading-[15px] md:leading-[22px] mt-1 whitespace-nowrap'>
                   Shopify Plus Stores
                 </p>
               </div>
               <div
-                className='w-px h-[54px] md:h-[64px]'
+                className='w-px h-[40px] md:h-[64px] md:ml-auto'
                 style={{ backgroundColor: '#FFFFFF80' }}
               ></div>
-              <div className='pl-5 md:pl-6 lg:pl-8'>
+              <div className='pl-0 md:pl-5 lg:pl-6 xl:pl-8'>
                 <Link
                   href='https://www.shopify.com/partners/directory/partner/bitpastel3'
                   target='_blank'
@@ -120,7 +120,7 @@ const HeroSection: React.FC<HerSectionProps> = ({ openModal }) => {
                     alt='Shopify Select Partner'
                     width={130}
                     height={50}
-                    className='h-[54px] md:h-[64px] w-auto object-contain'
+                    className='h-[34px] md:h-[64px] w-auto object-contain'
                   />
                 </Link>
               </div>

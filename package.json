@@ -11,6 +11,7 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
+    "@a5c-ai/babysitter-sdk": "^0.0.187",
     "@next/bundle-analyzer": "^15.4.4",
     "@tailwindcss/typography": "^0.5.16",
     "country-codes-list": "^2.0.0",

@@ -982,14 +982,14 @@ padding-bottom:20px;
 
 
         .nav-item.current span {
-  color: #008B8B;
+  color: #00A974;
   font-weight: bold;
 }
-
+/* 
 .nav-item.current svg path {
   fill: #008B8B;
   stroke: #008B8B;
-}
+} */
 
 #culture .arrow-icon{
   margin-left: auto !important;

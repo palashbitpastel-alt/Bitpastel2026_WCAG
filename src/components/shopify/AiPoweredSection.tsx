@@ -9,21 +9,29 @@ const AiPoweredSection: React.FC<AiPoweredSectionProps> = ({ openModal }) => {
     return (
         <>
             <section id="Advantages" className="relative h-auto overflow-hidden">
+                {/* Mobile background */}
                 <div
-                    className=" absolute inset-0 bg-cover bg-[position:60%_20%] bg-no-repeat"
+                    className="absolute inset-0 bg-no-repeat md:hidden"
                     style={{
-                        backgroundImage: `
-            url('/images/ai-poweredbackground.webp')
-          `,
+                        backgroundImage: `url('/images/bgmob.webp')`,
+                        backgroundSize: '100% 100%',
+                        backgroundPosition: 'center',
+                    }}
+                ></div>
+                {/* Desktop / tablet background */}
+                <div
+                    className="absolute inset-0 bg-cover bg-[position:60%_20%] bg-no-repeat hidden md:block"
+                    style={{
+                        backgroundImage: `url('/images/ai-poweredbackground.webp')`,
                     }}
                 ></div>
                 <div className="relative z-10 container mx-auto px-4 md:pt-[50px] pt-[50px] md:pb-[50px] pb-[50px] text-left ">
                     <div className='grid md:grid-cols-1 lg:grid-cols-2  gap-8'>
                         <div className='flex justify-center items-left flex-col'>
                             <h1 className="font-source font-bold text-[23px] md:text-[38px] leading-[1.2] md:leading-[49.4px] mb-[5px] text-center md:text-left text-[#ffffff] ai-powered-title">
-                                <span className="block text-[38px] md:text-[32px] lg:text-[36px] leading-[48px] md:leading-[40px] horizon-title">AI-Powered Selling </span>
-                                <span className=" text-[38px] md:text-[32px] lg:text-[36px] leading-[48px] md:leading-[40px] horizon-title">with </span>
-                                <span className="bold text-[38px] md:text-[32px] lg:text-[36px] leading-[48px] md:leading-[40px] horizon-title">  Horizon + Bitpastel</span>
+                                <span className="block text-[23px] md:text-[32px] lg:text-[36px] leading-[1.2] md:leading-[40px] mb-0">AI-Powered Selling </span>
+                                <span className=" text-[23px] md:text-[32px] lg:text-[36px] leading-[1.2] md:leading-[40px] mb-0 horizon-title">with </span>
+                                <span className="bold text-[23px] md:text-[32px] lg:text-[36px] leading-[1.2] md:leading-[40px] mb-0 horizon-title">  Horizon + Bitpastel</span>
                             </h1>
                             <div className="ai-powered-green-gradient"></div>
                             <h4 className='ai-powered-subtitle'>
@@ -59,7 +67,7 @@ const AiPoweredSection: React.FC<AiPoweredSectionProps> = ({ openModal }) => {
                             </div>
                         </div>
                         <div className='flex justify-center align-middle'>
-                            <Image src="/images/Ai_powered_Image.webp" alt="Ai_powered_Image" width={430} height={460} />
+                            <Image src="/images/Ai_powered_Image.webp" alt="Ai_powered_Image" width={430} height={460} className="w-full h-auto max-w-[430px]" />
                         </div>
                     </div>
                 </div>

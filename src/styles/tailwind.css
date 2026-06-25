@@ -685,17 +685,17 @@ input:focus-visible {
   }
 }
 
-.nav-item.current svg {
+/* .nav-item.current svg {
   fill: var(--primary-teal);
 }
 
 .nav-item.current svg path d {
   fill: var(--primary-teal);
-}
+} */
 
-.nav-item.current span {
+/* .nav-item.current span {
   color: var(--primary-teal);
-}
+} */
 
 .partner-refer-list:last-child {
   border-bottom: 0;
@@ -1931,7 +1931,7 @@ span.MuiAccordionSummary-content.Mui-expanded.MuiAccordionSummary-contentGutters
   }
 
   .mobile-horizon {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
     width: 100% !important;
   }
 
@@ -1990,6 +1990,7 @@ span.MuiAccordionSummary-content.Mui-expanded.MuiAccordionSummary-contentGutters
     color: #ffffff !important;
     font-size: 23px;
     line-height: 30px;
+    letter-spacing: 0px;
   }
 
   .horizon-our-services-wrapper p {
@@ -2590,7 +2591,7 @@ span.MuiAccordionSummary-content.Mui-expanded.MuiAccordionSummary-contentGutters
   }
 
   .mobile-horizon {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
     width: 100% !important;
   }
 
@@ -2614,6 +2615,7 @@ span.MuiAccordionSummary-content.Mui-expanded.MuiAccordionSummary-contentGutters
     font-size: 16px;
     color: #ffffff !important;
     line-height: 20px !important;
+    margin-bottom: 15px;
   }
 
   .hero-btn-area {
@@ -2663,7 +2665,7 @@ span.MuiAccordionSummary-content.Mui-expanded.MuiAccordionSummary-contentGutters
   }
 
   .horinzon-logo-area {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     margin-top: 40px;
   }
 
@@ -2796,11 +2798,11 @@ a.horizon-nav-menu::after {
     justify-content: center;
     align-items: center;
   }
-  .mobile-style-admantage
-  {
+  .mobile-style-admantage {
     align-items: center;
+    text-align: center;
     height: auto;
-  }
+}
   .mobile-style-description
   {
     text-align: center;
@@ -2842,7 +2844,9 @@ a.horizon-nav-menu::after {
   border: none;
   padding: 12px 24px;
   cursor: pointer;
-  width: 200px;
+  min-width: 200px;
+  width: auto;
+  white-space: nowrap;
   text-decoration: none;
   line-height: normal;
 }
@@ -2936,4 +2940,52 @@ a.horizon-nav-menu::after {
 .hero-btn-area .btn > span {
   position: relative;
   z-index: 1;
+}
+
+/* ── "Why choose Horizon" advantages grid → vertical stack on mobile ──
+   Single column with a simple full-width horizontal rule between items
+   (no column dividers, last divider hidden). Placed last so it wins over
+   the earlier 2-column mobile rules. */
+@media (max-width: 767px) {
+  .mobile-horizon {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+    width: 100% !important;
+  }
+
+  .mobile-horizon .card-element-Horizon {
+    min-height: unset !important;
+    padding-top: 24px !important;
+    padding-bottom: 24px !important;
+  }
+
+  /* natural content height in a stack — no fixed-height title alignment */
+  .mobile-horizon .card-element-Horizon .responsive-h3 {
+    height: auto !important;
+  }
+
+  /* remove the vertical column dividers */
+  .mobile-horizon .card-element-Horizon::after {
+    display: none !important;
+  }
+
+  /* full-width horizontal separator under every item */
+  .mobile-horizon .card-element-Horizon::before {
+    content: '' !important;
+    display: block !important;
+    left: 0 !important;
+    right: auto !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 1px !important;
+    background: linear-gradient(
+      90deg,
+      rgba(34, 88, 122, 0.42) 0%,
+      rgba(86, 204, 153, 0.42) 70.19%,
+      rgba(57, 163, 166, 0.42) 100%
+    ) !important;
+  }
+
+  .mobile-horizon .card-element-Horizon:last-child::before {
+    background: none !important;
+  }
 }

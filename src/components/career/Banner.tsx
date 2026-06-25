@@ -94,7 +94,7 @@ const Banner = () => {
             </div>
 
             <button
-              className="new-btn-design-full mt-[15px] mb-center"
+              className="new-btn-design-full mt-[15px] mb-center block mx-auto md:mx-0"
               onClick={() => scrollToSection('jobCards')}
             >
               Explore Opportunities

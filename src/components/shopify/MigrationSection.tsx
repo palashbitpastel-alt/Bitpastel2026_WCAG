@@ -11,6 +11,15 @@ interface MigrationSectionProps {
 
 const MigrationSection: React.FC<MigrationSectionProps> = ({ openModal }) => {
     // const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const migrationSteps = [
+        { num: '01', icon: '/images/migration1.svg', title: 'Theme Audit', desc: 'Review your existing setup', color: '#22577A' },
+        { num: '02', icon: '/images/migration2.svg', title: 'Strategy & Planning', desc: 'Map features to Horizon', color: '#39A3A6' },
+        { num: '03', icon: '/images/migration3.svg', title: 'Migration & Customisation', desc: 'Move design, products, and apps seamlessly', color: '#56CC99' },
+        { num: '04', icon: '/images/migration4.svg', title: 'AI Integration', desc: 'Add personalization and automation', color: '#56CC99' },
+        { num: '05', icon: '/images/migration5.svg', title: 'Testing & launch', desc: 'Ensure smooth performance and conversions', color: '#39A3A6' },
+    ];
+
     return (
         <>
             <section id="Advantages" className="md:pt-[90px] pt-[60px] md:pb-[40px] pb-[50px] migration-section ">
@@ -96,110 +105,46 @@ const MigrationSection: React.FC<MigrationSectionProps> = ({ openModal }) => {
                     </div>
                 </div>
             </section>
-            <section id="Advantages" className="md:pt-[90px] pt-[40px] pb-[40px] migration-section-mobile h-full">
-                <div className="container  mx-auto px-4 overflow-hidden relative md:px-[30px] mx-auto">
-                    <h2 className=" md:font-[600] font-[700] font-source text-center text-[23px] leading-[30px] md:leading-normal md:text-[28px] lg:text-[36px]  md:mb-0 mb-3 text-[#111827]">
+            <section id="Advantages" className="pt-[50px] pb-[50px] migration-section-mobile">
+                <div className="container mx-auto px-4">
+                    <h2 className="font-[700] font-source text-center text-[23px] leading-[30px] mb-3 text-[#111827]">
                         Effortless Migration Powered by Bitpastel
                     </h2>
-                    <div className="flex justify-center items-center mb-[20px]">
+                    <div className="flex justify-center items-center mb-[10px]">
                         <div className="ai-powered-green-gradient heading-bottom"></div>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-5 gap-4 md:gap-0 grid-gap-class pt-[20px] pb-[30px]">
-                        <div className='flex justify-between items-center flex-col migration-section-item w-full gap-4 mt-4 mr-[20px]'>
-                            <div className='flex justify-center items-left flex-col '>
-                                <h3 className='migration-title md:text-[14px] lg:text-[16px] text-left'>Theme Audit</h3>
-                                <p className='migration-subtitle word-break'>Review your existing setup</p>
-                            </div>
-                            <div className='flex item-center flex-row-reverse gap-6 mt-[-15px]'>
-                                <div className='flex flex-col-reverse justify-center items-center'>
-                                    <Image src="/images/migrationline1.svg" alt="theme-audit" width={8} height={40} className='rotate-class' />
-                                    <span className='migration-number mb-0'>01.</span>
+
+                    {/* Clean vertical timeline — single connector line through the icon centers */}
+                    <div className="relative max-w-[400px] mx-auto mt-[34px]">
+                        <div
+                            aria-hidden="true"
+                            className="absolute top-[35px] bottom-[35px] left-[35px] w-[2px] -translate-x-1/2 rounded-full"
+                            style={{ background: 'linear-gradient(180deg,#22577A 0%,#56CC99 50%,#39A3A6 100%)' }}
+                        />
+                        {migrationSteps.map((step) => (
+                            <div key={step.num} className="relative flex items-start gap-[18px] pb-[34px] last:pb-0">
+                                <div
+                                    className="relative z-10 shrink-0 w-[70px] h-[70px] rounded-full bg-[#FFF] flex items-center justify-center"
+                                    style={{ boxShadow: '1px 1px 14px 0px #0000001c' }}
+                                >
+                                    <Image src={step.icon} alt={step.title} width={38} height={38} />
                                 </div>
-                                <div className='flex justify-center items-center w-[90px] h-[90px] rounded-full bg-[#FFF] migration-box-shadow'>
-                                    <Image src="/images/migration1.svg" alt="theme-audit" width={40} height={40} />
-                                </div>
-                            </div>
-
-
-
-                        </div>
-                        <div className='flex justify-between items-center flex-col migration-section-item w-full gap-4'>
-                            <div className='flex justify-center items-left flex-col '>
-                                <h3 className='migration-title md:text-[14px] lg:text-[16px]'>Strategy & Planning</h3>
-                                <p className='migration-subtitle '>Map features to Horizon</p>
-                            </div>
-                            <div className='flex item-center flex-row-reverse gap-6 mt-[-15px]'>
-                                 <div className='flex justify-center items-center w-[90px] h-[90px] rounded-full bg-[#FFF] migration-box-shadow'>
-                                    <Image src="/images/migration2.svg" alt="theme-audit" width={40} height={40} />
-                                </div>
-                                <div className='flex flex-col-reverse justify-center items-center'>
-                                    <Image src="/images/migrationline1.svg" alt="theme-audit" width={8} height={40} className='rotate-class-rotate' />
-                                    <span className='migration-number mb-0'>02.</span>
-                                </div>
-                               
-                            </div>
-
-
-
-                        </div>
-                        <div className='flex justify-between items-center flex-col migration-section-item w-full gap-4'>
-                            <div className='flex justify-center items-left flex-col w-[50%]'>
-                                <h3 className='migration-title md:text-[14px] lg:text-[16px]'>Migration & Customisation</h3>
-                                <p className='migration-subtitle'>Move design, products, and apps seamlessly</p>
-                            </div>
-                            <div className='flex item-center flex-row-reverse gap-6 mt-[-15px]'>
-                                <div className='flex flex-col-reverse justify-center items-center'>
-                                    <Image src="/images/migrationline1.svg" alt="theme-audit" width={8} height={40} className='rotate-class' />
-                                    <span className='migration-number mb-0'>03.</span>
-                                </div>
-                                <div className='flex justify-center items-center w-[90px] h-[90px] rounded-full bg-[#FFF] migration-box-shadow'>
-                                    <Image src="/images/migration3.svg" alt="theme-audit" width={40} height={40} />
+                                <div className="pt-[4px]">
+                                    <span
+                                        className="block font-source font-[600] text-[14px] leading-[1] mb-[6px]"
+                                        style={{ color: step.color }}
+                                    >
+                                        {step.num}
+                                    </span>
+                                    <h3 className="font-source font-[700] text-[18px] leading-[24px] text-[#111827] mb-[4px]">
+                                        {step.title}
+                                    </h3>
+                                    <p className="font-roboto font-[400] text-[15px] leading-[22px] text-[#6B7280]">
+                                        {step.desc}
+                                    </p>
                                 </div>
                             </div>
-
-
-
-                        </div>
-                        <div className='flex justify-between items-center flex-col migration-section-item w-full gap-4'>
-                            <div className='flex justify-center items-left flex-col '>
-                                <h3 className='migration-title md:text-[14px] lg:text-[16px]'>AI Integration</h3>
-                                <p className='migration-subtitle'>Add personalization and automation</p>
-                            </div>
-                            <div className='flex item-center flex-row gap-6 mt-[-15px]'>
-                                <div className='flex flex-col-reverse justify-center items-center'>
-                                    <Image src="/images/migrationline1.svg" alt="theme-audit" width={8} height={40} className='rotate-class-rotate' />
-                                    <span className='migration-number mb-0'>04.</span>
-                                </div>
-                                <div className='flex justify-center items-center w-[90px] h-[90px] rounded-full bg-[#FFF] migration-box-shadow'>
-                                    <Image src="/images/migration4.svg" alt="theme-audit" width={40} height={40} />
-                                </div>
-                            </div>
-
-
-
-                        </div>
-                        <div className='flex justify-between items-center flex-col migration-section-item w-full gap-4'>
-                            <div className='flex justify-center items-left flex-col w-[50%]'>
-                                <h3 className='migration-title md:text-[14px] lg:text-[16px]'>Testing & launch</h3>
-                                <p className='migration-subtitle'>Ensure smooth performance and conversions</p>
-                            </div>
-                            <div className='flex item-center flex-row-reverse gap-6 mt-[-15px]'>
-                                <div className='flex flex-col-reverse justify-center items-center'>
-                                    <Image src="/images/migrationline1.svg" alt="theme-audit" width={8} height={40} className='rotate-class' />
-                                    <span className='migration-number mb-0'>05.</span>
-                                </div>
-                                <div className='flex justify-center items-center w-[90px] h-[90px] rounded-full bg-[#FFF] migration-box-shadow'>
-                                    <Image src="/images/migration5.svg" alt="theme-audit" width={40} height={40} />
-                                </div>
-                            </div>
-
-
-
-                        </div>
-
-                    </div>
-                    <div className='absolute top-[15%] translate-x-[-50%] left-[45%] migration-middle-line'>
-                        <Image src="/images/Vector 3.png" alt="theme-audit" className='w-[50px]' width={2000} height={8} />
+                        ))}
                     </div>
                 </div>
             </section>

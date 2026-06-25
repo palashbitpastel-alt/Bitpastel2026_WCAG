@@ -16,7 +16,7 @@ const HorizonBanner: React.FC = () => {
   const inView = useInView(headingRef, { once: true, margin: '-50px' });
 
   return (
-    <section className="relative overflow-hidden bg-[#05111d] pt-[100px] pb-[90px]">
+    <section className="relative overflow-hidden bg-[#05111d] pt-[60px] md:pt-[100px] pb-[40px] md:pb-[90px]">
       {/* Animation keyframes — 5-state Figma keyframe cycle (default → variant4a → variant3 → variant4b → variant5).
           Matches Figma Interaction prototype: 2500ms ease-out smart-animate per transition, 1ms delay between
           (= continuous chain). 5 transitions × 2.5s = 12.5s total cycle. Ease-out per segment via animation-timing-function. */}
@@ -86,8 +86,8 @@ const HorizonBanner: React.FC = () => {
           style={{ left: '-9.59%', top: '55.66%', width: '41.29%', aspectRatio: '1 / 1', transformOrigin: '0 0' }}
         >
           <div
-            className="absolute inset-0"
-            style={{ background: '#00D5BE', filter: 'blur(183.2px)', opacity: 0.66, borderRadius: '50%' }}
+            className="absolute inset-0 [filter:blur(70px)] md:[filter:blur(183.2px)]"
+            style={{ background: '#00D5BE', opacity: 0.66, borderRadius: '50%' }}
           />
         </div>
         {/* Glow B — #00E365, blur 183.2px, base 38.07% */}
@@ -96,8 +96,8 @@ const HorizonBanner: React.FC = () => {
           style={{ left: '27.09%', top: '72.95%', width: '38.07%', aspectRatio: '1 / 1', transformOrigin: '0 0' }}
         >
           <div
-            className="absolute inset-0"
-            style={{ background: '#00E365', filter: 'blur(183.2px)', opacity: 0.66, borderRadius: '50%' }}
+            className="absolute inset-0 [filter:blur(70px)] md:[filter:blur(183.2px)]"
+            style={{ background: '#00E365', opacity: 0.66, borderRadius: '50%' }}
           />
         </div>
         {/* Glow C — #00E365, blur 183.2px, base 17.35% */}
@@ -106,8 +106,8 @@ const HorizonBanner: React.FC = () => {
           style={{ left: '88.36%', top: '37.97%', width: '17.35%', aspectRatio: '1 / 1', transformOrigin: '0 0' }}
         >
           <div
-            className="absolute inset-0"
-            style={{ background: '#00E365', filter: 'blur(183.2px)', opacity: 0.66, borderRadius: '50%' }}
+            className="absolute inset-0 [filter:blur(70px)] md:[filter:blur(183.2px)]"
+            style={{ background: '#00E365', opacity: 0.66, borderRadius: '50%' }}
           />
         </div>
         {/* Glow D — #02C8B7, blur 183.2px, base 24.38% */}
@@ -116,8 +116,8 @@ const HorizonBanner: React.FC = () => {
           style={{ left: '72.62%', top: '77.89%', width: '24.38%', aspectRatio: '1 / 1', transformOrigin: '0 0' }}
         >
           <div
-            className="absolute inset-0"
-            style={{ background: '#02C8B7', filter: 'blur(183.2px)', opacity: 0.66, borderRadius: '50%' }}
+            className="absolute inset-0 [filter:blur(70px)] md:[filter:blur(183.2px)]"
+            style={{ background: '#02C8B7', opacity: 0.66, borderRadius: '50%' }}
           />
         </div>
       </div>

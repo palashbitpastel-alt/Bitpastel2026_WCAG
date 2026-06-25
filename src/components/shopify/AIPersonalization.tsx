@@ -33,17 +33,17 @@ const AIPersonalization: React.FC = () => {
 
   return (
     <section className="bg-[#f8fafc] py-[80px] md:py-[100px] overflow-x-clip mob-pad relative">
-        <div className='container mx-auto px-4 max-w-[1206px]'>
+        <div className='container mx-auto px-4 pb-[60px] md:pb-0 max-w-[1206px]'>
 
         <div
           ref={sectionRef}
           className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
         >
           {/* LEFT — Copy column */}
-          <div className="flex flex-col gap-[30px]">
+          <div className="flex flex-col gap-[15px] md:gap-[30px] ">
             {/* Headline + gradient divider */}
-            <motion.div className="flex flex-col gap-[5px] items-center md:items-start" {...fadeUp(0)}>
-              <h2 className="font-source font-bold lg:font-semibold lg:tracking-[-1px] text-[23px] md:text-[38px] leading-[1.2] md:leading-[49.4px] text-center md:text-left">
+            <motion.div className="flex flex-col gap-[5px] items-center md:items-start mb-[10px] md:mb-0" {...fadeUp(0)}>
+              <h2 className="font-source font-bold lg:font-semibold lg:tracking-[-1px] text-[23px] md:text-[38px] leading-[1.2] md:leading-[49.4px] text-center md:text-left ">
                 AI Personalisation with Rebuy
               </h2>
               <div
@@ -54,7 +54,7 @@ const AIPersonalization: React.FC = () => {
 
             {/* Client label */}
             <motion.p
-              className="font-roboto font-bold text-[20px] leading-[26px] text-[#111827]"
+              className="font-roboto font-bold text-[18px] md:text-[20px] leading-[26px] text-[#111827]"
               {...fadeUp(0.1)}
             >
               Client: Luxury Kidswear brand UK
@@ -62,13 +62,13 @@ const AIPersonalization: React.FC = () => {
 
             {/* Challenge */}
             <motion.div
-              className="font-roboto text-[18px] text-[#45556c]"
+              className="font-roboto text-[16px] md:text-[18px] text-[#45556c] mt-[-10px] md:mt-0"
               {...fadeUp(0.2)}
             >
               <span className="block font-bold text-[#f5747e] leading-[26px]">
                 Challenge
               </span>
-              <p className="leading-[30px] mt-[2px] text-[18px]">
+              <p className="leading-[26px] md:leading-[30px] mt-[2px] text-[16px] md:text-[18px]">
                 The client wanted to improve customer engagement and increase average
                 order value by delivering more personalized shopping experiences across
                 their Shopify store.
@@ -77,13 +77,13 @@ const AIPersonalization: React.FC = () => {
     
             {/* Solution */}
             <motion.div
-              className="font-roboto text-[18px] text-[#45556c]"
+              className="font-roboto text-[16px] md:text-[18px] text-[#45556c]"
               {...fadeUp(0.3)}
             >
               <span className="block font-bold text-[#009689] leading-[26px]">
                 Solution
               </span>
-              <p className="leading-[30px] mt-[2px] text-[18px]">
+              <p className="leading-[26px] md:leading-[30px] mt-[2px] text-[16px] md:text-[18px]">
                 Bitpastel implemented{' '}
                 <span className="font-semibold">Rebuy AI</span> to enhance the customer
                 journey with:
@@ -92,7 +92,7 @@ const AIPersonalization: React.FC = () => {
                 {solutionBullets.map((item, i) => (
                   <li
                     key={i}
-                    className="leading-[30px] flex gap-[8px] text-[18px]"
+                    className="leading-[26px] md:leading-[30px] flex gap-[8px] text-[16px] md:text-[18px]"
                   >
                     <span className="text-[#009689] shrink-0" aria-hidden="true">•</span>
                     <span>{item}</span>

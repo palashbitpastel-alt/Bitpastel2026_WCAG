@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 // import { TrendingUp, ScanSearch, CheckCircle2, Cpu } from 'lucide-react';
 import { motion, useInView, useAnimation } from 'framer-motion';
@@ -38,11 +38,11 @@ const AnimatedBar = ({
 }) => (
   <div className="mb-[60px] md:mb-[70px] last:mb-0 w-full max-w-[460px]">
     <div className="flex justify-between items-center mb-[14px]">
-      <span className="font-roboto font-medium text-[16px] md:text-[18px] leading-[24px] text-[#FFFFFF]">
+      <span className="font-roboto font-medium text-[14px] md:text-[18px] leading-[24px] text-[#FFFFFF]">
         {label}
       </span>
       <span
-        className="font-roboto font-normal text-[16px] md:text-[18px] leading-[24px]"
+        className="font-roboto font-normal text-[14px] md:text-[18px] leading-[24px] whitespace-nowrap"
         style={{ color }}
       >
         {value}
@@ -82,7 +82,7 @@ const AREA =
   'M48 280 C56 279, 68 278, 82 275 C104 270, 122 261, 140 249 C166 235, 188 219, 210 211 C228 206, 238 224, 252 234 C268 245, 286 240, 306 211 C326 183, 344 151, 366 133 C388 120, 406 133, 424 159 C442 185, 456 188, 474 175 C496 159, 520 125, 544 91 C556 75, 580 65, 598 65 C606 65, 612 65, 616 65 L616 280 L48 280 Z';
 
 
-const AnimatedGraph = ({ inView }: { inView: boolean }) => {
+const AnimatedGraph = ({ inView, mobile = false }: { inView: boolean; mobile?: boolean }) => {
   const pathRef = useRef<SVGPathElement>(null);
 
   useEffect(() => {
@@ -114,7 +114,7 @@ const AnimatedGraph = ({ inView }: { inView: boolean }) => {
 
   return (
     <svg
-      viewBox="0 15 700 310"
+      viewBox={mobile ? '10 16 606 322' : '0 15 700 310'}
       className="w-full h-full"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -166,7 +166,7 @@ const AnimatedGraph = ({ inView }: { inView: boolean }) => {
         x="22"
         y="175"
         fill="#FFFFFF"
-        fontSize="16"
+        fontSize={mobile ? 24 : 16}
         fontFamily="Roboto, sans-serif"
         fontWeight="400"
         transform="rotate(-90 22 175)"
@@ -190,7 +190,7 @@ const AnimatedGraph = ({ inView }: { inView: boolean }) => {
         x="332"
         y="312"
         fill="#FFFFFF"
-        fontSize="16"
+        fontSize={mobile ? 24 : 16}
         fontFamily="Roboto, sans-serif"
         fontWeight="400"
         textAnchor="middle"
@@ -226,7 +226,7 @@ const AnimatedGraph = ({ inView }: { inView: boolean }) => {
         ref={pathRef}
         d={CURVE}
         stroke="url(#curveStroke)"
-        strokeWidth="3.5"
+        strokeWidth={mobile ? 5 : 3.5}
         strokeLinecap="round"
         strokeLinejoin="round"
         clipPath="url(#graphClip)"
@@ -271,6 +271,15 @@ const PerformanceSection: React.FC = () => {
   const bottomRef = useRef<HTMLDivElement>(null);
   const topInView = useInView(topRef, { once: true, margin: '-50px' });
   const bottomInView = useInView(bottomRef, { once: true, margin: '-100px' });
+
+  // Mobile-tuned graph rendering (tighter framing + larger labels for readability)
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener('resize', check);
+    return () => window.removeEventListener('resize', check);
+  }, []);
 
   return (
     <section className="bg-white py-[80px] md:py-[100px]">
@@ -395,8 +404,8 @@ const PerformanceSection: React.FC = () => {
               </div>
             </div>
 
-            <div className="w-full aspect-[700/310] mt-2">
-              <AnimatedGraph inView={bottomInView} />
+            <div className="w-full aspect-[606/322] md:aspect-[700/310] mt-2">
+              <AnimatedGraph inView={bottomInView} mobile={isMobile} />
             </div>
           </div>
         </div>

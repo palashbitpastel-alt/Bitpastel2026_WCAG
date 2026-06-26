@@ -1997,7 +1997,7 @@ span.MuiAccordionSummary-content.Mui-expanded.MuiAccordionSummary-contentGutters
     display: block !important;
     font-size: 16px;
     margin-bottom: 0px;
-    margin-top: 10px;
+    /* margin-top: 10px; */
   }
 
   .responsive-h3 {

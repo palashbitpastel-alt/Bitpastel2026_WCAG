@@ -46,7 +46,7 @@ const AiPoweredSection: React.FC<AiPoweredSectionProps> = ({ openModal }) => {
                                     'Dynamic content adjustments based on user behaviour',
                                     'AI-driven insights to improve conversion rates',
                                 ].map((text, idx) => (
-                                    <div key={idx} className="flex md:gap-4 gap-2 mb-[5px] items-center">
+                                    <div key={idx} className="flex md:gap-4 gap-2 mb-[5px] items-start md:items-center">
                                         <Image
                                             src="/images/img_materialsymbolscheckrounded.svg"
                                             alt="Check"

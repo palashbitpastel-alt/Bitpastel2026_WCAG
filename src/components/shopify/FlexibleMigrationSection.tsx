@@ -137,8 +137,8 @@ const FlexibleMigrationSection: React.FC<FlexibleMigrationSectionProps> = ({ ope
                                                         <Image
                                                             src={d.icon}
                                                             alt="Check"
-                                                            width={24}
-                                                            height={24}
+                                                            width={20}
+                                                            height={20}
                                                             className="block w-[20px] " />
                                                         <p className="md:font-[400] font-[400] font-roboto text-left text-[16px] leading-[20px] w-200 md:mb-0 mb-3 description text-[#1E1E1E]">
                                                             {d.text}

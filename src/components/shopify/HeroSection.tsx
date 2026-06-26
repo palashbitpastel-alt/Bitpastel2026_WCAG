@@ -64,7 +64,7 @@ const HeroSection: React.FC<HerSectionProps> = ({ openModal }) => {
             </p>
 
             {/* Buttons */}
-            <div className='flex justify-center md:justify-start items-center gap-[18px] hero-btn-area'>
+            <div className='flex justify-center md:justify-between items-center gap-[18px] md:w-full md:max-w-[510px] hero-btn-area'>
               <button
                 className='font-600 btn leading-normal bg-white-btn bg-green-text md:w-auto w-full mt-0 font-roboto btn-hover !rounded-full !min-w-[244px] flexible-horizon'
                 onClick={() => {
@@ -85,8 +85,8 @@ const HeroSection: React.FC<HerSectionProps> = ({ openModal }) => {
             </div>
 
             {/* Stats Bar */}
-            <div className='flex flex-row justify-between md:justify-start items-center mt-8 md:mt-10 gap-2 md:gap-[15px] md:w-full md:max-w-[506px]'>
-              <div className='text-left pr-0 md:pr-6 lg:pr-8'>
+            <div className='flex flex-row justify-between md:justify-start items-center mt-8 md:mt-10 gap-2 md:gap-[15px] md:w-full md:max-w-[510px]'>
+              <div className='text-left pr-0 md:pr-6 lg:pr-6'>
                 <p className='text-[#FFF] font-source font-[500] lg:font-semibold text-[24px] md:text-[36px] lg:text-[38px] leading-none'>
                   400+
                 </p>
@@ -98,7 +98,7 @@ const HeroSection: React.FC<HerSectionProps> = ({ openModal }) => {
                 className='w-px h-[34px] md:h-[54px] shrink-0'
                 style={{ backgroundColor: '#FFFFFF80' }}
               ></div>
-              <div className='text-left px-0 md:px-6 lg:px-8'>
+              <div className='text-left px-0 md:px-6 lg:px-6'>
                 <p className='text-[#FFF] font-source font-[500] lg:font-semibold text-[24px] md:text-[36px] lg:text-[38px] leading-none'>
                   100+
                 </p>
@@ -107,7 +107,7 @@ const HeroSection: React.FC<HerSectionProps> = ({ openModal }) => {
                 </p>
               </div>
               <div
-                className='w-px h-[34px] md:h-[54px] md:ml-auto shrink-0'
+                className='w-px h-[34px] md:h-[54px]  shrink-0'
                 style={{ backgroundColor: '#FFFFFF80' }}
               ></div>
               <div className='pl-0 flex-shrink-0'>
@@ -120,7 +120,7 @@ const HeroSection: React.FC<HerSectionProps> = ({ openModal }) => {
                     alt='Shopify Select Partner'
                     width={226}
                     height={80}
-                    className='h-[34px] md:h-[52px] lg:h-[54px] w-auto object-contain'
+                    className='h-[34px] md:h-[52px] lg:h-[54px] w-auto object-contain md:pl-[25px]'
                   />
                 </Link>
               </div>

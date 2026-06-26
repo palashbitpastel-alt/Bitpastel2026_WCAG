@@ -54,7 +54,7 @@ const BrandingSection: React.FC = () => {
         </div>
 
         {/* Subtitle */}
-        <p className='font-roboto font-normal lg:font-light text-[16px] md:text-[18px] leading-[26px] text-center text-[#FFF] max-w-[655px] mx-auto mb-[40px] md:mb-[40px]'>
+        <p className='font-roboto font-normal lg:font-light text-[16px] md:text-[18px] leading-[22px] md:leading-[26px] text-center text-[#FFF] max-w-[655px] mx-auto mb-[40px] md:mb-[40px]'>
           We provide a wide range of Shopify development and optimization services designed to help
           brands build, scale, and optimize their e-commerce stores.
         </p>

@@ -55,7 +55,7 @@ const AiPoweredSection: React.FC<AiPoweredSectionProps> = ({ openModal }) => {
                                             className="w-auto md:block hidden"
                                         />
                                         <Image
-                                            src="/images/img_materialsymbolscheckrounded_teal_300.svg"
+                                            src="/images/img_materialsymbolscheckrounded.svg"
                                             alt="Check"
                                             width={24}
                                             height={24}

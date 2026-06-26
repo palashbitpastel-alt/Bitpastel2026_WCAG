@@ -159,7 +159,7 @@ const AISection: React.FC = () => {
                 </h3>
 
                 {/* Description */}
-                <p className="font-roboto font-normal text-[16px] leading-[26px] text-[#45556c] max-w-[499px] mobile-style-description">
+                <p className="font-roboto font-normal text-[16px] leading-[22px] md:leading-[26pxpx] text-[#45556c] max-w-[499px] ">
                   {card.description}
                 </p>
               </motion.div>

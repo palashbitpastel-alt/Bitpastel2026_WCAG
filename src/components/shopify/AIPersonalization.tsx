@@ -32,8 +32,8 @@ const AIPersonalization: React.FC = () => {
   });
 
   return (
-    <section className="bg-[#f8fafc] py-[80px] md:py-[100px] overflow-x-clip mob-pad relative">
-        <div className='container mx-auto px-4 pb-[60px] md:pb-0 max-w-[1206px]'>
+    <section className="bg-[#f8fafc] py-[50px] md:py-[100px] overflow-x-clip  relative">
+        <div className='container mx-auto px-4  md:pb-0 max-w-[1206px]'>
 
         <div
           ref={sectionRef}

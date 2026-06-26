@@ -1958,10 +1958,10 @@ span.MuiAccordionSummary-content.Mui-expanded.MuiAccordionSummary-contentGutters
     line-height: 20px !important;
   }
 
-  .hero-btn-area {
+ .hero-btn-area {
     flex-wrap: wrap;
-    gap: 10px;
-  }
+    gap: 15px;
+}
 
   .hero-btn-area button {
     width: 100%;
@@ -2615,12 +2615,12 @@ span.MuiAccordionSummary-content.Mui-expanded.MuiAccordionSummary-contentGutters
     font-size: 16px;
     color: #ffffff !important;
     line-height: 20px !important;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
 
   .hero-btn-area {
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 15px;
   }
 
   .hero-btn-area button {
@@ -2802,10 +2802,12 @@ a.horizon-nav-menu::after {
     align-items: center;
     text-align: center;
     height: auto;
+    padding: 20px 15px;
 }
   .mobile-style-description
   {
     text-align: center;
+    margin-top: -10px;
   }
   .mobile-auto
   {
@@ -2951,7 +2953,15 @@ a.horizon-nav-menu::after {
     grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
     width: 100% !important;
   }
-
+  .accordion-item-title
+  {
+    line-height: 22px;
+  }
+  .partner-card-item
+  {
+    margin-bottom: 20px;
+    margin-top: 0px;
+  }
   .mobile-horizon .card-element-Horizon {
     min-height: unset !important;
     padding-top: 24px !important;

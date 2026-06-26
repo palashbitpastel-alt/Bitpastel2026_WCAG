@@ -95,7 +95,7 @@ const HeroSection: React.FC<HerSectionProps> = ({ openModal }) => {
                 </p>
               </div>
               <div
-                className='w-px h-[40px] md:h-[64px]'
+                className='w-px h-[34px] md:h-[54px] shrink-0'
                 style={{ backgroundColor: '#FFFFFF80' }}
               ></div>
               <div className='text-left px-0 md:px-6 lg:px-8'>
@@ -107,10 +107,10 @@ const HeroSection: React.FC<HerSectionProps> = ({ openModal }) => {
                 </p>
               </div>
               <div
-                className='w-px h-[40px] md:h-[64px] md:ml-auto'
+                className='w-px h-[34px] md:h-[54px] md:ml-auto shrink-0'
                 style={{ backgroundColor: '#FFFFFF80' }}
               ></div>
-              <div className='pl-0 md:pl-5 lg:pl-6 xl:pl-8'>
+              <div className='pl-0 flex-shrink-0'>
                 <Link
                   href='https://www.shopify.com/partners/directory/partner/bitpastel3'
                   target='_blank'
@@ -118,9 +118,9 @@ const HeroSection: React.FC<HerSectionProps> = ({ openModal }) => {
                   <Image
                     src='/images/ShopifySelectPartnerHero.svg'
                     alt='Shopify Select Partner'
-                    width={130}
-                    height={50}
-                    className='h-[34px] md:h-[64px] w-auto object-contain'
+                    width={226}
+                    height={80}
+                    className='h-[34px] md:h-[52px] lg:h-[54px] w-auto object-contain'
                   />
                 </Link>
               </div>

@@ -114,7 +114,7 @@ const AnimatedGraph = ({ inView, mobile = false }: { inView: boolean; mobile?: b
 
   return (
     <svg
-      viewBox={mobile ? '10 16 606 322' : '0 15 700 310'}
+      viewBox={mobile ? '2 16 614 326' : '0 15 700 310'}
       className="w-full h-full"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -166,7 +166,7 @@ const AnimatedGraph = ({ inView, mobile = false }: { inView: boolean; mobile?: b
         x="22"
         y="175"
         fill="#FFFFFF"
-        fontSize={mobile ? 24 : 16}
+        fontSize={mobile ? 20 : 16}
         fontFamily="Roboto, sans-serif"
         fontWeight="400"
         transform="rotate(-90 22 175)"
@@ -190,7 +190,7 @@ const AnimatedGraph = ({ inView, mobile = false }: { inView: boolean; mobile?: b
         x="332"
         y="312"
         fill="#FFFFFF"
-        fontSize={mobile ? 24 : 16}
+        fontSize={mobile ? 20 : 16}
         fontFamily="Roboto, sans-serif"
         fontWeight="400"
         textAnchor="middle"
@@ -239,8 +239,8 @@ const AnimatedGraph = ({ inView, mobile = false }: { inView: boolean; mobile?: b
 /* ─── Performance 99% floating card ─── */
 const PerformanceCard = ({ inView }: { inView: boolean }) => (
   <motion.div
-    className="absolute top-[15%] left-[0%] md:left-[-2%] lg:left-[1%] bg-white rounded-[12px] px-[24px] py-[18px] z-20 w-[200px] md:w-[220px]"
-    style={{ boxShadow: '0 8px 30px rgba(0,0,0,0.15)' }}
+    className="absolute top-[-1%] left-[8%] md:top-[15%] md:left-[0%] md:left-[-2%] lg:left-[1%] bg-white rounded-[12px] px-[24px] py-[15px] md:py-[18px] z-20 w-[200px] md:w-[220px]"
+    style={{ boxShadow: 'rgb(0 0 0 / 54%) 0px 8px 30px' }}
     initial={{ opacity: 0, y: 20 }}
     animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
     transition={{ duration: 0.6, delay: 0.3 }}
@@ -282,7 +282,7 @@ const PerformanceSection: React.FC = () => {
   }, []);
 
   return (
-    <section className="bg-white py-[80px] md:py-[100px]">
+    <section className="bg-white py-[50px] md:py-[100px]">
       <div className="container mx-auto px-4 max-w-[1206px]">
         {/* ═══ TOP: Two columns ═══ */}
         <div
@@ -303,7 +303,7 @@ const PerformanceSection: React.FC = () => {
                   'linear-gradient(90deg, #22587a 0%, #C7FACE 36%, #56CC99 70%, #39A3A6 100%)',
               }}
             />
-            <p className="font-roboto font-normal lg:font-light text-[16px] md:text-[18px] leading-[26px] text-[#45556C] mb-[40px] max-w-[470px] mobile-style-description">
+            <p className="font-roboto font-normal text-center md:text-left  lg:font-light text-[16px] md:text-[18px]  leading-[22px]  md:leading-[26px] text-[#45556C] mb-[20px] md:mb-[40px] max-w-[470px]">
               A slow store impacts conversions, SEO rankings, and user experience. Our Shopify
               performance experts conduct detailed speed audits and implement advanced optimization
               strategies to ensure your store loads fast and performs efficiently across all
@@ -315,7 +315,7 @@ const PerformanceSection: React.FC = () => {
                   <div className="w-[42px] h-[42px] rounded-full bg-[#EFF9F6] flex items-center justify-center flex-shrink-0">
                     <Image src={item.icon} alt="" width={20} height={20} />
                   </div>
-                  <span className="font-roboto font-medium text-[18px] leading-[27px] text-[#1D293D]">
+                  <span className="font-roboto font-medium text-[16px]  md:text-[18px] leading-[22px] md:leading-[27px] text-[#1D293D]">
                     {item.label}
                   </span>
                 </div>
@@ -329,7 +329,7 @@ const PerformanceSection: React.FC = () => {
             <img
               src="/images/horizon-new-images/performanceImage.png"
               alt="Shopify Performance Dashboard"
-              className="w-full max-w-[300px] md:max-w-[550px] h-auto ml-auto"
+              className="w-full max-w-[none] md:max-w-[550px] h-auto ml-auto mt-[20px] md:mt-0"
             />
           </div>
         </div>
@@ -404,7 +404,7 @@ const PerformanceSection: React.FC = () => {
               </div>
             </div>
 
-            <div className="w-full aspect-[606/322] md:aspect-[700/310] mt-2">
+            <div className="w-full aspect-[614/326] md:aspect-[700/310] mt-2">
               <AnimatedGraph inView={bottomInView} mobile={isMobile} />
             </div>
           </div>

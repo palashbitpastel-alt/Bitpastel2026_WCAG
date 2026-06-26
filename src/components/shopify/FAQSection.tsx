@@ -85,7 +85,7 @@ const FAQSection: React.FC<FAQSectionProps> = ({ openModal }) => {
                                         aria-expanded={isActive}
                                     >
                                         <span
-                                            className={`accordion-item-title text-[20px] font-[500] font-source responsive-h3 ${
+                                            className={`accordion-item-title text-[20px] font-[500] leading-[22px] md:leading-[26px] font-source responsive-h3 ${
                                                 isActive ? 'text-[#FFF] mt-[6px]' : 'text-[#111827]'
                                             }`}
                                         >
@@ -112,7 +112,7 @@ const FAQSection: React.FC<FAQSectionProps> = ({ openModal }) => {
                                             <p
                                                 className={`md:text-[16px] lg:text-[18px] responsive-subtitle ${
                                                     isActive ? 'text-[#FFF]' : 'text-[#111827]'
-                                                } text-[18px] leading-[26px] w-[75%] font-roboto font-[400]`}
+                                                } text-[18px] leading-[26px] md:w-[75%] font-roboto font-[400]`}
                                             >
                                                 {item.description}
                                             </p>

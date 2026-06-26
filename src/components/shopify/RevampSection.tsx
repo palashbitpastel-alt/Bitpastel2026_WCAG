@@ -74,7 +74,7 @@ const RevampSection: React.FC = () => {
   const inView = useInView(sectionRef, { once: true, margin: '-50px' });
 
   return (
-    <section className="relative overflow-hidden bg-[#0f182c] py-[80px] md:py-[100px]">
+    <section className="relative overflow-hidden bg-[#0f182c] py-[50px] md:py-[100px]">
       {/* Gradient overlay - dark navy → teal accent → dark navy */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -122,13 +122,13 @@ const RevampSection: React.FC = () => {
               }}
             />
 
-            <p className="font-roboto font-normal lg:font-light text-[16px] md:text-[18px] leading-[29.25px] text-[#FFF] mb-[40px] max-w-[557px]">
+            <p className="font-roboto font-normal lg:font-light text-[16px] md:text-[18px] leading-[22px] md:leading-[29.25px] text-[#FFF] mb-[20px] md:mb-[40px] max-w-[557px]">
               Switching platforms can feel complex, but our migration specialists
               ensure a seamless transition to Shopify without losing valuable data
               or SEO rankings.
             </p>
 
-            <p className="font-roboto font-normal lg:font-light text-[16px] md:text-[18px] leading-[29.25px] text-[#FFF] max-w-[557px]">
+            <p className="font-roboto font-normal lg:font-light text-[16px] md:text-[18px] leading-[22px] md:leading-[29.25px] text-[#FFF] max-w-[557px]">
               If your current Shopify store feels outdated or is underperforming, we
               help transform it with modern, conversion-focused designs. Bitpastel
               redesigns stores using premium themes and custom UX strategies to
@@ -137,7 +137,7 @@ const RevampSection: React.FC = () => {
           </motion.div>
 
           {/* Right column — 2x3 grid of cards */}
-          <div className="w-full lg:flex-1 grid grid-cols-1 sm:grid-cols-2 gap-[24px] self-start">
+          <div className="w-full lg:flex-1 grid grid-cols-1 sm:grid-cols-2 gap-[20px] md:gap-[24px] self-start">
             {cards.map((card, i) => {
               const Icon = card.icon;
               return (

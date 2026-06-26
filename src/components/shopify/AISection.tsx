@@ -96,7 +96,7 @@ const AISection: React.FC = () => {
   const inView = useInView(sectionRef, { once: true, margin: '-50px' });
 
   return (
-    <section className="bg-[#f8fafc] py-[80px] md:py-[100px]">
+    <section className="bg-[#f8fafc] py-[50px] md:py-[100px]">
       <div className="container mx-auto px-4 max-w-[1206px]">
         <div ref={sectionRef}>
           {/* Header */}
@@ -118,7 +118,7 @@ const AISection: React.FC = () => {
               }}
             />
 
-            <p className="font-roboto font-normal lg:font-light text-[16px] md:text-[18px] leading-[26px] md:leading-[29.25px] text-[#45556c] text-center max-w-[834px]">
+            <p className="font-roboto font-normal lg:font-light text-[16px] md:text-[18px] leading-[22px] md:leading-[29.25px] text-[#45556c] text-center max-w-[834px]">
               We help Shopify stores unlock the power of AI to create smarter, more
               personalised shopping experiences. From intelligent product recommendations
               to automated customer interactions, our AI integrations are designed to

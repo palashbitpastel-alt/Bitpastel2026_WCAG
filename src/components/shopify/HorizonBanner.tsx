@@ -16,7 +16,7 @@ const HorizonBanner: React.FC = () => {
   const inView = useInView(headingRef, { once: true, margin: '-50px' });
 
   return (
-    <section className="relative overflow-hidden bg-[#05111d] pt-[60px] md:pt-[100px] pb-[40px] md:pb-[90px]">
+    <section className="relative overflow-hidden bg-[#05111d] pt-[50px] md:pt-[100px] pb-[50px] md:pb-[90px]">
       {/* Animation keyframes — 5-state Figma keyframe cycle (default → variant4a → variant3 → variant4b → variant5).
           Matches Figma Interaction prototype: 2500ms ease-out smart-animate per transition, 1ms delay between
           (= continuous chain). 5 transitions × 2.5s = 12.5s total cycle. Ease-out per segment via animation-timing-function. */}

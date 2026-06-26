@@ -80,7 +80,7 @@ const advantages = [
 
 const AdvantageSection: React.FC = () => {
   return (
-    <section className="bg-white py-[80px] md:py-[100px]">
+    <section className="bg-white py-[50px] md:py-[100px]">
       <div className="relative z-10 container mx-auto px-4">
         {/* Title */}
         <div className="flex flex-col items-center mb-[20px]">
@@ -103,13 +103,13 @@ const AdvantageSection: React.FC = () => {
         </p>
 
         {/* Cards */}
-        <div className="flex flex-wrap justify-center gap-[40px] mx-auto">
+        <div className="flex flex-wrap justify-center gap-[20px] md:gap-[40px] mx-auto">
           {advantages.map((item, index) => {
             const Icon = item.icon;
             return (
               <div
                 key={index}
-                className="bg-white rounded-[16px] border p-[15px] md:p-[33px] flex flex-col gap-[15px] h-[296px] w-full sm:w-[272px] mobile-style-admantage"
+                className="bg-white rounded-[16px] border p-[20px 15px] md:p-[33px] flex flex-col gap-[15px] h-[296px] w-full sm:w-[272px] mobile-style-admantage"
                 style={{
                   borderColor: item.borderColor,
                   boxShadow: '0 0 13.6px 0 rgba(0, 0, 0, 0.08)',
@@ -129,7 +129,7 @@ const AdvantageSection: React.FC = () => {
                 </h3>
 
                 {/* Card Description */}
-                <p className="font-roboto font-normal text-[16px] leading-[26px] text-[#45556C] mobile-style-description">
+                <p className="font-roboto font-normal text-[16px] leading-[22px] md:leading-[26px] text-[#45556C] mobile-style-description">
                   {item.description}
                 </p>
               </div>

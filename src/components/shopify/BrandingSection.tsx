@@ -27,7 +27,7 @@ const services = [
 
 const BrandingSection: React.FC = () => {
   return (
-    <section className='relative overflow-hidden  py-[80px] md:py-[100px]'>
+    <section className='relative overflow-hidden  py-[50px] md:py-[100px]'>
       {/* Wave background image at 24% opacity */}
       <div
         className='absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none'
@@ -64,29 +64,32 @@ const BrandingSection: React.FC = () => {
           {services.map((item, index) => (
             <div
               key={index}
-              className='rounded-[20px] px-[30px] py-[40px] flex flex-col items-start text-left h-[396px] justify-center backdrop-blur-[27px] mobile-style-admantage'
+              className='rounded-[20px] px-[15px] py-[20px] md:px-[30px] md:py-[40px] flex flex-col items-start text-left h-auto md:h-[396px] justify-center backdrop-blur-[27px]'
               style={{
                 background: ' #FFFFFF05',
                 boxShadow: '1px 1px 27.9px 0 rgba(0, 0, 0, 0.15)',
                 border: '1px solid rgba(255, 255, 255, 0.06)',
               }}
             >
-              {/* Icon */}
-              {item.iconWrapper === 'tile' ? (
-                <div className='w-[80px] h-[80px] flex items-center justify-center mb-[40px]'>
-                  <Image src={item.icon} alt={item.title} width={80} height={80} />
-                </div>
-              ) : (
-                <div className='w-[80px] h-[80px] flex items-center justify-center mb-[40px]'>
-                  <Image src={item.icon} alt={item.title} width={80} height={80} />
-                </div>
-              )}
+              {/* Icon + Title: row on mobile, column on larger screens */}
+              <div className='flex flex-row sm:flex-col items-center sm:items-start gap-[10px] sm:gap-0 w-full mb-[12px] sm:mb-0'>
+                {/* Icon */}
+                {item.iconWrapper === 'tile' ? (
+                  <div className='w-[50px] h-[50px] md:w-[80px] md:h-[80px] flex items-center justify-center shrink-0 sm:mb-[40px]'>
+                    <Image src={item.icon} alt={item.title} width={80} height={80} />
+                  </div>
+                ) : (
+                  <div className='w-[50px] h-[50px] md:w-[80px] md:h-[80px] flex items-center justify-center shrink-0 sm:mb-[20px] md:mb-[40px]'>
+                    <Image src={item.icon} alt={item.title} width={80} height={80} />
+                  </div>
+                )}
 
-              {/* Label */}
-              <h3 className='font-roboto font-bold text-[18px] leading-[28px] text-[#FFF] mb-[15px] max-w-[190px] mobile-style-description'>
-                {item.title}
-              </h3>
-              <p className='font-roboto font-normal text-[16px] leading-[29.25px] text-[#FFF] mobile-style-description'>
+                {/* Label */}
+                <h3 className='font-roboto font-bold text-[18px] leading-[22px] md:leading-[28px] text-[#FFF] sm:mb-[15px] max-w-[190px]'>
+                  {item.title}
+                </h3>
+              </div>
+              <p className='font-roboto font-normal text-[16px] leading-[22px] md:leading-[29.25px] text-[#FFF]'>
                 {item.description}
               </p>
             </div>

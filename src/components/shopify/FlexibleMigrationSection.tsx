@@ -102,7 +102,7 @@ const FlexibleMigrationSection: React.FC<FlexibleMigrationSectionProps> = ({ ope
     const FlexibleMigrationData = FlexibleMigrationSection;
     return (
         <>
-            <section id="flexible-horizon" className="md:pt-[70px] pt-[40px] ">
+            <section id="flexible-horizon" className="md:pt-[70px] pt-[50px] ">
                 <div className="container mx-auto px-4 overflow-hidden relative">
                     <h2 className="font-source font-bold lg:font-semibold lg:tracking-[-1px] text-[23px] md:text-[38px] leading-[1.2] md:leading-[49.4px] text-center text-[#111827] md:mb-[5px] mb-[5px]">
                         Flexible Horizon Migration Packages
@@ -112,10 +112,10 @@ const FlexibleMigrationSection: React.FC<FlexibleMigrationSectionProps> = ({ ope
                     </div>
                     <h4 className="md:font-[500] font-[500] font-roboto text-center text-[16px] leading-[20px] w-200 md:mb-6 mb-4 description">
                          
-                        <span className="block md:text-[16px] lg:text-[18px] font-[400] lg:font-light leading-[26px] description text-[#4B5563] ">Every store has unique needs. That’s why we offer tailored migration packages to help you move to</span>
-                        <span className="block md:text-[16px] lg:text-[18px] font-[400] lg:font-light leading-[26px] description text-[#4B5563]">Horizon with the right balance of customization, performance, and AI-powered enhancements</span>
+                        <span className="inline md:block md:text-[16px] lg:text-[18px] font-[400] lg:font-light leading-[22px] md:leading-[26px] description text-[#4B5563] ">Every store has unique needs. That’s why we offer tailored migration packages to help you move to</span>{' '}
+                        <span className="inline md:block md:text-[16px] lg:text-[18px] font-[400] lg:font-light leading-[22px] md:leading-[26px] description text-[#4B5563]">Horizon with the right balance of customization, performance, and AI-powered enhancements</span>
                     </h4>
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-4 mx-auto our-services-wrapper md:w-[auto] lg:w-[1200px] mx-auto horizon-our-services-wrapper">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 md:gap-x-4 md:gap-y-4 mx-auto our-services-wrapper md:w-[auto] lg:w-[1200px] mx-auto horizon-our-services-wrapper">
                         {
                             FlexibleMigrationData.map((item, idx) => (
                                 <div key={item.id} className='partner-card-item flexible-card-item flex flex-col justify-between items-start '>

@@ -37,7 +37,7 @@ const CheckoutSection: React.FC = () => {
   const inView = useInView(sectionRef, { once: true, margin: '-50px' });
 
   return (
-    <section className='bg-white py-[80px] md:py-[100px]'>
+    <section className='bg-white py-[50px] md:py-[100px]'>
       <div className='container mx-auto px-4 max-w-[1206px]'>
         <div ref={sectionRef} className='flex flex-col items-start lg:flex-row lg:gap-[60px] lg:items-stretch'>
           {/* Left — Checkout card mockup (below content on mobile/tablet) */}
@@ -66,7 +66,7 @@ const CheckoutSection: React.FC = () => {
             />
 
             <p
-              className='font-roboto font-normal lg:font-light text-[16px] md:text-[18px] leading-[29.25px] text-[#45556C] mb-[20px] max-w-[530px]'
+              className='font-roboto font-normal lg:font-light text-[16px] md:text-[18px] leading-[22px] md:leading-[29.25px] text-[#45556C] mb-[20px] max-w-[530px]'
               style={{ wordSpacing: '-1px' }}
             >
               We extend Shopify&apos;s checkout and post-purchase journey to create personalised and
@@ -74,7 +74,7 @@ const CheckoutSection: React.FC = () => {
             </p>
 
             <p
-              className='font-roboto font-normal lg:font-light text-[16px] md:text-[18px] leading-[29.25px] text-[#45556C] mb-[45px] max-w-[530px]'
+              className='font-roboto font-normal lg:font-light text-[16px] md:text-[18px] leading-[22px] md:leading-[29.25px] text-[#45556C] mb-[45px] max-w-[530px]'
               style={{ wordSpacing: '-1px' }}
             >
               By leveraging Shopify&apos;s latest Checkout Extensibility framework, we enhance

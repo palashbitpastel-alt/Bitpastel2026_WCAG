@@ -2413,9 +2413,6 @@ span.MuiAccordionSummary-content.Mui-expanded.MuiAccordionSummary-contentGutters
 }
 
 @media (max-width: 1024px) {
-  .desktop-footer {
-    display: none;
-  }
   .card-element-Horizon:nth-child(2)::after,
   .card-element-Horizon:nth-child(4)::after {
     background: none;

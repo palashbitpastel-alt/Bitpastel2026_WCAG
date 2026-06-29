@@ -713,7 +713,7 @@ export default function JobDetail ({ params }: { params: { id: string } }) {
               <div className='md:pt-[90px] pt-[30px]' ref={formRef}>
                 <div className='flex flex-col sm:flex-row gap-4 justify-center items-center md:mb-16 mb-[30px] md:pt-[90px] pt-[30px]'>
                   <button
-                    className='new-btn-design'
+                    className='new-btn-design '
                     onClick={() => formRef.current?.scrollIntoView({ behavior: 'smooth' })}
                   >
                     Apply Now

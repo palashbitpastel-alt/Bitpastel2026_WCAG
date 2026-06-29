@@ -146,7 +146,7 @@ const JobDetailsBanner: React.FC<JobDetailsBannerProps> = ({
             </div>
 
             <button
-              className={` new-btn-design`}
+              className={` mt-[15px] md:mt-0 new-btn-design`}
               onClick={() => scrollToSection(scrollToId)}
             >
               {applyButtonText}

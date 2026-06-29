@@ -51,10 +51,10 @@ const AnimatedBar = ({
     {/* bar track */}
     <div className="relative h-[4px] w-full rounded-full bg-[#1F2D3C]">
       {/* dot at start */}
-      <div
+      {/* <div
         className="absolute left-0 top-1/2 -translate-y-1/2 w-[8px] h-[8px] rounded-full z-10"
         style={{ backgroundColor: color }}
-      />
+      /> */}
       {/* animated fill */}
       <motion.div
         className="absolute left-0 top-0 h-full rounded-full"

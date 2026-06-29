@@ -584,7 +584,7 @@ export default function JobDetail ({ params }: { params: { id: string } }) {
                   The current position requires the following skills:
                 </p>
                 {job.responsibilities && (
-                  <div className='flex flex-col md:flex-row gap-8 md:mb-[65px] mb-[30px]'>
+                  <div className='flex flex-col md:flex-row gap-[1em] md:gap-8 md:mb-[65px] mb-[30px]'>
                     {' '}
                     {/* Added gap for better spacing */}
                     <div className='md:w-1/3'>
@@ -604,7 +604,7 @@ export default function JobDetail ({ params }: { params: { id: string } }) {
                   </div>
                 )}
                 {job.requirements && (
-                  <div className='flex flex-col md:flex-row gap-8'>
+                  <div className='flex flex-col md:flex-row gap-[1em] md:gap-8'>
                     {' '}
                     {/* Added gap for better spacing */}
                     <div className='md:w-1/3'>
@@ -624,7 +624,7 @@ export default function JobDetail ({ params }: { params: { id: string } }) {
                   </div>
                 )}
                 {job.softSkills && (
-                  <div className='flex flex-col md:flex-row gap-8 md:mt-[65px] mt-[30px]'>
+                  <div className='flex flex-col md:flex-row gap-[1em] md:gap-8 md:mt-[65px] mt-[30px]'>
                     <div className='md:w-1/3'>
                       <h3 className='subheading font-source font-semibold text-title'>
                         Soft Skills:
@@ -642,7 +642,7 @@ export default function JobDetail ({ params }: { params: { id: string } }) {
                   </div>
                 )}
                 {job.desiredCandidateProfile && (
-                  <div className='flex flex-col md:flex-row gap-8 md:mt-[65px] mt-[30px]'>
+                  <div className='flex flex-col md:flex-row gap-[1em] md:gap-8 md:mt-[65px] mt-[30px]'>
                     <div className='md:w-1/3'>
                       <h3 className='subheading font-source font-semibold text-title'>
                         Desired Candidate Profile:

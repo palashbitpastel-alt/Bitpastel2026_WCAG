@@ -117,7 +117,7 @@ const ChooseHorizonSection: React.FC<ChooseHorizonSectionProps> = ({ openModal }
                                         <Image src={service.icon} alt={service.title} width={50} height={50} />
                                     </div>
                                     <h3
-                                        className={`font-[500] font-source md:font-bold  md:mb-2 mb-0 md:h-auto h-[60px] md:leading-[normal] md:text-[18px] lg:text-[20px] text-[16px] leading-[20px] md:px-0 px-[17px] text-[#111827] content-center responsive-h3`}
+                                        className={`font-[500] font-source md:font-bold  md:mb-2 mb-[10px] md:h-auto h-[60px] md:leading-[normal] md:text-[18px] lg:text-[20px] text-[16px] leading-[20px] md:px-0 px-[17px] text-[#111827] content-center responsive-h3`}
                                     >
                                         {service.title}
                                     </h3>

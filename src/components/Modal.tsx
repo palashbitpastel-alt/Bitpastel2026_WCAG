@@ -708,7 +708,7 @@ const Modal: React.FC<ModalProps> = ({ open, setIsModalOpen, children }) => {
                               value={formData.message}
                               onChange={(e) => handleInputChange('message', e.target.value)}
                               rows={2}
-                              className="w-full focus:outline-none font-[100] resize-none md:max-h-[40px] md:py-2"
+                              className="w-full focus:outline-none font-[100] resize-none md:max-h-[40px] pt-[8px] md:pt-[none] md:py-2 "
                             />
                           </div>
                         </div>

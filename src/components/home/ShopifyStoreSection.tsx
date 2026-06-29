@@ -148,7 +148,7 @@ const ShopifyStoreSection = () => {
                   alt='Shopify Select Partner'
                   width={isMobile ? 180 : 220}
                   height={53}
-                  className='object-contain object-left mb-center h-[26px] md:h-[48px]'
+                  className='object-contain object-left mb-center h-[28px] md:h-[48px]'
                 />
               </Link>
             </div>

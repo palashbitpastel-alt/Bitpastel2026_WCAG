@@ -1,0 +1,480 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e4]:
+      - link "Bitpastel Logo" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "Bitpastel Logo" [ref=e6]
+      - navigation [ref=e7]:
+        - button "Services" [ref=e8] [cursor=pointer]
+        - button "Stories" [ref=e9] [cursor=pointer]
+        - link "Culture" [ref=e10] [cursor=pointer]:
+          - /url: /culture
+        - link "Chat with Us" [ref=e11] [cursor=pointer]:
+          - /url: "#"
+  - main [ref=e12]:
+    - generic [ref=e13]:
+      - generic [ref=e14]:
+        - img "Shopify Dashboard" [ref=e19]
+        - generic [ref=e21]:
+          - img "Shopify X Bitpastel" [ref=e23]
+          - heading "We help brands unlock the Full Potential of Shopify" [level=1] [ref=e24]:
+            - text: We help brands unlock the
+            - text: Full Potential of Shopify
+          - paragraph [ref=e25]: through custom development, store optimization, migrations, and advanced integrations.
+          - generic [ref=e26]:
+            - button "Explore Horizon" [ref=e27] [cursor=pointer]
+            - button "Speed Optimisation Service" [ref=e28] [cursor=pointer]
+          - generic [ref=e29]:
+            - generic [ref=e30]:
+              - paragraph [ref=e31]: 400+
+              - paragraph [ref=e32]: Shopify Stores
+            - generic [ref=e34]:
+              - paragraph [ref=e35]: 100+
+              - paragraph [ref=e36]: Shopify Plus Stores
+            - link "Shopify Select Partner" [ref=e39] [cursor=pointer]:
+              - /url: https://www.shopify.com/partners/directory/partner/bitpastel3
+              - img "Shopify Select Partner" [ref=e40]
+      - generic [ref=e42]:
+        - heading "The Bitpastel Advantage" [level=2] [ref=e44]
+        - paragraph [ref=e46]: At Bitpastel, we combine Shopify expertise with modern development practices to help brands build scalable and high-performing ecommerce stores. From store setup to advanced integrations, our team delivers tailored Shopify solutions that align with your business goals.
+        - generic [ref=e47]:
+          - generic [ref=e48]:
+            - img [ref=e50]
+            - heading "Reliable & Scalable Development" [level=3] [ref=e53]
+            - paragraph [ref=e54]: Built for high-volume stores with robust architecture.
+          - generic [ref=e55]:
+            - img [ref=e57]
+            - heading "End-to-End Shopify Solutions" [level=3] [ref=e61]
+            - paragraph [ref=e62]: From strategy to custom theme development and ongoing support.
+          - generic [ref=e63]:
+            - img [ref=e65]
+            - heading "Performance & Conversion Focused" [level=3] [ref=e67]
+            - paragraph [ref=e68]: Optimized for speed to turn browsers into loyal buyers.
+          - generic [ref=e69]:
+            - img [ref=e71]
+            - heading "AI & Automation Integration" [level=3] [ref=e74]
+            - paragraph [ref=e75]: Smart tools to streamline operations and personalize experiences.
+      - generic [ref=e77]:
+        - heading "Shopify Solutions & Branding" [level=2] [ref=e79]
+        - paragraph [ref=e81]: We provide a wide range of Shopify development and optimization services designed to help brands build, scale, and optimize their e-commerce stores.
+        - generic [ref=e82]:
+          - generic [ref=e83]:
+            - generic [ref=e84]:
+              - img "Build, Migrate & Customize on Shopify" [ref=e86]
+              - heading "Build, Migrate & Customize on Shopify" [level=3] [ref=e87]
+            - paragraph [ref=e88]: From building new Shopify stores to migrating from other platforms, we handle complete setup and customize themes to match your brand and business goals.
+          - generic [ref=e89]:
+            - generic [ref=e90]:
+              - img "Optimise Performance & Integrate Tools" [ref=e92]
+              - heading "Optimise Performance & Integrate Tools" [level=3] [ref=e93]
+            - paragraph [ref=e94]: We optimize your store for speed and performance while integrating powerful apps to enhance functionality, automation, and overall user experience.
+          - generic [ref=e95]:
+            - generic [ref=e96]:
+              - img "Power Growth with AI & Personalisation" [ref=e98]
+              - heading "Power Growth with AI & Personalisation" [level=3] [ref=e99]
+            - paragraph [ref=e100]: Leverage AI-driven tools to create personalized shopping journeys, improve engagement, and increase conversions through intelligent automation.
+      - generic [ref=e102]:
+        - generic [ref=e103]:
+          - generic [ref=e104]:
+            - heading "Shopify Speed Optimization & Performance Audits" [level=2] [ref=e105]:
+              - text: Shopify Speed Optimization
+              - text: "& Performance Audits"
+            - paragraph [ref=e107]: A slow store impacts conversions, SEO rankings, and user experience. Our Shopify performance experts conduct detailed speed audits and implement advanced optimization strategies to ensure your store loads fast and performs efficiently across all devices.
+            - generic [ref=e108]:
+              - generic [ref=e111]: Core Web Vitals optimization
+              - generic [ref=e114]: Lighthouse, Google Page Speed Insights audits
+              - generic [ref=e117]: Theme code optimization
+              - generic [ref=e120]: Script and Apps load management
+          - generic [ref=e121]:
+            - generic [ref=e122]:
+              - generic [ref=e123]:
+                - generic [ref=e124]: Performance
+                - generic [ref=e125]: 99%
+              - generic [ref=e127]: Passing Core Web Vitals
+            - img "Shopify Performance Dashboard" [ref=e128]
+        - generic [ref=e129]:
+          - generic [ref=e130]:
+            - generic [ref=e131]:
+              - img [ref=e133]
+              - generic [ref=e135]:
+                - heading "Why does Speed Matter?" [level=3] [ref=e136]
+                - paragraph [ref=e137]: Performance directly affects revenue and engagement
+            - generic [ref=e139]:
+              - generic [ref=e140]: Slow loading (>6s)
+              - generic [ref=e141]: 50% abandon the site
+            - generic [ref=e145]:
+              - generic [ref=e146]: Fast loading
+              - generic [ref=e147]: High Rentention
+          - generic [ref=e150]:
+            - generic [ref=e151]:
+              - img [ref=e153]
+              - generic [ref=e155]:
+                - heading "Studies Show" [level=3] [ref=e156]
+                - paragraph [ref=e157]: 70% of visitors leave a site taking more than 6s to load
+            - img [ref=e159]:
+              - generic [ref=e160]: Loading Speed
+              - generic [ref=e162]: Revenue & engagement
+      - generic [ref=e167]:
+        - generic [ref=e168]:
+          - img [ref=e170]
+          - heading "Replatforming & Elevated Shopify Experiences" [level=2] [ref=e173]
+          - paragraph [ref=e175]: Switching platforms can feel complex, but our migration specialists ensure a seamless transition to Shopify without losing valuable data or SEO rankings.
+          - paragraph [ref=e176]: If your current Shopify store feels outdated or is underperforming, we help transform it with modern, conversion-focused designs. Bitpastel redesigns stores using premium themes and custom UX strategies to enhance brand identity and improve customer engagement.
+        - generic [ref=e177]:
+          - generic [ref=e178]:
+            - img [ref=e180]
+            - heading "Product Data, Customers, Blogs, and Pages Migration" [level=3] [ref=e182]
+          - generic [ref=e183]:
+            - img [ref=e185]
+            - heading "SEO Preservation" [level=3] [ref=e188]
+          - generic [ref=e189]:
+            - img [ref=e191]
+            - heading "Store Functionality Replication" [level=3] [ref=e194]
+          - generic [ref=e195]:
+            - img [ref=e197]
+            - heading "Shopify Theme 2.0" [level=3] [ref=e200]
+          - generic [ref=e201]:
+            - img [ref=e203]
+            - heading "Premium Theme Implementation" [level=3] [ref=e207]
+          - generic [ref=e208]:
+            - img [ref=e210]
+            - heading "UX/UI Improvements & Conversion Layouts" [level=3] [ref=e215]
+      - generic [ref=e218]:
+        - img "Enhanced checkout mockup" [ref=e221]
+        - generic [ref=e222]:
+          - heading "Enhanced Checkout & Post-Purchase Experiences" [level=2] [ref=e223]:
+            - text: Enhanced Checkout &
+            - text: Post-Purchase Experiences
+          - paragraph [ref=e225]: We extend Shopify's checkout and post-purchase journey to create personalised and high-converting experiences.
+          - paragraph [ref=e226]: By leveraging Shopify's latest Checkout Extensibility framework, we enhance critical touchpoints in the customer journey to improve engagement, increase order value, and deliver a consistent brand experience.
+          - generic [ref=e228]:
+            - img [ref=e229]
+            - generic [ref=e231]:
+              - paragraph [ref=e232]: Important Deadline
+              - paragraph [ref=e233]: Final deadline to upgrade Thank You & Order Status Extensibility - 26 August 2026 for non-Plus stores
+          - generic [ref=e234]:
+            - generic [ref=e235]:
+              - img [ref=e237]
+              - generic [ref=e240]: Checkout extensibility upgrades
+            - generic [ref=e241]:
+              - img [ref=e243]
+              - generic [ref=e246]: Thank You & Order Status extensibility upgrades
+            - generic [ref=e247]:
+              - img [ref=e249]
+              - generic [ref=e252]: Custom checkout blocks & Apps integration
+            - generic [ref=e253]:
+              - img [ref=e255]
+              - generic [ref=e258]: Checkout UI Extensions & Shopify Pixels
+      - generic [ref=e261]:
+        - generic [ref=e262]:
+          - heading "AI-Powered Shopify Enhancements" [level=2] [ref=e263]
+          - paragraph [ref=e265]: We help Shopify stores unlock the power of AI to create smarter, more personalised shopping experiences. From intelligent product recommendations to automated customer interactions, our AI integrations are designed to increase engagement, improve conversions, and maximise revenue.
+        - generic [ref=e266]:
+          - generic [ref=e267]:
+            - img [ref=e269]
+            - heading "AI Personalization & Product Recommendations" [level=3] [ref=e272]
+            - paragraph [ref=e273]: We deploy recommendation engines dynamically suggesting products from customer behavior, boosting order value and conversions.
+          - generic [ref=e274]:
+            - img [ref=e276]
+            - heading "AI-Driven Customer Support & Engagement" [level=3] [ref=e288]
+            - paragraph [ref=e289]: Deploy intelligent chat and support systems that automate responses, assist customers in real-time, and improve overall user experience.
+          - generic [ref=e290]:
+            - img [ref=e292]
+            - heading "AI Inventory & Merchandising Optimisation" [level=3] [ref=e294]
+            - paragraph [ref=e295]: Leverage AI to manage inventory efficiently, forecast demand, and ensure the right products are showcased to the right audience.
+          - generic [ref=e296]:
+            - img [ref=e298]
+            - heading "Smart Search & Product Discovery" [level=3] [ref=e301]
+            - paragraph [ref=e302]: Enhance product discovery with AI-powered search, filtering, and merchandising to help customers find what they need faster.
+      - generic [ref=e305]:
+        - generic [ref=e306]:
+          - heading "AI Personalisation with Rebuy" [level=2] [ref=e308]
+          - paragraph [ref=e310]: "Client: Luxury Kidswear brand UK"
+          - generic [ref=e311]:
+            - generic [ref=e312]: Challenge
+            - paragraph [ref=e313]: The client wanted to improve customer engagement and increase average order value by delivering more personalized shopping experiences across their Shopify store.
+          - generic [ref=e314]:
+            - generic [ref=e315]: Solution
+            - paragraph [ref=e316]: "Bitpastel implemented Rebuy AI to enhance the customer journey with:"
+            - list [ref=e317]:
+              - listitem [ref=e318]:
+                - generic [ref=e319]: •
+                - generic [ref=e320]: Dynamic product recommendations across product and cart pages
+              - listitem [ref=e321]:
+                - generic [ref=e322]: •
+                - generic [ref=e323]: Smart upsell and cross-sell widgets
+              - listitem [ref=e324]:
+                - generic [ref=e325]: •
+                - generic [ref=e326]: Personalized shopping experiences based on user behaviour
+          - generic [ref=e328]:
+            - img [ref=e329]
+            - generic [ref=e331]:
+              - heading "Results" [level=3] [ref=e332]
+              - list [ref=e333]:
+                - listitem [ref=e334]:
+                  - generic [ref=e335]: •
+                  - generic [ref=e336]: Increase in overall revenue driven by AI-powered recommendations
+                - listitem [ref=e337]:
+                  - generic [ref=e338]: •
+                  - generic [ref=e339]: Higher average order value through targeted upsells
+                - listitem [ref=e340]:
+                  - generic [ref=e341]: •
+                  - generic [ref=e342]: Improved customer engagement and product discovery
+        - img "Device mockup" [ref=e345]
+      - generic [ref=e346]:
+        - generic [ref=e348]:
+          - generic [ref=e349]:
+            - img "Horizons"
+          - heading "Introducing Horizon for Shopify" [level=2] [ref=e350]
+          - paragraph [ref=e351]: Horizon represents the next evolution of Shopify themes-built for performance, flexibility, and modern e-commerce experiences. Designed with a mobile-first approach and powered by Shopify’s latest capabilities, Horizon enables brands to create fast, scalable, and visually engaging storefronts without unnecessary complexity.
+        - generic [ref=e353]:
+          - list [ref=e354]:
+            - listitem [ref=e355]: Built for Speed and Performance
+            - listitem [ref=e356]: Flexible & Modern Design System
+            - listitem [ref=e357]: Optimized for Mobile-first Shopping
+            - listitem [ref=e358]: Powered by Shopify's Latest Architecture
+            - listitem [ref=e359]: AI-Ready Commerce Foundation
+          - list [ref=e360]:
+            - listitem [ref=e361]: Built for Speed and Performance
+            - listitem [ref=e362]: Flexible & Modern Design System
+            - listitem [ref=e363]: Optimized for Mobile-first Shopping
+            - listitem [ref=e364]: Powered by Shopify's Latest Architecture
+            - listitem [ref=e365]: AI-Ready Commerce Foundation
+      - generic [ref=e367]:
+        - heading "Why choose Horizon for your Store?" [level=2] [ref=e368]
+        - heading "Horizon isn't just another Shopify theme; it's built for speed, scalability, and conversions. Whether you're running a startup store or scaling to enterprise level, Horizon ensures your brand looks modern, loads faster, and converts better." [level=4] [ref=e371]:
+          - generic [ref=e373]: Horizon isn't just another Shopify theme; it's built for speed, scalability, and conversions. Whether you're running a startup store or scaling to enterprise level, Horizon ensures your brand looks modern, loads faster, and converts better.
+        - generic [ref=e374]:
+          - generic [ref=e376]:
+            - img "Performance Optimised" [ref=e378]
+            - heading "Performance Optimised" [level=3] [ref=e379]
+            - paragraph [ref=e380]: Faster load times, improved Core Web Vitals
+          - generic [ref=e382]:
+            - img "Modern Design Flexibility" [ref=e384]
+            - heading "Modern Design Flexibility" [level=3] [ref=e385]
+            - paragraph [ref=e386]: Sleek layouts adaptable to any industry
+          - generic [ref=e388]:
+            - img "Mobile-First UX" [ref=e390]
+            - heading "Mobile-First UX" [level=3] [ref=e391]
+            - paragraph [ref=e392]: Designed for mobile shoppers to boost conversions
+          - generic [ref=e394]:
+            - img "SEO-Ready" [ref=e396]
+            - heading "SEO-Ready" [level=3] [ref=e397]
+            - paragraph [ref=e398]: Clean structure with built-in best practices
+          - generic [ref=e400]:
+            - img "Easy Customization" [ref=e402]
+            - heading "Easy Customization" [level=3] [ref=e403]
+            - paragraph [ref=e404]: Change layouts without heavy coding
+          - generic [ref=e406]:
+            - img "Free & Future-Proof" [ref=e408]
+            - heading "Free & Future-Proof" [level=3] [ref=e409]
+            - paragraph [ref=e410]: It’s free and fully aligned with Shopify’s Online Store 2.0
+      - generic [ref=e414]:
+        - generic [ref=e415]:
+          - heading "AI-Powered Selling with Horizon + Bitpastel" [level=1] [ref=e416]:
+            - generic [ref=e417]: AI-Powered Selling
+            - text: with Horizon + Bitpastel
+          - heading "Horizon becomes more powerful when paired with Bitpastel’s AI-driven solutions. We bring advanced personalisation and automation into your Shopify store:" [level=4] [ref=e419]:
+            - generic [ref=e420]: Horizon becomes more powerful when paired with Bitpastel’s AI-driven
+            - generic [ref=e421]: solutions. We bring advanced personalisation and automation into your
+            - text: "Shopify store:"
+          - generic [ref=e422]:
+            - generic [ref=e423]:
+              - img "Check"
+              - paragraph [ref=e424]: Smart product recommendations and upsells
+            - generic [ref=e425]:
+              - img "Check"
+              - paragraph [ref=e426]: Personalised shopping journeys for every customer
+            - generic [ref=e427]:
+              - img "Check"
+              - paragraph [ref=e428]: Dynamic content adjustments based on user behaviour
+            - generic [ref=e429]:
+              - img "Check"
+              - paragraph [ref=e430]: AI-driven insights to improve conversion rates
+        - img "Ai_powered_Image" [ref=e432]
+      - generic [ref=e434]:
+        - heading "Effortless Migration powered by Bitpastel" [level=2] [ref=e435]
+        - generic [ref=e438]:
+          - generic [ref=e439]:
+            - generic [ref=e440]:
+              - heading "Theme Audit" [level=3] [ref=e441]
+              - paragraph [ref=e442]: Review your existing setup
+            - img "theme-audit" [ref=e444]
+            - img "theme-audit" [ref=e446]
+            - generic [ref=e447]: "01."
+          - generic [ref=e448]:
+            - generic [ref=e449]:
+              - heading "Strategy & Planning" [level=3] [ref=e450]
+              - paragraph [ref=e451]: Map features to Horizon
+            - img "theme-audit" [ref=e453]
+            - img "theme-audit" [ref=e455]
+            - generic [ref=e456]: "02."
+          - generic [ref=e457]:
+            - generic [ref=e458]:
+              - heading "Migration & Customisation" [level=3] [ref=e459]
+              - paragraph [ref=e460]: Move design, products, and apps seamlessly
+            - img "theme-audit" [ref=e462]
+            - img "theme-audit" [ref=e464]
+            - generic [ref=e465]: "03."
+          - generic [ref=e466]:
+            - generic [ref=e467]:
+              - heading "AI Integration" [level=3] [ref=e468]
+              - paragraph [ref=e469]: Add personalization and automation
+            - img "theme-audit" [ref=e471]
+            - img "theme-audit" [ref=e473]
+            - generic [ref=e474]: "04."
+          - generic [ref=e475]:
+            - generic [ref=e476]:
+              - heading "Testing & launch" [level=3] [ref=e477]
+              - paragraph [ref=e478]: Ensure smooth performance and conversions
+            - img "theme-audit" [ref=e480]
+            - img "theme-audit" [ref=e482]
+            - generic [ref=e483]: "05."
+        - img "theme-audit" [ref=e485]
+      - generic [ref=e487]:
+        - heading "Flexible Horizon Migration Packages" [level=2] [ref=e488]
+        - heading "Every store has unique needs. That’s why we offer tailored migration packages to help you move to Horizon with the right balance of customization, performance, and AI-powered enhancements" [level=4] [ref=e491]:
+          - generic [ref=e492]: Every store has unique needs. That’s why we offer tailored migration packages to help you move to
+          - generic [ref=e493]: Horizon with the right balance of customization, performance, and AI-powered enhancements
+        - generic [ref=e494]:
+          - generic [ref=e495]:
+            - heading "Basic Migration" [level=3] [ref=e497]
+            - generic [ref=e499]:
+              - generic [ref=e500]:
+                - img "Check" [ref=e501]
+                - paragraph [ref=e502]: For small to mid-sized stores
+              - generic [ref=e503]:
+                - img "Check" [ref=e504]
+                - paragraph [ref=e505]: Core theme migration
+              - generic [ref=e506]:
+                - img "Check" [ref=e507]
+                - paragraph [ref=e508]: Basic customization (colors, fonts, branding)
+              - generic [ref=e509]:
+                - img "Check" [ref=e510]
+                - paragraph [ref=e511]: Performance check & mobile optimization
+            - link "Start with Basic" [ref=e513] [cursor=pointer]:
+              - /url: https://calendly.com/ayanh/meet-ayan
+          - generic [ref=e514]:
+            - heading "Advanced Migration" [level=3] [ref=e516]
+            - generic [ref=e518]:
+              - generic [ref=e519]:
+                - img "Check" [ref=e520]
+                - paragraph [ref=e521]: Includes everything in Basic
+              - generic [ref=e522]:
+                - img "Check" [ref=e523]
+                - paragraph [ref=e524]: Advanced design customization
+              - generic [ref=e525]:
+                - img "Check" [ref=e526]
+                - paragraph [ref=e527]: App integrations & compatibility checks
+              - generic [ref=e528]:
+                - img "Check" [ref=e529]
+                - paragraph [ref=e530]: Enhanced SEO setup
+            - link "Upgrade to Advanced" [ref=e532] [cursor=pointer]:
+              - /url: https://calendly.com/ayanh/meet-ayan
+          - generic [ref=e533]:
+            - heading "Premium Migration" [level=3] [ref=e535]
+            - generic [ref=e537]:
+              - generic [ref=e538]:
+                - img "Check" [ref=e539]
+                - paragraph [ref=e540]: Includes everything in Advanced
+              - generic [ref=e541]:
+                - img "Check" [ref=e542]
+                - paragraph [ref=e543]: AI personalization & recommendations
+              - generic [ref=e544]:
+                - img "Check" [ref=e545]
+                - paragraph [ref=e546]: Dynamic content & automation setup
+              - generic [ref=e547]:
+                - img "Check" [ref=e548]
+                - paragraph [ref=e549]: Ongoing optimization support
+            - link "Go Premium" [ref=e551] [cursor=pointer]:
+              - /url: https://calendly.com/ayanh/meet-ayan
+      - generic [ref=e553]:
+        - heading "Frequently Asked Questions" [level=2] [ref=e554]
+        - generic [ref=e557]:
+          - generic [ref=e558]:
+            - button "What makes Horizon better than my current theme? Collapse" [expanded] [ref=e559] [cursor=pointer]:
+              - generic [ref=e560]: What makes Horizon better than my current theme?
+              - img "Collapse" [ref=e561]
+            - paragraph [ref=e564]: Horizon is optimized for speed, design flexibility, AI features and conversions, helping your store perform better on all fronts
+          - generic [ref=e565]:
+            - button "Can you migrate from any Shopify theme (free or paid)? Expand" [ref=e566] [cursor=pointer]:
+              - generic [ref=e567]: Can you migrate from any Shopify theme (free or paid)?
+              - img "Expand" [ref=e568]
+            - paragraph [ref=e570]: Yes, we can migrate from both free and premium themes into Horizon
+          - generic [ref=e571]:
+            - button "How long does the migration process take? Expand" [ref=e572] [cursor=pointer]:
+              - generic [ref=e573]: How long does the migration process take?
+              - img "Expand" [ref=e574]
+            - paragraph [ref=e576]: Typically 3-4 weeks, depending on complexity and customizations
+          - generic [ref=e577]:
+            - button "Do I need new apps when switching to Horizon? Expand" [ref=e578] [cursor=pointer]:
+              - generic [ref=e579]: Do I need new apps when switching to Horizon?
+              - img "Expand" [ref=e580]
+            - paragraph [ref=e582]: Not always. We review your current apps and ensure compatibility or suggest better alternatives
+      - generic [ref=e586]:
+        - generic [ref=e587]:
+          - img "Horizon logo" [ref=e589]
+          - heading "Ready to transform your Shopify Store with Horizon?" [level=1] [ref=e590]:
+            - generic [ref=e591]: Ready to transform
+            - text: your Shopify Store with Horizon?
+          - heading "Let Bitpastel handle your migration, customization, and AI integration-so you can focus on growth." [level=4] [ref=e592]:
+            - generic [ref=e593]: Let Bitpastel handle your migration, customization,
+            - text: and AI integration-so you can focus on growth.
+          - button "Book a Free Consultation" [ref=e595] [cursor=pointer]
+        - img "transformmain" [ref=e597]
+  - contentinfo [ref=e598]:
+    - generic [ref=e600]:
+      - generic [ref=e601]:
+        - generic [ref=e602]:
+          - link "Bitpastel Logo" [ref=e603] [cursor=pointer]:
+            - /url: /
+            - img "Bitpastel Logo" [ref=e604]
+          - link "Technopolis, 11th Floor, BP Block, Sector V, Salt Lake City, Kolkata - 700091" [ref=e606] [cursor=pointer]:
+            - /url: https://www.google.com/maps/place/Technopolis+Building/@22.5797323,88.4351652,17z/data=!4m14!1m7!3m6!1s0x3a0275a701908349:0x8d6c12852bc079bc!2sTechnopolis+Building!8m2!3d22.5797323!4d88.4377401!16s%2Fg%2F11hblq2494!3m5!1s0x3a0275a701908349:0x8d6c12852bc079bc!8m2!3d22.5797323!4d88.4377401!16s%2Fg%2F11hblq2494?entry=ttu
+            - generic [ref=e607]:
+              - text: Technopolis, 11th Floor, BP Block, Sector V,
+              - text: Salt Lake City, Kolkata - 700091
+          - generic [ref=e608]:
+            - paragraph [ref=e609]: CONNECT WITH US
+            - generic [ref=e610]:
+              - link "Facebook" [ref=e612] [cursor=pointer]:
+                - /url: https://www.facebook.com/bitpastel
+                - img "Facebook" [ref=e613]
+              - link "Instagram" [ref=e615] [cursor=pointer]:
+                - /url: https://www.instagram.com/bitpastel.ai/
+                - img "Instagram" [ref=e616]
+              - link "LinkedIn" [ref=e618] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/bitpastel
+                - img "LinkedIn" [ref=e619]
+        - generic [ref=e620]:
+          - paragraph [ref=e621]: QUICK LINKS
+          - generic [ref=e622]:
+            - generic [ref=e624]:
+              - link "Home" [ref=e626] [cursor=pointer]:
+                - /url: /
+              - button "About" [ref=e628] [cursor=pointer]
+              - button "Services" [ref=e630] [cursor=pointer]
+              - button "Stories" [ref=e632] [cursor=pointer]
+            - generic [ref=e634]:
+              - link "Culture" [ref=e635] [cursor=pointer]:
+                - /url: /culture
+              - button "Clientele" [ref=e637] [cursor=pointer]
+              - link "Careers" [ref=e638] [cursor=pointer]:
+                - /url: /careers
+              - link "Partners" [ref=e639] [cursor=pointer]:
+                - /url: /partners
+        - generic [ref=e641]:
+          - paragraph [ref=e642]: INFORMATION
+          - generic [ref=e643]:
+            - 'link "US: +1 (872) 444 6679" [ref=e644] [cursor=pointer]':
+              - /url: tel:+1 (872) 444 6679
+            - 'link "UK: +44 7469 539191" [ref=e645] [cursor=pointer]':
+              - /url: tel:+44 7469 539191
+            - 'link "IN: +91 9830 566 248" [ref=e646] [cursor=pointer]':
+              - /url: tel:+91 9830 566 248
+            - link "connect@bitpastel.com" [ref=e647] [cursor=pointer]:
+              - /url: mailto:connect@bitpastel.com
+      - paragraph [ref=e649]:
+        - text: Copyright © Bitpastel Solution Private Limited 2026 | All Rights Reserved |
+        - link "Privacy Policy" [ref=e650] [cursor=pointer]:
+          - /url: /privacy-policy

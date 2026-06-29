@@ -557,34 +557,57 @@
     display: block;
   }
 
+  /* Layering so the description panel slides out from UNDER the card's
+     icon/title (the icon box stays on top) but sits ABOVE the neighbour card.
+     - active card is raised above its siblings (panel can overlay the neighbour)
+     - icon/title (.mobile-none) sits above the panel (panel tucks under it) */
+  .our-services-wrapper .card-element.active {
+    z-index: 5;
+  }
+  .our-services-wrapper .mobile-none {
+    position: relative;
+    z-index: 2;
+  }
+
   .collapsible-element {
     width: calc(100% + 30px);
-    visibility: hidden;
+    /* Override the base rule's visibility:hidden — on mobile we control
+       show/hide with opacity so the panel can fade smoothly. */
+    visibility: visible;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0 !important;
     left: calc(100%);
     padding: 15px;
-    z-index: -1;
-    transition: all 0.4s ease;
+    /* Constant z-index + opacity (instead of tweening z-index/visibility)
+       so the panel stays in front for the whole slide — no end-of-slide pop.
+       opacity hides the brief "over its own card" moment at left:0 and gives
+       a smooth fade on both open and close. */
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+    /* Slide and fade run together over the same duration (no delay) so the
+       panel is visible the whole way — you actually see it slide out and slide
+       back, fading in/out as it moves. Equal timing keeps open/close consistent. */
+    transition: left 0.45s ease, opacity 0.45s ease;
     border-radius: 8px;
     align-content: center;
-    
+
 }
-/* Odd children (1, 3, 5, 7...) */
+/* Odd children (1, 3, 5, 7...) — slide content left → right */
 .our-services-wrapper .card-element.active:nth-child(odd) .collapsible-element {
   left: calc(100% - 14px) !important;
-  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
   padding-left: 30px;
-  z-index: 1;
 }
 
-/* Even children (2, 4, 6, 8...) */
+/* Even children (2, 4, 6, 8...) — slide content right → left */
 .our-services-wrapper .card-element.active:nth-child(even) .collapsible-element {
   left: calc(-100% - 16px) !important;
-  visibility: visible;
-  z-index: 1;
+  opacity: 1;
+  pointer-events: auto;
   padding-right: 30px;
 }
   
@@ -1002,7 +1025,7 @@ padding-bottom:20px;
 @media screen and (max-width:767px) {
   .shopify_badge_section {
     position: absolute;
-    bottom: 2px;
+    bottom: 5px;
     left: 2px;
 }
   #culture .work-with-us-features .relative:nth-child(1) ul li::before {

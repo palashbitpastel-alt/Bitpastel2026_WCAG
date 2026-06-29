@@ -86,6 +86,20 @@ const Header = ({ forceModalOpen = false, onModalClose }: HomePageProps) => {
   const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null)
   // Tracks the URL we should restore when closing the /free-quote modal
   const freeQuotePrevUrlRef = useRef<string | null>(null)
+  // While set, the scroll handler must not override the active nav item. We set
+  // the active section optimistically on click and hold it through the
+  // programmatic scroll, so the indicator activates instantly and never gets
+  // wiped if the scroll detection misses the trigger line.
+  const activeLockRef = useRef<NodeJS.Timeout | null>(null)
+
+  // Set the active nav item immediately and lock it for the scroll duration.
+  const lockActiveSection = useCallback((section: string) => {
+    setActiveSection(section)
+    if (activeLockRef.current) clearTimeout(activeLockRef.current)
+    activeLockRef.current = setTimeout(() => {
+      activeLockRef.current = null
+    }, 1000)
+  }, [])
 
   // Close modal on route change (but ignore the synthetic free-quote paths
   // we push via window.history — usePathname won't update for plain pushState,
@@ -112,6 +126,8 @@ const Header = ({ forceModalOpen = false, onModalClose }: HomePageProps) => {
       throttle(() => {
         // Only check sections if on home page
         if (!isHomePage) return
+        // Don't override the optimistic active set during a click-driven scroll.
+        if (activeLockRef.current) return
 
         const sections = ["services", "stories"]
         let currentSection = null
@@ -336,14 +352,14 @@ const Header = ({ forceModalOpen = false, onModalClose }: HomePageProps) => {
 
             <nav className="flex space-x-8 items-center">
               <button
-                onClick={(e) => handleLinkClick(e, "services")}
+                onClick={(e) => { lockActiveSection("services"); handleLinkClick(e, "services"); }}
                 className={`nav-dark ${activeSection === "services" ? "is-active" : ""} `}
                 style={{ fontFamily: "Roboto", fontSize: "16px", fontWeight: 400 }}
               >
                 Services
               </button>
               <button
-                onClick={scrollToNews}
+                onClick={() => { lockActiveSection("stories"); scrollToNews(); }}
                 className={`nav-dark ${activeSection === "stories" ? "is-active" : ""} `}
                 style={{ fontFamily: "Roboto", fontSize: "16px", fontWeight: 400 }}
               >

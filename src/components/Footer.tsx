@@ -55,6 +55,18 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
   const {scrollToNews} = useScrollToNews();
   // Tracks the URL we should restore when the Free Quote modal is closed.
   const freeQuotePrevUrlRef = useRef<string | null>(null);
+  // While set, the IntersectionObserver must not override the active nav item.
+  // We set the active section optimistically on click and hold it through the
+  // programmatic scroll so the indicator activates instantly and reliably.
+  const navLockRef = useRef<NodeJS.Timeout | null>(null);
+
+  const lockActiveSection = useCallback((section: string) => {
+    setActiveSection(section);
+    if (navLockRef.current) clearTimeout(navLockRef.current);
+    navLockRef.current = setTimeout(() => {
+      navLockRef.current = null;
+    }, 1000);
+  }, []);
   useEffect(() => {
     setIsClient(true);
   }, []);
@@ -68,6 +80,8 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
     const sectionIds = ['services', 'stories'];
     const observer = new IntersectionObserver(
       (entries) => {
+        // Don't override the optimistic active set during a click-driven scroll.
+        if (navLockRef.current) return;
         for (const entry of entries) {
           if (entry.isIntersecting) {
             setActiveSection(entry.target.id);
@@ -780,10 +794,11 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
             >
               <button
                 onClick={(e) => {
+                  lockActiveSection('services');
                   handleSectionClick(e, 'services');
                   setCurrentTab('services');
                 }}
-                className="flex flex-col items-center gap-1"
+                className="flex flex-col items-center"
               >
                 <Image
                   src={isHomePage && isClient && activeSection === 'services' ? NAV_ICONS.service.solid : NAV_ICONS.service.line}
@@ -803,7 +818,7 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
               }`}
             >
               <button
-                onClick={() => { scrollToNews(); }}
+                onClick={() => { lockActiveSection('stories'); scrollToNews(); }}
                 className="flex flex-col items-center"
               >
                 <Image

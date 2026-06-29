@@ -477,7 +477,7 @@ const Modal: React.FC<ModalProps> = ({ open, setIsModalOpen, children }) => {
               <div className="lg:w-[40%] md:w-[50%] w-full ">
                 <div className="md:hidden">
                   <div className="bg-[#3dcb90] text-primary-white">
-                    <h3 className="title md:p-4 p-2 ">
+                    <h3 className="modal-title title md:p-4 p-2 ">
                       Get Your Business Online Today <br />
                       With <span className="font-bold text-primary-white">Bitpastel</span>
                     </h3>
@@ -485,7 +485,7 @@ const Modal: React.FC<ModalProps> = ({ open, setIsModalOpen, children }) => {
                 </div>
 
                 {/* Form Section */}
-                <div className="bg-[#fff] md:p-[35px] p-[15px] md:shadow-[1px_-2px_20px_rgba(0,0,0,0.1),0_12px_24px_rgba(0,0,0,0.12)] modalform-area-mob">
+                <div className="bg-[#fff] md:p-[35px] p-[24px] md:p-[15px] md:shadow-[1px_-2px_20px_rgba(0,0,0,0.1),0_12px_24px_rgba(0,0,0,0.12)] modalform-area-mob">
                   {isSuccess ? (
                     <>
                       <div className="grid grid-cols-1 min-h-[450px] place-items-center justify-between">

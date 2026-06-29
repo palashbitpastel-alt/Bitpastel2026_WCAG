@@ -640,7 +640,7 @@ export default function JoinTeam({ title = 'Join Our Team', className, jobTitle 
             Send
           </button>
           {/* Privacy Policy */}
-          <p className="text-white text-center font-roboto text-[10px]">
+          <p className="text-white text-center font-roboto text-[14px] md:text-[13px]">
             By clicking "Send", you agree to our{' '}
             <Link href="/privacy-policy" target='_blank' className=" text-till hover:underline">
               Privacy Policy

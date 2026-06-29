@@ -93,12 +93,14 @@ const Banner = () => {
               ))}
             </div>
 
-            <button
-              className="new-btn-design-full mt-[15px] mb-center block mx-auto md:mx-0"
-              onClick={() => scrollToSection('jobCards')}
-            >
-              Explore Opportunities
-            </button>
+            <div className="button-area-main">
+              <button
+                className="new-btn-design-full mt-[15px]"
+                onClick={() => scrollToSection('jobCards')}
+              >
+                Explore Opportunities
+              </button>
+            </div>
           </div>
         </div>
       </section>

@@ -101,12 +101,14 @@ const TeamBanner = () => {
             ))}
           </div>
 
-          <button
-            className="new-btn-design-full mt-[15px] mb-center"
-            onClick={() => scrollToSection('OurTeam')}
-          >
-            Meet the Team
-          </button>
+          <div className="button-area-main">
+            <button
+              className="new-btn-design-full mt-[15px]"
+              onClick={() => scrollToSection('OurTeam')}
+            >
+              Meet the Team
+            </button>
+          </div>
         </div>
       </div>
     </section>

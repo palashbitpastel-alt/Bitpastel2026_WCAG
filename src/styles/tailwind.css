@@ -1999,7 +1999,14 @@ span.MuiAccordionSummary-content.Mui-expanded.MuiAccordionSummary-contentGutters
     margin-bottom: 0px;
     /* margin-top: 10px; */
   }
-
+.modal-title
+{
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
   .responsive-h3 {
     font-size: 18px !important;
     font-weight: 600 !important;

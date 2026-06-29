@@ -371,7 +371,7 @@ const PerformanceSection: React.FC = () => {
               inView={bottomInView}
               delay={0.5}
               duration={10}
-              repeat={Infinity}
+              repeat={Infinity} 
             />
             <AnimatedBar
               label="Fast loading"

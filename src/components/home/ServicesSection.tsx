@@ -38,34 +38,11 @@ const ServicesSection = () => {
     };
   });
 
-  const [transitionComplete, setTransitionComplete] = useState<Set<number>>(new Set());
-
+  // Toggle active card. The slide + fade is fully CSS-driven off the `.active`
+  // class (see .collapsible-element), so no JS timers are needed — that avoids
+  // the timer/CSS-duration mismatch that made the text pop in mid-slide.
   const handleClick = (index: number) => {
-    if (activeIndex === index) {
-      // Deactivating: first hide text, then collapse
-      setTransitionComplete((prev) => {
-        const newSet = new Set(prev);
-        newSet.delete(index);
-        return newSet;
-      });
-      
-      // Wait for text fade out, then collapse
-      setTimeout(() => {
-        setActiveIndex(null);
-      }, 200); // Match CSS transition duration
-    } else {
-      // Activating: first expand, then show text
-      setActiveIndex(index);
-      
-      // Wait for CSS transition to complete, then show text
-      setTimeout(() => {
-        setTransitionComplete((prev) => {
-          const newSet = new Set(prev);
-          newSet.add(index);
-          return newSet;
-        });
-      }, 300); // Match CSS transition duration
-    }
+    setActiveIndex((prev) => (prev === index ? null : index));
   };
   
   const services: services[] = [
@@ -219,9 +196,7 @@ const ServicesSection = () => {
                 className={`collapsible-element text-left content-center${activeIndex === index ? 'active' : ''}`}
                 style={{ background: service.bgcolorCollapsed }}
               >
-                <p className={`paragraph text-title text-[16px] leading-[20px] transition-opacity duration-300 ${
-                  transitionComplete.has(index) && activeIndex === index ? 'opacity-100' : 'opacity-0'
-                }`}>
+                <p className="paragraph text-title text-[16px] leading-[20px]">
                   {service.description}
                 </p>
               </div>

@@ -1,0 +1,291 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e4]:
+      - link "Bitpastel Logo" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "Bitpastel Logo" [ref=e6]
+      - navigation [ref=e7]:
+        - button "Services" [ref=e8] [cursor=pointer]
+        - button "Stories" [ref=e9] [cursor=pointer]
+        - link "Culture" [ref=e10] [cursor=pointer]:
+          - /url: /culture
+        - link "Chat with Us" [ref=e11] [cursor=pointer]:
+          - /url: "#"
+  - main [ref=e12]:
+    - generic [ref=e13]:
+      - generic [ref=e14]:
+        - img "Desktop Banner" [ref=e16]
+        - generic [ref=e19]:
+          - heading "Crafting Digital Solutions for your business" [level=1] [ref=e20]:
+            - text: Crafting Digital Solutions
+            - generic [ref=e21]: for your business
+          - generic [ref=e22]:
+            - generic [ref=e23]:
+              - img "Check" [ref=e24]
+              - paragraph [ref=e25]: Shopify & eCommerce Solutions
+            - generic [ref=e26]:
+              - img "Check" [ref=e27]
+              - paragraph [ref=e28]: Custom SaaS Product Development
+            - generic [ref=e29]:
+              - img "Check" [ref=e30]
+              - paragraph [ref=e31]: AI Transformation & Automation Services
+          - button "Let’s Work Together" [ref=e33] [cursor=pointer]
+      - generic [ref=e35]:
+        - heading "Our Services" [level=2] [ref=e36]
+        - generic [ref=e37]:
+          - generic [ref=e39]:
+            - img "Artificial Intelligence" [ref=e41]
+            - heading "Artificial Intelligence" [level=3] [ref=e42]
+            - paragraph [ref=e43]: Smart AI agents and solutions driving automation, insight, and innovation
+          - generic [ref=e45]:
+            - img "Shopify Plus Development" [ref=e47]
+            - heading "Shopify Plus Development" [level=3] [ref=e48]
+            - paragraph [ref=e49]: Scalable Shopify Plus stores tailored for high-growth e-commerce brands
+          - generic [ref=e51]:
+            - img "Web Development" [ref=e53]
+            - heading "Web Development" [level=3] [ref=e54]
+            - paragraph [ref=e55]: Robust, responsive web apps built for performance and user experience
+          - generic [ref=e57]:
+            - img "Design & Creatives" [ref=e59]
+            - heading "Design & Creatives" [level=3] [ref=e60]
+            - paragraph [ref=e61]: Engaging, user-focused designs that bring your vision to life
+          - generic [ref=e63]:
+            - img "E-commerce Development" [ref=e65]
+            - heading "E-commerce Development" [level=3] [ref=e66]
+            - paragraph [ref=e67]: End-to-end e-commerce solutions for seamless shopping and sales growth
+          - generic [ref=e69]:
+            - img "Custom SaaS Development" [ref=e71]
+            - heading "Custom SaaS Development" [level=3] [ref=e72]
+            - paragraph [ref=e73]: Tailored SaaS platforms that solve real problems and scale faster
+      - generic [ref=e74]:
+        - generic [ref=e76]:
+          - generic [ref=e77]:
+            - img "Team working together" [ref=e79]
+            - heading "400+ Shopify Stores & 100+ Shopify Plus Stores" [level=2] [ref=e80]:
+              - text: 400+ Shopify Stores
+              - text: "& 100+ Shopify Plus Stores"
+            - paragraph [ref=e81]:
+              - text: We have helped 250+ brands grow from scratch to $1M GMV.
+              - text: At Bitpastel, we build differentiated, fast, and scalable online
+              - text: stores to help you provide the best customer experience!
+            - paragraph [ref=e82]:
+              - text: We also deliver speed and performance optimization that
+              - text: contributes to better conversion rates.
+            - link "Get Started" [ref=e84] [cursor=pointer]:
+              - /url: /shopify
+          - generic [ref=e85]:
+            - link "Shopify Select Partner" [ref=e87] [cursor=pointer]:
+              - /url: https://www.shopify.com/partners/directory/partner/bitpastel3
+              - img "Shopify Select Partner" [ref=e88]
+            - img "Team working together" [ref=e89]
+        - generic [ref=e91]:
+          - generic [ref=e92]:
+            - heading "Building Scalable SaaS Platforms that grow with you" [level=2] [ref=e93]:
+              - text: Building Scalable SaaS
+              - text: Platforms that grow with you
+            - paragraph [ref=e94]:
+              - text: We create SaaS solutions tailored to your business goals which
+              - text: are secure, scalable, and designed for seamless growth, helping
+              - text: you streamline operations, boost collaboration, and enhance
+              - text: customer experiences.
+          - img "Team working together" [ref=e96]
+        - generic [ref=e98]:
+          - generic [ref=e99]:
+            - heading "Transforming Businesses with AI and Automation" [level=2] [ref=e100]:
+              - text: Transforming Businesses
+              - text: with AI and Automation
+            - paragraph [ref=e101]:
+              - text: We build AI-powered solutions that help transform businesses
+              - text: through intelligent automation, predictive insights, and human-
+              - text: centric design - boosting efficiency, fueling innovation, and
+              - text: enabling smarter decisions at scale.
+          - img "Team working together" [ref=e103]
+      - generic [ref=e105]:
+        - heading "Stories" [level=2] [ref=e106]
+        - generic [ref=e107]:
+          - generic [ref=e108]:
+            - paragraph [ref=e111]: "\"We have worked with Bitpastel now for over 2 years and we've been really happy with the level of service and development work we have had done. They now manage all of our technology needs on an ongoing basis and nothing ever seems to be an issue with our requirements. Work is completed on time and to the highest quality that meets our expectations.\""
+            - generic [ref=e112]:
+              - img "Dan Miller" [ref=e113]
+              - generic [ref=e114]:
+                - heading "Dan Miller" [level=4] [ref=e115]
+                - paragraph [ref=e116]: CEO, Young Professionals, UK
+          - generic [ref=e117]:
+            - paragraph [ref=e120]: "\"As soon as I came into contact with Ayan and his Bitpastel team, I felt in safe hands. What impressed me most is Ayan’s level of communication. In the past I have experienced slow turnaround times and lack of communication but with Ayan and his team I genuinely felt like I was their only client and the attention to detail is impeccable. I highly recommend them\""
+            - generic [ref=e121]:
+              - img "Cameron Sangster" [ref=e122]
+              - generic [ref=e123]:
+                - heading "Cameron Sangster" [level=4] [ref=e124]
+                - paragraph [ref=e125]: Director, RareBoots4U, UK
+          - generic [ref=e126]:
+            - paragraph [ref=e129]: "\"Bitpastel has been a delight to work with! They take the time to truly understand the requirements and provide expert opinion on design, development, and implementation. The team is also very detail oriented and communicate extremely well. Everything is timely, effective, and well done. I keep going back to them to build new things because there is no one else I would rather work with.\""
+            - generic [ref=e130]:
+              - img "Honey Patel" [ref=e131]
+              - generic [ref=e132]:
+                - heading "Honey Patel" [level=4] [ref=e133]
+                - paragraph [ref=e134]: Business Strategy & Operations Leader, USA
+          - generic [ref=e135]:
+            - paragraph [ref=e138]: "\"Ayan and his team are superstars, they interpret suggestions well and propose even better and more efficient alternatives, the team's work is to a very high standard and turn around time is much faster than a UK equivalent\""
+            - generic [ref=e139]:
+              - img "Reece Wabara" [ref=e140]
+              - generic [ref=e141]:
+                - heading "Reece Wabara" [level=4] [ref=e142]
+                - paragraph [ref=e143]: CEO, Maniére De Voir, UK | Forbes 30 Under 30
+          - generic [ref=e144]:
+            - paragraph [ref=e147]: "\"Ayan and his team were excellent to work with. He was a great communicator, took the time to understand my needs and always delivered as promised. I will hire him again in the future.\""
+            - generic [ref=e148]:
+              - img "Paul R. Turner" [ref=e149]
+              - generic [ref=e150]:
+                - heading "Paul R. Turner" [level=4] [ref=e151]
+                - paragraph [ref=e152]: International Director & Co-founder, Food for Life Global, USA
+          - generic [ref=e153]:
+            - paragraph [ref=e156]: "\"Ayan and the Bitpastel team are a reliable and dedicated group. Whenever I reach out to the team about back-end or front-end tasks that need to be completed, they're not only quick to respond but I can rely on their turnaround time. Since partnering with them, my mind has been at ease knowing that they will get the job done so that I can focus on other tasks. It has been a pleasure working with them!\""
+            - generic [ref=e157]:
+              - img "David Jones" [ref=e158]
+              - generic [ref=e159]:
+                - heading "David Jones" [level=4] [ref=e160]
+                - paragraph [ref=e161]: Marketing Manager, Jax Brands, Canada
+        - button "Explore more stories" [ref=e163] [cursor=pointer]:
+          - generic [ref=e164]: Explore more stories
+      - generic [ref=e166]:
+        - heading "Satisfied Clientele Worldwide" [level=2] [ref=e167]
+        - generic [ref=e168]:
+          - img "World Map with Pointers" [ref=e170]
+          - generic [ref=e171]:
+            - generic [ref=e172]:
+              - img "Clients" [ref=e173]
+              - heading "900" [level=2] [ref=e174]
+              - generic [ref=e175]: Clients
+            - generic [ref=e176]:
+              - img "Projects" [ref=e177]
+              - heading "1400+" [level=2] [ref=e178]
+              - generic [ref=e179]: Projects
+            - generic [ref=e180]:
+              - img "Lines of Code" [ref=e181]
+              - heading "50M" [level=2] [ref=e182]
+              - generic [ref=e183]: Lines of Code
+            - generic [ref=e184]:
+              - img "Countries" [ref=e185]
+              - heading "35" [level=2] [ref=e186]
+              - generic [ref=e187]: Countries
+      - generic [ref=e190]:
+        - img "Team collaboration" [ref=e192]
+        - generic [ref=e193]:
+          - heading "Why we are the best Tech Partner out there" [level=2] [ref=e194]:
+            - text: Why we are the best
+            - text: Tech Partner out there
+          - generic [ref=e195]:
+            - generic [ref=e196]:
+              - img "Check"
+              - paragraph [ref=e197]: Perfectly managed worry-free delivery
+            - generic [ref=e198]:
+              - img "Check"
+              - paragraph [ref=e199]: Fast turn-around time
+            - generic [ref=e200]:
+              - img "Check"
+              - paragraph [ref=e201]: Multi-layered Quality Assurance
+            - generic [ref=e202]:
+              - img "Check"
+              - paragraph [ref=e203]: Idea, Confidentiality & Data Protection
+            - generic [ref=e204]:
+              - img "Check"
+              - paragraph [ref=e205]: 30 days free maintenance
+      - generic [ref=e207]:
+        - heading "The Value We Bring" [level=2] [ref=e208]
+        - generic [ref=e209]:
+          - img "Team collaboration" [ref=e212]
+          - generic [ref=e213]:
+            - generic [ref=e214]:
+              - generic [ref=e215] [cursor=pointer]:
+                - img "Reliable Engineering" [ref=e216]
+                - heading "Reliable Engineering" [level=3] [ref=e217]
+              - list [ref=e219]:
+                - listitem [ref=e220]: Multifunctional engineering teams with deep expertise
+                - listitem [ref=e221]: Proven track record of 100% Customer Satisfaction
+            - generic [ref=e222]:
+              - generic [ref=e223] [cursor=pointer]:
+                - img "Quality Assurance" [ref=e224]
+                - heading "Quality Assurance" [level=3] [ref=e225]
+              - list [ref=e227]:
+                - listitem [ref=e228]: Dedicated QA team for thorough testing
+                - listitem [ref=e229]: Multilayered Quality Assurance before delivery
+            - generic [ref=e230]:
+              - generic [ref=e231] [cursor=pointer]:
+                - img "Cool & Elegant Designs" [ref=e232]
+                - heading "Cool & Elegant Designs" [level=3] [ref=e233]
+              - list [ref=e235]:
+                - listitem [ref=e236]: Dedicated design studio with a talented team
+                - listitem [ref=e237]: Specialists in high-quality UI/UX
+            - generic [ref=e238]:
+              - generic [ref=e239] [cursor=pointer]:
+                - img "Agile Delivery" [ref=e240]
+                - heading "Agile Delivery" [level=3] [ref=e241]
+              - list [ref=e243]:
+                - listitem [ref=e244]: Delivery on demanding timelines
+                - listitem [ref=e245]: Fast-paced response across all timezone
+      - generic [ref=e248]:
+        - img "Background" [ref=e250]
+        - generic [ref=e252]:
+          - heading "Discover the digital possibilities we can help you unlock for your business!" [level=2] [ref=e253]:
+            - text: Discover the digital
+            - generic [ref=e254]: possibilities we can help you
+            - generic [ref=e255]: unlock for your business!
+          - paragraph [ref=e256]: We understand your unique way of work and provide bespoke technology solutions. Our team works in sync with you ensuring seamless delivery and optimum quality. We are eager to know about your business.
+          - link "Contact Us" [ref=e257] [cursor=pointer]:
+            - /url: "#"
+  - contentinfo [ref=e258]:
+    - generic [ref=e260]:
+      - generic [ref=e261]:
+        - generic [ref=e262]:
+          - link "Bitpastel Logo" [ref=e263] [cursor=pointer]:
+            - /url: /
+            - img "Bitpastel Logo" [ref=e264]
+          - link "Technopolis, 11th Floor, BP Block, Sector V, Salt Lake City, Kolkata - 700091" [ref=e266] [cursor=pointer]:
+            - /url: https://www.google.com/maps/place/Technopolis+Building/@22.5797323,88.4351652,17z/data=!4m14!1m7!3m6!1s0x3a0275a701908349:0x8d6c12852bc079bc!2sTechnopolis+Building!8m2!3d22.5797323!4d88.4377401!16s%2Fg%2F11hblq2494!3m5!1s0x3a0275a701908349:0x8d6c12852bc079bc!8m2!3d22.5797323!4d88.4377401!16s%2Fg%2F11hblq2494?entry=ttu
+            - generic [ref=e267]:
+              - text: Technopolis, 11th Floor, BP Block, Sector V,
+              - text: Salt Lake City, Kolkata - 700091
+          - generic [ref=e268]:
+            - paragraph [ref=e269]: CONNECT WITH US
+            - generic [ref=e270]:
+              - link "Facebook" [ref=e272] [cursor=pointer]:
+                - /url: https://www.facebook.com/bitpastel
+                - img "Facebook" [ref=e273]
+              - link "Instagram" [ref=e275] [cursor=pointer]:
+                - /url: https://www.instagram.com/bitpastel.ai/
+                - img "Instagram" [ref=e276]
+              - link "LinkedIn" [ref=e278] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/bitpastel
+                - img "LinkedIn" [ref=e279]
+        - generic [ref=e280]:
+          - paragraph [ref=e281]: QUICK LINKS
+          - generic [ref=e282]:
+            - generic [ref=e284]:
+              - link "Home" [ref=e286] [cursor=pointer]:
+                - /url: /
+              - button "About" [ref=e288] [cursor=pointer]
+              - button "Services" [ref=e290] [cursor=pointer]
+              - button "Stories" [ref=e292] [cursor=pointer]
+            - generic [ref=e294]:
+              - link "Culture" [ref=e295] [cursor=pointer]:
+                - /url: /culture
+              - button "Clientele" [ref=e297] [cursor=pointer]
+              - link "Careers" [ref=e298] [cursor=pointer]:
+                - /url: /careers
+              - link "Partners" [ref=e299] [cursor=pointer]:
+                - /url: /partners
+        - generic [ref=e301]:
+          - paragraph [ref=e302]: INFORMATION
+          - generic [ref=e303]:
+            - 'link "US: +1 (872) 444 6679" [ref=e304] [cursor=pointer]':
+              - /url: tel:+1 (872) 444 6679
+            - 'link "UK: +44 7469 539191" [ref=e305] [cursor=pointer]':
+              - /url: tel:+44 7469 539191
+            - 'link "IN: +91 9830 566 248" [ref=e306] [cursor=pointer]':
+              - /url: tel:+91 9830 566 248
+            - link "connect@bitpastel.com" [ref=e307] [cursor=pointer]:
+              - /url: mailto:connect@bitpastel.com
+      - paragraph [ref=e309]:
+        - text: Copyright © Bitpastel Solution Private Limited 2026 | All Rights Reserved |
+        - link "Privacy Policy" [ref=e310] [cursor=pointer]:
+          - /url: /privacy-policy

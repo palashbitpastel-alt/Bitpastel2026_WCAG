@@ -1,0 +1,70 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e4]:
+      - link "Bitpastel Logo" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "Bitpastel Logo" [ref=e6]
+      - navigation [ref=e7]:
+        - button "Services" [ref=e8] [cursor=pointer]
+        - button "Stories" [ref=e9] [cursor=pointer]
+        - link "Culture" [ref=e10] [cursor=pointer]:
+          - /url: /culture
+        - link "Chat with Us" [ref=e11] [cursor=pointer]:
+          - /url: "#"
+  - main [ref=e12]
+  - contentinfo [ref=e16]:
+    - generic [ref=e18]:
+      - generic [ref=e19]:
+        - generic [ref=e20]:
+          - link "Bitpastel Logo" [ref=e21] [cursor=pointer]:
+            - /url: /
+            - img "Bitpastel Logo" [ref=e22]
+          - link "Technopolis, 11th Floor, BP Block, Sector V, Salt Lake City, Kolkata - 700091" [ref=e24] [cursor=pointer]:
+            - /url: https://www.google.com/maps/place/Technopolis+Building/@22.5797323,88.4351652,17z/data=!4m14!1m7!3m6!1s0x3a0275a701908349:0x8d6c12852bc079bc!2sTechnopolis+Building!8m2!3d22.5797323!4d88.4377401!16s%2Fg%2F11hblq2494!3m5!1s0x3a0275a701908349:0x8d6c12852bc079bc!8m2!3d22.5797323!4d88.4377401!16s%2Fg%2F11hblq2494?entry=ttu
+            - generic [ref=e25]:
+              - text: Technopolis, 11th Floor, BP Block, Sector V,
+              - text: Salt Lake City, Kolkata - 700091
+          - generic [ref=e26]:
+            - paragraph [ref=e27]: CONNECT WITH US
+            - generic [ref=e28]:
+              - link "Facebook" [ref=e30] [cursor=pointer]:
+                - /url: https://www.facebook.com/bitpastel
+                - img "Facebook" [ref=e31]
+              - link "Instagram" [ref=e33] [cursor=pointer]:
+                - /url: https://www.instagram.com/bitpastel.ai/
+                - img "Instagram" [ref=e34]
+              - link "LinkedIn" [ref=e36] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/bitpastel
+                - img "LinkedIn" [ref=e37]
+        - generic [ref=e38]:
+          - paragraph [ref=e39]: QUICK LINKS
+          - generic [ref=e40]:
+            - generic [ref=e42]:
+              - link "Home" [ref=e44] [cursor=pointer]:
+                - /url: /
+              - button "About" [ref=e46] [cursor=pointer]
+              - button "Services" [ref=e48] [cursor=pointer]
+              - button "Stories" [ref=e50] [cursor=pointer]
+            - generic [ref=e52]:
+              - link "Culture" [ref=e53] [cursor=pointer]:
+                - /url: /culture
+              - button "Clientele" [ref=e55] [cursor=pointer]
+              - link "Careers" [ref=e56] [cursor=pointer]:
+                - /url: /careers
+              - link "Partners" [ref=e57] [cursor=pointer]:
+                - /url: /partners
+        - generic [ref=e59]:
+          - paragraph [ref=e60]: INFORMATION
+          - generic [ref=e61]:
+            - 'link "US: +1 (872) 444 6679" [ref=e62] [cursor=pointer]':
+              - /url: tel:+1 (872) 444 6679
+            - 'link "UK: +44 7469 539191" [ref=e63] [cursor=pointer]':
+              - /url: tel:+44 7469 539191
+            - 'link "IN: +91 9830 566 248" [ref=e64] [cursor=pointer]':
+              - /url: tel:+91 9830 566 248
+            - link "connect@bitpastel.com" [ref=e65] [cursor=pointer]:
+              - /url: mailto:connect@bitpastel.com
+      - paragraph [ref=e67]:
+        - text: Copyright © Bitpastel Solution Private Limited 2026 | All Rights Reserved |
+        - link "Privacy Policy" [ref=e68] [cursor=pointer]:
+          - /url: /privacy-policy

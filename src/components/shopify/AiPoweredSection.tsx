@@ -35,8 +35,7 @@ const AiPoweredSection: React.FC<AiPoweredSectionProps> = ({ openModal }) => {
                             </h1>
                             <div className="ai-powered-green-gradient"></div>
                             <h4 className='ai-powered-subtitle'>
-                                <span className="block font-[300]  md:text-[16px] lg:text-[18px] text-roboto">Horizon becomes more powerful when paired with Bitpastel’s AI-driven  </span>
-                                <span className="block font-[300]  md:text-[16px] lg:text-[18px]">solutions. We bring advanced personalisation and automation into your</span>
+                                <span className="block font-[300]  md:text-[16px] lg:text-[18px] text-roboto">Horizon becomes more powerful when paired with Bitpastel’s AI-driven solutions. We bring advanced personalisation and automation into your</span>
                                 <span className='font-[300]  md:text-[16px] lg:text-[18px]'>Shopify store:</span>
                             </h4>
                             <div className="md:text-primary-white text-title md:text-left text-center">

@@ -569,7 +569,7 @@ export default function JobDetail ({ params }: { params: { id: string } }) {
         />
         {/* Job Details Content */}
         {/* className='md:pt-16 pt-12' */}
-        <div className='md:pt-[90px] pt-[70px] text-title'>
+        <div className='md:pt-[90px] pt-[15px] text-title'>
           <div className='container mx-auto px-4'>
             <div className='max-w-4xl mx-auto'>
               {' '}

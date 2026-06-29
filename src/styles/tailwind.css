@@ -1999,6 +1999,10 @@ span.MuiAccordionSummary-content.Mui-expanded.MuiAccordionSummary-contentGutters
     margin-bottom: 0px;
     /* margin-top: 10px; */
   }
+  .new-btn-design
+  {
+    margin-top: 15px;
+  }
 .modal-title
 {
   font-size: 20px;

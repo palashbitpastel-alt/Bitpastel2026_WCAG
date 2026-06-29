@@ -485,7 +485,7 @@ const Modal: React.FC<ModalProps> = ({ open, setIsModalOpen, children }) => {
                 </div>
 
                 {/* Form Section */}
-                <div className="bg-[#fff] md:p-[35px] p-[24px] md:p-[15px] md:shadow-[1px_-2px_20px_rgba(0,0,0,0.1),0_12px_24px_rgba(0,0,0,0.12)] modalform-area-mob">
+                <div className="bg-[#fff] md:p-[35px] py-[9px] px-[24px] md:p-[15px] md:shadow-[1px_-2px_20px_rgba(0,0,0,0.1),0_12px_24px_rgba(0,0,0,0.12)] modalform-area-mob">
                   {isSuccess ? (
                     <>
                       <div className="grid grid-cols-1 min-h-[450px] place-items-center justify-between">

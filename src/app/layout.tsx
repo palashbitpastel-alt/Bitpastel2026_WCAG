@@ -8,6 +8,8 @@ import HeaderOptimized from '@/components/Header';
 import FooterOptimized from '@/components/Footer';
 import Script from 'next/script';
 
+import { SITE_URL } from '@/data/site';
+
 export const dynamic = 'force-static';
 export const revalidate = 3600;
 
@@ -19,7 +21,7 @@ export const viewport: Viewport = {
 
 // ✅ Correct metadata export (proper typing)
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.bitpastel.com'),
+  metadataBase: new URL(SITE_URL),
   title: 'Bitpastel - Shopify Plus Development Agency | AI Transformation & Custom SaaS Solutions',
   description: 'Bitpastel is a software development company specializing in Shopify Plus & e-commerce development, custom SaaS product development, AI transformation & automation, mobile apps, websites, and UI/UX design for startups and enterprises.',
   alternates: {

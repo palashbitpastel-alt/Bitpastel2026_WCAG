@@ -5,6 +5,8 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useSearchParams } from 'next/navigation';
 
+import { jobListings } from '@/data/jobs';
+
 export default function Home() {
   const router = useRouter();
   
@@ -31,99 +33,17 @@ export default function Home() {
     }
   };
 
- const jobListings = [
-    {
-      id: "1",
-      title: "Marketing Manager",
-      hashtags: ["#Upwork", "#Freelancer", "#OnlineBidding", "#Leadership", "#Itservice", "#Itsales"],
-      experience: "2 - 6 Years",
-      gradientColors: "linear-gradient(-45deg, rgb(0,103,183), rgb(140, 13,99))"
-    },
-    // {
-    //   id: "2",
-    //   title: "Back End Developer",
-    //   hashtags: ["#PHP", "#MySQL", "#CodeIgniter", "#Laravel", "#JavaScript", "#Plugins", "#WordPress", "#WooCommerce", "#Shopify"],
-    //   experience: "2 - 5 Years",
-    //   gradientColors: "linear-gradient(-45deg, rgb(108, 50, 182), rgb(29, 160, 163))"
-    // },
-    // {
-    //   id: "3",
-    //   title: "Shopify Developer",
-    //   hashtags: ["#Shopify", "#RubyonRails"],
-    //   experience: "2 - 6 Years",
-    //   gradientColors: "linear-gradient(-45deg, rgb(15, 134, 178), rgb(7, 62, 152))"
-    // },
-    // {
-    //   id: "4",
-    //   title: "Senior WordPress Developer",
-    //   hashtags: ["#WordPress", "#WooCommerce"," #PHP", "#MySQL" ,"#JavaScript" ,"#Plugins"],
-    //   experience: "2 - 6 Years",
-    //   gradientColors: "linear-gradient(-45deg, rgb(15, 134, 178), rgb(7, 62, 152))"
-    // },
-    // {
-    //   id: "5",
-    //   title: "Full Stack Developer",
-    //   hashtags: ["#FullStackDeveloper", "#FrontEndDeveloper", "#BackEndDeveloper"],
-    //   experience: "2 - 5 Years",
-    //   gradientColors: "linear-gradient(-45deg, rgb(0, 103, 183), rgb(140, 13, 99))"
-    // },
-    // {
-    //   id: "6",
-    //   title: "PHP Development - Internship",
-    //   hashtags: ["#PHP", "#MySQL", "#JavaScript", "#Plugins"],
-    //   experience: "Fresher",
-    //   gradientColors: "linear-gradient(-45deg, rgb(108, 50, 182), rgb(29, 160, 163))"
-    // },
-    // {
-    //   id: "7",
-    //   title: "UI/UX Designer Intern",
-    //   hashtags: ["#GraphicDesign", "#Logo", "#WebDesign", "#AppDesign", "#UI", "#UX"],
-    //   experience: "Fresher",
-    //   gradientColors: "linear-gradient(-45deg, rgb(108, 50, 182), rgb(29, 160, 163))"
-    // },
-    //  {
-    //   id: "8",
-    //   title: "Mobile App Developer",
-    //   hashtags: ["#React Native", "#Responsiveness", "#UI", "#UX", "#MobileApp" , "#Git", "#Android", "#iOS" ],
-    //   experience: "1 - 3 Years",
-    //   gradientColors: "linear-gradient(-45deg, rgb(15, 134, 178), rgb(7, 62, 152))"
-    // }
-    {
-      id: "2",
-      title: "Email & LinkedIn Sales Executive",
-      hashtags: ["#Hiring", "#KolkataJobs", "#SalesExecutive", "#Bitpastel", "#LinkedInEmails"],
-      experience: "1 - 3 Years",
-      gradientColors: "linear-gradient(-45deg, rgb(108, 50, 182), rgb(29, 160, 163))"
-    },
-    {
-      id: "3",
-      title: "Sales Intern",
-      hashtags:["#Hiring", "#SalesIntern", "##InternshipOpportunity", "#CareerGrowth", "#WeAreHiring"],
-      experience: "Fresher",
-      gradientColors: "linear-gradient(-45deg, rgb(15, 134, 178), rgb(7, 62, 152))"
-    },
-     {
-      id: "4",
-      title: "Affiliate PR and Link Acquisition Specialist",
-      hashtags:["#Shopify", "#AffiliateMarketing", "#SEO", "#DigitalMedia", "#PRCampaigns"],
-      experience: "2 - 4 Years",
-      gradientColors: "linear-gradient(-45deg, rgb(0,103,183), rgb(140, 13,99))"
-    },
-    {
-      id: "5",
-      title: "CRO Specialist",
-      hashtags:["#CRO", "#BusinessIntelligence&Analytics", "##SQLFundamentals", "#Shopify"],
-      experience: "2 - 4 Years",
-      gradientColors: "linear-gradient(-45deg, rgb(108, 50, 182), rgb(29, 160, 163))"
-    },
-  ];
+  // Cards render straight from the shared list in src/data/jobs.ts, so the
+  // openings shown here can never drift from the detail pages or the sitemap.
 
   const handleApply = (jobTitle: string) => {
     // alert(`Applied for ${jobTitle} position!`);
   };
-  
+
   const handleApplyClick = (id: string) => {
-    router.push(`careers/applyJob/${id}`); // Navigate to job detail page
+    // Absolute path: a relative one resolves against the current URL, so from
+    // /careers/ it would push /careers/careers/applyJob/<id>.
+    router.push(`/careers/applyJob/${id}`); // Navigate to job detail page
   };
 
 

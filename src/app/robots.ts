@@ -9,10 +9,12 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      // The /free-quote routes re-render their parent page with the enquiry
-      // modal open. They already canonicalise to the parent, which is what we
-      // want; this just saves the crawl budget spent rediscovering that.
-      disallow: ['/free-quote', '/careers/free-quote', '/culture/free-quote', '/shopify/free-quote'],
+      // Nothing is disallowed on purpose. The /free-quote routes re-render
+      // their parent page with the enquiry modal open and canonicalise to that
+      // parent — which is the behaviour we want, and which only works while
+      // crawlers can still fetch them and read the canonical tag. Blocking them
+      // here would hide that tag and risk them being indexed as bare URLs
+      // instead ("Indexed, though blocked by robots.txt").
     },
     sitemap: `${SITE_URL}/sitemap.xml`,
     host: SITE_URL,

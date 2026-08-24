@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import HomePage from "@/app/home/page";
+import HomePageComponent from "@/components/home/HomePageComponent";
 
 export default function FreeQuotePage() {
   useEffect(() => {
@@ -14,5 +14,5 @@ export default function FreeQuotePage() {
 
   // Render the home page beneath so the modal overlays real content rather
   // than a blank background when the user navigates to /free-quote directly.
-  return <HomePage />;
+  return <HomePageComponent />;
 }

@@ -65,6 +65,12 @@ const nextConfig = {
         destination: '/',
         permanent: true,
       },
+      {
+        // Legacy route from old site flagged as 404 in Search Console
+        source: '/team',
+        destination: '/culture',
+        permanent: true,
+      },
     ];
   },
 

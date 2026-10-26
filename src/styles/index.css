@@ -1007,7 +1007,7 @@ margin-top:0 !important;
   bottom: 35px;
   left: 15px;
 }
-@media screen and (max-width: 1537px) {
+@media screen and (max-width: 1536px) {
   .shopify_badge_section {
     position: absolute;
     bottom: unset;

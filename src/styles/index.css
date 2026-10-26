@@ -1004,14 +1004,30 @@ margin-top:0 !important;
 }
 .shopify_badge_section {
   position: absolute;
-  bottom: 25px;
+  bottom: 35px;
   left: 15px;
+}
+@media screen and (max-width: 1536px) {
+  .shopify_badge_section {
+    position: absolute;
+    bottom: unset;
+    left: 5px;
+    top: calc(100% - 130px);
+  }
+}
+@media screen and (max-width: 1280px) {
+  .shopify_badge_section {
+    top: calc(100% - 100px);
+    max-width: 100px;
+  }
 }
 @media screen and (max-width: 767px) {
   .shopify_badge_section {
     position: absolute;
+    top:unset;
     bottom: 10px;
-    left: 2px;
+    left: 5px;
+    max-width: unset;
   }
   #culture .work-with-us-features .relative:nth-child(1) ul li::before {
     background: #3ecb90;

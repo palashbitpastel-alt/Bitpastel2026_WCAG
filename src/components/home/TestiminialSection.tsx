@@ -393,7 +393,7 @@ const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
           </p>
         </div>
       </div>
-      <div className="flex items-center space-x-4 mt-4 pt-4 border-t border-transparent md:min-h-[80px]">
+      <div className={`flex items-center space-x-4 mt-4 pt-4 border-t border-transparent md:min-h-[80px] ${testimonial.bgColor}`}>
         <Image
           src={testimonial.image}
           alt=""

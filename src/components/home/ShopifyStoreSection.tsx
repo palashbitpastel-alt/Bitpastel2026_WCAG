@@ -110,16 +110,16 @@ const ShopifyStoreSection = () => {
               <span className ="block">& <span className='text-accent-green'>100+</span> Shopify Plus Stores </span>
             </h2>
             {/* <p className="text-[16px] leading-[26px] text-title md:leading-relaxed mb-8"> */}
-            <p className='md:text-[19px] text-[16px] leading-[26px] md:p-0 px-[10px] text-[#222B32] md:leading-relaxed'>
+            <p className='lg:text-[19px] md:max-w-[516px] md:text-[16px] text-[16px] leading-[26px] md:p-0 px-[10px] text-[#222B32] md:leading-relaxed'>
               We have helped 250+ brands grow from scratch to $1M GMV.
-              <span className='md:block inline md:pl-0 pl-[5px]' />
+              <span className='md:inline-block inline md:pl-0 pl-[5px]' />
               At Bitpastel, we build differentiated, fast, and scalable online
-              <span className='md:block inline md:pl-0 pl-[5px]' />
+              <span className='md:inline-block inline md:pl-0 pl-[5px]' />
               stores to help you provide the best customer experience!
             </p>
-            <p className='md:text-[19px] text-[16px] leading-[26px] md:p-0 px-[10px] text-[#222B32] md:leading-relaxed'>
+            <p className='lg:text-[19px] md:max-w-[516px] md:text-[16px] text-[16px] leading-[26px] md:p-0 px-[10px] text-[#222B32] md:leading-relaxed'>
               We also deliver speed and performance optimization that
-              <span className='md:block inline md:pl-0 pl-[5px]' />
+              <span className='md:inline-block inline md:pl-0 pl-[5px]' />
               contributes to better conversion rates.
             </p>
 
@@ -184,18 +184,18 @@ const ShopifyStoreSection = () => {
               </span>
             </h2>
             {/* <p className="text-[16px] leading-[26px] text-title md:leading-relaxed mb-8"> */}
-            <p className='md:text-[19px] text-[16px] leading-[26px] md:p-0 px-[10px] text-[#222B32] md:leading-relaxed'>
+            <p className='md:text-[19px] md:max-w-[516px] text-[16px] leading-[26px] md:p-0 px-[10px] text-[#222B32] md:leading-relaxed'>
               {/* We have helped 100+ brands grow from scratch to $1M GMV.
               <span className="md:block inline md:pl-0 pl-[5px]" />
               At Bitpastel, we build differentiated, fast, and scalable online
               <span className="md:block inline md:pl-0 pl-[5px]" />
               stores to help you provide the best customer experience! */}
               We create SaaS solutions tailored to your business goals which
-              <span className='md:block inline md:pl-0 pl-[5px]' />
+              <span className='md:inline-block inline md:pl-0 pl-[5px]' />
               are secure, scalable, and designed for seamless growth, helping
-              <span className='md:block inline md:pl-0 pl-[5px]' />
+              <span className='md:inline-block inline md:pl-0 pl-[5px]' />
               you streamline operations, boost collaboration, and enhance
-              <span className='md:block inline md:pl-0 pl-[5px]' />
+              <span className='md:inline-block inline md:pl-0 pl-[5px]' />
               customer experiences.
             </p>
             {/* <button className="btn font-roboto h-auto  font-[400] bg-green-btn">
@@ -235,18 +235,18 @@ const ShopifyStoreSection = () => {
             </h2>
             {/* <p className="text-[16px] leading-[26px] text-title md:leading-relaxed mb-8"> */}
             {/* <p className='text-[16px] leading-[26px] md:p-0 px-[10px] text-title md:leading-relaxed'> */}
-            <p className='md:text-[19px] text-[16px] leading-[26px] md:p-0 px-[10px] text-[#222B32] md:leading-relaxed'>
+            <p className='md:text-[19px] md:max-w-[516px] text-[16px] leading-[26px] md:p-0 px-[10px] text-[#222B32] md:leading-relaxed'>
               {/* We have helped 100+ brands grow from scratch to $1M GMV.
               <span className="md:block inline md:pl-0 pl-[5px]" />
               At Bitpastel, we build differentiated, fast, and scalable online
               <span className="md:block inline md:pl-0 pl-[5px]" />
               stores to help you provide the best customer experience! */}
               We build AI-powered solutions that help transform businesses
-              <span className='md:block inline md:pl-0 pl-[5px]' />
+              <span className='md:inline-block inline md:pl-0 pl-[5px]' />
               through intelligent automation, predictive insights, and human-
-              <span className='md:block inline md:pl-0 pl-[5px]' />
+              <span className='md:inline-block inline md:pl-0 pl-[5px]' />
               centric design - boosting efficiency, fueling innovation, and
-              <span className='md:block inline md:pl-0 pl-[5px]' />
+              <span className='md:inline-block inline md:pl-0 pl-[5px]' />
               enabling smarter decisions at scale.
             </p>
             {/* <button className="btn font-roboto h-auto  font-[400] bg-green-btn">

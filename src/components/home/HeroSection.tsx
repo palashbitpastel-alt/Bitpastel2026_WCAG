@@ -86,6 +86,7 @@ const HeroSection: React.FC<HerSectionProps> = ({ openModal }) => {
                   <Image
                     src={CheckIcon}
                     alt=""
+                    aria-hidden="true"
                     width={24}
                     height={24}
                     className="w-auto md:block hidden"
@@ -93,6 +94,7 @@ const HeroSection: React.FC<HerSectionProps> = ({ openModal }) => {
                   <Image
                     src={CheckIconMobile}
                     alt=""
+                    aria-hidden="true"
                     width={24}
                     height={24}
                     className="md:hidden block w-[20px]"

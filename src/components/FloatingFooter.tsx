@@ -148,7 +148,7 @@ const FloatingFooter = () => {
         {/* Home */}
         <div className="nav-item flex flex-col items-center">
           <Link href="/" className="flex flex-col items-center">
-            <Image src={navIcon('home', 'home')} alt="" width={22} height={22} className="h-[22px] w-[22px]" />
+            <Image src={navIcon('home', 'home')} alt="" aria-hidden="true" width={22} height={22} className="h-[22px] w-[22px]" />
             <span className={textCls('home')}>Home</span>
           </Link>
         </div>
@@ -156,7 +156,7 @@ const FloatingFooter = () => {
         {/* Services */}
         <div className="nav-item flex flex-col items-center">
           <a href="#services" onClick={handleServicesClick} className="flex flex-col items-center">
-            <Image src={navIcon('service', 'services')} alt="" width={22} height={22} className="h-[22px] w-[22px]" />
+            <Image src={navIcon('service', 'services')} alt="" aria-hidden="true" width={22} height={22} className="h-[22px] w-[22px]" />
             <span className={textCls('services')}>Services</span>
           </a>
         </div>
@@ -169,7 +169,7 @@ const FloatingFooter = () => {
             lockRef.current = setTimeout(() => { lockRef.current = null; }, 1200);
             scrollToNews();
           }} className="flex flex-col items-center">
-            <Image src={navIcon('stories', 'stories')} alt="" width={22} height={22} className="h-[22px] w-[22px]" />
+            <Image src={navIcon('stories', 'stories')} alt="" aria-hidden="true" width={22} height={22} className="h-[22px] w-[22px]" />
             <span className={textCls('stories')}>Stories</span>
           </button>
         </div>
@@ -177,7 +177,7 @@ const FloatingFooter = () => {
         {/* Culture */}
         <div className="nav-item flex flex-col items-center">
           <Link href="/culture" className="flex flex-col items-center">
-            <Image src={navIcon('culture', 'culture')} alt="" width={22} height={22} className="h-[22px] w-[22px]" />
+            <Image src={navIcon('culture', 'culture')} alt="" aria-hidden="true" width={22} height={22} className="h-[22px] w-[22px]" />
             <span className={textCls('culture')}>Culture</span>
           </Link>
         </div>
@@ -185,7 +185,7 @@ const FloatingFooter = () => {
         {/* Careers */}
         <div className="nav-item flex flex-col items-center">
           <Link href="/careers" className="flex flex-col items-center">
-            <Image src={navIcon('career', 'careers')} alt="" width={22} height={22} className="h-[22px] w-[22px]" />
+            <Image src={navIcon('career', 'careers')} alt="" aria-hidden="true" width={22} height={22} className="h-[22px] w-[22px]" />
             <span className={textCls('careers')}>Careers</span>
           </Link>
         </div>
@@ -198,7 +198,7 @@ const FloatingFooter = () => {
             className="flex flex-col items-center"
             aria-label="Open Get a Free Quote"
           >
-            <Image src={navIcon('contact', 'contact')} alt="" width={22} height={22} className="h-[22px] w-[22px]" />
+            <Image src={navIcon('contact', 'contact')} alt="" aria-hidden="true" width={22} height={22} className="h-[22px] w-[22px]" />
             <span className={textCls('contact')}>Contact</span>
           </button>
         </div>

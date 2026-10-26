@@ -396,7 +396,7 @@ const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
       <div className={`flex items-center space-x-4 mt-4 pt-4 border-t border-transparent md:min-h-[80px] ${testimonial.bgColor}`}>
         <Image
           src={testimonial.image}
-          alt=""
+          alt={`Photo of ${testimonial.name}`}
           width={56}
           height={56}
           className="rounded-full object-cover md:h-[56px] md:w-[56px] w-[40px] h-[40px]"

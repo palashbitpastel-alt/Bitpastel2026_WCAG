@@ -164,6 +164,7 @@ const TechPartnerSection = () => {
                 <Image
                   src="/images/img_materialsymbolscheckrounded_teal_300.svg"
                   alt=""
+                  aria-hidden="true"
                   width={24}
                   height={24}
                   className="md:w-[auto] w-[20px] md:h-[auto] h-[20px] md:mt-[-5px] mt-[-2px] hidden md:block"
@@ -171,6 +172,7 @@ const TechPartnerSection = () => {
                 <Image
                   src="/images/img_materialsymbolscheckrounded_teal_300.svg"
                   alt=""
+                  aria-hidden="true"
                   width={24}
                   height={24}
                   className="w-auto md:hidden mt-[-4px] block md:w-[auto]"
@@ -184,6 +186,7 @@ const TechPartnerSection = () => {
                 <Image
                   src="/images/img_materialsymbolscheckrounded_teal_300.svg"
                   alt=""
+                  aria-hidden="true"
                   width={24}
                   height={24}
                   className="md:w-[auto] w-[20px] md:h-[auto] h-[20px] md:mt-[-5px] mt-[-2px] hidden md:block"
@@ -191,6 +194,7 @@ const TechPartnerSection = () => {
                 <Image
                   src="/images/img_materialsymbolscheckrounded_teal_300.svg"
                   alt=""
+                  aria-hidden="true"
                   width={24}
                   height={24}
                   className="w-auto md:hidden mt-[-4px] block md:w-[auto]"
@@ -201,6 +205,7 @@ const TechPartnerSection = () => {
                 <Image
                   src="/images/img_materialsymbolscheckrounded_teal_300.svg"
                   alt=""
+                  aria-hidden="true"
                   width={24}
                   height={24}
                   className="md:w-[auto] w-[20px] md:h-[auto] h-[20px] md:mt-[-5px] mt-[-2px] hidden md:block"
@@ -208,6 +213,7 @@ const TechPartnerSection = () => {
                 <Image
                   src="/images/img_materialsymbolscheckrounded_teal_300.svg"
                   alt=""
+                  aria-hidden="true"
                   width={24}
                   height={24}
                   className="w-auto md:hidden mt-[-4px] block md:w-[auto]"
@@ -220,6 +226,7 @@ const TechPartnerSection = () => {
                 <Image
                   src="/images/img_materialsymbolscheckrounded_teal_300.svg"
                   alt=""
+                  aria-hidden="true"
                   width={24}
                   height={24}
                   className="md:w-[auto] w-[20px] md:h-[auto] h-[20px] md:mt-[-5px] mt-[-2px] hidden md:block"
@@ -227,6 +234,7 @@ const TechPartnerSection = () => {
                 <Image
                   src="/images/img_materialsymbolscheckrounded_teal_300.svg"
                   alt=""
+                  aria-hidden="true"
                   width={24}
                   height={24}
                   className="w-auto md:hidden mt-[-4px] block md:w-[auto]"
@@ -239,6 +247,7 @@ const TechPartnerSection = () => {
                 <Image
                   src="/images/img_materialsymbolscheckrounded_teal_300.svg"
                   alt=""
+                  aria-hidden="true"
                   width={24}
                   height={24}
                   className="md:w-[auto] w-[20px] md:h-[auto] h-[20px] md:mt-[-5px] mt-[-2px] hidden md:block"
@@ -246,6 +255,7 @@ const TechPartnerSection = () => {
                 <Image
                   src="/images/img_materialsymbolscheckrounded_teal_300.svg"
                   alt=""
+                  aria-hidden="true"
                   width={24}
                   height={24}
                   className="w-auto md:hidden block mt-[-4px] md:w-[auto]"

@@ -139,7 +139,7 @@ const AIPersonalization: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
            <div className="w-full h-full lg:w-[100%] xl:w-[100%] lg:max-w-none flex items-center justify-end">
-            <Image src={deviceMockup} alt="Device mockup" className="w-full h-full object-contain max-w-[690px]"  />
+            <Image src={deviceMockup} alt="Children's clothing store shown on a laptop and a mobile phone" className="w-full h-full object-contain max-w-[690px]"  />
            </div>
           </motion.div>
         </div>

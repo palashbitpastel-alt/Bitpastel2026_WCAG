@@ -38,10 +38,10 @@ const MigrationSection: React.FC<MigrationSectionProps> = ({ openModal }) => {
                             </div>
 
                             <div className='flex justify-center items-center w-[120px] h-[120px] rounded-full bg-[#FFF] migration-box-shadow'>
-                                <Image src="/images/migration1.svg" alt="theme-audit" width={50} height={50} />
+                                <Image src="/images/migration1.svg" alt="" width={50} height={50} />
                             </div>
                             <div>
-                                <Image src="/images/migrationline1.svg" alt="theme-audit" width={8} height={40} />
+                                <Image src="/images/migrationline1.svg" alt="" width={8} height={40} />
                             </div>
                             <span className='text-[#39A3A6] migration-number migration-number-1'>01.</span>
                         </div>
@@ -52,10 +52,10 @@ const MigrationSection: React.FC<MigrationSectionProps> = ({ openModal }) => {
                             </div>
 
                             <div className='flex justify-center items-center w-[120px] h-[120px] rounded-full bg-[#FFF] migration-box-shadow'>
-                                <Image src="/images/migration2.svg" alt="theme-audit" width={50} height={50} />
+                                <Image src="/images/migration2.svg" alt="" width={50} height={50} />
                             </div>
                             <div>
-                                <Image src="/images/migrationline2.svg" alt="theme-audit" width={8} height={40} />
+                                <Image src="/images/migrationline2.svg" alt="" width={8} height={40} />
                             </div>
                             <span className='text-[#56CC99] migration-number'>02.</span>
                         </div>
@@ -65,10 +65,10 @@ const MigrationSection: React.FC<MigrationSectionProps> = ({ openModal }) => {
                                 <p className='migration-subtitle min-w-[220px]'> Move design, products, and apps seamlessly</p>
                             </div>
                             <div className='flex justify-center items-center w-[120px] h-[120px] rounded-full bg-[#FFF] migration-box-shadow'>
-                                <Image src="/images/migration3.svg" alt="theme-audit" width={50} height={50} />
+                                <Image src="/images/migration3.svg" alt="" width={50} height={50} />
                             </div>
                             <div>
-                                <Image src="/images/migrationline1.svg" alt="theme-audit" width={8} height={40} />
+                                <Image src="/images/migrationline1.svg" alt="" width={8} height={40} />
                             </div>
                             <span className='text-[#56CC99] migration-number migration-number-1'>03.</span>
                         </div>
@@ -78,10 +78,10 @@ const MigrationSection: React.FC<MigrationSectionProps> = ({ openModal }) => {
                                 <p className='migration-subtitle mb-0 min-w-[220px]'>Add personalization and automation</p>
                             </div>
                             <div className='flex justify-center items-center w-[120px] h-[120px] rounded-full bg-[#FFF] migration-box-shadow'>
-                                <Image src="/images/migration4.svg" alt="theme-audit" width={50} height={50} />
+                                <Image src="/images/migration4.svg" alt="" width={50} height={50} />
                             </div>
                             <div>
-                                <Image src="/images/migrationline2.svg" alt="theme-audit" width={8} height={40} />
+                                <Image src="/images/migrationline2.svg" alt="" width={8} height={40} />
                             </div>
                             <span className='text-[#56CC99] migration-number'>04.</span>
                         </div>
@@ -91,17 +91,17 @@ const MigrationSection: React.FC<MigrationSectionProps> = ({ openModal }) => {
                                 <p className='migration-subtitle min-w-[220px]'>Ensure smooth performance and conversions</p>
                             </div>
                             <div className='flex justify-center items-center w-[120px] h-[120px] rounded-full bg-[#FFF] migration-box-shadow'>
-                                <Image src="/images/migration5.svg" alt="theme-audit" width={50} height={50} />
+                                <Image src="/images/migration5.svg" alt="" width={50} height={50} />
                             </div>
                             <div>
-                                <Image src="/images/migrationline1.svg" alt="theme-audit" width={8} height={40} />
+                                <Image src="/images/migrationline1.svg" alt="" width={8} height={40} />
                             </div>
                             <span className='text-[#22577A] migration-number migration-number-1 '>05.</span>
                         </div>
 
                     </div>
                     <div className='absolute max-w-[calc(100%-2em)] md:top-[65%] lg:top-[54%] left-[1em] md:translate-y-[-80%]  lg:translate-y-[-50%] migration-middle-line'>
-                        <Image src="/images/migration-border.svg" alt="theme-audit" width={2000} height={8} />
+                        <Image src="/images/migration-border.svg" alt="" width={2000} height={8} />
                     </div>
                 </div>
             </section>
@@ -127,7 +127,7 @@ const MigrationSection: React.FC<MigrationSectionProps> = ({ openModal }) => {
                                     className="relative z-10 shrink-0 w-[70px] h-[70px] rounded-full bg-[#FFF] flex items-center justify-center"
                                     style={{ boxShadow: '1px 1px 14px 0px #0000001c' }}
                                 >
-                                    <Image src={step.icon} alt={step.title} width={38} height={38} />
+                                    <Image src={step.icon} alt="" width={38} height={38} />
                                 </div>
                                 <div className="pt-[4px]">
                                     <span

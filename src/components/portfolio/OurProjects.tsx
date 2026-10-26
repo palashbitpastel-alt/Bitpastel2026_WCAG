@@ -482,7 +482,7 @@ const OurProjects = () => {
                         >
                           <Image
                             src={image}
-                            alt={`Thumb ${index + 1}`}
+                            alt={`${currentProject.title} thumbnail ${index + 1}`}
                             fill
                             className="object-cover"
                             sizes="100px"

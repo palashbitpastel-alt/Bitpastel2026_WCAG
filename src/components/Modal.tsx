@@ -396,7 +396,7 @@ const Modal: React.FC<ModalProps> = ({ open, setIsModalOpen, children }) => {
                 <div className="mb-3">
                   <Image
                     src={ContactUs}
-                    alt="bitpastel client image"
+                    alt="Get your business online today with Bitpastel: a team celebrating in an office"
                     className="w-full h-auto object-cover "
                   />
                 </div>
@@ -410,7 +410,7 @@ const Modal: React.FC<ModalProps> = ({ open, setIsModalOpen, children }) => {
                     <div className="text-center">
                       <Image
                         src="/images/img_fasolidusers.svg"
-                        alt="modal-1"
+                        alt=""
                         width={30}
                         height={30}
                         className="mx-auto mb-2 h-[30px]"
@@ -422,7 +422,7 @@ const Modal: React.FC<ModalProps> = ({ open, setIsModalOpen, children }) => {
                     <div className="text-center">
                       <Image
                         src="/images/Bulb.svg"
-                        alt="modal-2"
+                        alt=""
                         width={30}
                         height={30}
                         className="mx-auto mb-2 h-[30px]"
@@ -434,7 +434,7 @@ const Modal: React.FC<ModalProps> = ({ open, setIsModalOpen, children }) => {
                     <div className="text-center ">
                       <Image
                         src="/images/img_group.svg"
-                        alt="modal-2"
+                        alt=""
                         width={30}
                         height={30}
                         className="mx-auto mb-2 h-[30px]"
@@ -446,7 +446,7 @@ const Modal: React.FC<ModalProps> = ({ open, setIsModalOpen, children }) => {
                     <div className="text-center">
                       <Image
                         src="/images/img_tdesignlocationfilled.svg"
-                        alt="modal-2"
+                        alt=""
                         width={30}
                         height={30}
                         className="mx-auto mb-2 h-[30px]"
@@ -508,16 +508,16 @@ const Modal: React.FC<ModalProps> = ({ open, setIsModalOpen, children }) => {
                           </p>
                           <a
                             href="tel:+18724446679"
-                            className="flex items-center gap-3 text-[#009999] text-[16px] hover:underline"
+                            className="flex items-center gap-3 text-[#007A7A] text-[16px] hover:underline"
                           >
                             <Phone
-                              className="w-[24px] h-[24px] text-[#009999] fill-current"
+                              className="w-[24px] h-[24px] text-[#007A7A] fill-current"
                               strokeWidth={0.5}
                             />
                             <div className="w-6 h-6 relative">
                               <Image
                                 src="/flags/us.svg"
-                                alt="US Flag"
+                                alt="United States"
                                 width={26}
                                 height={26}
                                 className="object-contain"
@@ -527,16 +527,16 @@ const Modal: React.FC<ModalProps> = ({ open, setIsModalOpen, children }) => {
                           </a>
                           <a
                             href="tel:+447469539191"
-                            className="flex items-center gap-3 text-[#009999] text-[16px] hover:underline"
+                            className="flex items-center gap-3 text-[#007A7A] text-[16px] hover:underline"
                           >
                             <Phone
-                              className="w-[24px] h-[24px] text-[#009999] fill-current"
+                              className="w-[24px] h-[24px] text-[#007A7A] fill-current"
                               strokeWidth={0.5}
                             />
                             <div className="w-6 h-6 relative">
                               <Image
                                 src="/flags/uk.svg"
-                                alt="UK Flag"
+                                alt="United Kingdom"
                                 width={26}
                                 height={26}
                                 className="object-contain"
@@ -546,16 +546,16 @@ const Modal: React.FC<ModalProps> = ({ open, setIsModalOpen, children }) => {
                           </a>
                           <a
                             href="tel:+919830566248"
-                            className="flex items-center gap-3 text-[#009999] text-[16px] hover:underline"
+                            className="flex items-center gap-3 text-[#007A7A] text-[16px] hover:underline"
                           >
                             <Phone
-                              className="w-[24px] h-[24px] text-[#009999] fill-current"
+                              className="w-[24px] h-[24px] text-[#007A7A] fill-current"
                               strokeWidth={0.5}
                             />
                             <div className="w-6 h-6 relative">
                               <Image
                                 src="/flags/in.svg"
-                                alt="India Flag"
+                                alt="India"
                                 width={26}
                                 height={26}
                                 className="object-contain"

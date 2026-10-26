@@ -21,12 +21,12 @@
     --primary-white-transparent: #ffffff19;
 
     /* Text Colors */
-    --text-title: #2a2a2a;
+    --text-title: #123B42;
     --text-primary: #1e1e1e;
     --text-secondary: #212529;
     --text-dark: #212529;
     --text-muted: #3b3b3c;
-    --text-accent-green: #00a974;
+    --text-accent-green: #00855D;
     --text-accent-blue: #55b8d0;
     --text-accent-yellow: #f0c638;
     --text-accent-coral: #f5747e;
@@ -71,7 +71,7 @@ button {
 }
 
 .title {
-  font-size: 38px;
+  font-size: 48px;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -174,7 +174,7 @@ button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: #00a974;
+    background-color: #00855D;
     color: #ffffff;
     font-size: 16px;
     font-weight: 400;
@@ -189,7 +189,8 @@ button {
     transition: background-color 0.2s ease;
   }
   .new-btn-design:hover {
-    background-color: #009966;
+    /* WCAG 1.4.3: white text on #006B4B = 6.55:1 (was #009966 = 3.65:1) */
+    background-color: #006B4B;
     color: #ffffff;
     text-decoration: none;
   }
@@ -1850,12 +1851,18 @@ span.MuiAccordionSummary-content.Mui-expanded.MuiAccordionSummary-contentGutters
 }
 .nav-dark {
   position: relative;
-  color: #2a2a2a !important;
+  /* Figma nav text color; 14.39:1 on white, 5.05:1 worst case on the translucent header */
+  color: #222B32 !important;
 }
 .nav-dark::after {
+  /* absolute so the underline does not push the label off vertical centre */
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 9px;
   display: block;
   content: '';
-  border-bottom: solid 2px #2a2a2a;
+  border-bottom: solid 2px #222B32;
   transform: scaleX(0);
   transition: transform 300ms ease-in-out;
 }
@@ -2830,9 +2837,9 @@ a.horizon-nav-menu::after {
 }
 
 .new-btn-design {
-  height: 40px;
+  height: 44px;
   border-radius: 100px;
-  background-color: #00a974;
+  background-color: #00855D;
   font-size: 16px;
   font-weight: 400;
   color: #fff;
@@ -2846,9 +2853,9 @@ a.horizon-nav-menu::after {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 40px;
+  height: 50px;
   border-radius: 100px;
-  background-color: #00a974;
+  background-color: #00855D;
   font-size: 16px;
   font-weight: 400;
   color: #fff;
@@ -3007,4 +3014,15 @@ a.horizon-nav-menu::after {
   .mobile-horizon .card-element-Horizon:last-child::before {
     background: none !important;
   }
+}
+
+/* WCAG 2.4.7 Focus Visible + 1.4.11 Non-text Contrast:
+   two-tone ring (dark outline 16.67:1 on light, white inner ring 14.35:1 on dark)
+   so keyboard focus stays visible on every background. Shown only for keyboard
+   focus (:focus-visible), not on mouse click. !important overrides the older
+   outline:none / focus:outline-none rules. */
+:focus-visible {
+  outline: 2px solid #1e1e1e !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 2px #ffffff !important;
 }

@@ -48,7 +48,7 @@ const scrollToSection = (id: string) => {
                <button className='new-btn-design' onClick={() => scrollToSection('become-a-partner-form') }>Refer & Earn</button>
             </div>
             <div className=' md:pl-[30px] md:order-last order-first' >
-            <Image src="/images/partner_ban_new.jpg" alt="partner image" width={800} height={500} className='rounded-[10px] w-full h-auto'/>
+            <Image src="/images/partner_ban_new.jpg" alt="Business partners talking and smiling around a table" width={800} height={500} className='rounded-[10px] w-full h-auto'/>
             </div>
           </div>
       </div>

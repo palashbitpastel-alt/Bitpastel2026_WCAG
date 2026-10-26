@@ -173,8 +173,8 @@ const CultureSection = () => {
     {
       id: 1,
       title: 'Reliable Engineering',
-      icon: '/images/img_icroundsettings.svg',
-      mobileTextColor: 'text-[rgba(62,203,144,1)]',
+      icon: '/images/feature-reliable-engineering.svg',
+      mobileTextColor: 'text-[#00704E]',
       mobileBg: 'bg-[rgba(216,245,233,1)]',
       arrowcolor: '#3ECB90',
       items: [
@@ -185,8 +185,8 @@ const CultureSection = () => {
     {
       id: 2,
       title: 'Quality Assurance',
-      icon: '/images/img_icbaselinediamond.svg',
-      mobileTextColor: 'text-[rgba(240,198,56,1)]',
+      icon: '/images/feature-quality-assurance.svg',
+      mobileTextColor: 'text-[#7A5C00]',
       mobileBg: 'bg-[rgba(252,244,215,1)]',
       arrowcolor: '#F0C638',
       items: [
@@ -197,8 +197,8 @@ const CultureSection = () => {
     {
       id: 3,
       title: 'Cool & Elegant Designs',
-      icon: '/images/ink-pen 2.svg',
-      mobileTextColor: 'text-[rgba(85,184,208,1)]',
+      icon: '/images/feature-elegant-designs.svg',
+      mobileTextColor: 'text-[#0A6A80]',
       mobileBg: 'bg-[rgba(216,247,255,1)]',
       arrowcolor: '#55B8D0',
       items: ['Dedicated design studio with a talented team', 'Specialists in high-quality UI/UX'],
@@ -206,8 +206,8 @@ const CultureSection = () => {
     {
       id: 4,
       title: 'Agile Delivery',
-      icon: '/images/img_mingcutetimefill.svg',
-      mobileTextColor: 'text-[rgba(245,116,126,1)]',
+      icon: '/images/feature-agile-delivery.svg',
+      mobileTextColor: 'text-[#B3202D]',
       mobileBg: 'bg-[rgba(253,227,229,1)]',
       arrowcolor: '#F5747E',
       items: ['Delivery on demanding timelines', 'Fast-paced response across all timezone'],
@@ -222,27 +222,14 @@ const CultureSection = () => {
           {/* Our Commitment to You */}
           The Value We Bring
         </h2>
-        <div className="grid grid-cols-1 lg:grid-cols-[60%_auto] md:grid-cols-1 items-center md:gap-12 gap-8">
-          {/* Fixed Image Container - Maintains original height behavior */}
-          <div className="w-full md:h-full h-auto">
-            <div className="relative w-full h-full md:rounded-[40px] rounded-[20px] overflow-hidden">
-              <Image
-                src="/images/img_rectangle_51.webp"
-                alt="Team collaboration"
-                width={1200}  // Actual image width
-                height={800}   // Actual image height
-                quality={75}
-                className="w-full md:h-full h-auto"
-                priority
-              />
-            </div>
-          </div>
-          
-          <div className="work-with-us-features grid grid-cols-1 md:grid-cols-1 xl:gap-10 md:gap-6 gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-[auto_60%] md:grid-cols-1 items-center md:gap-[24px] gap-8">
+
+
+<div className="work-with-us-features md:border md:border-[#BDE0CE] rounded-[40px] flex flex-col justify-between h-full p-5 grid grid-cols-1 md:grid-cols-1 xl:gap-10 md:gap-6 gap-4">
             {features.map((feature, index) => (
               <div
                 key={feature.id}
-                className={`relative rounded-[10px] transition-all duration-300 ease-in-out overflow-hidden
+                className={`relative md:after:content-[''] after:absolute after:bottom-[-7px] after:left-0 after:w-full after:border-b after:border-[#29996A4D] last:after:hidden rounded-[10px] transition-all duration-300 ease-in-out md:overflow-visible overflow-hidden
                   md:bg-transparent md:p-0 md:rounded-none
                   ${feature.mobileBg} p-5
                 `}
@@ -251,14 +238,15 @@ const CultureSection = () => {
                 <div className="flex md:space-x-4 space-x-3 md:mb-4 flex-row gap-0 text-left justify-start cursor-pointer">
                   <Image
                     src={feature.icon}
-                    alt={feature.title}
+                    alt=""
+                    aria-hidden="true"
                     width={24}
                     height={24}
                     quality={100}
                     className=""
                   />
                   <h3
-                    className={`font-bold font-source text-title subheading leading-[1] ${feature.mobileTextColor} md:text-inherit`}
+                    className={`font-bold font-source md:text-[22px] text-[20px] leading-[1] ${feature.mobileTextColor} md:text-inherit`}
                   >
                     {feature.title}
                   </h3>
@@ -298,7 +286,7 @@ const CultureSection = () => {
 
                 {/* Desktop Static Content (hidden on mobile) */}
                 <div className="hidden md:block">
-                  <ul className="lg:pl-[57px] md:pl-[41px] text-title">
+                  <ul className="lg:pl-[25px] md:pl-[41px] text-[#222B32]">
                     {feature.items.map((item, itemIndex) => (
                       <li key={itemIndex} className="leading-[1] font-roboto text-[16px] md:mb-3">
                         {item}
@@ -309,6 +297,23 @@ const CultureSection = () => {
               </div>
             ))}
           </div>
+
+          {/* Fixed Image Container - Maintains original height behavior */}
+          <div className="w-full md:h-full h-auto">
+            <div className="relative w-full h-full md:rounded-[40px] rounded-[20px] overflow-hidden">
+              <Image
+                src="/images/img_rectangle_51.webp"
+                alt="Colleagues shaking hands across a meeting table"
+                width={783}  // Actual image width
+                height={578}   // Actual image height
+                quality={75}
+                className="w-full md:h-full h-auto"
+                priority
+              />
+            </div>
+          </div>
+          
+
         </div>
       </div>
     </section>

@@ -83,7 +83,7 @@ const TeamBanner = () => {
               <div key={idx} className="flex md:gap-4 gap-2 mb-[5px] items-center">
                 <Image
                   src="/images/img_materialsymbolscheckrounded.svg"
-                  alt="Check"
+                  alt=""
                   width={24}
                   height={24}
                   className="w-auto md:block hidden"
@@ -91,7 +91,7 @@ const TeamBanner = () => {
                 />
                 <Image
                   src="/images/img_materialsymbolscheckrounded_teal_300.svg"
-                  alt="Check"
+                  alt=""
                   width={24}
                   height={24}
                   className="w-auto md:hidden block"

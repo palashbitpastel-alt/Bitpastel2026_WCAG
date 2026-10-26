@@ -56,6 +56,7 @@ const WhatsAppBubble = () => {
         target="_blank"
         prefetch
         rel="noopener noreferrer"
+        aria-label="Chat with us on WhatsApp (opens in a new tab)"
         href={
           'https://api.whatsapp.com/send/?phone=919830566248&text=Hey...+I+would+like+to+have+a+quick+chat+with+you.&type=phone_number&app_absent=0'
         }
@@ -66,6 +67,8 @@ const WhatsAppBubble = () => {
           height="42"
           viewBox="0 0 44 42"
           fill="none"
+          aria-hidden="true"
+          focusable="false"
           style={{
             filter: 'drop-shadow(0px 0px 5px rgba(10, 0, 0, 0.4))',
           }}

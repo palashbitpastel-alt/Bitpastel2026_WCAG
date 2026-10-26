@@ -76,11 +76,11 @@ const BrandingSection: React.FC = () => {
                 {/* Icon */}
                 {item.iconWrapper === 'tile' ? (
                   <div className='w-[50px] h-[50px] md:w-[80px] md:h-[80px] flex items-center justify-center shrink-0 sm:mb-[40px]'>
-                    <Image src={item.icon} alt={item.title} width={80} height={80} />
+                    <Image src={item.icon} alt="" width={80} height={80} />
                   </div>
                 ) : (
                   <div className='w-[50px] h-[50px] md:w-[80px] md:h-[80px] flex items-center justify-center shrink-0 sm:mb-[20px] md:mb-[40px]'>
-                    <Image src={item.icon} alt={item.title} width={80} height={80} />
+                    <Image src={item.icon} alt="" width={80} height={80} />
                   </div>
                 )}
 

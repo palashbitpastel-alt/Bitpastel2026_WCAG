@@ -288,13 +288,14 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
   return (
     <>
       <footer className="footer">
-        <div className="desktop-footer bg-primary-dark text-white lg:pt-16 pt-10 lg:pb-6 pb-16 footer">
+        <div className="desktop-footer bg-primary-dark text-[#FCFFF9] lg:pt-16 pt-10 lg:pb-6 pb-16 footer">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-[60px] lg:gap-8 mb-8 align-top footer-wrapper">
               <div className="lg:space-y-3 col-start-1 lg:col-span-1 lg:col-start-auto">
                 <Link
                   href="/"
                   prefetch={true}
+                  className="hidden lg:inline-block rounded-[4px]"
                   onClick={(e) => {
                     if (isHomePage && isClient) {
                       e.preventDefault();
@@ -310,16 +311,16 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                 >
                   <Image
                     src="/images/Footer-logo.png"
-                    alt="Bitpastel Logo"
+                    alt="Bitpastel home"
                     width={196}
                     height={75}
-                    className="h-12 w-auto lg:block hidden"
+                    className="h-12 w-auto block"
                   />
                 </Link>
                 <p className="lg:hidden leading-[1] block lg:mt-0 mt-0 h-[32px] lg:pb-6 type-footer text-[13px]">
                   INFORMATION
                 </p>
-                <div className="text-[13px] lg:mb-0 mb-[1rem] leading-relaxed block">
+                <div className="text-[16px] lg:mb-0 mb-[1rem] leading-relaxed block">
                   <a
                     href="https://www.google.com/maps/place/Technopolis+Building/@22.5797323,88.4351652,17z/data=!4m14!1m7!3m6!1s0x3a0275a701908349:0x8d6c12852bc079bc!2sTechnopolis+Building!8m2!3d22.5797323!4d88.4377401!16s%2Fg%2F11hblq2494!3m5!1s0x3a0275a701908349:0x8d6c12852bc079bc!8m2!3d22.5797323!4d88.4377401!16s%2Fg%2F11hblq2494?entry=ttu"
                     target="_blank"
@@ -327,13 +328,14 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                   >
                     <span className="inline">
                       Technopolis, 11th Floor, BP Block, Sector V,
-                      <br />
+                      <span className="block">
                       Salt Lake City, Kolkata - 700091
+                      </span>
                     </span>
                   </a>
                 </div>
                 <div className="lg:hidden block space-y-2 text-[13px]">
-                  <a className="block text-[13px]" href="tel:+1 (872) 444 6679">
+                  <a className="block text-[16px]" href="tel:+1 (872) 444 6679">
                     <span>US: +1 (872) 444 6679</span>
                   </a>
                   {/* <a
@@ -342,19 +344,19 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                     href="https://api.whatsapp.com/send/?phone=447469539191&text=Hey...+I+would+like+to+have+a+quick+chat+with+you.&type=phone_number&app_absent=0"
                   >
                      </a> */}
-                  <a className="block text-[13px]" href="tel:+44 7469 539191">
+                  <a className="block text-[16px]" href="tel:+44 7469 539191">
                     {/* <span>UK: +44 2081 446579</span> */}
                     <span>UK: +44 7469 539191</span>
                   </a>
-                  <a className="block text-[13px]" href="tel:+91 9830 566 248">
+                  <a className="block text-[16px]" href="tel:+91 9830 566 248">
                     <span>IN: +91 9830 566 248</span>
                   </a>
-                  <a className="mt-4 block text-[13px]" href="mailto:connect@bitpastel.com">
+                  <a className="mt-4 block text-[16px]" href="mailto:connect@bitpastel.com">
                     <span>connect@bitpastel.com</span>
                   </a>
                 </div>
                 <div className="hidden lg:block">
-                  <p className="mt-6 text-[13px] lg:pb-6 pb-2 type-footer leading-[1]">
+                  <p className="mt-6 text-[16px] lg:pb-6 pb-2 type-footer leading-[1]">
                     CONNECT WITH US
                   </p>
                   <div className="flex lg:space-x-4 space-x-6 pt-2 lg:pt-0 social-media-wrapper">
@@ -363,10 +365,11 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                         href="https://www.facebook.com/bitpastel"
                         target="_blank"
                         rel="noopener noreferrer"
+                        className="flex items-center justify-center w-full h-full rounded-full"
                       >
                         <Image
                           src="/images/img_basilfacebooksolid.svg"
-                          alt="Facebook"
+                          alt="Bitpastel on Facebook"
                           width={16}
                           height={16}
                         />
@@ -377,10 +380,11 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                         href="https://www.instagram.com/bitpastel.ai/"
                         target="_blank"
                         rel="noopener noreferrer"
+                        className="flex items-center justify-center w-full h-full rounded-full"
                       >
                         <Image
                           src="/images/img_mingcuteinstagramfill.svg"
-                          alt="Instagram"
+                          alt="Bitpastel on Instagram"
                           width={16}
                           height={16}
                         />
@@ -391,10 +395,11 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                         href="https://www.linkedin.com/company/bitpastel"
                         target="_blank"
                         rel="noopener noreferrer"
+                        className="flex items-center justify-center w-full h-full rounded-full"
                       >
                         <Image
                           src="/images/img_uillinkedin.svg"
-                          alt="LinkedIn"
+                          alt="Bitpastel on LinkedIn"
                           width={16}
                           height={16}
                         />
@@ -404,14 +409,14 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                 </div>
               </div>
               <div className="lg:max-w-[300px] mx-auto w-full">
-                <p className="lg:h-[50px] h-[32px] type-footer leading-[1] text-[13px]">
+                <p className="lg:h-[50px] h-[32px] type-footer leading-[1] text-[18px]">
                   QUICK LINKS
                 </p>
 
                 <div className="lg:grid grid-cols-2 hidden">
                   <div className="">
-                    <div className="space-y-4 text-[13px]">
-                      <div className="block text-[13px]">
+                    <div className="space-y-4 text-[16px]">
+                      <div className="block text-[16px]">
                         <Link
                           prefetch={true}
                           href="/"
@@ -432,10 +437,10 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                           Home
                         </Link>
                       </div>
-                      <div className="block text-[13px]">
+                      <div className="block text-[16px]">
                         <button
                           onClick={(e) => handleSectionClick(e, 'culture')}
-                          className="hover:text-gray-300 text-[13px] transition-colors"
+                          className="hover:text-gray-300 text-[16px] transition-colors"
                         >
                           About
                         </button>
@@ -448,18 +453,18 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                           Portfolio
                         </Link>
                       </div> */}
-                      <div className="block text-[13px]">
+                      <div className="block text-[16px]">
                         <button
                           onClick={(e) => handleSectionClick(e, 'services')}
-                          className="hover:text-gray-300 text-[13px] transition-colors"
+                          className="hover:text-gray-300 text-[16px] transition-colors"
                         >
                           Services
                         </button>
                       </div>
-                      <div className="block text-[13px]">
+                      <div className="block text-[16px]">
                         <button
                           onClick={scrollToNews}
-                          className="hover:text-gray-300 text-[13px] transition-colors"
+                          className="hover:text-gray-300 text-[16px] transition-colors"
                         >
                           Stories
                         </button>
@@ -467,7 +472,7 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                     </div>
                   </div>
                   <div className="lg:ml-auto">
-                    <div className="space-y-4 text-[13px]">
+                    <div className="space-y-4 text-[16px]">
                       <Link
                         prefetch={true}
                         href="/culture"
@@ -482,10 +487,10 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                       >
                         Culture
                       </Link>
-                      <div className="hover:text-gray-300 text-[13px] transition-colors">
+                      <div className="hover:text-gray-300 text-[16px] transition-colors">
                         <button
                           onClick={(e) => handleSectionClick(e, 'client')}
-                          className="block hover:text-gray-300 text-[13px] mx-auto transition-colors cursor-pointer"
+                          className="block hover:text-gray-300 text-[16px] mx-auto transition-colors cursor-pointer"
                         >
                           Clientele
                         </button>
@@ -647,10 +652,11 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                       href="https://www.facebook.com/bitpastel"
                       target="_blank"
                       rel="noopener noreferrer"
+                      className="flex items-center justify-center w-full h-full rounded-full"
                     >
                       <Image
                         src="/images/img_basilfacebooksolid.svg"
-                        alt="Facebook"
+                        alt="Bitpastel on Facebook"
                         width={16}
                         height={16}
                       />
@@ -661,10 +667,11 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                       href="https://www.instagram.com/bitpastel.ai/"
                       target="_blank"
                       rel="noopener noreferrer"
+                      className="flex items-center justify-center w-full h-full rounded-full"
                     >
                       <Image
                         src="/images/img_mingcuteinstagramfill.svg"
-                        alt="Instagram"
+                        alt="Bitpastel on Instagram"
                         width={16}
                         height={16}
                       />
@@ -675,10 +682,11 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                       href="https://www.linkedin.com/company/bitpastel"
                       target="_blank"
                       rel="noopener noreferrer"
+                      className="flex items-center justify-center w-full h-full rounded-full"
                     >
                       <Image
                         src="/images/img_uillinkedin.svg"
-                        alt="LinkedIn"
+                        alt="Bitpastel on LinkedIn"
                         width={16}
                         height={16}
                       />
@@ -686,11 +694,11 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                   </div>
                 </div>
                 <div>
-                  <p className="hidden lg:block lg:h-[50px] h-[32px] type-footer leading-[1] text-[13px]">
+                  <p className="hidden lg:block lg:h-[50px] h-[32px] type-footer leading-[1] text-[18px]">
                     INFORMATION
                   </p>
                   <div className="lg:block hidden mt-0 space-y-4">
-                    <a className="block text-[13px]" href="tel:+1 (872) 444 6679" target="_blank">
+                    <a className="block text-[16px]" href="tel:+1 (872) 444 6679" target="_blank">
                       <span>US: +1 (872) 444 6679</span>
                     </a>
                     {/* <a className="block text-[13px]" href="tel:+44 2081 446579"> */}
@@ -703,14 +711,14 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                       <span>UK: +44 2081 446579</span>
                       <span>UK: +44 7469 539191</span>
                     </a> */}
-                    <a className="block text-[13px]" href="tel:+44 7469 539191" target="_blank">
+                    <a className="block text-[16px]" href="tel:+44 7469 539191" target="_blank">
                       <span>UK: +44 7469 539191</span>
                     </a>
-                    <a className="block text-[13px]" href="tel:+91 9830 566 248" target="_blank">
+                    <a className="block text-[16px]" href="tel:+91 9830 566 248" target="_blank">
                       <span>IN: +91 9830 566 248</span>
                     </a>
                     <a
-                      className="mt-4 block text-[13px]"
+                      className="mt-4 block text-[16px]"
                       href="mailto:connect@bitpastel.com"
                       target="_blank"
                     >
@@ -718,7 +726,7 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                     </a>
                   </div>
                 </div>
-                <p className="lg:hidden block text-center text-white text-[13px] font-roboto font-[300] lg:max-w-[100%] max-w-[100%] mx-auto">
+                <p className="lg:hidden block text-center text-white text-[12px] font-roboto font-[300] lg:max-w-[100%] max-w-[100%] mx-auto">
                   Copyright © Bitpastel Solution Private Limited {new Date().getFullYear()}
                   <br />
                   All Rights Reserved

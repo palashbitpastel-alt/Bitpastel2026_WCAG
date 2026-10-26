@@ -136,7 +136,7 @@ const FlexibleMigrationSection: React.FC<FlexibleMigrationSectionProps> = ({ ope
                                                     <div key={i} className="flex md:gap-2 gap-2 mb-[5px] items-start">
                                                         <Image
                                                             src={d.icon}
-                                                            alt="Check"
+                                                            alt=""
                                                             width={20}
                                                             height={20}
                                                             className="block w-[20px] " />

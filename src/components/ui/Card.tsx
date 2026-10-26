@@ -50,7 +50,7 @@ export default function Card({
               <div className=" rounded-full  flex items-center justify-center mt-1.5 flex-shrink-0">
                 <Image
                 src={'/images/badge.png'}
-                alt='badge icon'
+                alt=''
                 width={15}
                 height={15}
                 />
@@ -72,7 +72,7 @@ export default function Card({
             <div className=" rounded-full flex items-center justify-center flex-shrink-0">
               <Image
               src={'/images/power_career.png'}
-              alt='experience icon'
+              alt=''
               width={15}
               height={15}
               />

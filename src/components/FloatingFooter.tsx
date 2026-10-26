@@ -135,7 +135,7 @@ const FloatingFooter = () => {
   }, []);
 
   // Active label colour matches the solid SVG icon colour (#00A974).
-  const textCls = (section: string) => `text-xs mt-1 ${isActive(section) ? 'text-[#00A974] font-semibold' : 'text-[#008B8B]'}`;
+  const textCls = (section: string) => `text-xs mt-1 ${isActive(section) ? 'text-[#00855D] font-semibold' : 'text-[#007A7A]'}`;
 
   // Pick the imported icon asset (line by default, solid when active).
   const navIcon = (name: string, section: string) =>

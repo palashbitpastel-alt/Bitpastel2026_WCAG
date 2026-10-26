@@ -347,21 +347,21 @@ const Header = ({ forceModalOpen = false, onModalClose }: HomePageProps) => {
             }}
           >
             <Link href="/" prefetch={true} onClick={handleLogoClick} className="flex items-center h-full">
-              <Image src="/images/icons/bp_dark_logo.svg" alt="Bitpastel Logo" width={101} height={28} priority className="block mt-[2px]" />
+              <Image src="/images/icons/bp_dark_logo.svg" alt="Bitpastel home" width={101} height={28} priority className="block mt-[2px]" />
             </Link>
 
-            <nav className="flex space-x-8 items-center">
+            <nav className="flex space-x-3 items-center">
               <button
                 onClick={(e) => { lockActiveSection("services"); handleLinkClick(e, "services"); }}
-                className={`nav-dark ${activeSection === "services" ? "is-active" : ""} `}
-                style={{ fontFamily: "Roboto", fontSize: "16px", fontWeight: 400 }}
+                className={`nav-dark inline-flex items-center justify-center h-[44px] px-[10px] rounded-[4px] ${activeSection === "services" ? "is-active" : ""} `}
+                style={{ fontFamily: "Roboto", fontSize: "18px", fontWeight: 400, lineHeight: "100%" }}
               >
                 Services
               </button>
               <button
                 onClick={() => { lockActiveSection("stories"); scrollToNews(); }}
-                className={`nav-dark ${activeSection === "stories" ? "is-active" : ""} `}
-                style={{ fontFamily: "Roboto", fontSize: "16px", fontWeight: 400 }}
+                className={`nav-dark inline-flex items-center justify-center h-[44px] px-[10px] rounded-[4px] ${activeSection === "stories" ? "is-active" : ""} `}
+                style={{ fontFamily: "Roboto", fontSize: "18px", fontWeight: 400, lineHeight: "100%" }}
               >
                 Stories
               </button>
@@ -369,8 +369,8 @@ const Header = ({ forceModalOpen = false, onModalClose }: HomePageProps) => {
                 prefetch={true}
                 href="/culture"
                 onClick={handleCultureClick}
-                className={`nav-dark ${pathname === "/culture" ? "is-active" : ""} `}
-                style={{ fontFamily: "Roboto", fontSize: "16px", fontWeight: 400 }}
+                className={`nav-dark inline-flex items-center justify-center h-[44px] px-[10px] rounded-[4px] ${pathname === "/culture" ? "is-active" : ""} `}
+                style={{ fontFamily: "Roboto", fontSize: "18px", fontWeight: 400, lineHeight: "100%" }}
               >
                 Culture
               </Link>
@@ -397,10 +397,10 @@ const Header = ({ forceModalOpen = false, onModalClose }: HomePageProps) => {
               paddingRight: "16px",
             }}
           >
-            <Link href="/" prefetch={true} onClick={handleLogoClick}>
+            <Link href="/" prefetch={true} onClick={handleLogoClick} className="inline-block rounded-[4px]">
               <Image
                 src={isScrolled || forceGreenMobileHeader ? "/images/icons/mb_green.svg" : "/images/icons/mb_dark.svg"}
-                alt="Bitpastel Logo"
+                alt="Bitpastel home"
                 width={101}
                 height={28}
                 priority

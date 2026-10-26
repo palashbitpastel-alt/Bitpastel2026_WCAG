@@ -99,25 +99,25 @@ const ShopifyStoreSection = () => {
             <div className='xl:mb-[15px] mb-[10px] mobile-margin-bottom'>
               <Image
                 src={isMobile ? ShopifyImageMobile : ShopifyImage}
-                alt='Team working together'
+                alt='Shopify x Bitpastel'
                 width={isMobile ? 230 : 266}
                 height={53}
                 className='shopifyX-image object-contain object-center md:object-cover md:object-[30%] xl:object-contain xl:object-center'
               />
             </div>
-            <h2 className=' font-source md:font-[600] font-[700] text-title title mb-6 md:leading-[45px] leading-[normal] text-accent-green mobile-margin-bottom mb-[15px]'>
+            <h2 className=' font-source md:font-[600] font-[700] text-title md:text-[38px] text-[23px] mb-6 md:leading-[45px] leading-[normal] text-accent-green mobile-margin-bottom mb-[15px]'>
               <span className='text-accent-green'>400+</span> Shopify Stores
-              <br />& <span className='text-accent-green'>100+</span> Shopify Plus Stores
+              <span className ="block">& <span className='text-accent-green'>100+</span> Shopify Plus Stores </span>
             </h2>
             {/* <p className="text-[16px] leading-[26px] text-title md:leading-relaxed mb-8"> */}
-            <p className='text-[16px] leading-[26px] md:p-0 px-[10px] text-title md:leading-relaxed'>
+            <p className='md:text-[19px] text-[16px] leading-[26px] md:p-0 px-[10px] text-[#222B32] md:leading-relaxed'>
               We have helped 250+ brands grow from scratch to $1M GMV.
               <span className='md:block inline md:pl-0 pl-[5px]' />
               At Bitpastel, we build differentiated, fast, and scalable online
               <span className='md:block inline md:pl-0 pl-[5px]' />
               stores to help you provide the best customer experience!
             </p>
-            <p>
+            <p className='md:text-[19px] text-[16px] leading-[26px] md:p-0 px-[10px] text-[#222B32] md:leading-relaxed'>
               We also deliver speed and performance optimization that
               <span className='md:block inline md:pl-0 pl-[5px]' />
               contributes to better conversion rates.
@@ -137,24 +137,25 @@ const ShopifyStoreSection = () => {
              Upgrade your Shopify Store today
             </p> */}
           </div>
-          <div className='lg:w-1/2  lg:pr-[11px] lg:pt-[10px] lg:pb-[10px]   w-full lg:order-last order-first xl:h-auto md:h-[-webkit-fill-available] h-auto tab-padding relative'>
+          <div className='lg:w-1/2  lg:pr-[20px] lg:pt-[20px] lg:pb-[20px] w-full lg:order-last order-first xl:h-auto md:h-[-webkit-fill-available] h-auto tab-padding relative'>
             <div className='shopify_badge_section'>
               <Link
                 href='https://www.shopify.com/partners/directory/partner/bitpastel3'
                 target='_blank'
+                className='inline-block rounded-[4px]'
               >
                 <Image
                   src={ShopifyImageBottom}
-                  alt='Shopify Select Partner'
-                  width={isMobile ? 180 : 220}
-                  height={53}
-                  className='object-contain object-left mb-center h-[28px] md:h-[48px]'
+                  alt='Shopify Select Partner: view Bitpastel in the Shopify Partner Directory'
+                  width={isMobile ? 180 : 226}
+                  height={isMobile ? 53 : 80}
+                  className='object-contain object-left mb-center h-[28px] md:h-[48px] md:w-auto'
                 />
               </Link>
             </div>
             <Image
               src={ShopifyClientImage}
-              alt='Team working together'
+              alt='Hands holding a phone showing an online store and a credit card'
               width={1200}
               height={900}
               quality={75}
@@ -176,13 +177,14 @@ const ShopifyStoreSection = () => {
                 className="shopifyX-image object-contain object-center md:object-cover md:object-[30%] xl:object-contain xl:object-center"
               />
             </div> */}
-            <h2 className=' font-source md:font-[600] font-[700] text-title title mb-6 md:leading-[45px] leading-[normal] text-accent-green'>
+            <h2 className=' font-source md:font-[600] font-[700] text-title md:text-[38px] text-[23px] mb-6 md:leading-[45px] leading-[normal] text-accent-green mobile-margin-bottom mb-[15px]'>
               Building Scalable SaaS
-              <br />
+              <span className="block">
               Platforms that grow with you
+              </span>
             </h2>
             {/* <p className="text-[16px] leading-[26px] text-title md:leading-relaxed mb-8"> */}
-            <p className='text-[16px] leading-[26px] md:p-0 px-[10px] text-title md:leading-relaxed'>
+            <p className='md:text-[19px] text-[16px] leading-[26px] md:p-0 px-[10px] text-[#222B32] md:leading-relaxed'>
               {/* We have helped 100+ brands grow from scratch to $1M GMV.
               <span className="md:block inline md:pl-0 pl-[5px]" />
               At Bitpastel, we build differentiated, fast, and scalable online
@@ -200,10 +202,10 @@ const ShopifyStoreSection = () => {
               Explore Our Portfolio
             </button> */}
           </div>
-          <div className='lg:w-1/2 lg:py-[11px] lg:pr-[11px] md:p-[11px]  w-full lg:order-last order-first xl:h-auto md:h-[-webkit-fill-available] h-auto'>
+          <div className='lg:w-1/2 lg:py-[20px] lg:pr-[20px] md:p-[20px]  w-full lg:order-last order-first xl:h-auto md:h-[-webkit-fill-available] h-auto'>
             <Image
               src={ShopifyClientImage2}
-              alt='Team working together'
+              alt='Team presenting business analytics dashboards on a large screen'
               width={1200}
               height={900}
               className='md:rounded-[40px] rounded-[20px] w-full xl:h-auto md:h-[100%] h-auto object-contain object-center md:object-cover md:object-[30%] xl:object-contain xl:object-center'
@@ -224,7 +226,7 @@ const ShopifyStoreSection = () => {
                 className="shopifyX-image object-contain object-center md:object-cover md:object-[30%] xl:object-contain xl:object-center"
               />
             </div> */}
-            <h2 className=' font-source md:font-[600] font-[700] text-title title mb-6 md:leading-[45px] leading-[normal] text-accent-green'>
+            <h2 className=' font-source md:font-[600] font-[700] text-title md:text-[38px] text-[23px] mb-6 md:leading-[45px] leading-[normal] text-accent-green mobile-margin-bottom mb-[15px]'>
               {/* <span className="text-accent-green">200+</span> Shopify Stores
               <br />& <span className="text-accent-green">50+</span> Shopify Plus Stores */}
               Transforming Businesses
@@ -232,7 +234,8 @@ const ShopifyStoreSection = () => {
               with AI and Automation
             </h2>
             {/* <p className="text-[16px] leading-[26px] text-title md:leading-relaxed mb-8"> */}
-            <p className='text-[16px] leading-[26px] md:p-0 px-[10px] text-title md:leading-relaxed'>
+            {/* <p className='text-[16px] leading-[26px] md:p-0 px-[10px] text-title md:leading-relaxed'> */}
+            <p className='md:text-[19px] text-[16px] leading-[26px] md:p-0 px-[10px] text-[#222B32] md:leading-relaxed'>
               {/* We have helped 100+ brands grow from scratch to $1M GMV.
               <span className="md:block inline md:pl-0 pl-[5px]" />
               At Bitpastel, we build differentiated, fast, and scalable online
@@ -250,10 +253,10 @@ const ShopifyStoreSection = () => {
               Explore Our Portfolio
             </button> */}
           </div>
-          <div className='lg:w-1/2 lg:py-[11px] lg:pr-[11px] md:p-[11px]  w-full lg:order-last order-first xl:h-auto md:h-[-webkit-fill-available] h-auto'>
+          <div className='lg:w-1/2 lg:py-[20px] lg:pr-[20px] md:p-[20px]  w-full lg:order-last order-first xl:h-auto md:h-[-webkit-fill-available] h-auto'>
             <Image
               src={ShopifyClientImage3}
-              alt='Team working together'
+              alt='Woman at her desk using an AI assistant on a computer'
               width={1200}
               height={800}
               className='md:rounded-[40px] rounded-[20px] w-full xl:h-auto md:h-[100%] h-auto object-contain object-center md:object-cover md:object-[30%] xl:object-contain xl:object-center'

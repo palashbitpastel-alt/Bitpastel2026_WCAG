@@ -30,17 +30,17 @@ const JobDetailsBanner: React.FC<JobDetailsBannerProps> = ({
     {
       text: 'Dynamic Teams working on new ideas',
       icon: '/images/img_materialsymbolscheckrounded.svg',
-      alt: 'Check icon',
+      alt: '',
     },
     {
       text: 'Enjoy a Happy work environment',
       icon: '/images/img_materialsymbolscheckrounded.svg',
-      alt: 'Check icon',
+      alt: '',
     },
     {
       text: 'Fast-track career progress',
       icon: '/images/img_materialsymbolscheckrounded.svg',
-      alt: 'Check icon',
+      alt: '',
     },
   ],
   applyButtonText = 'Apply Now',

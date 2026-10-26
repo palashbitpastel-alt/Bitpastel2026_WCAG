@@ -58,7 +58,7 @@ const TransformSection: React.FC<TransformSectionProps> = ({ openModal }) => {
 
                         </div>
                         <div className='flex justify-center align-middle'>
-                            <Image src="/images/transformmain.webp" alt="transformmain" width={430} height={460} />
+                            <Image src="/images/transformmain.webp" alt="AI-powered store interface with product cards, a shopping bag and a T-shirt listing" width={430} height={460} />
                         </div>
                     </div>
                 </div>

@@ -48,14 +48,14 @@ const AiPoweredSection: React.FC<AiPoweredSectionProps> = ({ openModal }) => {
                                     <div key={idx} className="flex md:gap-4 gap-2 mb-[5px] items-start md:items-center">
                                         <Image
                                             src="/images/img_materialsymbolscheckrounded.svg"
-                                            alt="Check"
+                                            alt=""
                                             width={24}
                                             height={24}
                                             className="w-auto md:block hidden"
                                         />
                                         <Image
                                             src="/images/img_materialsymbolscheckrounded.svg"
-                                            alt="Check"
+                                            alt=""
                                             width={24}
                                             height={24}
                                             className="md:hidden block w-[20px]"
@@ -66,7 +66,7 @@ const AiPoweredSection: React.FC<AiPoweredSectionProps> = ({ openModal }) => {
                             </div>
                         </div>
                         <div className='flex justify-center align-middle'>
-                            <Image src="/images/Ai_powered_Image.webp" alt="Ai_powered_Image" width={430} height={460} className="w-full h-auto max-w-[430px]" />
+                            <Image src="/images/Ai_powered_Image.webp" alt="AI-powered shopping interface showing product cards, a Buy Now button and an Add to cart button" width={430} height={460} className="w-full h-auto max-w-[430px]" />
                         </div>
                     </div>
                 </div>

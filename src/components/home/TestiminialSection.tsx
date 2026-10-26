@@ -277,6 +277,8 @@ const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
   const [showMore, setShowMore] = useState(false);
   const [initialCount, setInitialCount] = useState(6);
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
+  // Tracked separately from hover so a mouse event (e.g. fired when Tab scrolls the page) can't close the keyboard-focused card
+  const [focusedCard, setFocusedCard] = useState<string | null>(null);
   const [closingCards, setClosingCards] = useState<Set<string>>(new Set());
   const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -302,7 +304,7 @@ const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
     }
     setClosingCards((prev) => {
       const next = new Set(prev);
-      if (hoveredCard && hoveredCard !== id) {
+      if (hoveredCard && hoveredCard !== id && hoveredCard !== focusedCard) {
         next.add(hoveredCard);
       }
       next.delete(id);
@@ -316,12 +318,34 @@ const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
       clearTimeout(hoverTimeoutRef.current);
       hoverTimeoutRef.current = null;
     }
+    if (id !== focusedCard) {
+      setClosingCards((prev) => {
+        const next = new Set(prev);
+        next.add(id);
+        return next;
+      });
+    }
+    setHoveredCard((current) => (current === id ? null : current));
+  };
+
+  const handleFocus = (id: string) => {
     setClosingCards((prev) => {
       const next = new Set(prev);
-      next.add(id);
+      next.delete(id);
       return next;
     });
-    setHoveredCard(null);
+    setFocusedCard(id);
+  };
+
+  const handleBlur = (id: string) => {
+    if (id !== hoveredCard) {
+      setClosingCards((prev) => {
+        const next = new Set(prev);
+        next.add(id);
+        return next;
+      });
+    }
+    setFocusedCard((current) => (current === id ? null : current));
   };
 
   useEffect(() => {
@@ -338,15 +362,23 @@ const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
       className={`${testimonial.bgColor} break-inside-avoid overflow-hidden md:rounded-[20px] ${
         !isMobile ? 'testimonial-card-parent' : ''
       } rounded-[10px] md:px-12 px-6 py-6 text-[rgba(33,37,41,1)] flex flex-col ${
-        hoveredCard === testimonial.id ? 'open' : ''
+        hoveredCard === testimonial.id || focusedCard === testimonial.id ? 'open' : ''
       } ${closingCards.has(testimonial.id) ? 'closing' : ''}`}
       onMouseEnter={() => handleMouseEnter(testimonial.id)}
       onMouseLeave={() => handleMouseLeave(testimonial.id)}
+      // WCAG 2.1.1 / 1.4.13: keyboard focus expands the clamped story the same way hover does (desktop only; mobile shows full text)
+      {...(!isMobile && {
+        tabIndex: 0,
+        role: 'article',
+        'aria-label': `Story from ${testimonial.name}`,
+        onFocus: () => handleFocus(testimonial.id),
+        onBlur: () => handleBlur(testimonial.id),
+      })}
     >
       <div className="flex-grow">
         <div className={`${!isMobile ? 'testimonial-card-content min-h-[70px]' : ''}`}>
           <p
-            className={`${!isMobile ? 'clamp-3' : ''} ${isMobile ? 'text-[12px]' : 'text-[13px] leading-[23px]'}`}
+            className={`${!isMobile ? 'clamp-3' : ''} ${isMobile ? 'text-[12px]' : 'text-[16px] leading-[26px]'}`}
             onTransitionEnd={(e) => {
               if (e.propertyName === 'max-height' && closingCards.has(testimonial.id)) {
                 setClosingCards((prev) => {
@@ -364,16 +396,16 @@ const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
       <div className="flex items-center space-x-4 mt-4 pt-4 border-t border-transparent md:min-h-[80px]">
         <Image
           src={testimonial.image}
-          alt={testimonial.name}
+          alt=""
           width={56}
           height={56}
           className="rounded-full object-cover md:h-[56px] md:w-[56px] w-[40px] h-[40px]"
         />
         <div>
-          <h4 className={`font-[600] ${isMobile ? 'text-[12px]' : 'paragraph'} font-source`}>
+          <h3 className={`font-[600] ${isMobile ? 'text-[12px]' : 'text-[20px]'} font-source`}>
             {testimonial.name}
-          </h4>
-          <p className={`font-roboto italic ${isMobile ? 'text-[12px]' : 'text-[13px]'}`}>
+          </h3>
+          <p className={`font-roboto italic ${isMobile ? 'text-[12px]' : 'text-[16px]'}`}>
             {testimonial.title}
           </p>
         </div>
@@ -404,7 +436,7 @@ const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
               onClick={() => setShowMore(true)}
               className="new-btn-design-full"
             >
-              <span>Explore more stories</span>
+              <span>Explore More Stories</span>
             </button>
           </div>
         )}

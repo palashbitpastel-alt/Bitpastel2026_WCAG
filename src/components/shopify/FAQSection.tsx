@@ -97,7 +97,7 @@ const FAQSection: React.FC<FAQSectionProps> = ({ openModal }) => {
                                                     ? '/images/AccordionMinus.svg'
                                                     : '/images/AccordionPlus.svg'
                                             }
-                                            alt={isActive ? 'Collapse' : 'Expand'}
+                                            alt=""
                                             className="w-5 h-5 md:w-7 md:h-7 flex-shrink-0 ml-3"
                                         />
                                     </button>

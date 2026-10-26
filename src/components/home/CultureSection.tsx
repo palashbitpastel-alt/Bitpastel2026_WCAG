@@ -233,7 +233,7 @@ const CultureSection = () => {
             {features.map((feature, index) => (
               <div
                 key={feature.id}
-                className={`relative md:content-center md:after:content-[''] after:absolute after:bottom-[-7px] after:left-0 after:w-full after:border-b after:border-[#29996A4D] last:after:hidden rounded-[10px] transition-all duration-300 ease-in-out md:overflow-visible overflow-hidden
+                className={`md:content-center relative md:after:content-[''] after:absolute after:bottom-[-7px] after:left-0 after:w-full after:border-b after:border-[#29996A4D] last:after:hidden rounded-[10px] transition-all duration-300 ease-in-out md:overflow-visible overflow-hidden
                   md:bg-transparent md:p-0 md:rounded-none
                   ${feature.mobileBg} p-5
                 `}

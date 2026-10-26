@@ -53,7 +53,7 @@ const CtaSection: React.FC<HerSectionProps> = ({ openModal }) => {
                 href="#" 
                 scroll={false}
                 onClick={openModal}
-                className="new-btn-design"
+                className="new-btn-design min-h-[50px]"
               >
                 Contact Us
               </Link>

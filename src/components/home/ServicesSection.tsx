@@ -229,7 +229,7 @@ const ServicesSection = () => {
               </div>
               <div
                 id={`service-panel-${service.id}`}
-                className={`collapsible-element text-left content-center${activeIndex === index ? 'active' : ''}`}
+                className={`collapsible-element text-left content-center${activeIndex === index ? ' active' : ''}`}
                 style={{ background: service.bgcolorCollapsed }}
               >
                 <p className="paragraph text-title text-[16px] leading-[20px]">

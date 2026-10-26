@@ -566,9 +566,6 @@
 
   .collapsible-element {
     width: calc(100% + 30px);
-    /* Override the base rule's visibility:hidden — on mobile we control
-       show/hide with opacity so the panel can fade smoothly. */
-    visibility: visible;
     height: 100%;
     position: absolute;
     top: 0;
@@ -581,11 +578,14 @@
        a smooth fade on both open and close. */
     z-index: 1;
     opacity: 0;
+    /* visibility (not just opacity) so a collapsed panel is also removed from
+       the accessibility tree; it flips only after the fade-out finishes. */
+    visibility: hidden;
     pointer-events: none;
     /* Slide and fade run together over the same duration (no delay) so the
        panel is visible the whole way — you actually see it slide out and slide
        back, fading in/out as it moves. Equal timing keeps open/close consistent. */
-    transition: left 0.45s ease, opacity 0.45s ease;
+    transition: left 0.45s ease, opacity 0.45s ease, visibility 0s linear 0.45s;
     border-radius: 8px;
     align-content: center;
   }
@@ -593,6 +593,8 @@
   .our-services-wrapper .card-element.active:nth-child(odd) .collapsible-element {
     left: calc(100% - 14px) !important;
     opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
     pointer-events: auto;
     padding-left: 30px;
   }
@@ -601,6 +603,8 @@
   .our-services-wrapper .card-element.active:nth-child(even) .collapsible-element {
     left: calc(-100% - 16px) !important;
     opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
     pointer-events: auto;
     padding-right: 30px;
   }

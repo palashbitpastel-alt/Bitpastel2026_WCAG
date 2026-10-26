@@ -170,7 +170,7 @@ const ServicesSection = () => {
       bgColor: 'bg-primary-green-light',
       bgcolorCollapsed: '#d8f5e9',
       mobileTextColor: 'text-[#00704E]',
-      iconAlt: 'Shopping cart with add icon representing e-commerce',
+      iconAlt: 'Cloud network icon representing SaaS platforms',
     },
     {
       id: 'ecommerce',
@@ -180,7 +180,7 @@ const ServicesSection = () => {
       bgColor: 'bg-primary-coral-light',
       bgcolorCollapsed: '#fde3e5',
       mobileTextColor: 'text-[#123B42]',
-      iconAlt: 'Cloud network icon representing SaaS platforms',
+      iconAlt: 'Shopping cart with add icon representing e-commerce',
     },
   ];
 

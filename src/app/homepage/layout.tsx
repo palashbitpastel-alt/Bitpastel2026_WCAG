@@ -1,7 +1,6 @@
 import React from 'react';
 import type { Metadata, Viewport } from 'next';
 import Script from 'next/script';
-import '../styles/index.css';
 import HeaderOptimized from '@/components/Header';
 import FooterOptimized from '@/components/Footer';
 import { SITE_URL } from '@/data/site';

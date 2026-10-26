@@ -177,6 +177,7 @@ const CultureSection = () => {
       mobileTextColor: 'text-[#00704E]',
       mobileBg: 'bg-[rgba(216,245,233,1)]',
       arrowcolor: '#3ECB90',
+      iconAltText: 'Icon representing reliable engineering',
       items: [
         'Multifunctional engineering teams with deep expertise',
         'Proven track record of 100% Customer Satisfaction',
@@ -189,6 +190,7 @@ const CultureSection = () => {
       mobileTextColor: 'text-[#7A5C00]',
       mobileBg: 'bg-[rgba(252,244,215,1)]',
       arrowcolor: '#F0C638',
+      iconAltText: 'Icon representing quality assurance',
       items: [
         'Dedicated QA team for thorough testing',
         'Multilayered Quality Assurance before delivery',
@@ -201,6 +203,7 @@ const CultureSection = () => {
       mobileTextColor: 'text-[#0A6A80]',
       mobileBg: 'bg-[rgba(216,247,255,1)]',
       arrowcolor: '#55B8D0',
+      iconAltText: 'Icon representing cool and elegant designs',
       items: ['Dedicated design studio with a talented team', 'Specialists in high-quality UI/UX'],
     },
     {
@@ -210,6 +213,7 @@ const CultureSection = () => {
       mobileTextColor: 'text-[#B3202D]',
       mobileBg: 'bg-[rgba(253,227,229,1)]',
       arrowcolor: '#F5747E',
+      iconAltText: 'Icon representing agile delivery',
       items: ['Delivery on demanding timelines', 'Fast-paced response across all timezone'],
     },
   ];
@@ -238,7 +242,7 @@ const CultureSection = () => {
                 <div className="flex md:space-x-4 space-x-3 md:mb-4 flex-row gap-0 text-left justify-start cursor-pointer">
                   <Image
                     src={feature.icon}
-                    alt=""
+                    alt={feature.iconAltText}
                     aria-hidden="true"
                     width={24}
                     height={24}

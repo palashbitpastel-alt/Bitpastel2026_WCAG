@@ -786,6 +786,7 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                 <Image
                   src={isHomePage && isClient && !activeSection ? NAV_ICONS.home.solid : NAV_ICONS.home.line}
                   alt=""
+                  aria-hidden="true"
                   width={NAV_ICON_SIZE}
                   height={NAV_ICON_SIZE}
                   className="h-[24px] w-[24px]"
@@ -811,6 +812,7 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                 <Image
                   src={isHomePage && isClient && activeSection === 'services' ? NAV_ICONS.service.solid : NAV_ICONS.service.line}
                   alt=""
+                  aria-hidden="true"
                   width={NAV_ICON_SIZE}
                   height={NAV_ICON_SIZE}
                   className="h-[24px] w-[24px]"
@@ -832,6 +834,7 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                 <Image
                   src={isHomePage && isClient && activeSection === 'stories' ? NAV_ICONS.stories.solid : NAV_ICONS.stories.line}
                   alt=""
+                  aria-hidden="true"
                   width={NAV_ICON_SIZE}
                   height={NAV_ICON_SIZE}
                   className="h-[24px] w-[24px]"
@@ -859,6 +862,7 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                 <Image
                   src={pathname.startsWith('/culture') ? NAV_ICONS.culture.solid : NAV_ICONS.culture.line}
                   alt=""
+                  aria-hidden="true"
                   width={NAV_ICON_SIZE}
                   height={NAV_ICON_SIZE}
                   className="h-[24px] w-[24px]"
@@ -886,6 +890,7 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                 <Image
                   src={pathname.startsWith('/careers') ? NAV_ICONS.career.solid : NAV_ICONS.career.line}
                   alt=""
+                  aria-hidden="true"
                   width={NAV_ICON_SIZE}
                   height={NAV_ICON_SIZE}
                   className="h-[24px] w-[24px]"
@@ -903,6 +908,7 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                 <Image
                   src={isModalOpen ? NAV_ICONS.contact.solid : NAV_ICONS.contact.line}
                   alt=""
+                  aria-hidden="true"
                   width={NAV_ICON_SIZE}
                   height={NAV_ICON_SIZE}
                   className="h-[24px] w-[24px]"

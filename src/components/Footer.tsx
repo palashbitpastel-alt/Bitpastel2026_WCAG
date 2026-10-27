@@ -25,6 +25,8 @@ import contactSolid from '@/../public/images/mobilenavicon/contact-s.svg';
 import careerLine from '@/../public/images/mobilenavicon/career-l.svg';
 import careerSolid from '@/../public/images/mobilenavicon/career-s.svg';
 
+import bitpastelLogoNew from '@/../public/images/bitpastel-logo-new.svg';
+
 const NAV_ICONS: Record<string, { line: string; solid: string }> = {
   home: { line: homeLine, solid: homeSolid },
   service: { line: serviceLine, solid: serviceSolid },
@@ -314,7 +316,7 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                   }}
                 >
                   <Image
-                    src="/images/Footer-logo.png"
+                    src={bitpastelLogoNew}
                     alt="Bitpastel home"
                     width={196}
                     height={75}

@@ -434,7 +434,7 @@ const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
           <div className="flex justify-center md:mt-8 mt-7 space-x-4">
             <button
               onClick={() => setShowMore(true)}
-              className="new-btn-design-full font-inter min-w-[261px] min-h-[50px]"
+              className="new-btn-design-full font-roboto min-w-[261px] min-h-[50px]"
             >
               <span>Explore More Stories</span>
             </button>

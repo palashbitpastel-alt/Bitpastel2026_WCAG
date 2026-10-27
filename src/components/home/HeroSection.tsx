@@ -73,11 +73,11 @@ const HeroSection: React.FC<HerSectionProps> = ({ openModal }) => {
           <div className="md:h-full content-center mx-auto md:max-w-[100%] max-w-[330px]">
             <h1 className="md:text-primary-white text-title title lg:!text-[56px] lg:leading-[57.6px] lg:font-[600] font-source leading-[normal] md:mb-5 mb-4 text-center md:text-left ">
               <span>Crafting </span>
-              <span className="font-bold lg:font-[900] lg:inline md:block inline">Digital Solutions</span>
+              <span className="font-bold lg:font-[700] lg:inline md:block inline">Digital Solutions</span>
               <span className="block"> for your business</span>
             </h1>
 
-            <div className="md:text-primary-white text-title md:text-left text-center">
+            <div className="md:text-primary-white text-title md:text-left lg:space-y-[15px] text-center">
               {[
                 'Shopify & eCommerce Solutions',
                 'Custom SaaS Product Development',
@@ -100,14 +100,14 @@ const HeroSection: React.FC<HerSectionProps> = ({ openModal }) => {
                     height={24}
                     className="md:hidden block w-[20px]"
                   />
-                  <p className="  md:text-[20px] lg:!text-[20px] lg:leading-[44px]  paragraph font-[400] font-roboto">{text}</p>
+                  <p className="  md:text-[20px] lg:!text-[20px] paragraph font-[400] font-roboto">{text}</p>
                 </div>
               ))}
             </div>
             <div className='button-area-main'>
               <button
                 // prefetch={true}
-                className='new-btn-design-full mt-[15px] font-inter min-w-[253px] min-h-[50px]'
+                className='new-btn-design-full mt-[40px] font-roboto min-w-[253px] min-h-[50px]'
                 // href="#"
                 // scroll={false}
                 onClick={openModal}

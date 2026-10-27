@@ -27,6 +27,22 @@ import careerSolid from '@/../public/images/mobilenavicon/career-s.svg';
 
 import bitpastelLogoNew from '@/../public/images/bitpastel-logo_new.png';
 
+// Social icons are inline SVG (paths copied from /images/img_basilfacebooksolid.svg,
+// img_mingcuteinstagramfill.svg, img_uillinkedin.svg) rather than <Image>: contrast
+// checkers treat an <img> with alt text as text and flag it even when it is white on
+// the dark footer. The accessible name lives on the surrounding link (aria-label).
+const SOCIAL_ICON_PATHS: Record<'facebook' | 'instagram' | 'linkedin', string> = {
+  facebook: 'M9.46683 1.9165C8.64908 1.9165 7.86482 2.24135 7.28658 2.81959C6.70835 3.39783 6.3835 4.18209 6.3835 4.99984V6.7165H4.7335C4.65083 6.7165 4.5835 6.78317 4.5835 6.8665V9.13317C4.5835 9.21584 4.65016 9.28317 4.7335 9.28317H6.3835V13.9332C6.3835 14.0158 6.45016 14.0832 6.5335 14.0832H8.80016C8.88283 14.0832 8.95016 14.0165 8.95016 13.9332V9.28317H10.6148C10.6835 9.28317 10.7435 9.2365 10.7602 9.16984L11.3268 6.90317C11.3324 6.88105 11.3329 6.85795 11.3282 6.83563C11.3235 6.81331 11.3138 6.79235 11.2997 6.77435C11.2857 6.75636 11.2678 6.74179 11.2473 6.73177C11.2268 6.72174 11.2043 6.71652 11.1815 6.7165H8.95016V4.99984C8.95016 4.93199 8.96353 4.8648 8.98949 4.80212C9.01546 4.73943 9.05351 4.68248 9.10149 4.6345C9.14947 4.58652 9.20643 4.54846 9.26911 4.5225C9.33179 4.49653 9.39898 4.48317 9.46683 4.48317H11.2002C11.2828 4.48317 11.3502 4.4165 11.3502 4.33317V2.0665C11.3502 1.98384 11.2835 1.9165 11.2002 1.9165H9.46683Z',
+  instagram: 'M10.6667 2C11.5507 2 12.3986 2.35119 13.0237 2.97631C13.6488 3.60143 14 4.44928 14 5.33333V10.6667C14 11.5507 13.6488 12.3986 13.0237 13.0237C12.3986 13.6488 11.5507 14 10.6667 14H5.33333C4.44928 14 3.60143 13.6488 2.97631 13.0237C2.35119 12.3986 2 11.5507 2 10.6667V5.33333C2 4.44928 2.35119 3.60143 2.97631 2.97631C3.60143 2.35119 4.44928 2 5.33333 2H10.6667ZM8 5.33333C7.29276 5.33333 6.61448 5.61428 6.11438 6.11438C5.61428 6.61448 5.33333 7.29276 5.33333 8C5.33333 8.70724 5.61428 9.38552 6.11438 9.88562C6.61448 10.3857 7.29276 10.6667 8 10.6667C8.70724 10.6667 9.38552 10.3857 9.88562 9.88562C10.3857 9.38552 10.6667 8.70724 10.6667 8C10.6667 7.29276 10.3857 6.61448 9.88562 6.11438C9.38552 5.61428 8.70724 5.33333 8 5.33333ZM8 6.66667C8.35362 6.66667 8.69276 6.80714 8.94281 7.05719C9.19286 7.30724 9.33333 7.64638 9.33333 8C9.33333 8.35362 9.19286 8.69276 8.94281 8.94281C8.69276 9.19286 8.35362 9.33333 8 9.33333C7.64638 9.33333 7.30724 9.19286 7.05719 8.94281C6.80714 8.69276 6.66667 8.35362 6.66667 8C6.66667 7.64638 6.80714 7.30724 7.05719 7.05719C7.30724 6.80714 7.64638 6.66667 8 6.66667ZM11 4.33333C10.8232 4.33333 10.6536 4.40357 10.5286 4.5286C10.4036 4.65362 10.3333 4.82319 10.3333 5C10.3333 5.17681 10.4036 5.34638 10.5286 5.4714C10.6536 5.59643 10.8232 5.66667 11 5.66667C11.1768 5.66667 11.3464 5.59643 11.4714 5.4714C11.5964 5.34638 11.6667 5.17681 11.6667 5C11.6667 4.82319 11.5964 4.65362 11.4714 4.5286C11.3464 4.40357 11.1768 4.33333 11 4.33333Z',
+  linkedin: 'M13.6469 1.3331H2.35354C2.22659 1.33134 2.10054 1.3546 1.98258 1.40156C1.86462 1.44851 1.75707 1.51825 1.66607 1.60678C1.57506 1.6953 1.50239 1.80089 1.4522 1.91751C1.402 2.03412 1.37527 2.15949 1.37354 2.28643V13.7131C1.37527 13.84 1.402 13.9654 1.4522 14.082C1.50239 14.1986 1.57506 14.3042 1.66607 14.3928C1.75707 14.4813 1.86462 14.551 1.98258 14.598C2.10054 14.6449 2.22659 14.6682 2.35354 14.6664H13.6469C13.7738 14.6682 13.8999 14.6449 14.0178 14.598C14.1358 14.551 14.2433 14.4813 14.3343 14.3928C14.4253 14.3042 14.498 14.1986 14.5482 14.082C14.5984 13.9654 14.6251 13.84 14.6269 13.7131V2.28643C14.6251 2.15949 14.5984 2.03412 14.5482 1.91751C14.498 1.80089 14.4253 1.6953 14.3343 1.60678C14.2433 1.51825 14.1358 1.44851 14.0178 1.40156C13.8999 1.3546 13.7738 1.33134 13.6469 1.3331ZM5.39354 12.4931H3.39354V6.4931H5.39354V12.4931ZM4.39354 5.6531C4.11771 5.6531 3.85318 5.54353 3.65814 5.34849C3.46311 5.15345 3.35354 4.88893 3.35354 4.6131C3.35354 4.33728 3.46311 4.07275 3.65814 3.87771C3.85318 3.68267 4.11771 3.5731 4.39354 3.5731C4.54 3.55649 4.68832 3.571 4.82879 3.61569C4.96925 3.66038 5.09869 3.73423 5.20864 3.83241C5.31859 3.93059 5.40655 4.05089 5.46678 4.18542C5.52701 4.31996 5.55815 4.4657 5.55815 4.6131C5.55815 4.7605 5.52701 4.90624 5.46678 5.04078C5.40655 5.17532 5.31859 5.29561 5.20864 5.39379C5.09869 5.49197 4.96925 5.56583 4.82879 5.61051C4.68832 5.6552 4.54 5.66971 4.39354 5.6531ZM12.6069 12.4931H10.6069V9.2731C10.6069 8.46643 10.3202 7.93977 9.59354 7.93977C9.36864 7.94141 9.14966 8.01195 8.96609 8.14188C8.78252 8.27181 8.64319 8.45488 8.56687 8.66643C8.5147 8.82313 8.49209 8.98815 8.5002 9.1531V12.4864H6.5002V6.48643H8.5002V7.3331C8.68189 7.01784 8.94614 6.75811 9.2645 6.5819C9.58285 6.40569 9.94325 6.31967 10.3069 6.3331C11.6402 6.3331 12.6069 7.1931 12.6069 9.03977V12.4931Z',
+};
+
+const SocialIcon = ({ name }: { name: keyof typeof SOCIAL_ICON_PATHS }) => (
+  <svg width={16} height={16} viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+    <path d={SOCIAL_ICON_PATHS[name]} fill="#FFFFFF" />
+  </svg>
+);
+
 const NAV_ICONS: Record<string, { line: string; solid: string }> = {
   home: { line: homeLine, solid: homeSolid },
   service: { line: serviceLine, solid: serviceSolid },
@@ -329,7 +345,7 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                 <div className="text-[16px] lg:mb-0 mb-[1rem] leading-relaxed block">
                   <a
                     href="#" /* original href: "https://www.google.com/maps/place/Technopolis+Building/@22.5797323,88.4351652,17z/data=!4m14!1m7!3m6!1s0x3a0275a701908349:0x8d6c12852bc079bc!2sTechnopolis+Building!8m2!3d22.5797323!4d88.4377401!16s%2Fg%2F11hblq2494!3m5!1s0x3a0275a701908349:0x8d6c12852bc079bc!8m2!3d22.5797323!4d88.4377401!16s%2Fg%2F11hblq2494?entry=ttu" */
-                    target="_blank"
+                    /* target="_blank" */
                     rel="noopener noreferrer"
                   >
                     <span className="inline">
@@ -341,7 +357,7 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                   </a>
                 </div>
                 <div className="lg:hidden block space-y-2 text-[13px]">
-                  <a className="block text-[16px]" href="tel:+1 (872) 444 6679">
+                  <a className="block text-[16px]" href="#" /* original href: "tel:+1 (872) 444 6679" */>
                     <span>US: +1 (872) 444 6679</span>
                   </a>
                   {/* <a
@@ -350,14 +366,14 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                     href="https://api.whatsapp.com/send/?phone=447469539191&text=Hey...+I+would+like+to+have+a+quick+chat+with+you.&type=phone_number&app_absent=0"
                   >
                      </a> */}
-                  <a className="block text-[16px]" href="tel:+44 7469 539191">
+                  <a className="block text-[16px]" href="#" /* original href: "tel:+44 7469 539191" */>
                     {/* <span>UK: +44 2081 446579</span> */}
                     <span>UK: +44 7469 539191</span>
                   </a>
-                  <a className="block text-[16px]" href="tel:+91 9830 566 248">
+                  <a className="block text-[16px]" href="#" /* original href: "tel:+91 9830 566 248" */>
                     <span>IN: +91 9830 566 248</span>
                   </a>
-                  <a className="mt-4 block text-[16px]" href="mailto:connect@bitpastel.com">
+                  <a className="mt-4 block text-[16px]" href="#" /* original href: "mailto:connect@bitpastel.com" */>
                     <span>connect@bitpastel.com</span>
                   </a>
                 </div>
@@ -369,52 +385,34 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                     <div className="w-8 h-8 border border-white rounded-full flex items-center justify-center hover:bg-primary-teal transition-background-color cursor-pointer">
                       <a
                         href="#" /* original href: "https://www.facebook.com/bitpastel" */
-                        target="_blank"
+                        /* target="_blank" */
                         rel="noopener noreferrer"
                         className="flex items-center justify-center w-full h-full rounded-full"
+                        aria-label="Bitpastel on Facebook"
                       >
-                        <Image
-                          src="/images/img_basilfacebooksolid.svg"
-                          alt="Bitpastel on Facebook"
-                          width={16}
-                          height={16}
-                          // next/image inlines color:transparent, which contrast checkers read as invisible text
-                          style={{ color: '#FFFFFF' }}
-                        />
+                        <SocialIcon name="facebook" />
                       </a>
                     </div>
                     <div className="w-8 h-8 border border-white rounded-full flex items-center justify-center hover:bg-primary-teal transition-background-color cursor-pointer">
                       <a
                         href="#" /* original href: "https://www.instagram.com/bitpastel.ai/" */
-                        target="_blank"
+                        /* target="_blank" */
                         rel="noopener noreferrer"
                         className="flex items-center justify-center w-full h-full rounded-full"
+                        aria-label="Bitpastel on Instagram"
                       >
-                        <Image
-                          src="/images/img_mingcuteinstagramfill.svg"
-                          alt="Bitpastel on Instagram"
-                          width={16}
-                          height={16}
-                          // next/image inlines color:transparent, which contrast checkers read as invisible text
-                          style={{ color: '#FFFFFF' }}
-                        />
+                        <SocialIcon name="instagram" />
                       </a>
                     </div>
                     <div className="w-8 h-8 border border-white rounded-full flex items-center justify-center hover:bg-primary-teal transition-background-color cursor-pointer">
                       <a
                         href="#" /* original href: "https://www.linkedin.com/company/bitpastel" */
-                        target="_blank"
+                        /* target="_blank" */
                         rel="noopener noreferrer"
                         className="flex items-center justify-center w-full h-full rounded-full"
+                        aria-label="Bitpastel on LinkedIn"
                       >
-                        <Image
-                          src="/images/img_uillinkedin.svg"
-                          alt="Bitpastel on LinkedIn"
-                          width={16}
-                          height={16}
-                          // next/image inlines color:transparent, which contrast checkers read as invisible text
-                          style={{ color: '#FFFFFF' }}
-                        />
+                        <SocialIcon name="linkedin" />
                       </a>
                     </div>
                   </div>
@@ -662,52 +660,34 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                   <div className="w-8 h-8 border border-white rounded-full flex items-center justify-center hover:bg-primary-teal transition-background-color cursor-pointer">
                     <a
                       href="#" /* original href: "https://www.facebook.com/bitpastel" */
-                      target="_blank"
+                      /* target="_blank" */
                       rel="noopener noreferrer"
                       className="flex items-center justify-center w-full h-full rounded-full"
+                      aria-label="Bitpastel on Facebook"
                     >
-                      <Image
-                        src="/images/img_basilfacebooksolid.svg"
-                        alt="Bitpastel on Facebook"
-                        width={16}
-                        height={16}
-                        // next/image inlines color:transparent, which contrast checkers read as invisible text
-                        style={{ color: '#FFFFFF' }}
-                      />
+                      <SocialIcon name="facebook" />
                     </a>
                   </div>
                   <div className="w-8 h-8 border border-white rounded-full flex items-center justify-center hover:bg-primary-teal transition-background-color cursor-pointer">
                     <a
                       href="#" /* original href: "https://www.instagram.com/bitpastel.ai/" */
-                      target="_blank"
+                      /* target="_blank" */
                       rel="noopener noreferrer"
                       className="flex items-center justify-center w-full h-full rounded-full"
+                      aria-label="Bitpastel on Instagram"
                     >
-                      <Image
-                        src="/images/img_mingcuteinstagramfill.svg"
-                        alt="Bitpastel on Instagram"
-                        width={16}
-                        height={16}
-                        // next/image inlines color:transparent, which contrast checkers read as invisible text
-                        style={{ color: '#FFFFFF' }}
-                      />
+                      <SocialIcon name="instagram" />
                     </a>
                   </div>
                   <div className="w-8 h-8 border border-white rounded-full flex items-center justify-center hover:bg-primary-teal transition-background-color cursor-pointer">
                     <a
                       href="#" /* original href: "https://www.linkedin.com/company/bitpastel" */
-                      target="_blank"
+                      /* target="_blank" */
                       rel="noopener noreferrer"
                       className="flex items-center justify-center w-full h-full rounded-full"
+                      aria-label="Bitpastel on LinkedIn"
                     >
-                      <Image
-                        src="/images/img_uillinkedin.svg"
-                        alt="Bitpastel on LinkedIn"
-                        width={16}
-                        height={16}
-                        // next/image inlines color:transparent, which contrast checkers read as invisible text
-                        style={{ color: '#FFFFFF' }}
-                      />
+                      <SocialIcon name="linkedin" />
                     </a>
                   </div>
                 </div>
@@ -716,7 +696,7 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                     INFORMATION
                   </p>
                   <div className="lg:block hidden mt-0 space-y-4">
-                    <a className="block text-[16px]" href="tel:+1 (872) 444 6679" target="_blank">
+                    <a className="block text-[16px]" href="#" /* original href: "tel:+1 (872) 444 6679" */ /* target="_blank" */>
                       <span>US: +1 (872) 444 6679</span>
                     </a>
                     {/* <a className="block text-[13px]" href="tel:+44 2081 446579"> */}
@@ -729,16 +709,16 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                       <span>UK: +44 2081 446579</span>
                       <span>UK: +44 7469 539191</span>
                     </a> */}
-                    <a className="block text-[16px]" href="tel:+44 7469 539191" target="_blank">
+                    <a className="block text-[16px]" href="#" /* original href: "tel:+44 7469 539191" */ /* target="_blank" */>
                       <span>UK: +44 7469 539191</span>
                     </a>
-                    <a className="block text-[16px]" href="tel:+91 9830 566 248" target="_blank">
+                    <a className="block text-[16px]" href="#" /* original href: "tel:+91 9830 566 248" */ /* target="_blank" */>
                       <span>IN: +91 9830 566 248</span>
                     </a>
                     <a
                       className="mt-4 block text-[16px]"
-                      href="mailto:connect@bitpastel.com"
-                      target="_blank"
+                      href="#" /* original href: "mailto:connect@bitpastel.com" */
+                      /* target="_blank" */
                     >
                       <span>connect@bitpastel.com</span>
                     </a>

@@ -124,7 +124,7 @@ const ShopifyStoreSection = () => {
             <div className='md:pb-[15px]'>
               <Link
                 prefetch={true}
-                className='new-btn-design-full mt-[35px] font-inter min-w-[190px] min-h-[50px]'
+                className='new-btn-design-full mt-[35px] font-roboto min-w-[190px] min-h-[50px]'
                 href="#" /* original href: "/shopify" */
                 scroll={true}
               >
@@ -139,7 +139,7 @@ const ShopifyStoreSection = () => {
             <div className='shopify_badge_section'>
               <Link
                 href="#" /* original href: "https://www.shopify.com/partners/directory/partner/bitpastel3" */
-                target='_blank'
+                /* target='_blank' */
                 className='inline-block rounded-[4px]'
               >
                 <Image

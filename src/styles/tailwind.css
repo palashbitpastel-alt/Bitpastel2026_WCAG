@@ -190,7 +190,7 @@ button {
   }
   .new-btn-design:hover {
     /* WCAG 1.4.3: white text on #006B4B = 6.55:1 (was #009966 = 3.65:1) */
-    background-color: #006B4B;
+    background-color: #007A55;
     color: #ffffff;
     text-decoration: none;
   }

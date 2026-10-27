@@ -1,0 +1,17 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js",
+  "/robots.txt/route": "app/robots.txt/route.js",
+  "/free-quote/page": "app/free-quote/page.js",
+  "/privacy-policy/page": "app/privacy-policy/page.js",
+  "/page": "app/page.js",
+  "/careers/free-quote/page": "app/careers/free-quote/page.js",
+  "/careers/page": "app/careers/page.js",
+  "/shopify/free-quote/page": "app/shopify/free-quote/page.js",
+  "/culture/page": "app/culture/page.js",
+  "/shopify/page": "app/shopify/page.js",
+  "/partners/page": "app/partners/page.js",
+  "/culture/free-quote/page": "app/culture/free-quote/page.js",
+  "/careers/applyJob/[id]/page": "app/careers/applyJob/[id]/page.js",
+  "/portfolio/page": "app/portfolio/page.js"
+}

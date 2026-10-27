@@ -25,7 +25,7 @@ import contactSolid from '@/../public/images/mobilenavicon/contact-s.svg';
 import careerLine from '@/../public/images/mobilenavicon/career-l.svg';
 import careerSolid from '@/../public/images/mobilenavicon/career-s.svg';
 
-import bitpastelLogoNew from '@/../public/images/bitpastel-logo-new.svg';
+import bitpastelLogoNew from '@/../public/images/bitpastel-logo_new.png';
 
 const NAV_ICONS: Record<string, { line: string; solid: string }> = {
   home: { line: homeLine, solid: homeSolid },
@@ -318,9 +318,9 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                   <Image
                     src={bitpastelLogoNew}
                     alt="Bitpastel home"
-                    width={196}
-                    height={75}
-                    className="h-12 w-auto block"
+                    width={202}
+                    height={77}
+                    className="h-[77px] mb-[-15px] w-auto block"
                   />
                 </Link>
                 <p className="lg:hidden leading-[1] block lg:mt-0 mt-0 h-[32px] lg:pb-6 type-footer text-[13px]">
@@ -362,10 +362,10 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                   </a>
                 </div>
                 <div className="hidden lg:block">
-                  <p className="mt-6 text-[16px] lg:pb-6 pb-2 type-footer leading-[1]">
+                  <p className="mt-8 text-[16px] lg:pb-8 pb-2 type-footer leading-[1]">
                     CONNECT WITH US
                   </p>
-                  <div className="flex lg:space-x-4 space-x-6 pt-2 lg:pt-0 social-media-wrapper">
+                  <div className="flex lg:space-x-10 space-x-6 pt-2 lg:pt-0 social-media-wrapper">
                     <div className="w-8 h-8 border border-white rounded-full flex items-center justify-center hover:bg-primary-teal transition-background-color cursor-pointer">
                       <a
                         href="#" /* original href: "https://www.facebook.com/bitpastel" */
@@ -378,6 +378,8 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                           alt="Bitpastel on Facebook"
                           width={16}
                           height={16}
+                          // next/image inlines color:transparent, which contrast checkers read as invisible text
+                          style={{ color: '#FFFFFF' }}
                         />
                       </a>
                     </div>
@@ -393,6 +395,8 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                           alt="Bitpastel on Instagram"
                           width={16}
                           height={16}
+                          // next/image inlines color:transparent, which contrast checkers read as invisible text
+                          style={{ color: '#FFFFFF' }}
                         />
                       </a>
                     </div>
@@ -408,13 +412,15 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                           alt="Bitpastel on LinkedIn"
                           width={16}
                           height={16}
+                          // next/image inlines color:transparent, which contrast checkers read as invisible text
+                          style={{ color: '#FFFFFF' }}
                         />
                       </a>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="lg:max-w-[300px] mx-auto w-full">
+              <div className="lg:max-w-[241px] mx-auto w-full">
                 <p className="lg:h-[50px] h-[32px] type-footer leading-[1] text-[18px]">
                   QUICK LINKS
                 </p>
@@ -665,6 +671,8 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                         alt="Bitpastel on Facebook"
                         width={16}
                         height={16}
+                        // next/image inlines color:transparent, which contrast checkers read as invisible text
+                        style={{ color: '#FFFFFF' }}
                       />
                     </a>
                   </div>
@@ -680,6 +688,8 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                         alt="Bitpastel on Instagram"
                         width={16}
                         height={16}
+                        // next/image inlines color:transparent, which contrast checkers read as invisible text
+                        style={{ color: '#FFFFFF' }}
                       />
                     </a>
                   </div>
@@ -695,6 +705,8 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                         alt="Bitpastel on LinkedIn"
                         width={16}
                         height={16}
+                        // next/image inlines color:transparent, which contrast checkers read as invisible text
+                        style={{ color: '#FFFFFF' }}
                       />
                     </a>
                   </div>
@@ -747,7 +759,7 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
               className="pt-6 lg:block hidden"
               style={{ borderTop: '1px solid rgba(255, 255, 255, 0.1)' }}
             >
-              <p className="text-center lg:text-[13px] text-[13px] font-roboto font-[300] lg:max-w-[100%] max-w-[80%] mx-auto">
+              <p className="text-center text-[#FCFFF9] lg:text-[12px] text-[12px] font-roboto font-[400] lg:max-w-[100%] max-w-[80%] mx-auto">
                 Copyright © Bitpastel Solution Private Limited {new Date().getFullYear()} | All Rights Reserved |{' '}
                 <Link prefetch={true} href="#" /* original href: "/privacy-policy" */>
                   Privacy Policy

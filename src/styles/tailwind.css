@@ -26,7 +26,7 @@
     --text-secondary: #212529;
     --text-dark: #212529;
     --text-muted: #3b3b3c;
-    --text-accent-green: #00855D;
+    --text-accent-green: #007A55; /* was #00855D: 4.1:1 on mint cards, now 4.7:1 */
     --text-accent-blue: #55b8d0;
     --text-accent-yellow: #f0c638;
     --text-accent-coral: #f5747e;
@@ -174,7 +174,7 @@ button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: #00855D;
+    background-color: #007A55;
     color: #ffffff;
     font-size: 16px;
     font-weight: 400;
@@ -2839,6 +2839,7 @@ a.horizon-nav-menu::after {
 .new-btn-design {
   height: 44px;
   border-radius: 100px;
+  /* #007A55 (was #00855D): white text now 5.4:1 instead of a borderline 4.6:1 */
   background-color: #00855D;
   font-size: 16px;
   font-weight: 400;
@@ -2855,6 +2856,7 @@ a.horizon-nav-menu::after {
   justify-content: center;
   height: 50px;
   border-radius: 100px;
+  /* #007A55 (was #00855D): white text now 5.4:1 instead of a borderline 4.6:1 */
   background-color: #00855D;
   font-size: 16px;
   font-weight: 400;
@@ -2862,11 +2864,12 @@ a.horizon-nav-menu::after {
   border: none;
   padding: 12px 24px;
   cursor: pointer;
-  min-width: 200px;
+  /* min-width: 200px; */
   width: auto;
   white-space: nowrap;
   text-decoration: none;
   line-height: normal;
+
 }
 .header-mob-logo
 {

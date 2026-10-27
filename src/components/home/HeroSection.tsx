@@ -107,7 +107,7 @@ const HeroSection: React.FC<HerSectionProps> = ({ openModal }) => {
             <div className='button-area-main'>
               <button
                 // prefetch={true}
-                className='new-btn-design-full mt-[15px]'
+                className='new-btn-design-full mt-[15px] font-inter min-w-[253px] min-h-[50px]'
                 // href="#"
                 // scroll={false}
                 onClick={openModal}

@@ -105,9 +105,9 @@ const ShopifyStoreSection = () => {
                 className='shopifyX-image object-contain object-center md:object-cover md:object-[30%] xl:object-contain xl:object-center'
               />
             </div>
-            <h2 className=' font-source md:font-[600] font-[700] text-title md:text-[38px] text-[23px] mb-6 md:leading-[45px] leading-[normal] text-accent-green mobile-margin-bottom mb-[15px]'>
-              <span className='text-accent-green'>400+</span> Shopify Stores
-              <span className ="block">& <span className='text-accent-green'>100+</span> Shopify Plus Stores </span>
+            <h2 className=' font-source md:font-[600] font-[700] md:text-[38px] text-[23px] mb-6 md:leading-[45px] leading-[normal] text-[#00855D] mobile-margin-bottom mb-[15px]'>
+              <span className=''>400+</span> Shopify Stores
+              <span className ="block">& <span className=''>100+</span> Shopify Plus Stores </span>
             </h2>
             {/* <p className="text-[16px] leading-[26px] text-title md:leading-relaxed mb-8"> */}
             <p className='lg:text-[19px] md:max-w-[516px] md:text-[16px] text-[16px] leading-[26px] md:p-0 px-[10px] text-[#222B32] md:leading-relaxed'>
@@ -124,7 +124,7 @@ const ShopifyStoreSection = () => {
             <div className='md:pb-[15px]'>
               <Link
                 prefetch={true}
-                className='new-btn-design-full mt-[35px]'
+                className='new-btn-design-full mt-[35px] font-inter min-w-[190px] min-h-[50px]'
                 href="#" /* original href: "/shopify" */
                 scroll={true}
               >
@@ -175,7 +175,7 @@ const ShopifyStoreSection = () => {
                 className="shopifyX-image object-contain object-center md:object-cover md:object-[30%] xl:object-contain xl:object-center"
               />
             </div> */}
-            <h2 className=' font-source md:font-[600] font-[700] text-title md:text-[38px] text-[23px] mb-6 md:leading-[45px] leading-[normal] text-accent-green mobile-margin-bottom mb-[15px]'>
+            <h2 className=' font-source md:font-[600] font-[700] md:text-[38px] text-[23px] mb-6 md:leading-[45px] leading-[normal] text-[#00855D] mobile-margin-bottom mb-[15px]'>
               Building Scalable SaaS
               <span className="block">
               Platforms that grow with you
@@ -224,12 +224,13 @@ const ShopifyStoreSection = () => {
                 className="shopifyX-image object-contain object-center md:object-cover md:object-[30%] xl:object-contain xl:object-center"
               />
             </div> */}
-            <h2 className=' font-source md:font-[600] font-[700] text-title md:text-[38px] text-[23px] mb-6 md:leading-[45px] leading-[normal] text-accent-green mobile-margin-bottom mb-[15px]'>
+            <h2 className=' font-source md:font-[600] font-[700] md:text-[38px] text-[23px] mb-6 md:leading-[45px] leading-[normal] text-[#00855D] mobile-margin-bottom mb-[15px]'>
               {/* <span className="text-accent-green">200+</span> Shopify Stores
               <br />& <span className="text-accent-green">50+</span> Shopify Plus Stores */}
               Transforming Businesses
-              <br />
+              <span className="block">
               with AI and Automation
+              </span>
             </h2>
             {/* <p className="text-[16px] leading-[26px] text-title md:leading-relaxed mb-8"> */}
             {/* <p className='text-[16px] leading-[26px] md:p-0 px-[10px] text-title md:leading-relaxed'> */}

@@ -188,12 +188,11 @@ button {
     text-decoration: none;
     transition: background-color 0.2s ease;
   }
-  .new-btn-design:hover {
-    /* WCAG 1.4.3: white text on #006B4B = 6.55:1 (was #009966 = 3.65:1) */
-    background-color: #007A55;
+  /* .new-btn-design:hover {
+    background-color: #00855D;
     color: #ffffff;
     text-decoration: none;
-  }
+  } */
   .new-btn-design:disabled,
   .new-btn-design[disabled] {
     opacity: 0.65;

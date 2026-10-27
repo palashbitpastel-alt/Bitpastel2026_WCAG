@@ -739,7 +739,7 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
               className="pt-6 lg:block hidden"
               style={{ borderTop: '1px solid rgba(255, 255, 255, 0.1)' }}
             >
-              <p className="text-center text-[#FCFFF9] lg:text-[12px] text-[12px] font-roboto font-[400] lg:max-w-[100%] max-w-[80%] mx-auto">
+              <p className="text-center text-[#FCFFF9] lg:text-[14px] text-[12px] font-roboto font-[400] lg:max-w-[100%] max-w-[80%] mx-auto">
                 Copyright © Bitpastel Solution Private Limited {new Date().getFullYear()} | All Rights Reserved |{' '}
                 <Link prefetch={true} href="#" /* original href: "/privacy-policy" */>
                   Privacy Policy

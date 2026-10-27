@@ -195,10 +195,10 @@ const ServicesSection = () => {
   return (
     <section id="services" className="md:pt-[90px] pt-[60px]">
       <div className="container mx-auto px-4 overflow-hidden">
-        <h2 className=" md:font-[600] font-[700] font-source text-center text-title md:mb-0 mb-3 title">
+        <h2 className=" md:leading-[1] font-source md:font-[600] font-[700] text-center text-title title md:mb-[40px] mb-3">
           Our Services
         </h2>
-        <div className="grid grid-cols-2 lg:grid-cols-3 md:grid-cols-2 py-[40px] gap-x-[24px] gap-y-[24px] mx-auto our-services-wrapper">
+        <div className="grid grid-cols-2 lg:grid-cols-3 md:grid-cols-2 pb-[40px] gap-x-[24px] gap-y-[24px] mx-auto our-services-wrapper">
           {servicesData.map((service, index) => (
             <div
               key={service.id}
@@ -225,7 +225,7 @@ const ServicesSection = () => {
                   <Image src={service.icon} alt={service.iconAlt ?? ''}  width={36} height={36} />
                 </div>
                 <h3
-                  className={`font-[500] md:font-bold md:text-title md:mb-[15px] mb-0 md:h-auto h-[60px] md:leading-[normal] md:text-[22px] text-[16px] leading-[22px] md:px-0 px-[15px]  content-center ${service.mobileTextColor}`}
+                  className={`font-[500] md:font-[600] md:text-title md:mb-[15px] mb-0 md:h-auto h-[60px] md:leading-[normal] md:text-[22px] text-[16px] leading-[22px] md:px-0 px-[15px]  content-center ${service.mobileTextColor}`}
                 >
                   {service.title}
                 </h3>

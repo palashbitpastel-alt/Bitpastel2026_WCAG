@@ -221,7 +221,7 @@ const CultureSection = () => {
   return (
     <section id="culture" className="md:pt-[90px] pt-[64px] bg-[#ffffff]">
       <div className="container mx-auto px-4">
-        <h2 className="font-source md:font-[600] font-[700] text-center text-title title md:mb-8 mb-4">
+        <h2 className=" md:leading-[1] font-source md:font-[600] font-[700] text-center text-title title md:mb-[40px] mb-3">
           {/* Why work with us? */}
           {/* Our Commitment to You */}
           The Value We Bring
@@ -250,7 +250,7 @@ const CultureSection = () => {
                     className=""
                   />
                   <h3
-                    className={`font-bold font-source md:text-[22px] text-[20px] leading-[1] ${feature.mobileTextColor} md:text-inherit`}
+                    className={`font-bold font-source md:text-[22px] text-[20px] leading-[1] ${feature.mobileTextColor} md:text-[#123B42]`}
                   >
                     {feature.title}
                   </h3>

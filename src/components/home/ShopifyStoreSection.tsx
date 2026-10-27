@@ -110,7 +110,7 @@ const ShopifyStoreSection = () => {
               <span className ="block">& <span className=''>100+</span> Shopify Plus Stores </span>
             </h2>
             {/* <p className="text-[16px] leading-[26px] text-title md:leading-relaxed mb-8"> */}
-            <p className='lg:text-[19px] md:max-w-[516px] md:text-[16px] text-[16px] leading-[26px] md:p-0 px-[10px] text-[#222B32] md:leading-relaxed'>
+            <p className='lg:text-[18px] md:max-w-[500px] md:text-[16px] text-[16px] leading-[26px] md:p-0 px-[10px] text-[#222B32] md:leading-relaxed'>
               We have helped 250+ brands grow from scratch to $1M GMV.
               <span className='md:inline-block inline md:pl-0 pl-[5px]' />
               At Bitpastel, we build differentiated, fast, and scalable online
@@ -182,7 +182,7 @@ const ShopifyStoreSection = () => {
               </span>
             </h2>
             {/* <p className="text-[16px] leading-[26px] text-title md:leading-relaxed mb-8"> */}
-            <p className='md:text-[19px] md:max-w-[516px] text-[16px] leading-[26px] md:p-0 px-[10px] text-[#222B32] md:leading-relaxed'>
+            <p className='md:text-[18px] md:max-w-[500px] text-[16px] leading-[26px] md:p-0 px-[10px] text-[#222B32] md:leading-relaxed'>
               {/* We have helped 100+ brands grow from scratch to $1M GMV.
               <span className="md:block inline md:pl-0 pl-[5px]" />
               At Bitpastel, we build differentiated, fast, and scalable online
@@ -234,7 +234,7 @@ const ShopifyStoreSection = () => {
             </h2>
             {/* <p className="text-[16px] leading-[26px] text-title md:leading-relaxed mb-8"> */}
             {/* <p className='text-[16px] leading-[26px] md:p-0 px-[10px] text-title md:leading-relaxed'> */}
-            <p className='md:text-[19px] md:max-w-[516px] text-[16px] leading-[26px] md:p-0 px-[10px] text-[#222B32] md:leading-relaxed'>
+            <p className='md:text-[18px] md:max-w-[500px] text-[16px] leading-[26px] md:p-0 px-[10px] text-[#222B32] md:leading-relaxed'>
               {/* We have helped 100+ brands grow from scratch to $1M GMV.
               <span className="md:block inline md:pl-0 pl-[5px]" />
               At Bitpastel, we build differentiated, fast, and scalable online

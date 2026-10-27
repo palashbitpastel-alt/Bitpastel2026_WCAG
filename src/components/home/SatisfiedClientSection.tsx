@@ -42,7 +42,7 @@ const SatisfiedClientSection = () => {
   return (
     <section className="md:pt-[100px] pt-[64px]" id='client'>
       <div className="container mx-auto px-4">
-        <h2 className=" md:leading-[1] font-source md:font-[600] font-[700] text-center text-title title md:mb-8 mb-3">
+        <h2 className=" md:leading-[1] font-source md:font-[600] font-[700] text-center text-title title md:mb-[40px] mb-3">
           Satisfied Clientele Worldwide
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-[1fr] md:gap-[28px] gap-4 items-center">

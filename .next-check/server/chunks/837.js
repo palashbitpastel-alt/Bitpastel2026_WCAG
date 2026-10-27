@@ -1,1 +1,0 @@
-"use strict";exports.id=837,exports.ids=[837],exports.modules={8837:(e,t,m)=>{m.r(t),m.d(t,{default:()=>s});var p=m(326);m(7577);let s=()=>p.jsx("section",{className:"bg-no-repeat common-banner bg-cover md:bg-top bg-left md:min-h-[360px] md:max-h-[360px] min-h-[135px] max-h-[135px] pt-[45px]"})}};

@@ -378,7 +378,7 @@ const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
       <div className="flex-grow">
         <div className={`${!isMobile ? 'testimonial-card-content min-h-[70px]' : ''}`}>
           <p
-            className={`${!isMobile ? 'clamp-3' : ''} ${isMobile ? 'text-[12px]' : 'text-[16px] leading-[26px]'}`}
+            className={`text-[#222B32] ${!isMobile ? 'clamp-3' : ''} ${isMobile ? 'text-[12px]' : 'text-[16px] leading-[26px]'}`}
             onTransitionEnd={(e) => {
               if (e.propertyName === 'max-height' && closingCards.has(testimonial.id)) {
                 setClosingCards((prev) => {
@@ -416,7 +416,7 @@ const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
   return (
     <section id="stories" className="md:pt-[90px] pt-[55px]">
       <div className="container mx-auto px-4">
-        <h2 className="font-source md:font-[600] font-[700] text-center text-title title md:mb-8 mb-3">
+        <h2 className=" md:leading-[1] font-source md:font-[600] font-[700] text-center text-title title md:mb-[40px] mb-3">
           Stories
         </h2>
 

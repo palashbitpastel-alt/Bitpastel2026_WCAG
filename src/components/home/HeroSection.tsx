@@ -7,7 +7,8 @@ import Link from 'next/link';
 import BannerDesktop from '../../../public/images/banner_new02.webp';
 import BannerMobile from '../../../public/images/banner-for-mobile.webp';
 import CheckIcon from '../../../public/images/img_materialsymbolscheckrounded.svg';
-import CheckIconMobile from '../../../public/images/img_materialsymbolscheckrounded_teal_300.svg';
+import CheckIconMobile from '../../../public/images/new_check_icon.svg';
+// import CheckIconMobile from '../../../public/images/img_materialsymbolscheckrounded_teal_300.svg';
 
 interface HerSectionProps {
   openModal?: () => void;

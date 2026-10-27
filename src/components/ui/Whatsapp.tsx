@@ -57,9 +57,8 @@ const WhatsAppBubble = () => {
         prefetch
         rel="noopener noreferrer"
         aria-label="Chat with us on WhatsApp (opens in a new tab)"
-        href={
-          'https://api.whatsapp.com/send/?phone=919830566248&text=Hey...+I+would+like+to+have+a+quick+chat+with+you.&type=phone_number&app_absent=0'
-        }
+        href="#"
+        // original href: 'https://api.whatsapp.com/send/?phone=919830566248&text=Hey...+I+would+like+to+have+a+quick+chat+with+you.&type=phone_number&app_absent=0'
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

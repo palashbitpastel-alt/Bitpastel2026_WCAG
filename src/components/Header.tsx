@@ -115,7 +115,8 @@ const Header = ({ forceModalOpen = false, onModalClose }: HomePageProps) => {
       if (e) e.preventDefault()
 
       // Immediate navigation without blocking
-      router.push(path)
+      // Home-page-only showcase: navigation disabled
+      // router.push(path)
     },
     [router],
   )
@@ -240,7 +241,8 @@ const Header = ({ forceModalOpen = false, onModalClose }: HomePageProps) => {
         window.scrollTo({ top: 0, behavior: "smooth" })
       } else {
         // Direct navigation without additional logic
-        router.push("/culture")
+        // Home-page-only showcase: navigation disabled
+        // router.push("/culture")
       }
     },
     [pathname, router],
@@ -250,6 +252,8 @@ const Header = ({ forceModalOpen = false, onModalClose }: HomePageProps) => {
   // the URL as /<scope>/free-quote (scope picked from the current page) without
   // triggering a Next.js navigation, so the current page stays mounted under it.
   const handleChatClick = useCallback(() => {
+    // Home-page-only showcase: free quote modal disabled
+    return
     if (typeof window !== "undefined") {
       const currentUrl =
         window.location.pathname + window.location.search + window.location.hash
@@ -367,7 +371,7 @@ const Header = ({ forceModalOpen = false, onModalClose }: HomePageProps) => {
               </button>
               <Link
                 prefetch={true}
-                href="/culture"
+                href="#" /* original href: "/culture" */
                 onClick={handleCultureClick}
                 className={`nav-dark inline-flex items-center justify-center h-[44px] px-[10px] rounded-[4px] ${pathname === "/culture" ? "is-active" : ""} `}
                 style={{ fontFamily: "Roboto", fontSize: "18px", fontWeight: 400, lineHeight: "100%" }}
@@ -412,6 +416,7 @@ const Header = ({ forceModalOpen = false, onModalClose }: HomePageProps) => {
         </div>
       </header>
 
+      {/* Home-page-only showcase: free quote modal disabled
       <Modal
         open={isModalOpen}
         setIsModalOpen={((value) => {
@@ -425,7 +430,7 @@ const Header = ({ forceModalOpen = false, onModalClose }: HomePageProps) => {
             handleModalClose()
           }
         }) as React.Dispatch<React.SetStateAction<boolean>>}
-      />
+      /> */}
     </>
   )
 }

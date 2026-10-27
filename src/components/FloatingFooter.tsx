@@ -124,6 +124,8 @@ const FloatingFooter = () => {
   // page) without a Next.js navigation.
   const handleContactClick = useCallback((e: React.MouseEvent) => {
     e.preventDefault();
+    // Home-page-only showcase: free quote modal disabled
+    return;
     if (typeof window === 'undefined') return;
     if (!isFreeQuotePath(window.location.pathname)) {
       const prev =
@@ -176,7 +178,7 @@ const FloatingFooter = () => {
 
         {/* Culture */}
         <div className="nav-item flex flex-col items-center">
-          <Link href="/culture" className="flex flex-col items-center">
+          <Link href="#" /* original href: "/culture" */ className="flex flex-col items-center">
             <Image src={navIcon('culture', 'culture')} alt="" aria-hidden="true" width={22} height={22} className="h-[22px] w-[22px]" />
             <span className={textCls('culture')}>Culture</span>
           </Link>
@@ -184,7 +186,7 @@ const FloatingFooter = () => {
 
         {/* Careers */}
         <div className="nav-item flex flex-col items-center">
-          <Link href="/careers" className="flex flex-col items-center">
+          <Link href="#" /* original href: "/careers" */ className="flex flex-col items-center">
             <Image src={navIcon('career', 'careers')} alt="" aria-hidden="true" width={22} height={22} className="h-[22px] w-[22px]" />
             <span className={textCls('careers')}>Careers</span>
           </Link>

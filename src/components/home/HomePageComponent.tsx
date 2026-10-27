@@ -15,6 +15,8 @@ const HomePageComponent = () => {
   // "Chat with Us" button), reflecting the URL as /free-quote without a
   // Next.js navigation. Mirrors FloatingFooter.handleContactClick.
   const openModal = () => {
+    // Home-page-only showcase: free quote modal disabled
+    return;
     if (typeof window === 'undefined') return;
     const isFreeQuote = window.location.pathname === '/free-quote';
     if (!isFreeQuote) {

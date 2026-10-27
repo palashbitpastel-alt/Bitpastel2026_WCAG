@@ -229,11 +229,11 @@ const CultureSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-[auto_60%] md:grid-cols-1 items-center md:gap-[24px] gap-8">
 
 
-<div className="work-with-us-features md:border md:border-[#BDE0CE] rounded-[40px] flex flex-col justify-between h-full p-5 grid grid-cols-1 md:grid-cols-1 xl:gap-10 md:gap-6 gap-4">
+<div className="work-with-us-features md:border md:border-[#BDE0CE] rounded-[40px] flex flex-col justify-between h-full p-[30px] grid grid-cols-1 md:grid-cols-1 xl:gap-10 md:gap-6 gap-4">
             {features.map((feature, index) => (
               <div
                 key={feature.id}
-                className={`md:content-center relative md:after:content-[''] after:absolute after:bottom-[-7px] after:left-0 after:w-full after:border-b after:border-[#29996A4D] last:after:hidden rounded-[10px] transition-all duration-300 ease-in-out md:overflow-visible overflow-hidden
+                className={`md:content-center relative md:after:content-[''] after:absolute after:bottom-[-14px] after:left-0 after:w-full after:border-b after:border-[#29996A4D] last:after:hidden rounded-[10px] transition-all duration-300 ease-in-out md:overflow-visible overflow-hidden
                   md:bg-transparent md:p-0 md:rounded-none
                   ${feature.mobileBg} p-5
                 `}

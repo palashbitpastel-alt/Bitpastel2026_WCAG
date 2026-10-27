@@ -1,6 +1,14 @@
 @import './tailwind.css';
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;500;600;700;900&display=swap');
 
+/* next/image inlines color:transparent on every <img> to hide alt text while
+   loading. Contrast checkers read that as invisible text, and if an image
+   fails to load the alt text should be readable, so restore the text colour
+   for images that carry meaningful alt text. */
+img[alt]:not([alt='']) {
+  color: inherit !important;
+}
+
 @media screen and (min-width: 1536px) {
   .container {
     max-width: 1366px !important;
@@ -1011,28 +1019,38 @@ margin-top:0 !important;
   bottom: 35px;
   left: 15px;
 }
-@media screen and (max-width: 1537px) and (min-width: 1281px) {
+@media screen and (max-width: 1560px) and (min-width: 1441px) {
   .shopify_badge_section {
     position: absolute;
-    bottom: unset;
-    left: 5px;
-    top: calc(100% - 130px);
+    bottom: 35px;
   }
+}
+@media screen and (max-width: 1440px) and (min-width: 1281px) {
+  .shopify_badge_section {
+        left: 5px;
+        max-width: 120px;
+        bottom: 70px;
+    }
 }
 @media screen and (max-width: 1280px) {
   .shopify_badge_section {
-    top: calc(100% - 100px);
     max-width: 100px;
+    bottom: 50px;
   }
 }
 @media screen and (max-width: 767px) {
   .shopify_badge_section {
-    position: absolute;
-    top:unset;
     bottom: 10px;
     left: 5px;
-    max-width: unset;
   }
+}
+@media screen and (max-width: 540px) {
+  .shopify_badge_section {
+    bottom: 5px;
+    max-width: 65px;
+  }
+}
+@media screen and (max-width: 767px) {
   #culture .work-with-us-features .relative:nth-child(1) ul li::before {
     background: #3ecb90;
   }

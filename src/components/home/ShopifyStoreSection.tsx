@@ -116,18 +116,16 @@ const ShopifyStoreSection = () => {
               At Bitpastel, we build differentiated, fast, and scalable online
               <span className='md:inline-block inline md:pl-0 pl-[5px]' />
               stores to help you provide the best customer experience!
-            </p>
-            <p className='lg:text-[19px] md:max-w-[516px] md:text-[16px] text-[16px] leading-[26px] md:p-0 px-[10px] text-[#222B32] md:leading-relaxed'>
               We also deliver speed and performance optimization that
               <span className='md:inline-block inline md:pl-0 pl-[5px]' />
               contributes to better conversion rates.
             </p>
 
-            <div className='mt-auto md:pb-[15px]'>
+            <div className='md:pb-[15px]'>
               <Link
                 prefetch={true}
-                className='new-btn-design-full mt-[40px]'
-                href="/shopify"
+                className='new-btn-design-full mt-[35px]'
+                href="#" /* original href: "/shopify" */
                 scroll={true}
               >
                 Get Started
@@ -140,7 +138,7 @@ const ShopifyStoreSection = () => {
           <div className='lg:w-1/2  lg:pr-[20px] lg:pt-[20px] lg:pb-[20px] w-full lg:order-last order-first xl:h-auto md:h-[-webkit-fill-available] h-auto tab-padding relative'>
             <div className='shopify_badge_section'>
               <Link
-                href='https://www.shopify.com/partners/directory/partner/bitpastel3'
+                href="#" /* original href: "https://www.shopify.com/partners/directory/partner/bitpastel3" */
                 target='_blank'
                 className='inline-block rounded-[4px]'
               >

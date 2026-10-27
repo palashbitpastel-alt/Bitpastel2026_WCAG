@@ -1,12 +1,18 @@
 import React, { useEffect } from 'react';
 import Image from 'next/image';
 import { useState } from 'react';
-import AiIcon from '../../../public/images/AI icon 1.svg';
-import ShopifyIcon from '../../../public/images/img_hugeiconsshopify.svg';
-import WebDevIcon from '../../../public/images/img_icoutlinelaptop.svg';
-import DesignCreativeIcon from '../../../public/images/img_iconoirdesignnib.svg';
-import EcommerceIcon from '../../../public/images/img_bicartplus.svg';
-import SaasIcon from '../../../public/images/img_lineiconscloudiot2.svg';
+import AiIcon from '../../../public/images/Ai_new_icon.svg';
+import ShopifyIcon from '../../../public/images/shopify_icon.svg';
+import WebDevIcon from '../../../public/images/laptop_icon.svg';
+import DesignCreativeIcon from '../../../public/images/design_icon.svg';
+import EcommerceIcon from '../../../public/images/cartPlus_icon.svg';
+import SaasIcon from '../../../public/images/custom_saas_icon.svg';
+// import AiIcon from '../../../public/images/AI icon 1.svg';
+// import ShopifyIcon from '../../../public/images/img_hugeiconsshopify.svg';
+// import WebDevIcon from '../../../public/images/img_icoutlinelaptop.svg';
+// import DesignCreativeIcon from '../../../public/images/img_iconoirdesignnib.svg';
+// import EcommerceIcon from '../../../public/images/img_bicartplus.svg';
+// import SaasIcon from '../../../public/images/img_lineiconscloudiot2.svg';
 
 
 
@@ -219,7 +225,7 @@ const ServicesSection = () => {
                   <Image src={service.icon} alt={service.iconAlt ?? ''}  width={36} height={36} />
                 </div>
                 <h3
-                  className={`font-[500] md:font-bold md:text-title md:mb-[15px] mb-0 md:h-auto h-[60px] md:leading-[normal] md:text-[22px] text-[16px] leading-[22px] md:px-0 px-[17px]  content-center ${service.mobileTextColor}`}
+                  className={`font-[500] md:font-bold md:text-title md:mb-[15px] mb-0 md:h-auto h-[60px] md:leading-[normal] md:text-[22px] text-[16px] leading-[22px] md:px-0 px-[15px]  content-center ${service.mobileTextColor}`}
                 >
                   {service.title}
                 </h3>

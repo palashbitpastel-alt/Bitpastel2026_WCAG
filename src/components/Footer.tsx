@@ -136,7 +136,8 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
       e.preventDefault();
       if (isNavigating.current) return;
       isNavigating.current = true;
-      router.push(path);
+      // Home-page-only showcase: navigation disabled
+      // router.push(path);
       isNavigating.current = false;
     },
     [router]
@@ -238,12 +239,15 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
 
 
   const openModal = () => {
-    setIsModalOpen(true)
+    // Home-page-only showcase: free quote modal disabled
+    // setIsModalOpen(true)
   }
 
   // Open the Free Quote modal and reflect the URL as /free-quote in place
   // (matches the desktop "Chat with Us" UX in Header).
   const handleContactClick = useCallback(() => {
+    // Home-page-only showcase: free quote modal disabled
+    return;
     if (typeof window !== 'undefined') {
       const currentUrl =
         window.location.pathname + window.location.search + window.location.hash;
@@ -322,7 +326,7 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                 </p>
                 <div className="text-[16px] lg:mb-0 mb-[1rem] leading-relaxed block">
                   <a
-                    href="https://www.google.com/maps/place/Technopolis+Building/@22.5797323,88.4351652,17z/data=!4m14!1m7!3m6!1s0x3a0275a701908349:0x8d6c12852bc079bc!2sTechnopolis+Building!8m2!3d22.5797323!4d88.4377401!16s%2Fg%2F11hblq2494!3m5!1s0x3a0275a701908349:0x8d6c12852bc079bc!8m2!3d22.5797323!4d88.4377401!16s%2Fg%2F11hblq2494?entry=ttu"
+                    href="#" /* original href: "https://www.google.com/maps/place/Technopolis+Building/@22.5797323,88.4351652,17z/data=!4m14!1m7!3m6!1s0x3a0275a701908349:0x8d6c12852bc079bc!2sTechnopolis+Building!8m2!3d22.5797323!4d88.4377401!16s%2Fg%2F11hblq2494!3m5!1s0x3a0275a701908349:0x8d6c12852bc079bc!8m2!3d22.5797323!4d88.4377401!16s%2Fg%2F11hblq2494?entry=ttu" */
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -362,7 +366,7 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                   <div className="flex lg:space-x-4 space-x-6 pt-2 lg:pt-0 social-media-wrapper">
                     <div className="w-8 h-8 border border-white rounded-full flex items-center justify-center hover:bg-primary-teal transition-background-color cursor-pointer">
                       <a
-                        href="https://www.facebook.com/bitpastel"
+                        href="#" /* original href: "https://www.facebook.com/bitpastel" */
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center justify-center w-full h-full rounded-full"
@@ -377,7 +381,7 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                     </div>
                     <div className="w-8 h-8 border border-white rounded-full flex items-center justify-center hover:bg-primary-teal transition-background-color cursor-pointer">
                       <a
-                        href="https://www.instagram.com/bitpastel.ai/"
+                        href="#" /* original href: "https://www.instagram.com/bitpastel.ai/" */
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center justify-center w-full h-full rounded-full"
@@ -392,7 +396,7 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                     </div>
                     <div className="w-8 h-8 border border-white rounded-full flex items-center justify-center hover:bg-primary-teal transition-background-color cursor-pointer">
                       <a
-                        href="https://www.linkedin.com/company/bitpastel"
+                        href="#" /* original href: "https://www.linkedin.com/company/bitpastel" */
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center justify-center w-full h-full rounded-full"
@@ -475,7 +479,7 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                     <div className="space-y-4 text-[16px]">
                       <Link
                         prefetch={true}
-                        href="/culture"
+                        href="#" /* original href: "/culture" */
                         onClick={(e) => {
                           if (pathname === '/culture') {
                             e.preventDefault();
@@ -497,7 +501,7 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                       </div>
                       <Link
                         prefetch={true}
-                        href="/careers"
+                        href="#" /* original href: "/careers" */
                         onClick={(e) => {
                           if (pathname === '/careers') {
                             e.preventDefault();
@@ -513,7 +517,7 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                       </Link>
                       <Link
                         prefetch={true}
-                        href="/partners"
+                        href="#" /* original href: "/partners" */
                         onClick={(e) => {
                           if (pathname === '/partners') {
                             e.preventDefault();
@@ -585,7 +589,7 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                     <div className="block text-[13px]">
                       <Link
                         prefetch={true}
-                        href="/culture"
+                        href="#" /* original href: "/culture" */
                         onClick={(e) => {
                           if (pathname === '/culture') {
                             e.preventDefault();
@@ -609,7 +613,7 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                     <div className="block text-[13px]">
                       <Link
                         prefetch={true}
-                        href="/careers"
+                        href="#" /* original href: "/careers" */
                         onClick={(e) => {
                           if (pathname === '/careers') {
                             e.preventDefault();
@@ -627,7 +631,7 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                     <div className="block text-[13px]">
                       <Link
                         prefetch={true}
-                        href="/partners"
+                        href="#" /* original href: "/partners" */
                         onClick={(e) => {
                           if (pathname === '/partners') {
                             e.preventDefault();
@@ -649,7 +653,7 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                 <div className="lg:hidden flex gap-[30px] pt-[5px] social-media-wrapper">
                   <div className="w-8 h-8 border border-white rounded-full flex items-center justify-center hover:bg-primary-teal transition-background-color cursor-pointer">
                     <a
-                      href="https://www.facebook.com/bitpastel"
+                      href="#" /* original href: "https://www.facebook.com/bitpastel" */
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center justify-center w-full h-full rounded-full"
@@ -664,7 +668,7 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                   </div>
                   <div className="w-8 h-8 border border-white rounded-full flex items-center justify-center hover:bg-primary-teal transition-background-color cursor-pointer">
                     <a
-                      href="https://www.instagram.com/bitpastel.ai/"
+                      href="#" /* original href: "https://www.instagram.com/bitpastel.ai/" */
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center justify-center w-full h-full rounded-full"
@@ -679,7 +683,7 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                   </div>
                   <div className="w-8 h-8 border border-white rounded-full flex items-center justify-center hover:bg-primary-teal transition-background-color cursor-pointer">
                     <a
-                      href="https://www.linkedin.com/company/bitpastel"
+                      href="#" /* original href: "https://www.linkedin.com/company/bitpastel" */
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center justify-center w-full h-full rounded-full"
@@ -731,7 +735,7 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
                   <br />
                   All Rights Reserved
                   <span className="px-2">|</span>
-                  <Link prefetch={true} href="/privacy-policy">
+                  <Link prefetch={true} href="#" /* original href: "/privacy-policy" */>
                     Privacy Policy
                   </Link>
                 </p>
@@ -743,7 +747,7 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
             >
               <p className="text-center lg:text-[13px] text-[13px] font-roboto font-[300] lg:max-w-[100%] max-w-[80%] mx-auto">
                 Copyright © Bitpastel Solution Private Limited {new Date().getFullYear()} | All Rights Reserved |{' '}
-                <Link prefetch={true} href="/privacy-policy">
+                <Link prefetch={true} href="#" /* original href: "/privacy-policy" */>
                   Privacy Policy
                 </Link>
               </p>
@@ -849,7 +853,7 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
             >
               <Link
                 prefetch={true}
-                href="/culture"
+                href="#" /* original href: "/culture" */
                 onClick={(e) => {
                   if (pathname === '/culture') {
                     e.preventDefault();
@@ -877,7 +881,7 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
             >
               <Link
                 prefetch={true}
-                href="/careers"
+                href="#" /* original href: "/careers" */
                 onClick={(e) => {
                   if (pathname === '/careers') {
                     e.preventDefault();
@@ -919,6 +923,7 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
           </div>
         </div>
       </footer>
+      {/* Home-page-only showcase: free quote modal disabled
       <Modal
         open={isModalOpen}
         setIsModalOpen={((value) => {
@@ -932,7 +937,7 @@ const Footer = ({forceModalOpen = false, onModalClose}: HomePageProps) => {
             handleModalClose();
           }
         }) as React.Dispatch<React.SetStateAction<boolean>>}
-      />
+      /> */}
       <Whatsapp />
     </>
   );

@@ -156,7 +156,7 @@ const TechPartnerSection = () => {
             <h2 className=" lg:leading-[45px] leading-[normal] font-source font-[600] text-[#123B42] md:text-[38px]  text-title md:mb-8 mb-5 ">
               <span className="font-semibold">Why we are the best </span>
              <span className = "block">
-              <span className="font-[700] text-[#00855D]">Tech Partner</span>
+              <span className="font-[700] text-[#007A56]">Tech Partner</span>
               <span className="font-semibold"> out there</span>
               </span>
             </h2>

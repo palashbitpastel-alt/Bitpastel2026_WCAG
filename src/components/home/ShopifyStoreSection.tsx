@@ -105,7 +105,7 @@ const ShopifyStoreSection = () => {
                 className='shopifyX-image object-contain object-center md:object-cover md:object-[30%] xl:object-contain xl:object-center'
               />
             </div>
-            <h2 className=' font-source md:font-[600] font-[700] md:text-[38px] text-[23px] mb-6 md:leading-[45px] leading-[normal] text-[#00855D] mobile-margin-bottom mb-[15px]'>
+            <h2 className=' font-source md:font-[600] font-[700] md:text-[38px] text-[23px] mb-6 md:leading-[45px] leading-[normal] text-[#007A56] mobile-margin-bottom mb-[15px]'>
               <span className=''>400+</span> Shopify Stores
               <span className ="block">& <span className=''>100+</span> Shopify Plus Stores </span>
             </h2>
@@ -175,7 +175,7 @@ const ShopifyStoreSection = () => {
                 className="shopifyX-image object-contain object-center md:object-cover md:object-[30%] xl:object-contain xl:object-center"
               />
             </div> */}
-            <h2 className=' font-source md:font-[600] font-[700] md:text-[38px] text-[23px] mb-6 md:leading-[45px] leading-[normal] text-[#00855D] mobile-margin-bottom mb-[15px]'>
+            <h2 className=' font-source md:font-[600] font-[700] md:text-[38px] text-[23px] mb-6 md:leading-[45px] leading-[normal] text-[#007A56] mobile-margin-bottom mb-[15px]'>
               Building Scalable SaaS
               <span className="block">
               Platforms that grow with you
@@ -224,7 +224,7 @@ const ShopifyStoreSection = () => {
                 className="shopifyX-image object-contain object-center md:object-cover md:object-[30%] xl:object-contain xl:object-center"
               />
             </div> */}
-            <h2 className=' font-source md:font-[600] font-[700] md:text-[38px] text-[23px] mb-6 md:leading-[45px] leading-[normal] text-[#00855D] mobile-margin-bottom mb-[15px]'>
+            <h2 className=' font-source md:font-[600] font-[700] md:text-[38px] text-[23px] mb-6 md:leading-[45px] leading-[normal] text-[#007A56] mobile-margin-bottom mb-[15px]'>
               {/* <span className="text-accent-green">200+</span> Shopify Stores
               <br />& <span className="text-accent-green">50+</span> Shopify Plus Stores */}
               Transforming Businesses

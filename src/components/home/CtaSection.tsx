@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-
+import BannerDesktop from '../../../public/images/cta_banner_new.webp';
 interface HerSectionProps {
   openModal?: () => void;
 }
@@ -14,7 +14,8 @@ const CtaSection: React.FC<HerSectionProps> = ({ openModal }) => {
           {/* Background for desktop */}
           <div className="hidden md:block w-full md:absolute md:inset-0 h-full z-0">
             <Image
-              src="/images/CTA.webp"
+              // src="/images/CTA.webp"
+              src={BannerDesktop}
               alt="Smiling team members working together in an office"
               fill
               quality={60}

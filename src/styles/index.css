@@ -573,7 +573,7 @@ img[alt]:not([alt='']) {
   }
 
   .collapsible-element {
-    width: calc(100% + 30px);
+    width: calc(100% + 60px);
     height: 100%;
     position: absolute;
     top: 0;
@@ -594,27 +594,27 @@ img[alt]:not([alt='']) {
        panel is visible the whole way — you actually see it slide out and slide
        back, fading in/out as it moves. Equal timing keeps open/close consistent. */
     transition: left 0.45s ease, opacity 0.45s ease, visibility 0s linear 0.45s;
-    border-radius: 8px;
+    border-radius: 20px;
     align-content: center;
   }
   /* Odd children (1, 3, 5, 7...) — slide content left → right */
   .our-services-wrapper .card-element.active:nth-child(odd) .collapsible-element {
-    left: calc(100% - 14px) !important;
+    left: calc(100% - 35px) !important;
     opacity: 1;
     visibility: visible;
     transition-delay: 0s;
     pointer-events: auto;
-    padding-left: 30px;
+    padding-left: 60px;
   }
 
   /* Even children (2, 4, 6, 8...) — slide content right → left */
   .our-services-wrapper .card-element.active:nth-child(even) .collapsible-element {
-    left: calc(-100% - 16px) !important;
-    opacity: 1;
-    visibility: visible;
-    transition-delay: 0s;
-    pointer-events: auto;
-    padding-right: 30px;
+left: calc(-100% - 25px) !important;
+        opacity: 1;
+        visibility: visible;
+        transition-delay: 0s;
+        pointer-events: auto;
+        padding-right: 60px;
   }
 
   .mobile-none img {

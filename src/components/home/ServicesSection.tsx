@@ -70,7 +70,7 @@ const ServicesSection = () => {
       title: 'Artificial Intelligence',
       description: 'Smart AI agents and solutions driving automation, insight, and innovation',
       icon: AiIcon,
-      bgColor: '  bg-primary-green-light',
+      bgColor:'#D6F5E4',
       bgcolorCollapsed: '#D6F5E4',
       mobileTextColor: ' text-[#7A5C00]',
       iconAlt: 'Atom with sparkle icon representing AI and smart technology',
@@ -80,7 +80,7 @@ const ServicesSection = () => {
       title: 'Shopify Plus Development',
       description: 'Scalable Shopify Plus stores tailored for high-growth e-commerce brands',
       icon: ShopifyIcon,
-      bgColor: 'bg-primary-yellow-light',
+      bgColor: '#FCF4D7',
       bgcolorCollapsed: '#FCF4D7',
       mobileTextColor: 'text-[#00704E]',
       iconAlt: 'Shopify shopping bag icon',
@@ -90,7 +90,7 @@ const ServicesSection = () => {
       title: 'Web Development',
       description: 'Robust, responsive web apps built for performance and user experience',
       icon: WebDevIcon,
-      bgColor: 'bg-primary-coral-light',
+      bgColor: '#FDE3E5',
       bgcolorCollapsed: '#fde3e5',
       mobileTextColor: 'text-[#B3202D]',
       iconAlt: 'Laptop icon representing web development',
@@ -100,7 +100,7 @@ const ServicesSection = () => {
       title: 'Design & Creatives',
       description: 'Engaging, user-focused designs that bring your vision to life',
       icon: DesignCreativeIcon,
-      bgColor: 'bg-primary-yellow-light',
+      bgColor: '#FCF4D7',
       bgcolorCollapsed: '#fcf4d7',
       mobileTextColor: 'text-[#7A5C00]',
       iconAlt: 'Pen nib icon representing design and creative work',
@@ -110,7 +110,7 @@ const ServicesSection = () => {
       title: 'E-commerce Development',
       description: 'End-to-end e-commerce solutions for seamless shopping and sales growth',
       icon: EcommerceIcon,
-      bgColor: 'bg-primary-coral-light',
+      bgColor: '#FDE3E5',
       bgcolorCollapsed: '#fde3e5',
       mobileTextColor: 'text-[#B3202D]',
       iconAlt: 'Shopping cart with add icon representing e-commerce',
@@ -120,7 +120,7 @@ const ServicesSection = () => {
       title: 'Custom SaaS Development',
       description: 'Tailored SaaS platforms that solve real problems and scale faster',
       icon: SaasIcon,
-      bgColor: 'bg-primary-green-light',
+      bgColor: '#D6F5E4',
       bgcolorCollapsed: '#d6F5E4',
       mobileTextColor: 'text-[#00704E]',
       iconAlt: 'Cloud network icon representing SaaS platforms',
@@ -134,7 +134,7 @@ const ServicesSection = () => {
       description: 'Smart AI agents and solutions driving automation, insight, and innovation',
       icon: '/images/Our services icons/ai-yellow-icon.svg',
       bgColor: ' bg-primary-yellow-light ',
-      bgcolorCollapsed: '#D6F5E4',
+      bgcolorCollapsed: '#FCF4D7',
       mobileTextColor: ' text-[#7A5C00] ',
       iconAlt: 'Atom with sparkle icon representing AI and smart technology',
     },
@@ -144,7 +144,7 @@ const ServicesSection = () => {
       description: 'Scalable Shopify Plus stores tailored for high-growth e-commerce brands',
       icon: '/images/Our services icons/shopify-green-icon.svg',
       bgColor: 'bg-primary-green-light',
-      bgcolorCollapsed: '#FCF4D7',
+      bgcolorCollapsed: '#D6F5E4',
       mobileTextColor: 'text-[#00704E]',
       iconAlt: 'Shopify shopping bag icon',
     },
@@ -205,7 +205,7 @@ const ServicesSection = () => {
               onClick={() => handleClick(index)}
               style={{ borderColor: `var(--${service.bgColor.trim().replace(/^bg-/, '')})` }}
               // className="text-center hover:shadow-lg transition-shadow duration-300 cursor-pointer py-10"
-              className={`card-element text-center transition-shadow duration-300m md:min-w-[275px] min-w-[unset] cursor-pointer md:py-8 pt-[20px] pb-8 md:bg-transparent ${service.bgColor} border-1 borde md:rounded rounded-[20px] md:min-h-full min-h-[160px]
+              className={`card-element text-center transition-shadow duration-300m md:min-w-[275px] min-w-[unset] cursor-pointer md:py-8 pt-[20px] pb-8 md:bg-transparent ${service.bgColor.startsWith('#') ? '' : service.bgColor} border-1 borde md:rounded rounded-[20px] md:min-h-full min-h-[160px]
                         ${activeIndex === index ? 'active' : ''}
                         `}
             >
@@ -220,7 +220,9 @@ const ServicesSection = () => {
                 })}
               >
                 <div
-                  className={`${service.bgColor} mobile-bg-transparent w-20 md:h-20 h-auto rounded-[10px] flex items-center justify-center mx-auto md:mb-10 mb-4`}
+                  // Tailwind can't generate `bg-[${...}]` at runtime, so hex colors go through inline style
+                  style={service.bgColor.startsWith('#') ? { backgroundColor: service.bgColor } : undefined}
+                  className={`mobile-bg-transparent w-20 md:h-20 h-auto rounded-[10px] flex items-center justify-center mx-auto md:mb-10 mb-4`}
                 >
                   <Image src={service.icon} alt={service.iconAlt ?? ''}  width={36} height={36} />
                 </div>

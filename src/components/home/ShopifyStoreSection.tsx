@@ -91,7 +91,7 @@ const ShopifyStoreSection = () => {
     };
   }, []);
   return (
-    <section className='md:pt-[73px] pt-[60px]'>
+    <section className='md:pt-[63px] pt-[20px]'>
       <div className='container mx-auto mb-12 px-4  '>
         {/* <div className="flex flex-col lg:flex-row items-center gap-12 md:md:rounded-[40px] md:p-8 px-4 pt-4 pb-12 bg-primary-mint md:text-left text-center "> */}
         <div className='flex flex-col lg:flex-row lg:items-stretch items-center md:gap-0 gap-10 md:rounded-[40px] rounded-[20px] bg-[#DCF6EB] md:text-left text-center pt-[20px] px-[20px] pb-[40px] md:p-0 '>

@@ -18,7 +18,11 @@ const HeroSection: React.FC<HerSectionProps> = ({ openModal }) => {
   // const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <>
-      <section className="relative lg:h-lvh md:h-[686px] h-auto overflow-hidden">
+      {/* md:bg-[#1f1f1f]: dark fallback behind the banner photo. Contrast checkers
+          (WAVE, axe) can't read the image, so without a background-color they
+          measure the white hero text against white and flag it. Hidden by the
+          photo; also keeps the text readable if the image fails to load. */}
+      <section className="relative lg:h-lvh md:h-[686px] h-auto overflow-hidden md:bg-[#1f1f1f]">
         {/* Desktop background image */}
         <div
           className="hidden md:block absolute inset-0">

@@ -176,7 +176,7 @@ button {
     justify-content: center;
     background-color: #007A55;
     color: #ffffff;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 400;
     font-family: Roboto, sans-serif;
     padding: 12px 24px;
@@ -2840,7 +2840,7 @@ a.horizon-nav-menu::after {
   border-radius: 100px;
   /* #007A55 (was #00855D): white text now 5.4:1 instead of a borderline 4.6:1 */
   background-color: #00855D;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
   color: #fff;
   border: none;
@@ -2870,10 +2870,13 @@ a.horizon-nav-menu::after {
   line-height: normal;
 
 }
+
 .header-logo .new-btn-design-full {
-  font-size: 18px;
+  font-size: 16px;
 
 }
+
+
 .header-mob-logo
 {
   height: 28px;

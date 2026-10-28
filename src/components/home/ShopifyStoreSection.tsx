@@ -80,6 +80,7 @@ import Link from 'next/link';
 //import Button from '@/components/ui/Button';
 const ShopifyStoreSection = () => {
   const [isMobile, setIsMobile] = useState(false);
+  console.log('isMobile:', isMobile); // Log the value of isMobile to the console
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 767);
